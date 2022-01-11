@@ -6,7 +6,7 @@
 
 /* --------------------------------------------------
 Table of Content:
-
+c
 1.  Google Fonts
 2.  Basic Styles
 3.  Typography
@@ -212,7 +212,7 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder { opacity:1; -ms-fil
 .promotion-header { color:#df1a0b; letter-spacing:1px; text-transform:uppercase; padding:10px 35px; background-color:#fff0ef; text-align:center; position:relative; z-index:5; }
 .closeHeader { cursor:pointer; font-size:18px; font-weight:400; position:absolute; right:40px; top:8px; height:25px; width:25px; line-height:22px; color:#df1a0b; }
 
-.top-header { color:#fff; padding-top:8px; padding-bottom:10px; background:#141414; height:38px; }
+.top-header { color:#fff; padding-top:8px; padding-bottom:10px; background:#28a745; height:38px; }
 .top-header a { color:#fff; }
 .top-header p, .top-header a, .top-header select, .top-header .fa, .top-header span.selected-currency, .top-header .language-dd { color:#ffffff; font-size:12px; margin-bottom:0; text-decoration:none; letter-spacing:0.05em; vertical-align:middle; text-transform:uppercase; line-height:normal; }
 .top-header a:hover { text-decoration:underline; }

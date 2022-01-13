@@ -1674,6 +1674,20 @@ body.home15-funiture-template { font-size:14px; }
 .footer-bottom span { letter-spacing:1px; }
 .footer-bottom .payment-icons .icon { font-size:25px; }
 
+.map-container{
+	overflow:hidden;
+	padding-bottom:56.25%;
+	position:relative;
+	height:0;
+}
+.map-container iframe{
+	left:0;
+	top:0;
+	height:100%;
+	width:100%;
+	position:absolute;
+}
+
 #site-scroll { color:#fff; line-height:38px; cursor:pointer; font-size:20px; height:40px; right:30px; position:fixed; border-radius:3px; text-align:center; transition:all 0.3s ease 0s; -moz-transition:all 0.3s ease 0s; -webkit-transition:all 0.3s ease 0s; width:40px; bottom:50px; z-index:444; display:none; background:#000; }
 #site-scroll i { line-height:40px; }
 /*---------------------------------------

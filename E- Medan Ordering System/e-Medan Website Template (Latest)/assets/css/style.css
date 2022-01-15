@@ -225,6 +225,9 @@ th { font-family:"Roboto Slab",Helvetica,Tahoma,Arial,serif; font-weight:700; }
   5. Container
 ========================================================================*/
 .container { max-width:1300px; padding-left:30px; padding-right:30px; }
+.container2 { margin: auto;
+  width: 60%;
+  padding: 10px;}
 .container-fluid { padding:0 55px; }
 .container-fluid:before,
 .container-fluid:after { content:''; clear:both; display:block; }

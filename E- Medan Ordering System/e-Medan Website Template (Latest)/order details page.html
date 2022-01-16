@@ -73,7 +73,75 @@ ol.progtrckr li.progtrckr-todo:before {
     bottom: -1.2em;
 }
 
+@import "https://fonts.googleapis.com/css?family=Raleway";
+* { box-sizing: border-box; }
+body2 { 
+  margin: 0; 
+  padding: 0; 
+  background: #333;
+  font-family: Raleway; 
+  text-transform: uppercase; 
+  font-size: 11px; 
+}
+h1{ margin: 0; }
+#contact { 
+  -webkit-user-select: none; /* Chrome/Safari */        
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* IE10+ */
+  margin: 4em auto;
+  width: 100px; 
+  height: 30px; 
+  line-height: 30px;
+  background: teal;
+  color: white;
+  font-weight: 700;
+  text-align: center;
+  cursor: pointer;
+  border: 1px solid white;
+}
 
+#contact:hover { background: #666; }
+#contact:active { background: #444; }
+
+#contactForm { 
+  display: none;
+
+  border: 6px solid salmon; 
+  padding: 2em;
+  width: 400px;
+  text-align: center;
+  background: #fff;
+  position: fixed;
+  top:50%;
+  left:50%;
+  transform: translate(-50%,-50%);
+  -webkit-transform: translate(-50%,-50%)
+  
+}
+
+input, textarea { 
+  margin: .8em auto;
+  font-family: inherit; 
+  text-transform: inherit; 
+  font-size: inherit;
+  
+  display: block; 
+  width: 280px; 
+  padding: .4em;
+}
+textarea { height: 80px; resize: none; }
+
+.formBtn { 
+  width: 140px;
+  display: inline-block;
+  
+  background: teal;
+  color: #fff;
+  font-weight: 100;
+  font-size: 1.2em;
+  border: none;
+  height: 30px;
+}
     
   </style>
 
@@ -96,6 +164,27 @@ ol.progtrckr li.progtrckr-todo:before {
 <link rel="stylesheet" href="assets/css/responsive.css">
 </head>
 <body class="template-blog belle">
+  <script type="text/javascript">
+    $(function() 
+    {
+    
+    // contact form animations
+    $('#contact').click(function() 
+    {
+      $('#contactForm').fadeToggle();
+    })
+    $(document).mouseup(function (e) {
+      var container = $("#contactForm");
+  
+      if (!container.is(e.target) // if the target of the click isn't the container...
+          && container.has(e.target).length === 0) // ... nor a descendant of the container
+      {
+          container.fadeOut();
+      }
+    });
+    
+  });
+  </script>
 <div class="pageWrapper">
 	<!--Search Form Drawer-->
 	<div class="search">
@@ -625,7 +714,7 @@ ol.progtrckr li.progtrckr-todo:before {
                     We are preparing your order. 
                 </div>
                   <td colspan="3" class="text-right">
-                  <button type="submit" name="view details" class="btn btn-secondary btn--small  small--hide">View Order Details</button>
+                    <a id="inlinecheckout-cart" href="student/orderconfirmation.html" class="btn btn-secondary btn--small">View Order Details</a>
                 </td>
                 </div>
                 <br>
@@ -636,9 +725,9 @@ ol.progtrckr li.progtrckr-todo:before {
                     <div class="list-view-item__title">
                         Your Order 
                     </div>
-                    <h1>#283920</h1>
+                    <h1>#356241</h1>
                     <div class="cart__meta-text">
-                        21 June 2021, 10.00 A.M
+                        29 May 2021, 09.00 A.M
                     </div>
                 </td>
                 <td class="cart__price-wrapper cart-flex-item">
@@ -647,7 +736,7 @@ ol.progtrckr li.progtrckr-todo:before {
                 <br>                
                   <td colspan="3" class="text-right">
                   <button type="submit" name="leave feedback" class="btn btn-secondary btn--small  small--hide">Leave Feedback</button>
-                  <button type="submit" name="view details" class="btn btn-secondary btn--small  small--hide">View Order Details</button>
+                  <a id="inlinecheckout-cart" href="student/orderconfirmation.html" class="btn btn-secondary btn--small">View Order Details</a>
                 </td>
               </div>
               <br>
@@ -656,9 +745,9 @@ ol.progtrckr li.progtrckr-todo:before {
                   <div class="list-view-item__title">
                       Your Order 
                   </div>
-                  <h1>#283920</h1>
+                  <h1>#345267</h1>
                   <div class="cart__meta-text">
-                      21 June 2021, 10.00 A.M
+                      06 April 2021, 12.00 P.M
                   </div>
               </td>
               <td class="cart__price-wrapper cart-flex-item">
@@ -667,7 +756,7 @@ ol.progtrckr li.progtrckr-todo:before {
               <br>                
                 <td colspan="3" class="text-right">
                 <button type="submit" name="leave feedback" class="btn btn-secondary btn--small  small--hide">Leave Feedback</button>
-                <button type="submit" name="view details" class="btn btn-secondary btn--small  small--hide">View Order Details</button>
+                <a id="inlinecheckout-cart" href="student/orderconfirmation.html" class="btn btn-secondary btn--small">View Order Details</a>
               </td>
             </div>
             <br>
@@ -676,9 +765,9 @@ ol.progtrckr li.progtrckr-todo:before {
                   <div class="list-view-item__title">
                       Your Order 
                   </div>
-                  <h1>#283920</h1>
+                  <h1>#123453</h1>
                   <div class="cart__meta-text">
-                      21 June 2021, 10.00 A.M
+                      20 February 2021, 10.00 A.M
                   </div>
               </td>
               <td class="cart__price-wrapper cart-flex-item">
@@ -687,14 +776,29 @@ ol.progtrckr li.progtrckr-todo:before {
               <br>                
                 <td colspan="3" class="text-right">
                 <button type="submit" name="leave feedback" class="btn btn-secondary btn--small  small--hide">Leave Feedback</button>
-                <button type="submit" name="view details" class="btn btn-secondary btn--small  small--hide">View Order Details</button>
+                <a id="inlinecheckout-cart" href="student/orderconfirmation.html" class="btn btn-secondary btn--small">View Order Details</a>
               </td>
             </div>
         </div>
       </div>
     </div>
   </div>
+  <div id="contact">Contact</div>
 
+    <div id="contactForm">
+
+      <h1>Keep in touch!</h1>
+      <small>I'll get back to you as quickly as possible</small>
+      
+      <form action="#">
+        <input placeholder="Name" type="text" required />
+        <input placeholder="Email" type="email" required />
+        <input placeholder="Subject" type="text" required />
+        <textarea placeholder="Comment"></textarea>
+        <input class="formBtn" type="submit" />
+        <input class="formBtn" type="reset" />
+      </form>
+    </div>
   
         <!--Scoll Top-->
     <span id="site-scroll"><i class="icon anm anm-angle-up-r"></i></span>

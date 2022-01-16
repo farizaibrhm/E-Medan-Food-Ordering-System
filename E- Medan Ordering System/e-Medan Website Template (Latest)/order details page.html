@@ -1,13 +1,90 @@
 <!DOCTYPE html>
 <html class="no-js" lang="en">
+  <style type="text/css">
+    .bord
+    {
+      border-style:solid;
+      border-width:medium;
+      border-radius: 25px;
+      width: 700px;
+      height: 200px;      
+      padding: 10px;
+      text-align: center;
+    }
+    hr.new4 
+    {
+      border: 3px solid rgb(43, 255, 0);
+    }
+    ol.progtrckr {
+    margin: 0;
+    padding: 0;
+    list-style-type none;
+}
+
+ol.progtrckr li {
+    display: inline-block;
+    text-align: center;
+    line-height: 3.5em;
+}
+
+ol.progtrckr[data-progtrckr-steps="2"] li { width: 49%; }
+ol.progtrckr[data-progtrckr-steps="3"] li { width: 33%; }
+ol.progtrckr[data-progtrckr-steps="4"] li { width: 24%; }
+ol.progtrckr[data-progtrckr-steps="5"] li { width: 19%; }
+ol.progtrckr[data-progtrckr-steps="6"] li { width: 16%; }
+ol.progtrckr[data-progtrckr-steps="7"] li { width: 14%; }
+ol.progtrckr[data-progtrckr-steps="8"] li { width: 12%; }
+ol.progtrckr[data-progtrckr-steps="9"] li { width: 11%; }
+
+ol.progtrckr li.progtrckr-done {
+    color: black;
+    border-bottom: 4px solid yellowgreen;
+}
+ol.progtrckr li.progtrckr-todo {
+    color: silver; 
+    border-bottom: 4px solid silver;
+}
+
+ol.progtrckr li:after {
+    content: "\00a0\00a0";
+}
+ol.progtrckr li:before {
+    position: relative;
+    bottom: -2.5em;
+    float: left;
+    left: 50%;
+    line-height: 1em;
+}
+ol.progtrckr li.progtrckr-done:before {
+    content: "\2713";
+    color: white;
+    background-color: yellowgreen;
+    height: 2.2em;
+    width: 2.2em;
+    line-height: 2.2em;
+    border: none;
+    border-radius: 2.2em;
+}
+ol.progtrckr li.progtrckr-todo:before {
+    content: "\039F";
+    color: silver;
+    background-color: white;
+    font-size: 2.2em;
+    bottom: -1.2em;
+}
+
+
+    
+  </style>
 
 <!-- belle/blog-article.html   11 Nov 2019 12:47:01 GMT -->
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta http-equiv="x-ua-compatible" content="ie=edge">
-<title>Feedback &ndash;</title>
+<title>Order History &ndash;</title>
 <meta name="description" content="description">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <!-- Favicon -->
 <link rel="shortcut icon" href="assets/images/e-favicon.svg" />
 <!-- Plugins CSS -->
@@ -514,69 +591,111 @@
       </ul>
 	</div>
 	<!--End Mobile Menu-->
-    
-    <!--Body Content-->
-    <div id="page-content">
-    	<!--Page Title-->
-    	<div class="page section-header text-center mb-0">
-			<div class="page-title">
-        		<div class="wrapper"><h1 class="page-width">Give Feedback</h1></div>
-      		</div>
-		</div>
-        <!--End Page Title-->
-	    <div class="bredcrumbWrap">
-            <div class="container breadcrumbs">
-                <a href="index.html" title="Back to the home page">Home</a><span aria-hidden="true">›</span>
-                <a href="blog-left-sidebar.html" title="Back to News">News</a><span aria-hidden="true">›</span><span>Give Feedback</span>
+  <div id="page-content">
+    <!--Page Title-->
+    <div class="page section-header text-center">
+    <div class="page-title">
+          <div class="wrapper"><h1 class="page-width">Order History</h1></div>
+        </div>
+  </div>
+  <div class="container2" style="position: relative; right: -80px;">
+    <div class="row">
+      <div class="col-12 col-sm-12 col-md-12 col-lg-12 main-col">
+        <div id="accordionExample">
+              <h2 class="title h2">Active Order</h2>
+                <hr class="new4" style="width: 80%;">
+                  <div class="bord" style="height: 350%;">
+                    <td class="cart__meta small--text-left cart-flex-item">
+                      <div class="list-view-item__title">
+                          Your Order 
+                      </div>
+                      <h1>#283920</h1>
+                      <div class="cart__meta-text">
+                          21 June 2021, 10.00 A.M
+                      </div>
+                  </td>
+                  <ol class="progtrckr" data-progtrckr-steps="4">
+                    <li class="progtrckr-done">Order Placed</li><!--
+                 --><li class="progtrckr-done">Order Confirmed</li><!--
+                 --><li class="progtrckr-todo">Order Processed</li><!--
+                 --><li class="progtrckr-todo">Ready to pickup</li>
+                </ol>
+                  <br>                
+                  <div class="cart__meta-text">
+                    We are preparing your order. 
+                </div>
+                  <td colspan="3" class="text-right">
+                  <button type="submit" name="view details" class="btn btn-secondary btn--small  small--hide">View Order Details</button>
+                </td>
+                </div>
+                <br>
+                <h2 class="title h2">Past Order</h2>
+                <hr class="new4" style="width: 80%;">
+                <div class="bord">
+                  <td class="cart__meta small--text-left cart-flex-item">
+                    <div class="list-view-item__title">
+                        Your Order 
+                    </div>
+                    <h1>#283920</h1>
+                    <div class="cart__meta-text">
+                        21 June 2021, 10.00 A.M
+                    </div>
+                </td>
+                <td class="cart__price-wrapper cart-flex-item">
+                    <i class = "fa fa-check" style="color: black;"></i> <span class="money">Completed</span>
+                </td>
+                <br>                
+                  <td colspan="3" class="text-right">
+                  <button type="submit" name="leave feedback" class="btn btn-secondary btn--small  small--hide">Leave Feedback</button>
+                  <button type="submit" name="view details" class="btn btn-secondary btn--small  small--hide">View Order Details</button>
+                </td>
+              </div>
+              <br>
+              <div class="bord">
+                <td class="cart__meta small--text-left cart-flex-item">
+                  <div class="list-view-item__title">
+                      Your Order 
+                  </div>
+                  <h1>#283920</h1>
+                  <div class="cart__meta-text">
+                      21 June 2021, 10.00 A.M
+                  </div>
+              </td>
+              <td class="cart__price-wrapper cart-flex-item">
+                  <i class = "fa fa-check" style="color: black;"></i> <span class="money">Completed</span>
+              </td>
+              <br>                
+                <td colspan="3" class="text-right">
+                <button type="submit" name="leave feedback" class="btn btn-secondary btn--small  small--hide">Leave Feedback</button>
+                <button type="submit" name="view details" class="btn btn-secondary btn--small  small--hide">View Order Details</button>
+              </td>
+            </div>
+            <br>
+              <div class="bord">
+                <td class="cart__meta small--text-left cart-flex-item">
+                  <div class="list-view-item__title">
+                      Your Order 
+                  </div>
+                  <h1>#283920</h1>
+                  <div class="cart__meta-text">
+                      21 June 2021, 10.00 A.M
+                  </div>
+              </td>
+              <td class="cart__price-wrapper cart-flex-item">
+                  <i class = "fa fa-check" style="color: black;"></i> <span class="money">Completed</span>
+              </td>
+              <br>                
+                <td colspan="3" class="text-right">
+                <button type="submit" name="leave feedback" class="btn btn-secondary btn--small  small--hide">Leave Feedback</button>
+                <button type="submit" name="view details" class="btn btn-secondary btn--small  small--hide">View Order Details</button>
+              </td>
             </div>
         </div>
-                          <form method="post" action="#" id="comment_form" accept-charset="UTF-8" class="comment-form">
-                              <h2>Leave a comment</h2>
-                              <div class="row">
-                                <div class="col-12 col-sm-12 col-md-6 col-lg-6">
-                                    <div class="form-group">
-                                    <input type="text" id="ContactFormName" name="contact[name]" placeholder="Name" value="" required="">
-                                    </div>
-                                </div>
-                                <div class="col-12 col-sm-12 col-md-6 col-lg-6">
-                                    <div class="form-group">
-                                    <input type="email" id="ContactFormEmail" name="contact[email]" placeholder="Email" value="" required="">                        	
-                                    </div>
-                                </div>
-                              </div>
-                              <div class="row">
-                                <div class="col-12 col-sm-12 col-md-12 col-lg-12">
-                                    <div class="form-group">
-                                    <textarea required="" rows="10" id="ContactFormMessage" name="contact[body]" placeholder="Your Message"></textarea>
-                                    </div>
-                                </div>  
-                              </div>
-                              <div class="row">
-                                <div class="col-12 col-sm-12 col-md-12 col-lg-12">
-                                    <p class="fine-print">Please note, comments must be approved before they are published</p>
-                                    <input type="submit" class="btn" value="Send Message">
-                                </div>
-                             </div>
-                         <div class="star-rating">
-                          <div class="thanks-msg">Thanks for your feedback !!!</div>
-                          <div class="star-input">
-                              <input type="radio" name="rating" id="rating-5">
-                              <label for="rating-5" class="fas fa-star"></label>
-                              <input type="radio" name="rating" id="rating-4">
-                              <label for="rating-4" class="fas fa-star"></label>
-                              <input type="radio" name="rating" id="rating-3">
-                              <label for="rating-3" class="fas fa-star"></label>
-                              <input type="radio" name="rating" id="rating-2">
-                              <label for="rating-2" class="fas fa-star"></label>
-                              <input type="radio" name="rating" id="rating-1">
-                              <label for="rating-1" class="fas fa-star"></label>                          
-                                  <span class="rating-reaction"></span>
-                                  
-                           </div>
-                      </div>
-                    </form>
-                <!--End Main Content--> 
-    <!--End Body Content-->
+      </div>
+    </div>
+  </div>
+
+  
         <!--Scoll Top-->
     <span id="site-scroll"><i class="icon anm anm-angle-up-r"></i></span>
     <!--End Scoll Top-->

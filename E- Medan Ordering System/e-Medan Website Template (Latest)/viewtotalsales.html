@@ -5,7 +5,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta http-equiv="x-ua-compatible" content="ie=edge">
-<title>Update Order Page &ndash; e-Medan Food Ordering System</title>
+<title>Total Sales Report &ndash; e-Medan Food Ordering System</title>
 <meta name="description" content="description">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <!-- Favicon -->
@@ -280,9 +280,42 @@
     	<!--Page Title-->
     	<div class="page section-header text-center">
 			<div class="page-title">
-        		<div class="wrapper"><h1 class="page-width">Update Order Page</h1></div>
+        		<div class="wrapper"><h1 class="page-width">Total Sales Report</h1></div>
       		</div>
 		</div>
+        <div class="container">
+            <div class="row" >
+                <h3>Filter By : </h3>
+                    <div class="dropdown " style="padding : 10px" >
+                        
+                        <button style="background-color:slategray; border-radius: 25px; font-size: small; " onclick="myFunction()" class="dropbtn">Month</button>
+                        <div id="myDropdown" class="dropdown-content">
+                            <a href="#">January</a>
+                            <a href="#">February</a>
+                            <a href="#">March</a>
+                            <a href="#">April</a>
+                            <a href="#">May</a>
+                            <a href="#">June</a>
+                            <a href="#">July</a>
+                            <a href="#">August</a>
+                            <a href="#">September</a>
+                            <a href="#">October</a>
+                            <a href="#">November</a>
+                            <a href="#">December</a>
+
+                        </div>
+
+                        <button style = "background-color: slategray; border-radius: 20px; font-size: small;"onclick="myFunctions()" class="dropbtn">Year</button>
+                        <div id="myDropdowns" class="dropdown-content">
+                            <a href="#">2021</a>
+                            <a href="#">2022</a>
+                        </div>
+                        <button class="btn-secondary" style="cursor: pointer;">Go</button>
+                        
+                    </div>
+                    
+                </div>
+        </div> 
         
         <div class="container align-items-center ">
         	<div class="row">
@@ -291,304 +324,155 @@
                 		<table>
                             <thead class="cart__row cart__header">
                                 <tr>
-                                    <th class="text-center">Order ID</th>
-                                    <th class="text-center">Name</th>
-                                    <th class="text-center">Telephone Number</th>
-                                    <th class="text-center">Order Details</th>
-                                    <th class="text-center">Status</th>
+                                    <th class="text-center">Month</th>
+                                    <th class="text-center">Total Sales</th>
                                     <th class="action">&nbsp;</th>
                                 </tr>
                             </thead>
                     		<tbody>
                                 <tr class="cart__row border-bottom line1 cart-flex border-top">
-                                    
                                     <td class="cart__meta text-right cart-flex-item">
                                         <div class="list-view-item__title text-center">
-                                            <h1>#1560</h1>
-                                            <h6>15th June 2022</h6>
-                                            <h6>4:00 PM</h6>
+                                            <h3>January 2021</h3>
                                         </div>
                                     </td>
                                     <td class="cart__price-wrapper cart-flex-item text-center">
                                         <div class="list-view-item__title text-center">
-                                            <h3>Mariah Binti Ahmad</h3>
-                                            
+                                            <h3>RM 12000</h3>
                                         </div>
                                     </td>
-                                    <td class="cart__update-wrapper cart-flex-item text-right">
-                                        <div class="list-view-item__title text-center">
-                                          
-                                            <h3>011-10944393</h3>
-                                            
-                                        </div>
-                                    </td>
-                                    <td class="text-right small--hide cart-price">
-                                        <h3 id="myBtn" class="text-center" style="text-decoration: underline; cursor: pointer;">View     <i class="fa fa-eye"></i></h3>
-
-                                            <!-- The Modal -->
-                                                <div id="myModal" class="modal">
-                                                    <!-- Modal content -->
-                                                        <div class="modal-content">
-                                                             <div class="modal-header text-center">
-                                                                <span class="close">&times;</span>
-                                                                
-                                                         </div>
-                                                        
-                                                        <div class="modal-body text-center">
-                                                        <a>Some text in the Modal Body</a>
-                                                        <a>Some other text...</a>
-                                                        </div>
-                                                        <div class="modal-footer text-center">
-                                                         <a>Modal Footer</a>
-                                                        </div>
-                                                     </div>
-                                                </div>
-                                    </td>
-                                    <td class="text-right small--hide cart-price">
-                                        <div class="dropdowns">
-                                            <button class="dropbtn">Pending</button>
-                                        <div class="dropdowns-content">
-                                            <a href="#">Confirmed</a>
-                                            <a href="#">Processed</a>
-                                            
-                                            <a href="#">Ready to Pickup</a>
-                                            <a href="#">Completed</a>
-                                        </div>
-                                    </div>
-                                    </td>
-                                    
                                 </tr>
                                 <tr class="cart__row border-bottom line1 cart-flex border-top">
-                                    
                                     <td class="cart__meta text-right cart-flex-item">
                                         <div class="list-view-item__title text-center">
-                                            <h1>#1561</h1>
-                                            <h6>19th July 2021</h6>
-                                            <h6>4:00 PM</h6>
+                                            <h3>February 2021</h3>
                                         </div>
                                     </td>
                                     <td class="cart__price-wrapper cart-flex-item text-center">
                                         <div class="list-view-item__title text-center">
-                                            <h3>Heliza Binti Helmi</h3>
-                                            
+                                            <h3>RM 11000</h3>
                                         </div>
                                     </td>
-                                    <td class="cart__update-wrapper cart-flex-item text-right">
-                                        <div class="list-view-item__title text-center">
-                                          
-                                            <h3>012-3456789</h3>
-                                            
-                                        </div>
-                                    </td>
-                                    <td class="text-right small--hide cart-price">
-                                        <h3 id="myBtn" class="text-center" style="text-decoration: underline; cursor: pointer;">View     <i class="fa fa-eye"></i></h3>
-
-                                        <!-- The Modal -->
-                                            <div id="myModal" class="modal">
-                                                <!-- Modal content -->
-                                                    <div class="modal-content">
-                                                         <div class="modal-header text-center">
-                                                            <span class="close">&times;</span>
-                                                            
-                                                     </div>
-                                                    
-                                                    <div class="modal-body text-center">
-                                                    <a>Some text in the Modal Body</a>
-                                                    <a>Some other text...</a>
-                                                    </div>
-                                                    <div class="modal-footer text-center">
-                                                     <a>Modal Footer</a>
-                                                    </div>
-                                                 </div>
-                                            </div>
-                                    </td>
-                                    <td class="text-right small--hide cart-price">
-                                        <div class="dropdowns">
-                                            <button class="dropbtn">Pending</button>
-                                        <div class="dropdowns-content">
-                                            <a href="#">Confirmed</a>
-                                            <a href="#">Processed</a>
-                                            
-                                            <a href="#">Ready to Pickup</a>
-                                            <a href="#">Completed</a>
-                                        </div>
-                                    </div>
-                                    </td>
-                                    
                                 </tr>
                                 <tr class="cart__row border-bottom line1 cart-flex border-top">
-                                    
                                     <td class="cart__meta text-right cart-flex-item">
                                         <div class="list-view-item__title text-center">
-                                            <h1>#1562</h1>
-                                            <h6>8th June 2021</h6>
-                                            <h6>4:00 PM</h6>
+                                            <h3>March 2021</h3>
                                         </div>
                                     </td>
                                     <td class="cart__price-wrapper cart-flex-item text-center">
                                         <div class="list-view-item__title text-center">
-                                            <h3>Petra Bin Hussin</h3>
-                                            
+                                            <h3>RM 10000</h3>
                                         </div>
                                     </td>
-                                    <td class="cart__update-wrapper cart-flex-item text-right">
-                                        <div class="list-view-item__title text-center">
-                                          
-                                            <h3>011-1453267</h3>
-                                            
-                                        </div>
-                                    </td>
-                                    <td class="text-right small--hide cart-price">
-                                        <h3 id="myBtn" class="text-center" style="text-decoration: underline; cursor: pointer;">View     <i class="fa fa-eye"></i></h3>
-
-                                        <!-- The Modal -->
-                                            <div id="myModal" class="modal">
-                                                <!-- Modal content -->
-                                                    <div class="modal-content">
-                                                         <div class="modal-header text-center">
-                                                            <span class="close">&times;</span>
-                                                            
-                                                     </div>
-                                                    
-                                                    <div class="modal-body text-center">
-                                                    <a>Some text in the Modal Body</a>
-                                                    <a>Some other text...</a>
-                                                    </div>
-                                                    <div class="modal-footer text-center">
-                                                     <a>Modal Footer</a>
-                                                    </div>
-                                                 </div>
-                                            </div>
-                                    </td>
-                                    <td class="text-right small--hide cart-price">
-                                        <div class="dropdowns">
-                                            <button class="dropbtn">Pending</button>
-                                        <div class="dropdowns-content">
-                                            <a href="#">Confirmed</a>
-                                            <a href="#">Processed</a>
-                                            
-                                            <a href="#">Ready to Pickup</a>
-                                            <a href="#">Completed</a>
-                                        </div>
-                                    </div>
-                                    </td>
-                                    
                                 </tr>
                                 <tr class="cart__row border-bottom line1 cart-flex border-top">
-                                    
                                     <td class="cart__meta text-right cart-flex-item">
                                         <div class="list-view-item__title text-center">
-                                            <h1>#1563</h1>
-                                            <h6>22nd June 2021</h6>
-                                            <h6>4:00 PM</h6>
+                                            <h3>April 2021</h3>
                                         </div>
                                     </td>
                                     <td class="cart__price-wrapper cart-flex-item text-center">
                                         <div class="list-view-item__title text-center">
-                                            <h3>Anita Binti Karim</h3>
-                                            
+                                            <h3>RM 11500</h3>
                                         </div>
                                     </td>
-                                    <td class="cart__update-wrapper cart-flex-item text-right">
-                                        <div class="list-view-item__title text-center">
-                                          
-                                            <h3>011-42376532</h3>
-                                            
-                                        </div>
-                                    </td>
-                                    <td class="text-right small--hide cart-price">
-                                        <h3 id="myBtn" class="text-center" style="text-decoration: underline; cursor: pointer;">View     <i class="fa fa-eye"></i></h3>
-
-                                        <!-- The Modal -->
-                                            <div id="myModal" class="modal">
-                                                <!-- Modal content -->
-                                                    <div class="modal-content">
-                                                         <div class="modal-header text-center">
-                                                            <span class="close">&times;</span>
-                                                            
-                                                     </div>
-                                                    
-                                                    <div class="modal-body text-center">
-                                                    <a>Some text in the Modal Body</a>
-                                                    <a>Some other text...</a>
-                                                    </div>
-                                                    <div class="modal-footer text-center">
-                                                     <a>Modal Footer</a>
-                                                    </div>
-                                                 </div>
-                                            </div>
-                                    </td>
-                                    <td class="text-right small--hide cart-price">
-                                        <div class="dropdowns">
-                                            <button class="dropbtn">Pending</button>
-                                        <div class="dropdowns-content">
-                                            <a href="#">Confirmed</a>
-                                            <a href="#">Processed</a>
-                                            
-                                            <a href="#">Ready to Pickup</a>
-                                            <a href="#">Completed</a>
-                                        </div>
-                                    </div>
-                                    </td>
-                                    
                                 </tr>
                                 <tr class="cart__row border-bottom line1 cart-flex border-top">
-                                    
                                     <td class="cart__meta text-right cart-flex-item">
                                         <div class="list-view-item__title text-center">
-                                            <h1>#1564</h1>
-                                            <h6>22nd June 2022</h6>
-                                            <h6>4:00 PM</h6>
+                                            <h3>May 2021</h3>
                                         </div>
                                     </td>
                                     <td class="cart__price-wrapper cart-flex-item text-center">
                                         <div class="list-view-item__title text-center">
-                                            <h3>Danial Bin Razif</h3>
-                                            
+                                            <h3>RM 13000</h3>
                                         </div>
                                     </td>
-                                    <td class="cart__update-wrapper cart-flex-item text-right">
+                                </tr>
+                                <tr class="cart__row border-bottom line1 cart-flex border-top">
+                                    <td class="cart__meta text-right cart-flex-item">
                                         <div class="list-view-item__title text-center">
-                                          
-                                            <h3>011-53758676</h3>
-                                            
+                                            <h3>June 2021</h3>
                                         </div>
                                     </td>
-                                    <td class="text-right small--hide cart-price">
-                                        <h3 id="myBtn" class="text-center" style="text-decoration: underline; cursor: pointer;">View     <i class="fa fa-eye"></i></h3>
-
-                                        <!-- The Modal -->
-                                            <div id="myModal" class="modal">
-                                                <!-- Modal content -->
-                                                    <div class="modal-content">
-                                                         <div class="modal-header text-center">
-                                                            <span class="close">&times;</span>
-                                                            
-                                                     </div>
-                                                    
-                                                    <div class="modal-body text-center">
-                                                    <a>Some text in the Modal Body</a>
-                                                    <a>Some other text...</a>
-                                                    </div>
-                                                    <div class="modal-footer text-center">
-                                                     <a>Modal Footer</a>
-                                                    </div>
-                                                 </div>
-                                            </div>
-                                    </td>
-                                    <td class="text-right small--hide cart-price">
-                                        <div class="dropdowns">
-                                            <button class="dropbtn">Pending</button>
-                                        <div class="dropdowns-content">
-                                            <a href="#">Confirmed</a>
-                                            <a href="#">Processed</a>
-                                            
-                                            <a href="#">Ready to Pickup</a>
-                                            <a href="#">Completed</a>
+                                    <td class="cart__price-wrapper cart-flex-item text-center">
+                                        <div class="list-view-item__title text-center">
+                                            <h3>RM 13500</h3>
                                         </div>
-                                    </div>
                                     </td>
-                                    
+                                </tr>
+                                <tr class="cart__row border-bottom line1 cart-flex border-top">
+                                    <td class="cart__meta text-right cart-flex-item">
+                                        <div class="list-view-item__title text-center">
+                                            <h3>July 2021</h3>
+                                        </div>
+                                    </td>
+                                    <td class="cart__price-wrapper cart-flex-item text-center">
+                                        <div class="list-view-item__title text-center">
+                                            <h3>RM 11000</h3>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr class="cart__row border-bottom line1 cart-flex border-top">
+                                    <td class="cart__meta text-right cart-flex-item">
+                                        <div class="list-view-item__title text-center">
+                                            <h3>August 2021</h3>
+                                        </div>
+                                    </td>
+                                    <td class="cart__price-wrapper cart-flex-item text-center">
+                                        <div class="list-view-item__title text-center">
+                                            <h3>RM 13650</h3>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr class="cart__row border-bottom line1 cart-flex border-top">
+                                    <td class="cart__meta text-right cart-flex-item">
+                                        <div class="list-view-item__title text-center">
+                                            <h3>September 2021</h3>
+                                        </div>
+                                    </td>
+                                    <td class="cart__price-wrapper cart-flex-item text-center">
+                                        <div class="list-view-item__title text-center">
+                                            <h3>RM 13550</h3>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr class="cart__row border-bottom line1 cart-flex border-top">
+                                    <td class="cart__meta text-right cart-flex-item">
+                                        <div class="list-view-item__title text-center">
+                                            <h3>October 2021</h3>
+                                        </div>
+                                    </td>
+                                    <td class="cart__price-wrapper cart-flex-item text-center">
+                                        <div class="list-view-item__title text-center">
+                                            <h3>RM 13240</h3>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr class="cart__row border-bottom line1 cart-flex border-top">
+                                    <td class="cart__meta text-right cart-flex-item">
+                                        <div class="list-view-item__title text-center">
+                                            <h3>November 2021</h3>
+                                        </div>
+                                    </td>
+                                    <td class="cart__price-wrapper cart-flex-item text-center">
+                                        <div class="list-view-item__title text-center">
+                                            <h3>RM 13450</h3>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr class="cart__row border-bottom line1 cart-flex border-top">
+                                    <td class="cart__meta text-right cart-flex-item">
+                                        <div class="list-view-item__title text-center">
+                                            <h3>December 2021</h3>
+                                        </div>
+                                    </td>
+                                    <td class="cart__price-wrapper cart-flex-item text-center">
+                                        <div class="list-view-item__title text-center">
+                                            <h3>RM 10500</h3>
+                                        </div>
+                                    </td>
                                 </tr>
                             </tbody>
                     		
@@ -751,6 +635,42 @@ span.onclick = function() {
 window.onclick = function(event) {
   if (event.target == modal) {
     modal.style.display = "none";
+  }
+}
+
+function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+
+function myFunctions() {
+  document.getElementById("myDropdowns").classList.toggle("show");
+}
+
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
   }
 }
 </script>

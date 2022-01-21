@@ -1,16 +1,16 @@
 <component name="ArtifactManager">
-  <artifact type="war" name="E-Medan-Food-Ordering-System:war">
+  <artifact type="war" name="e-Medan_Food_Ordering_System:war">
     <output-path>$PROJECT_DIR$/target</output-path>
     <properties id="maven-jee-properties">
       <options>
         <exploded>false</exploded>
-        <module>E-Medan-Food-Ordering-System</module>
+        <module>e-Medan_Food_Ordering_System</module>
         <packaging>war</packaging>
         <unpackNestedArchives>false</unpackNestedArchives>
       </options>
     </properties>
     <root id="archive" name="e-Medan_Food_Ordering_System-1.0-SNAPSHOT.war">
-      <element id="artifact" artifact-name="E-Medan-Food-Ordering-System:war exploded" />
+      <element id="artifact" artifact-name="e-Medan_Food_Ordering_System:war exploded" />
     </root>
   </artifact>
 </component>

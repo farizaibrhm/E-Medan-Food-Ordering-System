@@ -363,7 +363,7 @@
 
             >>>>>>> Stashed changes
             <div class="testbox">
-                <form action="/">
+                <form method="post" action="${pageContext.request.contextPath}/AddMenuServlet">
                     <div class="banner">
                         <h1>ADD MENU FORM</h1>
                     </div>
@@ -375,19 +375,19 @@
                     </div>-->
                     <div class="item">
                         <p>MENU NAME</p>
-                        <input type="text" name="menuName"/>
+                        <input type="text" name="MENUNAME"/>
                     </div>
                     <div class="item">
                         <p>MENU DESCRIPTION</p>
-                        <textarea rows="3" name="menuDesc"></textarea>
+                        <textarea rows="3" name="MENUDESC"></textarea>
                     </div>
                     <div class="item">
                         <p>MENU PRICE (RM)</p>
-                        <input type="text" name="menuPrice"/>
+                        <input type="text" name="MENUPRICE"/>
                     </div>
                     <div class="item">
                         <p>MENU TYPE</p>
-                        <select id="menuType" name="menuType">
+                        <select id="menuType" name="MENUTYPE">
                             <option value="choose" selected>CHOOSE MENU TYPE</option>
                             <option value="food">F- FOOD</option>
                             <option value="drinks">D- DRINK</option>
@@ -395,13 +395,13 @@
                     </div>
                     <div class="item">
                         <p>CAFE WORKER ID</p>
-                        <input type="text" name="cafeWID"/>
+                        <input type="text" name="CWORKID"/>
                     </div>
                     <div class="item">
                         <p>UPLOAD IMAGE</p>
                         <div class="name-item">
                             <input type="file"
-                                   id="Mimg" name="Mimg"
+                                   id="MENUIMAGE" name="MENUIMAGE"
                                    accept="image/png, image/jpeg"/>
                         </div>
                     </div>

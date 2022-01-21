@@ -1304,7 +1304,7 @@ input.checkbox { height:auto; vertical-align:middle; padding:0; box-shadow:none;
 /*======================================================================
   26. Promotional Top Popup
 ========================================================================*/
-.notification-bar { text-align:center; position:relative; z-index:5; background-color:#000; }
+.notification-bar { text-align:center; position:relative; z-index:5; background-color:#28a745; }
 .notification-bar__message { color:#fff; letter-spacing:1px; text-transform:uppercase; font-size:12px; padding:10px 30px; display:block; }
 .notification-bar__message:hover, .notification-bar__message:active, .notification-bar__message:focus, .notification-bar__message:focus-within { color:#fff; text-decoration:none; }
 .close-announcement { cursor:pointer; font-size:15px; font-weight:700; position:absolute; right:40px; top:8px; height:25px; width:25px; line-height:22px; color:#fff; }

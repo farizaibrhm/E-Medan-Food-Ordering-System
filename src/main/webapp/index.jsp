@@ -66,7 +66,7 @@
             <div class="row align-items-center">
                 <!--Desktop Logo-->
                 <div class="logo col-md-2 col-lg-2 d-none d-lg-block">
-                    <a href="homepage.html">
+                    <a href="index.jsp">
                         <img src="assets/images/e-Medan.svg" alt="e-Medan Food Ordering Website" title="e-Medan Food Ordering Website" />
                     </a>
                 </div>
@@ -81,7 +81,7 @@
                     <!--Desktop Menu-->
                     <nav class="grid__item" id="AccessibleNav"><!-- for mobile -->
                         <ul id="siteNav" class="site-nav medium center hidearrow">
-                            <li class="lvl1 parent megamenu"><a href="homepage.html">Home <i class="anm anm-angle-down-l"></i></a></li>
+                            <li class="lvl1 parent megamenu"><a href="index.jsp">Home <i class="anm anm-angle-down-l"></i></a></li>
                             <li class="lvl1 parent megamenu"><a href="about-us-notlogin.html">About <i class="anm anm-angle-down-l"></i></a></li>
                             <li class="lvl1 parent dropdown"><a href="menupagenotlogin.html">Menu <i class="anm anm-angle-down-l"></i></a>
                                 <ul class="dropdown">
@@ -97,7 +97,7 @@
                 <!--Mobile Logo-->
                 <div class="col-6 col-sm-6 col-md-6 col-lg-2 d-block d-lg-none mobile-logo">
                     <div class="logo">
-                        <a href="homepage.html">
+                        <a href="index.jsp">
                             <img src="assets/images/e-Medan.svg" alt="e-Medan Food Ordering Website" title="e-Medan Food Ordering Website" />
                         </a>
                     </div>
@@ -179,7 +179,7 @@
     <div class="mobile-nav-wrapper" role="navigation">
         <div class="closemobileMenu"><i class="icon anm anm-times-l pull-right"></i> Close Menu</div>
         <ul id="MobileNav" class="mobile-nav">
-            <li class="lvl1 parent megamenu"><a href="homepage.html">Home<i class="anm anm-plus-l"></i></a></li>
+            <li class="lvl1 parent megamenu"><a href="index.jsp">Home<i class="anm anm-plus-l"></i></a></li>
         </ul>
         </li>
         <li class="lvl1 parent megamenu"><a href="#">Shop <i class="anm anm-plus-l"></i></a>

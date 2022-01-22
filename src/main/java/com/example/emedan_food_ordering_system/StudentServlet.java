@@ -1,6 +1,7 @@
 package com.example.emedan_food_ordering_system;
 
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.sql.SQLException;
 import java.util.List;
 
@@ -10,6 +11,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import com.example.emedan_food_ordering_system.StudentDAO;
 import com.example.emedan_food_ordering_system.Student;
@@ -28,8 +30,17 @@ public class StudentServlet extends HttpServlet {
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException{
-        String action = request.getServletPath();
+        PrintWriter out =response.getWriter();
+        HttpSession session = request.getSession();
 
+        int studentID = (int) session.getAttribute("studentID");
+        String studentName = (String) session.getAttribute("studentName");
+        String studentPhoneNum = (String) session.getAttribute("studentPhoneNum");
+        String studentEmail = (String) session.getAttribute("studentEmail");
+        String studentPassword = (String) session.getAttribute("studentPassword");
+
+
+        String action = request.getServletPath();
         try {
             switch (action){
                 case "/insert":

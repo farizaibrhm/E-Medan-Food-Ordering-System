@@ -17,30 +17,64 @@ public class StudentDAO {
     private String dbDriver = "org.postgresql.Driver";
 
     public static final String INSERT_STUDENT_SQL = "INSERT INTO student" + "(STUDENTID, STUDENTNAME, STUDENTPHONENO, STUDENTEMAIL, STUDENTPASSWORD)" + "(?, ?, ?, ?, ?);";
-    public static final String SELECT_STUDENT_BY_ID = "SELECT STUDENTID, STUDENTNAME, STUDENTPHONENO, STUDENTEMAIL, STUDENTPASSWORD FROM STUDENT WHERE STUDENTID = ?;";
-    public static final String SELECT_ALL_STUDENT = "SELECT * FROM STUDENT;";
-    public static final String DELETE_STUDENT_SQL = "DELETE FROM STUDENT WHERE STUDENTID = ?;";
-    private static final String UPDATE_STUDENT_SQL = "UPDATE STUDENT SET STUDENTNAME = ?, STUDENTPHONENO = ?, STUDENTEMAIL = ?, STUDENTPASSWORD = ? WHERE ID = ?;";
+    public static final String SELECT_STUDENT_BY_ID = "SELECT STUDENTID, STUDENTNAME, STUDENTPHONENO, STUDENTEMAIL, STUDENTPASSWORD FROM student WHERE STUDENTID = ?;";
+    public static final String SELECT_ALL_STUDENT = "SELECT * FROM student;";
+    public static final String DELETE_STUDENT_SQL = "DELETE FROM student WHERE STUDENTID = ?;";
+    private static final String UPDATE_STUDENT_SQL = "UPDATE student SET STUDENTNAME = ?, STUDENTPHONENO = ?, STUDENTEMAIL = ?, STUDENTPASSWORD = ? WHERE ID = ?;";
 
-    public StudentDAO(){
+    static ResultSet rs = null;
 
-        public Connection connection(){
-            Connection conn = null;
-            try {
-                conn = DriverManager.getConnection(dbUrl, dbUname, dbPassword);
-
-                if(conn != null){
-                    System.out.println("Connected to the PostgreSQL successed !");
-                } else {
-                    System.out.println("Failed to make connection");
-                }
-            }catch (SQLException e){
-                System.out.println(e.getMessage());
-            }
-            return conn;
+    public void loadDriver(String dbDriver) {
+        try {
+            Class.forName(dbDriver);
+        } catch (ClassNotFoundException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
         }
-
-
     }
 
+    public Connection getConnection() {
+        Connection con = null;
+        try {
+            con = DriverManager.getConnection(dbUrl, dbUname, dbPassword);
+        } catch (SQLException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
+        return con;
+    }
+
+    public void addStudent(Student student){
+        try (Connection connection = DriverManager.getConnection(dbUrl, dbUname, dbPassword)) {
+            PreparedStatement preparedStatement = getConnection().prepareStatement(INSERT_STUDENT_SQL);{
+                preparedStatement.setInt(1, student.getStudentID());
+                preparedStatement.setString(2, student.getStudentName());
+                preparedStatement.setString(3, student.getStudentPhoneNum());
+                preparedStatement.setString(4, student.getStudentEmail());
+                preparedStatement.setString(5, student.getStudentPassword());
+
+                System.out.println(preparedStatement);
+
+                preparedStatement.executeUpdate();
+                }
+            } catch (SQLException ex){
+            System.out.println(ex.getMessage());
+        }
+    }
+
+    public static void  printSQLException (SQLException ex){
+        for (Throwable e: ex){
+            if(e instanceof SQLException){
+                e.printStackTrace(System.err);
+                System.err.println("SQLState: " + ((SQLException) e).getSQLState());
+                System.err.println("Error Code: " + ((SQLException) e).getErrorCode());
+                System.err.println("Message: " + e.getMessage());
+                Throwable t = ex.getCause();
+                while (t != null) {
+                    System.out.println("Cause: " + t);
+                    t = t.getCause();
+                }
+            }
+        }
+    }
 }

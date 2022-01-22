@@ -3,7 +3,7 @@ package com.example.emedan_food_ordering_system;
 public class Student {
     public int studentID;
     public String studentName;
-    public int studentPhoneNum;
+    public String studentPhoneNum;
     public String studentEmail;
     public String studentPassword;
 
@@ -18,7 +18,7 @@ public class Student {
         this.studentPassword = sPassword;
     }
 
-    public Student(int sID, String sName, int sPhoneNum, String studentEmail, String sPassword){
+    public Student(int sID, String sName, String sPhoneNum, String studentEmail, String sPassword){
         super();
         this.studentID = sID;
         this.studentName = sName;
@@ -43,10 +43,10 @@ public class Student {
         this.studentName=sName;
     }
 
-    public int getStudentPhoneNum(){
+    public String getStudentPhoneNum(){
         return studentPhoneNum;
     }
-    public void setStudentPhoneNum(int sPhoneNum){
+    public void setStudentPhoneNum(String sPhoneNum){
         this.studentPhoneNum = sPhoneNum;
     }
     public String getStudentEmail(){

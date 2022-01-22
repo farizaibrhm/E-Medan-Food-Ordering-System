@@ -69,8 +69,7 @@
                         <li class="lvl1 parent megamenu"><a href="homepage.html">Home <i class="anm anm-angle-down-l"></i></a></li>
                         <li class="lvl1 parent megamenu"><a href="about-us.html">About <i class="anm anm-angle-down-l"></i></a></li>
                         <li class="lvl1 parent dropdown"><a href="menupagenotlogin.html">Menu <i class="anm anm-angle-down-l"></i></a></li>
-                    
-
+                        </li>
                     </ul>
                 </nav>
                 <!--End Desktop Menu-->
@@ -95,16 +94,53 @@
         <div class="container">
             <div class="signup-content">
                 <div class="signup-form">
-                    <h2 class="form-title">Sign Up</h2>
-                    <a href= "D:\E-Medan-Food-Ordering-System\E- Medan Ordering System\e-Medan Website Template (Latest)\registerStudent.html"><button class="btn btn-light">Student</button></a><br><br>
-                    <a href="D:\E-Medan-Food-Ordering-System\E- Medan Ordering System\e-Medan Website Template (Latest)\registerCafeWorker.html"><button class="btn btn-light">Cafe Worker</button></a>
+                    
+                    <h2 class="form-title">Sign up</h2>
+                    <h3 class="form-title">Cafe Worker</h3>
+                    <form method="POST" class="register-form" id="register-form">
+                        <div class="form-group">
+                            <label for="cafeWorkerID"><i class="zmdi zmdi-account material-icons-name"></i></label>
+                            <input type="text" name="cafeWorkerID" id="cafeWorkerID" placeholder="Identification number"/>
+                        </div>
+                        <div class="form-group">
+                            <label for="cafeWorkerStallName"><i class="zmdi zmdi-account material-icons-name"></i></label>
+                            <input type="text" name="cafeWorkerStallName" id="cafeWorkerStallName" placeholder="Stall Name"/>
+                        </div>
+                        <div class="form-group">
+                            <label for="cafeWorkerPhoneNum"><i class="zmdi zmdi-account material-icons-name"></i></label>
+                            <input type="text" name="cafeWorkerPhoneNum" id="cafeWorkerPhoneNum" placeholder="Phone Number"/>
+                        </div>
+                        <div class="form-group">
+                            <label for="cafeWorkerEmail"><i class="zmdi zmdi-account material-icons-name"></i></label>
+                            <input type="text" name="cafeWorkerEmail" id="cafeWorkerEmail" placeholder="Email"/>
+                        </div>
+                        <div class="form-group">
+                            <label for="cafeWorkerPassword"><i class="zmdi zmdi-account material-icons-name"></i></label>
+                            <input type="text" name="cafeWorkerPassword" id="cafeWorkerPassword" placeholder="Password"/>
+                        </div>
+                        <div class="form-group">
+                            <label for="cafeWorkerAccNum"><i class="zmdi zmdi-account material-icons-name"></i></label>
+                            <input type="text" name="cafeWorkerAccNum" id="cafeWorkerAccNum" placeholder="Phone Number"/>
+                        </div>
+                        <div class="form-group">
+                            <label for="cafeWorkerAccName"><i class="zmdi zmdi-account material-icons-name"></i></label>
+                            <input type="text" name="cafeWorkerAccName" id="cafeWorkerAccName" placeholder="Email"/>
+                        </div>
+                        <div class="form-group">
+                            <input type="checkbox" name="agree-term" id="agree-term" class="agree-term" />
+                            <label for="agree-term" class="label-agree-term"><span><span></span></span>I agree all statements in  <a href="#" class="term-service">Terms of service</a></label>
+                        </div>
+                        <div class="form-group form-button">
+                            <input type="submit" name="signup" id="signup" class="form-submit" value="Register"/>
+                        </div>
+                    </form>
                 </div>
-                <div class="signin-image">
-                    <figure><img src="assets/images/sign-up-govi.png" alt="sing up image"></figure>
+                <div class="signup-image">
+                    <figure><img src="assets/images/signup-image.jpg" alt="sing up image"></figure>
+                    <a href="login.html" class="signup-image-link">I am already member</a>
                 </div>
             </div>
         </div>
-        
     </section>
 
 

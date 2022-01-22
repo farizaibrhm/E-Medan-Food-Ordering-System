@@ -401,7 +401,7 @@
                         <p>UPLOAD IMAGE</p>
                         <div class="name-item">
                             <input type="file"
-                                   id="MENUIMAGE" name="MENUIMAGE"
+                                   id="MENUIMAGE" name="MENUIMAGEuy"
                                    accept="image/png, image/jpeg"/>
                         </div>
                     </div>

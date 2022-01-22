@@ -19,23 +19,21 @@
 <link rel="stylesheet" href="assets/css/responsive.css">
 </head>
 <body class="template-index home2-default">
-<div id="pre-loader">
-    <img src="assets/images/loader.gif" alt="Loading..." />
-</div>
 <div class="pageWrapper">
 	<!--Promotion Bar-->
 	<div class="notification-bar mobilehide">
-    	<a href="#" class="notification-bar__message">Cafe Worker Profile</a>
+    	<a href="#" class="notification-bar__message">Student Profile</a>
         <span class="close-announcement">×</span>
     </div>
     <!--End Promotion Bar-->
+
     <!--Header-->
     <div class="header-wrap animated d-flex border-bottom">
     	<div class="container-fluid">
             <div class="row align-items-center">
             	<!--Desktop Logo-->
                 <div class="logo col-md-2 col-lg-2 d-none d-lg-block">
-                    <a href="index.html">
+                    <a href="homepagestudent.html">
                     	<img src="assets/images/e-Medan.svg" alt="e-Medan Food Ordering Website" title="e-Medan Food Ordering Website" />
                     </a>
                 </div>
@@ -44,12 +42,10 @@
                 	<!--Desktop Menu-->
                 	<nav class="grid__item" id="AccessibleNav"><!-- for mobile -->
                         <ul id="siteNav" class="site-nav medium center hidearrow">
-                            <li class="lvl1 parent dropdown"><a href="menucw.html">Menu <i class="anm anm-angle-down-l"></i></a>
-                            <li class="lvl1 parent megamenu"><a href="updateorder.html"> Order <i class="anm anm-angle-down-l"></i></a></li>
-                            <li class="lvl1 parent megamenu"><a href="feedbacklist.html"> Feedback <i class="anm anm-angle-down-l"></i></a></li>
-                            <li class="lvl1 parent megamenu"><a href="viewtotalsales.html"> Report <i class="anm anm-angle-down-l"></i></a></li>
-                            <li class="lvl1 parent megamenu"><a href="cafeWorkerProfile.html"> Account <i class="anm anm-angle-down-l"></i></a></li>
-                        
+                            <li class="lvl1 parent dropdown"><a href="homepagestudent.html">Home <i class="anm anm-angle-down-l"></i></a>
+                            <li class="lvl1 parent megamenu"><a href="about-us-student.html"> About <i class="anm anm-angle-down-l"></i></a></li>
+                            <li class="lvl1 parent megamenu"><a href="menuPage.html"> Menu <i class="anm anm-angle-down-l"></i></a></li>
+                            <li class="lvl1 parent megamenu"><a href="studentProfile.html"> Account <i class="anm anm-angle-down-l"></i></a></li>
                         </li>
                       </ul>
                     </nav>
@@ -72,13 +68,16 @@
 <div class="card h-100">
 <div class="card-body">
 <div class="account-settings">
+    <!-- Start display about read from database after student register account -->
 <div class="user-profile">
     <div class="user-avatar">
-        <img src="assets/images/stallicon.png" alt="Maxwell Admin">
+        <img src="assets/images/female-student.jpg" alt="Maxwell Admin">
     </div>
-    <h5 class="user-name">Gerai A</A></h5>
-    <h6 class="user-id">881015149872</h6>
+    <h5 class="user-name">Fatimah binti Fattah Amin</A></h5>
+    <h6 class="user-id">2021987286</h6>
 </div>
+
+<!-- End display about read from database after student register account -->
 </div>
 </div>
 </div>
@@ -90,50 +89,26 @@
 <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
     <h6 class="mb-2 text-primary">Personal Details</h6>
 </div>
+<div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+    <div class="form-group">
+        <label for="studentEmail">Email</label>
+        <input type="email" class="form-control" id="studentEmail">
+    </div>
+</div>
 
 <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
     <div class="form-group">
-        <label for="cafeWorkerID">Cafe Worker ID</label>
-        <input type="text" class="form-control" id="cafeWorkerID">
+        <label for="studentPassword">Password</label>
+        <input type="password" class="form-control" id="studentPassword">
     </div>
 </div>
-<div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
-    <div class="form-group">
-        <label for="fullName">Name</label>
-        <input type="text" class="form-control" id="fullName" >
-    </div>
-</div>
-<div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
-    <div class="form-group">
-        <label for="eMail">Email</label>
-        <input type="email" class="form-control" id="eMail">
-    </div>
-</div>
-<div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
-    <div class="form-group">
-        <label for="website">Bank Account Number</label>
-        <input type="url" class="form-control" id="website">
-    </div>
-</div>
-<div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
-    <div class="form-group">
-        <label for="website">Bank Name</label>
-        <input type="url" class="form-control" id="website" >
-    </div>
-</div>
-<div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
-    <div class="form-group">
-        <label for="website">Bank Account Name</label>
-        <input type="url" class="form-control" id="website">
-    </div>
-</div>
+
 </div>
 
 <div class="row gutters">
 <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
     <div class="text-right">
-        <a href= "cafeWorkerEditProfile.html"><button type="button" id="submit" name="submit" class="btn btn-primary">Edit Profile</button></a>
-        <a href= "deleteAccCafeWorker.html"><button type="button" id="submit" name="submit" class="btn btn-primary">Delete Account</button></a>
+        <button type="button" id="submit" name="submit" class="btn btn-primary">Save Changes</button>
     </div>
 </div>
 </div>

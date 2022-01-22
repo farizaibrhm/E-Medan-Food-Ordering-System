@@ -7,10 +7,12 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="E-Medan-Food-Ordering-System" />
+        <module name="e-Medan_Food_Ordering_System" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="E-Medan-Food-Ordering-System" target="1.8" />
+      <module name="e-Medan_Food_Ordering_System" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>

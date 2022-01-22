@@ -395,7 +395,7 @@
                     </div>
                     <div class="item">
                         <p>CAFE WORKER ID</p>
-                        <input type="text" name="CWORKID"/>
+                        <input type="text" name="CWORKIDxxc"/>
                     </div>
                     <div class="item">
                         <p>UPLOAD IMAGE</p>

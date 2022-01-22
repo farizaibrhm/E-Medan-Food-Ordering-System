@@ -16,65 +16,40 @@ public class StudentDAO {
     private String dbPassword = "452a173c45857bc5d4a0e09e553e6748e19271602a8311160d7dca2ee3cf40a6";
     private String dbDriver = "org.postgresql.Driver";
 
-    public static final String INSERT_STUDENT_SQL = "INSERT INTO student" + "(STUDENTID, STUDENTNAME, STUDENTPHONENO, STUDENTEMAIL, STUDENTPASSWORD)" + "(?, ?, ?, ?, ?);";
-    public static final String SELECT_STUDENT_BY_ID = "SELECT STUDENTID, STUDENTNAME, STUDENTPHONENO, STUDENTEMAIL, STUDENTPASSWORD FROM student WHERE STUDENTID = ?;";
-    public static final String SELECT_ALL_STUDENT = "SELECT * FROM student;";
-    public static final String DELETE_STUDENT_SQL = "DELETE FROM student WHERE STUDENTID = ?;";
-    private static final String UPDATE_STUDENT_SQL = "UPDATE student SET STUDENTNAME = ?, STUDENTPHONENO = ?, STUDENTEMAIL = ?, STUDENTPASSWORD = ? WHERE ID = ?;";
+    public static final String INSERT_STUDENT_SQL = "INSERT INTO student" + "(STUDENTID, STUDENTNAME, STUDENTPHONENO, STUDENTEMAIL, STUDENTPASSWORD) VALUES " + "(?, ?, ?, ?, ?);";
 
-    static ResultSet rs = null;
+    public StudentDAO(){
 
-    public void loadDriver(String dbDriver) {
-        try {
-            Class.forName(dbDriver);
-        } catch (ClassNotFoundException e) {
-            // TODO Auto-generated catch block
+    }
+    protected Connection getConnection(){
+        Connection connection = null;
+        try{
+            Class.forName("org.postgresql.Driver");
+            connection = DriverManager.getConnection(dbUrl, dbUname, dbPassword);
+        } catch (SQLException e){
+            e.printStackTrace();
+        } catch (ClassNotFoundException e){
             e.printStackTrace();
         }
+        return connection;
     }
 
-    public Connection getConnection() {
-        Connection con = null;
-        try {
-            con = DriverManager.getConnection(dbUrl, dbUname, dbPassword);
-        } catch (SQLException e) {
-            // TODO Auto-generated catch block
+    public void insertStudent(Student student) throws SQLException{
+        System.out.println(INSERT_STUDENT_SQL);
+
+        try(Connection connection = getConnection(); PreparedStatement preparedStatement = connection.prepareStatement(INSERT_STUDENT_SQL)){
+            preparedStatement.setInt(1, student.getStudentID());
+            preparedStatement.setString(2,student.getStudentName());
+            preparedStatement.setString(3,student.getStudentPhoneNum());
+            preparedStatement.setString(4,student.getStudentEmail());
+            preparedStatement.setString(5,student.getStudentPassword());
+            System.out.println(preparedStatement);
+            preparedStatement.executeUpdate();
+        }catch (SQLException e){
             e.printStackTrace();
         }
-        return con;
-    }
 
-    public void addStudent(Student student){
-        try (Connection connection = DriverManager.getConnection(dbUrl, dbUname, dbPassword)) {
-            PreparedStatement preparedStatement = getConnection().prepareStatement(INSERT_STUDENT_SQL);{
-                preparedStatement.setInt(1, student.getStudentID());
-                preparedStatement.setString(2, student.getStudentName());
-                preparedStatement.setString(3, student.getStudentPhoneNum());
-                preparedStatement.setString(4, student.getStudentEmail());
-                preparedStatement.setString(5, student.getStudentPassword());
 
-                System.out.println(preparedStatement);
-
-                preparedStatement.executeUpdate();
-                }
-            } catch (SQLException ex){
-            System.out.println(ex.getMessage());
-        }
-    }
-
-    public static void  printSQLException (SQLException ex){
-        for (Throwable e: ex){
-            if(e instanceof SQLException){
-                e.printStackTrace(System.err);
-                System.err.println("SQLState: " + ((SQLException) e).getSQLState());
-                System.err.println("Error Code: " + ((SQLException) e).getErrorCode());
-                System.err.println("Message: " + e.getMessage());
-                Throwable t = ex.getCause();
-                while (t != null) {
-                    System.out.println("Cause: " + t);
-                    t = t.getCause();
-                }
-            }
-        }
     }
 }
+

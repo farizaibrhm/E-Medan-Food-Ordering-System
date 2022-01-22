@@ -3,9 +3,7 @@
 <%@page import="java.sql.ResultSet"%>
 <%@page import="java.sql.Statement"%>
 <%@page import="java.sql.Connection"%>
-
-
-
+<%@ page import="com.example.emedan_food_ordering_system.Student" %>
 
 
 <html lang="en">
@@ -21,18 +19,18 @@
     <meta name="description" content="description">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Favicon -->
-    <link rel="shortcut icon" href="assets/images/e-Medan.svg" />
+    <link rel="shortcut icon" href="<%=application.getContextPath() %>/assets/images/e-Medan.svg" />
     <!-- Plugins CSS -->
-    <link rel="stylesheet" href="assets/css/plugins.css">
+    <link rel="stylesheet" href="<%=application.getContextPath() %>/assets/css/plugins.css">
     <!-- Bootstap CSS -->
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="<%=application.getContextPath() %>/assets/css/bootstrap.min.css">
     <!-- Main Style CSS -->
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="<%=application.getContextPath() %>/assets/css/style.css">
     <!-- Font Icon -->
-    <link rel="stylesheet" href="fonts/material-icon/css/material-design-iconic-font.min.css">
+    <link rel="stylesheet" href="<%=application.getContextPath() %>/fonts/material-icon/css/material-design-iconic-font.min.css">
 
     <!-- Main css -->
-    <link rel="stylesheet" href="assets/css/styleregister.css">
+    <link rel="stylesheet" href="<%=application.getContextPath() %>/assets/css/styleregister.css">
 </head>
 <body>
 <!--Top Header-->
@@ -62,7 +60,7 @@
             <!--Desktop Logo-->
             <div class="logo col-md-2 col-lg-2 d-none d-lg-block">
                 <a href="homepage.html">
-                    <img src="assets/images/e-Medan.svg" alt="e-Medan Food Ordering Website" title="e-Medan Food Ordering Website" />
+                    <img src="<%=application.getContextPath() %>/assets/images/e-Medan.svg" alt="e-Medan Food Ordering Website" title="e-Medan Food Ordering Website" />
                 </a>
             </div>
             <!--End Desktop Logo-->
@@ -87,7 +85,7 @@
             <div class="col-6 col-sm-6 col-md-6 col-lg-2 d-block d-lg-none mobile-logo">
                 <div class="logo">
                     <a href="homepage.html">
-                        <img src="assets/images/e-Medan.svg" alt="e-Medan Food Ordering Website" title="e-Medan Food Ordering Website" />
+                        <img src="${pageContext.request.contextPath}/assets/images/e-Medan.svg" alt="e-Medan Food Ordering Website" title="e-Medan Food Ordering Website" />
                     </a>
                 </div>
             </div>
@@ -107,26 +105,28 @@
 
                     <h2 class="form-title">Sign up</h2>
                     <h3 class="form-title">Student</h3>
-                    <form method="POST" class="register-form" id="register-form">
+
+                    <form action="<%=request.getContextPath()%>StudentServlet"  method="POST" class="register-form" id="register-form">
+
                         <div class="form-group">
                             <label for="studentID"><i class="zmdi zmdi-account material-icons-name"></i></label>
-                            <input type="text" name="studentID" id="studentID" placeholder="Identification number" />
+                            <input type="text" name="studentID" id="studentID" placeholder="Identification number"  />
                         </div>
                         <div class="form-group">
                             <label for="studentName"><i class="zmdi zmdi-account material-icons-name"></i></label>
-                            <input type="text" name="studentName" id="studentName" placeholder="Student Name" value="<c:out value='${student.STUDENTNAME}'/>"/>
+                            <input type="text" name="studentName" id="studentName" placeholder="Student Name" />
                         </div>
                         <div class="form-group">
                             <label for="studentPhoneNum"><i class="zmdi zmdi-account material-icons-name"></i></label>
-                            <input type="text" name="studentPhoneNum" id="studentPhoneNum" placeholder="Phone Number" value="<c:out value='${student.STUDENTPHONENUM}'/>"/>
+                            <input type="text" name="studentPhoneNum" id="studentPhoneNum" placeholder="Phone Number"  />
                         </div>
                         <div class="form-group">
                             <label for="studentEmail"><i class="zmdi zmdi-account material-icons-name"></i></label>
-                            <input type="text" name="studentEmail" id="studentEmail" placeholder="Email" value="<c:out value='${student.STUDENTEMAIL}'/>"/>
+                            <input type="text" name="studentEmail" id="studentEmail" placeholder="Email" />
                         </div>
                         <div class="form-group">
                             <label for="studentPassword"><i class="zmdi zmdi-account material-icons-name"></i></label>
-                            <input type="text" name="studentPassword" id="studentPassword" placeholder="Password" value="<c:out value='${student.STUDENTPASSWORD}'/>"/>
+                            <input type="password" name="studentPassword" id="studentPassword" placeholder="Password" />
                         </div>
                         <div class="form-group">
                             <input type="checkbox" name="agree-term" id="agree-term" class="agree-term" />
@@ -135,10 +135,15 @@
                         <div class="form-group form-button">
                             <input type="submit" name="signup" id="signup" class="form-submit" value="Register"/>
                         </div>
+
+
+
                     </form>
+
+
                 </div>
                 <div class="signup-image">
-                    <figure><img src="assets/images/signup-image.jpg" alt="sing up image"></figure>
+                    <figure><img src="${pageContext.request.contextPath}assets/images/signup-image.jpg" alt="sing up image"></figure>
                     <a href="<%=request.getContextPath()%>/login.jsp" class="signup-image-link">I am already member</a>
                 </div>
             </div>

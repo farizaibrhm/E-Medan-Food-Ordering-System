@@ -8,14 +8,14 @@
     <meta name="description" content="description">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Favicon -->
-    <link rel="shortcut icon" href="assets/images/favicon.png" />
+    <link rel="shortcut icon" href="<%=application.getContextPath() %>/assets/images/favicon.png" />
     <!-- Plugins CSS -->
-    <link rel="stylesheet" href="assets/css/plugins.css">
+    <link rel="stylesheet" href="<%=application.getContextPath() %>/assets/css/plugins.css">
     <!-- Bootstap CSS -->
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="<%=application.getContextPath() %>/assets/css/bootstrap.min.css">
     <!-- Main Style CSS -->
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="assets/css/responsive.css">
+    <link rel="stylesheet" href="<%=application.getContextPath() %>/assets/css/style.css">
+    <link rel="stylesheet" href="<%=application.getContextPath() %>/assets/css/responsive.css">
 </head>
 <body class="template-index home2-default">
 <div id="pre-loader">
@@ -52,8 +52,8 @@
                 <div class="col-2 col-sm-4 col-md-3 col-lg-4 text-right">
                     <span class="user-menu d-block d-lg-none"><i class="anm anm-user-al" aria-hidden="true"></i></span>
                     <ul class="customer-links list-inline">
-                        <li><a href="login.html">Login</a></li>
-                        <li><a href="register.html">Create Account</a></li>
+                        <li><a href="<%=request.getContextPath()%>/login.jsp">Login</a></li>
+                        <li><a href="<%=request.getContextPath()%>/register.jsp">Create Account</a></li>
                     </ul>
                 </div>
             </div>

@@ -16,32 +16,23 @@ import javax.servlet.http.HttpSession;
 import com.example.emedan_food_ordering_system.StudentDAO;
 import com.example.emedan_food_ordering_system.Student;
 
-@WebServlet(name = "StudentServlet", value = "/StudentServlet")
+@WebServlet("/")
 public class StudentServlet extends HttpServlet {
-    private static final long serialVersionUID = 1 ;
+    private static final long serialVersionUID = 1;
     private StudentDAO studentDAO;
 
-    public void init(){
+    public void init() {
         studentDAO = new StudentDAO();
     }
 
-    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException{
-        doGet(request, response);
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    doGet(request, response);
+
     }
 
-    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException{
-        PrintWriter out =response.getWriter();
-        HttpSession session = request.getSession();
-
-        int studentID = (int) session.getAttribute("studentID");
-        String studentName = (String) session.getAttribute("studentName");
-        String studentPhoneNum = (String) session.getAttribute("studentPhoneNum");
-        String studentEmail = (String) session.getAttribute("studentEmail");
-        String studentPassword = (String) session.getAttribute("studentPassword");
-
-
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws  ServletException, IOException{
         String action = request.getServletPath();
-        try {
+        try{
             switch (action){
                 case "/insert":
                     insertStudent(request, response);
@@ -51,14 +42,15 @@ public class StudentServlet extends HttpServlet {
         }
     }
 
-    private  void insertStudent(HttpServletRequest request, HttpServletResponse response) throws  SQLException, IOException{
-        int studentID = Integer.parseInt(request.getParameter("STUDENTID"));
-        String studentName = request.getParameter("STUDENTNAME");
-        String studentPhoneNum = request.getParameter("STUDENTPHONENUM");
-        String studentEmail = request.getParameter("STUDENTEMAIL");
-        String studentPassword = request.getParameter("STUDENTPASSWORD");
+    private void insertStudent(HttpServletRequest request, HttpServletResponse response) throws  SQLException, IOException{
+        int studentID = Integer.parseInt(request.getParameter("studentID"));
+        String studentName = request.getParameter("studentName");
+        String studentPhoneNum = request.getParameter("studentPhoneNum");
+        String studentEmail = request.getParameter("studentEmail");
+        String studentPassword = request.getParameter("studentPassword");
         Student newStudent = new Student(studentID, studentName, studentPhoneNum, studentEmail, studentPassword);
-        studentDAO.addStudent(newStudent);
-        response.sendRedirect("list");
+        studentDAO.insertStudent(newStudent);
+        response.sendRedirect("index.jsp");
     }
+
 }

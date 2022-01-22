@@ -18,15 +18,16 @@ public class AddMenuServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException
     {
-        int MENUID = Integer.parseInt(request.getParameter("MENUID"));
+
+        String MENUID = request.getParameter("MENUID");
         String MENUNAME = request.getParameter("MENUNAME");
         String MENUIMAGE= request.getParameter("MENUIMAGE");
         String MENUDESC = request.getParameter("MENUDESC");
         double MENUPRICE = Double.parseDouble(request.getParameter("MENUPRICE"));
         String MENUTYPE = request.getParameter("MENUTYPE");
-        int CWORKID = Integer.parseInt(request.getParameter("CWORKID"));
+//        int CWORKID = Integer.parseInt(request.getParameter("CWORKID"));
 
-        Menu addmenu = new Menu(MENUID,MENUNAME,MENUIMAGE,MENUDESC,MENUPRICE,MENUTYPE,CWORKID);
+        Menu addmenu = new Menu(MENUID,MENUNAME,MENUIMAGE,MENUDESC,MENUPRICE,MENUTYPE);
         MenuDAO mn = new MenuDAO();
         String result = mn.addMenu(addmenu);
         response.getWriter().print(result);

@@ -6,8 +6,9 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+
 <html>
-<<head>
+<head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <title>Add Menu</title>
@@ -236,7 +237,7 @@
             </div>
             <!--End Breadcrumb-->
 
-            <<<<<<< Updated upstream
+
             <style>
 
                 div, form, input, select, textarea, p {
@@ -359,20 +360,17 @@
                 }
 
             </style>
-            =======
-
-            >>>>>>> Stashed changes
             <div class="testbox">
-                <form method="post" action="${pageContext.request.contextPath}/AddMenuServlet">
+                <form method="post" enctype="multipart/form-data" action="${pageContext.request.contextPath}/AddMenuServlet">
                     <div class="banner">
                         <h1>ADD MENU FORM</h1>
                     </div>
-                    <!--<div class="item">
+                    <%--<div class="item">
                         <p>MENU ID</p>
                         <div class="name-item">
-                            <input type="text" name="menuID"  />
+                            <input type="text" name="MENUID"  />
                         </div>
-                    </div>-->
+                    </div>--%>
                     <div class="item">
                         <p>MENU NAME</p>
                         <input type="text" name="MENUNAME"/>
@@ -395,20 +393,37 @@
                     </div>
                     <div class="item">
                         <p>CAFE WORKER ID</p>
-                        <input type="text" name="CWORKIDxxc"/>
+                        <input type="text" name="CWORKID"/>
                     </div>
                     <div class="item">
                         <p>UPLOAD IMAGE</p>
                         <div class="name-item">
-                            <input type="file"
-                                   id="MENUIMAGE" name="MENUIMAGEuy"
-                                   accept="image/png, image/jpeg"/>
+                            <input type="file" id="MENUIMAGE" name="MENUIMAGE"/>
                         </div>
                     </div>
                     <div class="btn-block">
-                        <button type="submit" href="/">Submit</button>
+                        <button type="submit" value="submit">Submit</button>
                     </div>
                 </form>
+
+                <%--<%
+                    String mytext = request.getParameter("MENUNAME");
+
+                    if(mytext == null){
+
+                    }
+                    else{
+                        session.setAttribute("MENUNAME",request.getParameter("menuName"));
+                        session.setAttribute("MENUDESC",request.getParameter("menuDesc"));
+                        session.setAttribute("MENUPRICE",request.getParameter("menuPrice"));
+                        session.setAttribute("MENUTYPE",request.getParameter("menuType"));
+                        session.setAttribute("CWORKID",request.getParameter("cworkID"));
+                        session.setAttribute("MENUIMAGE",request.getParameter("menuImage"));
+                        out.println("session created");
+
+                    }
+                %>--%>
+
             </div>
             <!--MainContent-->
         </div>

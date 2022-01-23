@@ -1,18 +1,25 @@
 package com.example.emedan_food_ordering_system;
 
+import java.io.InputStream;
 import java.sql.Blob;
 
-public class Menu
+public class Menu implements java.io.Serializable
 {
-    private int MENUID;
+    private String MENUID;
     private String MENUNAME;
-    private String MENUIMAGE;
+    private InputStream MENUIMAGE;
     private String MENUDESC;
     private double MENUPRICE;
     private String MENUTYPE;
     private int CWORKID;
 
-    public Menu(int MENUID, String MENUNAME, String MENUIMAGE, String MENUDESC, double MENUPRICE, String MENUTYPE, int CWORKID) {
+
+    public Menu()
+    {
+
+    }
+
+    public Menu(String MENUID, String MENUNAME, InputStream MENUIMAGE, String MENUDESC, double MENUPRICE, String MENUTYPE, int CWORKID) {
         this.MENUID = MENUID;
         this.MENUNAME = MENUNAME;
         this.MENUIMAGE = MENUIMAGE;
@@ -22,11 +29,11 @@ public class Menu
         this.CWORKID = CWORKID;
     }
 
-    public int getMENUID() {
+    public String getMENUID() {
         return MENUID;
     }
 
-    public void setMENUID(int MENUID) {
+    public void setMENUID(String MENUID) {
         this.MENUID = MENUID;
     }
 
@@ -38,11 +45,11 @@ public class Menu
         this.MENUNAME = MENUNAME;
     }
 
-    public String getMENUIMAGE() {
+    public InputStream getMENUIMAGE() {
         return MENUIMAGE;
     }
 
-    public void setMENUIMAGE(String MENUIMAGE) {
+    public void setMENUIMAGE(InputStream MENUIMAGE) {
         this.MENUIMAGE = MENUIMAGE;
     }
 

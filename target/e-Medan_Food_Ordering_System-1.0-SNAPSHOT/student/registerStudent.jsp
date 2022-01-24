@@ -106,7 +106,7 @@
                     <h2 class="form-title">Sign up</h2>
                     <h3 class="form-title">Student</h3>
 
-                    <form action="${pageContext.request.contextPath}/StudentServlet"  method="post" class="register-form" id="register-form">
+                    <form action="${pageContext.request.contextPath}/AddStudentServlet"  method="Post" class="register-form" id="register-form">
 
                         <div class="form-group">
                             <label for="studentID"><i class="zmdi zmdi-account material-icons-name"></i></label>

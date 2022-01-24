@@ -107,7 +107,7 @@
                 <div class="signin-form">
                     <h2 class="form-title">Sign In</h2>
                     <h3 class="form-title">Student</h3>
-                    <form method="POST" class="register-form" id="login-form">
+                    <form method="POST" class="register-form" id="login-form" >
                         <div class="form-group">
                             <label for="studentID"><i class="zmdi zmdi-account material-icons-name"></i></label>
                             <input type="text" name="studentID" id="studentID" placeholder="Student ID"/>

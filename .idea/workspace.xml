@@ -10,737 +10,40 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ee72d468-6c94-46a4-8c84-170d520e2088" name="Changes" comment="init">
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/f0292c84-c452-4e26-8082-ca4cf1c91f3b.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/f0292c84-c452-4e26-8082-ca4cf1c91f3b/storage_v2/_src_/database/danpunma7i9eh0.kg9-EQ.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/f0292c84-c452-4e26-8082-ca4cf1c91f3b/storage_v2/_src_/database/danpunma7i9eh0.kg9-EQ/schema/information_schema.FNRwLQ.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/f0292c84-c452-4e26-8082-ca4cf1c91f3b/storage_v2/_src_/database/danpunma7i9eh0.kg9-EQ/schema/pg_catalog.0S1ZNQ.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/f0292c84-c452-4e26-8082-ca4cf1c91f3b/storage_v2/_src_/database/danpunma7i9eh0.kg9-EQ/schema/public.abK9xQ.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/example/emedan_food_ordering_system/AddMenuServlet.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/example/emedan_food_ordering_system/Menu.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/example/emedan_food_ordering_system/MenuDAO.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/META-INF/MANIFEST.MF" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/WEB-INF/classes/com/example/emedan_food_ordering_system/AddMenuServlet.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/WEB-INF/classes/com/example/emedan_food_ordering_system/Menu.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/WEB-INF/classes/com/example/emedan_food_ordering_system/MenuDAO.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/WEB-INF/lib/checker-qual-3.5.0.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/WEB-INF/lib/javax.mvc-api-1.0.0.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/WEB-INF/lib/jstl-1.2.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/WEB-INF/lib/postgresql-42.3.1.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/WEB-INF/web.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/.sass-cache/21880c0ffe15753a53f8402e9f64e1077e071510/style.scssc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/.sass-cache/2866be86c578bb583fbf023501bb9fd24cc3bf22/extend.scssc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/.sass-cache/2866be86c578bb583fbf023501bb9fd24cc3bf22/fonts.scssc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/.sass-cache/2866be86c578bb583fbf023501bb9fd24cc3bf22/global.scssc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/.sass-cache/2866be86c578bb583fbf023501bb9fd24cc3bf22/minxi.scssc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/.sass-cache/2866be86c578bb583fbf023501bb9fd24cc3bf22/variables.scssc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/.sass-cache/3948936f84e1a30385e73a9be140b58b48c82e15/style.scssc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/.sass-cache/643489b018602f15119d8f44aeb7fc79468873a9/main.scssc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/.sass-cache/643489b018602f15119d8f44aeb7fc79468873a9/responsive.scssc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/.sass-cache/7643c8aa2e335ff5e104bc47d8dd7f1a0693bb39/extend.scssc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/.sass-cache/7643c8aa2e335ff5e104bc47d8dd7f1a0693bb39/fonts.scssc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/.sass-cache/7643c8aa2e335ff5e104bc47d8dd7f1a0693bb39/global.scssc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/.sass-cache/7643c8aa2e335ff5e104bc47d8dd7f1a0693bb39/minxi.scssc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/.sass-cache/7643c8aa2e335ff5e104bc47d8dd7f1a0693bb39/variables.scssc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/.sass-cache/9dc767a56f3dc2f8a933300255cd2265f13191d4/main.scssc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/.sass-cache/9dc767a56f3dc2f8a933300255cd2265f13191d4/responsive.scssc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/css/bootstrap.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/css/cartprogressor.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/css/plugins.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/css/responsive.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/css/style.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/css/style.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/css/styleregister.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/fonts/annimex-icons0f29.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/fonts/annimex-icons0f29.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/fonts/annimex-icons0f29.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/fonts/annimex-icons0f29.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/fonts/fontawesome-webfont3e6e.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/fonts/fontawesome-webfont3e6e.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/fonts/fontawesome-webfont3e6e.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/fonts/fontawesome-webfont3e6e.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/fonts/fontawesome-webfont3e6e.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/fonts/fontawesome-webfontd41d.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/fonts/themify9f24.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/fonts/themify9f24.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/fonts/themify9f24.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/fonts/themify9f24.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/fonts/themifyd41d.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/about1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/about2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/about3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/ajax-loader.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/apple-touch-icon-114x114.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/apple-touch-icon-57x57.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/apple-touch-icon-72x72.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/arrow-select.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/autoparts/categories-img1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/autoparts/categories-img2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/autoparts/categories-img3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/autoparts/categories-img4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/autoparts/categories-img5.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/autoparts/categories-img6.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/autoparts/categories-img7.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/autoparts/categories-img8.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/bakso.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/bg1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/bg_3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/bihun tomyam.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/blog/blog-post-1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/blog/blog-post-2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/blog/blog-post-3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/blog/blog-post-4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/blog/blog-post-5.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/blog/blog-post-6.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/blog/blog-post-7.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/blog/blog-post-sml-1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/blog/blog-post-sml-2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/blog/blog-post-sml-3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/blog/blog-post-sml-4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/blog/post-img1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/blog/post-img2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/burger-daging.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/burger.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/cards.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/cat-men.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/cat-women.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/cat-women1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/cat-women2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/cat-women3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/check.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/collection/accessories.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/collection/bag.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/collection/collection-page1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/collection/collection-page2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/collection/collection-page3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/collection/collection-page4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/collection/collection-page5.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/collection/collection-page6.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/collection/collection-page7.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/collection/collection-page8.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/collection/collection1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/collection/collection2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/collection/collection3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/collection/collection4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/collection/cosmetic.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/collection/cosmetic1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/collection/cosmetic2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/collection/cosmetic3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/collection/fashion.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/collection/home10-sm-banner1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/collection/home10-sm-banner2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/collection/home10-sm-banner3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/collection/home10-sm-banner4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/collection/home11-grid-sm-banner1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/collection/home11-grid-sm-banner10.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/collection/home11-grid-sm-banner2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/collection/home11-grid-sm-banner3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/collection/home11-grid-sm-banner4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/collection/home11-grid-sm-banner5.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/collection/home11-grid-sm-banner6.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/collection/home11-grid-sm-banner7.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/collection/home11-grid-sm-banner8.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/collection/home11-grid-sm-banner9.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/collection/home12-category-bnr1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/collection/home12-category-bnr2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/collection/home12-category-bnr3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/collection/home13-autoparts1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/collection/home13-autoparts2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/collection/home13-autoparts3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/collection/home13-autoparts4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/collection/home13-autoparts5.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/collection/home13-autoparts6.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/collection/home14-bags-sm-banner1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/collection/home14-bags-sm-banner2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/collection/home14-bags-sm-banner3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/collection/home14-bags-sm-banner4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/collection/home14-bags-sm-banner5.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/collection/home15-lookbook1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/collection/home15-lookbook2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/collection/image-banner-home15-1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/collection/image-banner-home15-2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/collection/image-banner-home15-3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/collection/image-banner-home15-4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/collection/image-banner-home15-5.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/collection/jewellery-collection1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/collection/jewellery-collection2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/collection/jewellery-collection3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/collection/jewellery-collection4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/collection/jewellery-collection5.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/collection/jewellery-collection6.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/collection/jewellry.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/collection/modern-fi-1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/collection/modern-fi-2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/collection/modern-fi-3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/collection/modern1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/collection/modern2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/collection/modern3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/collection/modern4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/collection/modern5.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/collection/shoes-collection1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/collection/shoes-collection2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/collection/shoes-collection3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/collection/shoes.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/coming-soon.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/cosmetic-product/product-image1-1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/cosmetic-product/product-image1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/cosmetic-product/product-image10-1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/cosmetic-product/product-image10.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/cosmetic-product/product-image11-1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/cosmetic-product/product-image11.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/cosmetic-product/product-image12-1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/cosmetic-product/product-image12.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/cosmetic-product/product-image13-1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/cosmetic-product/product-image13.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/cosmetic-product/product-image14-1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/cosmetic-product/product-image14.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/cosmetic-product/product-image15-1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/cosmetic-product/product-image15.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/cosmetic-product/product-image2-1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/cosmetic-product/product-image2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/cosmetic-product/product-image3-1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/cosmetic-product/product-image3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/cosmetic-product/product-image4-1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/cosmetic-product/product-image4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/cosmetic-product/product-image5-1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/cosmetic-product/product-image5.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/cosmetic-product/product-image6-1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/cosmetic-product/product-image6.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/cosmetic-product/product-image7-1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/cosmetic-product/product-image7.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/cosmetic-product/product-image8-1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/cosmetic-product/product-image8.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/cosmetic-product/product-image9-1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/cosmetic-product/product-image9.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/cosmetic-product/single-product.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/credit-card.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/default-skin.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/diffrent-style-swatches.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/dollar.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/e-Medan.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/e-favicon.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/fast-fashion_600x.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/favicon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/female-student.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/grid.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/headercw.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/headercw1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/headercw2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/headerfoods.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/headernasilemak.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/home3-small-banner1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/home3-small-banner2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/home3-small-banner3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/jewellery-products/jewellery-products1-1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/jewellery-products/jewellery-products1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/jewellery-products/jewellery-products2-1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/jewellery-products/jewellery-products2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/jewellery-products/jewellery-products3-1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/jewellery-products/jewellery-products3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/jewellery-products/jewellery-products4-1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/jewellery-products/jewellery-products4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/jewellery-products/jewellery-products5-1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/jewellery-products/jewellery-products5.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/jewellery-products/jewellery-products6-1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/jewellery-products/jewellery-products6.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/kuey teow kungfu.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/list.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/loader.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/lock.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/logo-text.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/logo.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/logo/brandlogo1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/logo/brandlogo2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/logo/brandlogo3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/logo/brandlogo4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/logo/brandlogo5.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/logo/brandlogo6.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/lontong.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/lookbook-10.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/lookbook-11.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/lookbook-2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/lookbook-3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/lookbook-4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/lookbook-5.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/lookbook-6.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/lookbook-7.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/lookbook-8.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/lookbook-9.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/maggi goreng.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/male-student.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/mee_goreng.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/megamenu-bg1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/megamenu-bg2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/nasi ayam.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/nasi dagang kari ikan.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/nasi goreng kampung.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/nasi goreng pataya.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/nasi kerabu.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/nasi lemak ayam.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/nasi lemak biasa.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/newsletter-img.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/newsletter.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/order-icon.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/parallax-banners/cosmetic-parallax.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/parallax-banners/home13-car-parts.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/parallax-banners/home14-bags-parallax.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/parallax-banners/home9-parallax-banner1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/parallax-banners/home9-parallax-banner2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/parallax-banners/home9-parallax-banner3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/parallax-banners/jewellery-parallax.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/parallax-banners/parallax-banner.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/payment-img.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/phone-call.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/product-detail-page/camelia-reversible-big1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/product-detail-page/camelia-reversible-big10.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/product-detail-page/camelia-reversible-big2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/product-detail-page/camelia-reversible-big3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/product-detail-page/camelia-reversible-big4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/product-detail-page/camelia-reversible-big5.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/product-detail-page/camelia-reversible-big6.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/product-detail-page/camelia-reversible-big7.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/product-detail-page/camelia-reversible-big8.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/product-detail-page/camelia-reversible-big9.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/product-detail-page/camelia-reversible.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/product-detail-page/camelia-reversible0.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/product-detail-page/camelia-reversible1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/product-detail-page/camelia-reversible2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/product-detail-page/camelia-reversible3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/product-detail-page/camelia-reversible4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/product-detail-page/camelia-reversible5.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/product-detail-page/camelia-reversible6.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/product-detail-page/camelia-reversible7-big.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/product-detail-page/camelia-reversible7.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/product-detail-page/camelia-reversible8.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/product-detail-page/camelia-reversible9.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/product-detail-page/cape-dress-1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/product-detail-page/cape-dress-2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/product-detail-page/cape-dress-3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/product-detail-page/cape-dress-4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/product-detail-page/cape-dress-5.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/product-detail-page/cape-dress-6.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/product-detail-page/cape-dress-7.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/product-detail-page/cape-dress-8.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/product-detail-page/product-labels1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/product-detail-page/product-labels2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/product-detail-page/product-labels4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/product-detail-page/product-labels5.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/product-detail-page/product-labels6.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/product-detail-page/product-with-dropdown1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/product-detail-page/product-with-dropdown2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/product-detail-page/product-with-dropdown3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/product-detail-page/product-with-dropdown4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/product-detail-page/product-with-image-swatch1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/product-detail-page/product-with-image-swatch2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/product-detail-page/product-with-image-swatch3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/product-detail-page/product-with-image-swatch4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/product-detail-page/product-with-image-swatch5.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/product-detail-page/product-with-image-swatch6.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/product-detail-page/product-with-right-thumbs-1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/product-detail-page/product-with-right-thumbs-2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/product-detail-page/product-with-right-thumbs-3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/product-detail-page/product-with-right-thumbs-4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/product-detail-page/product-with-right-thumbs-5.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/product-detail-page/product-with-right-thumbs-6.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/product-detail-page/variant1-1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/product-detail-page/variant1-2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/product-detail-page/variant1-3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/product-detail-page/variant1-4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/product-detail-page/variant1-5.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/product-detail-page/variant1-6.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/product-images/abc.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/product-images/auto-parts-p-img1-1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/product-images/auto-parts-p-img1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/product-images/auto-parts-p-img2-1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/product-images/auto-parts-p-img2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/product-images/auto-parts-p-img3-1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/product-images/auto-parts-p-img3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/product-images/auto-parts-p-img4-1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/product-images/auto-parts-p-img4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/product-images/ayampaprik.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/product-images/bags-p-img1-1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/product-images/bags-p-img1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/product-images/bags-p-img2-1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/product-images/bags-p-img2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/product-images/bags-p-img3-1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/product-images/bags-p-img3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/product-images/bags-p-img4-1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/product-images/bags-p-img4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/product-images/bags-p-img5-1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/product-images/bags-p-img5.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/product-images/bags-p-img6-1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/product-images/bags-p-img6.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/product-images/bags-p-img7-1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/product-images/bags-p-img7.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/product-images/bags-p-img8-1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/product-images/bags-p-img8.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/product-images/burger-3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/product-images/butterchicken.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/product-images/cape-dress-1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/product-images/cape-dress-2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/product-images/dagingkicap.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/product-images/drink-1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/product-images/home15-product1-1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/product-images/home15-product1-2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/product-images/home15-product1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/product-images/home15-product2-1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/product-images/home15-product3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/product-images/home15-product4-1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/product-images/home15-product4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/product-images/home15-product5-1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/product-images/home15-product5.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/product-images/home15-product6-1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/product-images/home15-product6.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/product-images/home15-product7-1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/product-images/home15-product7.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/product-images/home7-product1-1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/product-images/home7-product1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/product-images/home7-product2-1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/product-images/home7-product2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/product-images/home7-product3-1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/product-images/home7-product3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/product-images/home7-product4-1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/product-images/home7-product4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/product-images/home7-product5-1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/product-images/home7-product5.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/product-images/home7-product6-1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/product-images/home7-product6.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/product-images/keligoreng.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/product-images/kentanggoreng.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/product-images/meatball.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/product-images/miloais.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/product-images/mini-product-img.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/product-images/mini-product-img1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/product-images/mini-product-img2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/product-images/mini-product-img3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/product-images/nasiayam.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/product-images/nasibujang.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/product-images/nasigorengayam.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/product-images/nasikerabu.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/product-images/pizza-2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/product-images/product-image-stw1-1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/product-images/product-image-stw1-2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/product-images/product-image-stw1-3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/product-images/product-image-stw1-4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/product-images/product-image-stw1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/product-images/product-image-swt2-1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/product-images/product-image-swt2-2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/product-images/product-image-swt2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/product-images/product-image1-1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/product-images/product-image1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/product-images/product-image10-1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/product-images/product-image10.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/product-images/product-image11-1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/product-images/product-image11.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/product-images/product-image12-1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/product-images/product-image12.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/product-images/product-image13-1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/product-images/product-image13.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/product-images/product-image14-1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/product-images/product-image14.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/product-images/product-image15-1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/product-images/product-image15.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/product-images/product-image16-1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/product-images/product-image16.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/product-images/product-image17-1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/product-images/product-image17.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/product-images/product-image18-1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/product-images/product-image18.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/product-images/product-image19-1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/product-images/product-image19.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/product-images/product-image2-1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/product-images/product-image2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/product-images/product-image20-1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/product-images/product-image20.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/product-images/product-image21-1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/product-images/product-image21.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/product-images/product-image22-1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/product-images/product-image22.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/product-images/product-image23-1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/product-images/product-image23.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/product-images/product-image24-1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/product-images/product-image24.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/product-images/product-image25-1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/product-images/product-image25.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/product-images/product-image26-1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/product-images/product-image26.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/product-images/product-image27-1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/product-images/product-image27.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/product-images/product-image28-1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/product-images/product-image28.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/product-images/product-image29-1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/product-images/product-image29.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/product-images/product-image3-1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/product-images/product-image3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/product-images/product-image30-1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/product-images/product-image30.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/product-images/product-image31-1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/product-images/product-image31.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/product-images/product-image32-1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/product-images/product-image32.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/product-images/product-image33-1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/product-images/product-image33.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/product-images/product-image34-1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/product-images/product-image34.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/product-images/product-image35-1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/product-images/product-image35.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/product-images/product-image36-1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/product-images/product-image36.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/product-images/product-image37-1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/product-images/product-image37.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/product-images/product-image38-1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/product-images/product-image38.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/product-images/product-image39-1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/product-images/product-image39.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/product-images/product-image4-1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/product-images/product-image4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/product-images/product-image40-1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/product-images/product-image40.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/product-images/product-image41-1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/product-images/product-image41.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/product-images/product-image42-1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/product-images/product-image42.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/product-images/product-image43-1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/product-images/product-image43.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/product-images/product-image44-1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/product-images/product-image44.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/product-images/product-image45-1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/product-images/product-image45.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/product-images/product-image46-1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/product-images/product-image46.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/product-images/product-image47-1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/product-images/product-image47.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/product-images/product-image48-1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/product-images/product-image48.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/product-images/product-image49-1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/product-images/product-image49.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/product-images/product-image5-1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/product-images/product-image5.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/product-images/product-image50-1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/product-images/product-image50.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/product-images/product-image6-1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/product-images/product-image6.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/product-images/product-image7-1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/product-images/product-image7.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/product-images/product-image8-1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/product-images/product-image8.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/product-images/product-image9-1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/product-images/product-image9.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/product-images/sirapbandung.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/product-images/variant1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/product-images/variant2-1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/product-images/variant2-2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/product-images/variant2-3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/product-images/variant2-4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/product-images/variant2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/product-images/variant3-1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/product-images/variant3-2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/product-images/variant3-3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/product-images/variant3-4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/product-images/variant3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/product-images/variant4-1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/product-images/variant4-2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/product-images/variant4-3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/product-images/variant4-4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/product-images/variant4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/product-images/variant5-1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/product-images/variant5.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/product-images/variant6.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/recent-commnet-img.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/reliable.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/return-mini.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/return.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/safepayment.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/shield.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/side-banner-2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/signin-image.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/signin-image.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/signup-image.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/signup-image.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/size.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/slideshow-banners/belle-banner1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/slideshow-banners/belle-banner2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/slideshow-banners/home11-grid-banner1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/slideshow-banners/home11-grid-banner2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/slideshow-banners/home12-category-banner1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/slideshow-banners/home12-category-banner2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/slideshow-banners/home13-auto-parts-bnr1-mobile.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/slideshow-banners/home13-auto-parts-bnr1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/slideshow-banners/home14-bags-bnr1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/slideshow-banners/home2-default-banner1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/slideshow-banners/home2-default-banner2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/slideshow-banners/home3-banner-mobile.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/slideshow-banners/home3-banner.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/slideshow-banners/home4-banner.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/slideshow-banners/home5-banner1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/slideshow-banners/home5-banner2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/slideshow-banners/home7-banner1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/slideshow-banners/home7-banner2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/slideshow-banners/home8-jewelry-banner1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/slideshow-banners/home8-jewelry-banner2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/slideshow-banners/home9-banner1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/stallicon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/swatches/color-img1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/swatches/color-img2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/swatches/color-img3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/swatches/color-img4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/truck-mini.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/truck.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/view.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/warranty.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/images/worldwide.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/js/bootstrap.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/js/lazysizes.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/js/main.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/js/mainform.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/js/plugins.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/js/popper.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/js/vendor/instagram-feed.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/js/vendor/jquery-3.3.1.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/js/vendor/jquery.cookie.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/js/vendor/masonry.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/js/vendor/modernizr-3.6.0.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/js/vendor/photoswipe-ui-default.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/js/vendor/photoswipe.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/js/vendor/wow.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/scss/common/extend.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/scss/common/fonts.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/scss/common/global.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/scss/common/minxi.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/scss/common/variables.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/scss/layouts/main.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/scss/layouts/responsive.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/scss/style.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/vendor/jquery/jquery-ui.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/vendor/jquery/jquery.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/cafe/AddMenu.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/cafe/cafeMenuList.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/cafe/cw_viewOrderDetails.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/cafe/deleteMenu.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/cafe/updateMenu.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/fonts/material-icon/css/material-design-iconic-font.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/fonts/material-icon/css/material-design-iconic-font.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/fonts/material-icon/fonts/Material-Design-Iconic-Font.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/fonts/material-icon/fonts/Material-Design-Iconic-Font.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/fonts/material-icon/fonts/Material-Design-Iconic-Font.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/fonts/material-icon/fonts/Material-Design-Iconic-Font.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/fonts/material-icon/fonts/Material-Design-Iconic-Font.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/fonts/poppins/poppins-v5-latin-300.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/fonts/poppins/poppins-v5-latin-300.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/fonts/poppins/poppins-v5-latin-300.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/fonts/poppins/poppins-v5-latin-300.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/fonts/poppins/poppins-v5-latin-300.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/fonts/poppins/poppins-v5-latin-300italic.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/fonts/poppins/poppins-v5-latin-300italic.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/fonts/poppins/poppins-v5-latin-300italic.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/fonts/poppins/poppins-v5-latin-300italic.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/fonts/poppins/poppins-v5-latin-300italic.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/fonts/poppins/poppins-v5-latin-500.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/fonts/poppins/poppins-v5-latin-500.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/fonts/poppins/poppins-v5-latin-500.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/fonts/poppins/poppins-v5-latin-500.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/fonts/poppins/poppins-v5-latin-500.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/fonts/poppins/poppins-v5-latin-500italic.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/fonts/poppins/poppins-v5-latin-500italic.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/fonts/poppins/poppins-v5-latin-500italic.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/fonts/poppins/poppins-v5-latin-500italic.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/fonts/poppins/poppins-v5-latin-500italic.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/fonts/poppins/poppins-v5-latin-600.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/fonts/poppins/poppins-v5-latin-600.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/fonts/poppins/poppins-v5-latin-600.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/fonts/poppins/poppins-v5-latin-600.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/fonts/poppins/poppins-v5-latin-600.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/fonts/poppins/poppins-v5-latin-700.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/fonts/poppins/poppins-v5-latin-700.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/fonts/poppins/poppins-v5-latin-700.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/fonts/poppins/poppins-v5-latin-700.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/fonts/poppins/poppins-v5-latin-700.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/fonts/poppins/poppins-v5-latin-700italic.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/fonts/poppins/poppins-v5-latin-700italic.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/fonts/poppins/poppins-v5-latin-700italic.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/fonts/poppins/poppins-v5-latin-700italic.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/fonts/poppins/poppins-v5-latin-700italic.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/fonts/poppins/poppins-v5-latin-800.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/fonts/poppins/poppins-v5-latin-800.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/fonts/poppins/poppins-v5-latin-800.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/fonts/poppins/poppins-v5-latin-800.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/fonts/poppins/poppins-v5-latin-800.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/fonts/poppins/poppins-v5-latin-800italic.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/fonts/poppins/poppins-v5-latin-800italic.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/fonts/poppins/poppins-v5-latin-800italic.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/fonts/poppins/poppins-v5-latin-800italic.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/fonts/poppins/poppins-v5-latin-800italic.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/fonts/poppins/poppins-v5-latin-900.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/fonts/poppins/poppins-v5-latin-900.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/fonts/poppins/poppins-v5-latin-900.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/fonts/poppins/poppins-v5-latin-900.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/fonts/poppins/poppins-v5-latin-900.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/fonts/poppins/poppins-v5-latin-italic.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/fonts/poppins/poppins-v5-latin-italic.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/fonts/poppins/poppins-v5-latin-italic.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/fonts/poppins/poppins-v5-latin-italic.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/fonts/poppins/poppins-v5-latin-italic.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/fonts/poppins/poppins-v5-latin-regular.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/fonts/poppins/poppins-v5-latin-regular.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/fonts/poppins/poppins-v5-latin-regular.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/fonts/poppins/poppins-v5-latin-regular.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/fonts/poppins/poppins-v5-latin-regular.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/fonts/poppins/roboto-condensed-v16-latin-700.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/fonts/poppins/roboto-condensed-v16-latin-700.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/fonts/poppins/roboto-condensed-v16-latin-700.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/fonts/poppins/roboto-condensed-v16-latin-700.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/fonts/poppins/roboto-condensed-v16-latin-700.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/fonts/poppins/roboto-condensed-v16-latin-700italic.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/fonts/poppins/roboto-condensed-v16-latin-700italic.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/fonts/poppins/roboto-condensed-v16-latin-700italic.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/fonts/poppins/roboto-condensed-v16-latin-700italic.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/fonts/poppins/roboto-condensed-v16-latin-700italic.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/fonts/poppins/roboto-condensed-v16-latin-italic.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/fonts/poppins/roboto-condensed-v16-latin-italic.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/fonts/poppins/roboto-condensed-v16-latin-italic.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/fonts/poppins/roboto-condensed-v16-latin-italic.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/fonts/poppins/roboto-condensed-v16-latin-italic.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/fonts/poppins/roboto-condensed-v16-latin-regular.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/fonts/poppins/roboto-condensed-v16-latin-regular.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/fonts/poppins/roboto-condensed-v16-latin-regular.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/fonts/poppins/roboto-condensed-v16-latin-regular.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/fonts/poppins/roboto-condensed-v16-latin-regular.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/E-Medan-Food-Ordering-System.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/e_Medan_Food_Ordering_System_war2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/e_Medan_Food_Ordering_System_war_exploded.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/mysql_connector_java.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/webContexts.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__javax_ejb_javax_ejb_api_3_2_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__javax_mvc_javax_mvc_api_1_0_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__javax_servlet_javax_servlet_api_4_0_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__javax_servlet_jstl_1_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__javax_transaction_javax_transaction_api_1_3.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apiguardian_apiguardian_api_1_1_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_checkerframework_checker_qual_3_5_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_api_5_7_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_engine_5_7_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_platform_junit_platform_commons_1_7_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_platform_junit_platform_engine_1_7_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_opentest4j_opentest4j_1_2_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_postgresql_postgresql_42_3_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/javax_servlet_jstl.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/e-Medan_Food_Ordering_System.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/f0292c84-c452-4e26-8082-ca4cf1c91f3b.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/f0292c84-c452-4e26-8082-ca4cf1c91f3b.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/f0292c84-c452-4e26-8082-ca4cf1c91f3b/storage_v2/_src_/database/danpunma7i9eh0.kg9-EQ/schema/public.abK9xQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/f0292c84-c452-4e26-8082-ca4cf1c91f3b/storage_v2/_src_/database/danpunma7i9eh0.kg9-EQ/schema/public.abK9xQ.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/emedan_food_ordering_system/AddMenuServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/emedan_food_ordering_system/AddMenuServlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/emedan_food_ordering_system/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/emedan_food_ordering_system/Menu.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/emedan_food_ordering_system/MenuDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/emedan_food_ordering_system/MenuDAO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/cafe/AddMenu.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/cafe/AddMenu.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/cafe/cafeMenuList.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/cafe/cafeMenuList.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/emedan_food_ordering_system/AddMenuServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/emedan_food_ordering_system/AddMenuServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/emedan_food_ordering_system/Menu.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/emedan_food_ordering_system/Menu.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/emedan_food_ordering_system/MenuDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/emedan_food_ordering_system/MenuDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/WEB-INF/classes/com/example/emedan_food_ordering_system/AddMenuServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/WEB-INF/classes/com/example/emedan_food_ordering_system/AddMenuServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/WEB-INF/classes/com/example/emedan_food_ordering_system/Menu.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/WEB-INF/classes/com/example/emedan_food_ordering_system/Menu.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/WEB-INF/classes/com/example/emedan_food_ordering_system/MenuDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/WEB-INF/classes/com/example/emedan_food_ordering_system/MenuDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/cafe/AddMenu.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/cafe/AddMenu.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/cafe/cafeMenuList.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/cafe/cafeMenuList.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/index.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
@@ -763,15 +66,28 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
-    <property name="DatabaseDriversLRU" value="postgresql" />
+    <property name="DatabaseDriversLRU" value="postgresql&#10;mysql" />
+    <property name="Downloaded.Files.Path.Enabled" value="false" />
+    <property name="Repository.Attach.Annotations" value="false" />
+    <property name="Repository.Attach.JavaDocs" value="false" />
+    <property name="Repository.Attach.Sources" value="false" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../../Program Files/Apache Software Foundation/Tomcat 9.0/lib" />
-    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java/com/example/emedan_food_ordering_system" />
+    <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.37241378" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Lenovo\IdeaProjects\E-Medan-Food-Ordering-System\src\main\java\com\example\emedan_food_ordering_system" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.example.emedan_food_ordering_system.controller" />
+      <recent name="com.example.emedan_food_ordering_system" />
+    </key>
   </component>
   <component name="RunManager">
     <configuration default="true" type="JetRunConfigurationType">
@@ -786,7 +102,7 @@
       </method>
     </configuration>
     <configuration name="Tomcat 9.0.54" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.54" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
-      <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8088/e_Medan_Food_Ordering_System_war_exploded/" />
+      <option name="BROWSER_ID" value="98ca6316-2f89-46d9-a9e5-fa9e2b0625b3" />
       <option name="UPDATING_POLICY" value="restart-server" />
       <deployment>
         <artifact name="e-Medan_Food_Ordering_System:war exploded">
@@ -883,8 +199,20 @@
       <option name="presentableId" value="Default" />
       <updated>1642827141271</updated>
       <workItem from="1642827143312" duration="861000" />
-      <workItem from="1642828179373" duration="5939000" />
+      <workItem from="1642828179373" duration="6653000" />
+      <workItem from="1642854416862" duration="15174000" />
+      <workItem from="1642914091725" duration="12038000" />
+      <workItem from="1642943565463" duration="3767000" />
+      <workItem from="1642992611949" duration="3982000" />
     </task>
+    <task id="LOCAL-00001" summary="Merge remote-tracking branch 'origin/dev' into dev">
+      <created>1642837016272</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1642837016272</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

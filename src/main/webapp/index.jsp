@@ -8,7 +8,7 @@
     <meta name="description" content="description">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Favicon -->
-    <link rel="shortcut icon" href="assets/images/favicon.png" />
+    <link rel="shortcut icon" href="assets/images/e-favicon.svg" />
     <!-- Plugins CSS -->
     <link rel="stylesheet" href="assets/css/plugins.css">
     <!-- Bootstap CSS -->
@@ -41,6 +41,7 @@
     <!--End Search Form Drawer-->
     <!--Top Header-->
     <div class="top-header">
+
         <div class="container-fluid">
             <div class="row">
                 <div class="col-10 col-sm-8 col-md-5 col-lg-4">

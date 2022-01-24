@@ -1,13 +1,7 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: Lenovo
-  Date: 21/1/2022
-  Time: 1:30 AM
-  To change this template use File | Settings | File Templates.
---%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+
 <html>
-<<head>
+<head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <title>Add Menu</title>
@@ -24,7 +18,6 @@
     <link rel="stylesheet" href="../assets/css/responsive.css">
 
     <style>
-
         div, form, input, select, textarea, p {
             padding: 0;
             margin: 0;
@@ -121,7 +114,6 @@
             opacity: 0;
             cursor: pointer;
         }
-
         button {
             width: 150px;
             padding: 10px;
@@ -143,7 +135,6 @@
                 justify-content: space-between;
             }*/
         }
-
     </style>
 
 </head>
@@ -236,9 +227,8 @@
             </div>
             <!--End Breadcrumb-->
 
-            <<<<<<< Updated upstream
-            <style>
 
+            <style>
                 div, form, input, select, textarea, p {
                     padding: 0;
                     margin: 0;
@@ -335,7 +325,6 @@
                     opacity: 0;
                     cursor: pointer;
                 }
-
                 button {
                     width: 150px;
                     padding: 10px;
@@ -357,22 +346,18 @@
                         justify-content: space-between;
                     }*/
                 }
-
             </style>
-            =======
-
-            >>>>>>> Stashed changes
             <div class="testbox">
-                <form method="post" action="${pageContext.request.contextPath}/AddMenuServlet">
+                <form method="post" enctype="multipart/form-data" action="${pageContext.request.contextPath}/AddMenuServlet">
                     <div class="banner">
                         <h1>ADD MENU FORM</h1>
                     </div>
-                    <!--<div class="item">
+                    <%--<div class="item">
                         <p>MENU ID</p>
                         <div class="name-item">
-                            <input type="text" name="menuID"  />
+                            <input type="text" name="MENUID"  />
                         </div>
-                    </div>-->
+                    </div>--%>
                     <div class="item">
                         <p>MENU NAME</p>
                         <input type="text" name="MENUNAME"/>
@@ -389,26 +374,40 @@
                         <p>MENU TYPE</p>
                         <select id="menuType" name="MENUTYPE">
                             <option value="choose" selected>CHOOSE MENU TYPE</option>
-                            <option value="food">F- FOOD</option>
-                            <option value="drinks">D- DRINK</option>
+                            <option value="F">FOOD</option>
+                            <option value="D">DRINK</option>
                         </select>
                     </div>
-<%--                    <div class="item">--%>
-<%--                        <p>CAFE WORKER ID</p>--%>
-<%--                        <input type="text" name="CWORKID"/>--%>
-<%--                    </div>--%>
+                    <div class="item">
+                        <p>CAFE WORKER ID</p>
+                        <input type="text" name="CWORKID"/>
+                    </div>
                     <div class="item">
                         <p>UPLOAD IMAGE</p>
                         <div class="name-item">
-                            <input type="file"
-                                   id="MENUIMAGE" name="MENUIMAGE"
-                                   accept="image/png, image/jpeg"/>
+                            <input type="file" id="MENUIMAGE" name="MENUIMAGE"/>
                         </div>
                     </div>
                     <div class="btn-block">
-                        <button type="submit" href="/">Submit</button>
+                        <button type="submit" value="submit">Submit</button>
                     </div>
                 </form>
+
+                <%--<%
+                    String mytext = request.getParameter("MENUNAME");
+                    if(mytext == null){
+                    }
+                    else{
+                        session.setAttribute("MENUNAME",request.getParameter("menuName"));
+                        session.setAttribute("MENUDESC",request.getParameter("menuDesc"));
+                        session.setAttribute("MENUPRICE",request.getParameter("menuPrice"));
+                        session.setAttribute("MENUTYPE",request.getParameter("menuType"));
+                        session.setAttribute("CWORKID",request.getParameter("cworkID"));
+                        session.setAttribute("MENUIMAGE",request.getParameter("menuImage"));
+                        out.println("session created");
+                    }
+                %>--%>
+
             </div>
             <!--MainContent-->
         </div>

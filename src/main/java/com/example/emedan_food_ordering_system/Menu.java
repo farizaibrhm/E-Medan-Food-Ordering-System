@@ -1,25 +1,39 @@
 package com.example.emedan_food_ordering_system;
 
-import java.sql.Blob;
-
-public class Menu
-{
+public class Menu {
     private String MENUID;
     private String MENUNAME;
-    private String MENUIMAGE;
+//    private InputStream MENUIMAGE;
+    private String fileName;
+    private String savePath;
     private String MENUDESC;
-    private double MENUPRICE;
+    private double MENUTPRICE;
     private String MENUTYPE;
-//    private int CWORKID;
+    private String CWORKID;
 
-    public Menu(String MENUID, String MENUNAME, String MENUIMAGE, String MENUDESC, double MENUPRICE, String MENUTYPE) {
+    public Menu() {
+    }
+
+    public Menu(String MENUNAME, String fileName, String savePath, String MENUDESC, double MENUTPRICE, String MENUTYPE, String CWORKID) {
+        super();
+        this.MENUNAME = MENUNAME;
+        this.fileName = fileName;
+        this.savePath = savePath;
+        this.MENUDESC = MENUDESC;
+        this.MENUTPRICE = MENUTPRICE;
+        this.MENUTYPE = MENUTYPE;
+        this.CWORKID = CWORKID;
+    }
+
+    public Menu(String MENUID, String MENUNAME, String fileName, String savePath, String MENUDESC, double MENUTPRICE, String MENUTYPE, String CWORKID) {
         this.MENUID = MENUID;
         this.MENUNAME = MENUNAME;
-        this.MENUIMAGE = MENUIMAGE;
+        this.fileName = fileName;
+        this.savePath = savePath;
         this.MENUDESC = MENUDESC;
-        this.MENUPRICE = MENUPRICE;
+        this.MENUTPRICE = MENUTPRICE;
         this.MENUTYPE = MENUTYPE;
-//        this.CWORKID = CWORKID;
+        this.CWORKID = CWORKID;
     }
 
     public String getMENUID() {
@@ -38,12 +52,20 @@ public class Menu
         this.MENUNAME = MENUNAME;
     }
 
-    public String getMENUIMAGE() {
-        return MENUIMAGE;
+    public String getFileName() {
+        return fileName;
     }
 
-    public void setMENUIMAGE(String MENUIMAGE) {
-        this.MENUIMAGE = MENUIMAGE;
+    public void setFileName(String fileName) {
+        this.fileName = fileName;
+    }
+
+    public String getSavePath() {
+        return savePath;
+    }
+
+    public void setSavePath(String savePath) {
+        this.savePath = savePath;
     }
 
     public String getMENUDESC() {
@@ -54,12 +76,12 @@ public class Menu
         this.MENUDESC = MENUDESC;
     }
 
-    public double getMENUPRICE() {
-        return MENUPRICE;
+    public double getMENUTPRICE() {
+        return MENUTPRICE;
     }
 
-    public void setMENUPRICE(double MENUPRICE) {
-        this.MENUPRICE = MENUPRICE;
+    public void setMENUTPRICE(double MENUTPRICE) {
+        this.MENUTPRICE = MENUTPRICE;
     }
 
     public String getMENUTYPE() {
@@ -68,5 +90,13 @@ public class Menu
 
     public void setMENUTYPE(String MENUTYPE) {
         this.MENUTYPE = MENUTYPE;
+    }
+
+    public String getCWORKID() {
+        return CWORKID;
+    }
+
+    public void setCWORKID(String CWORKID) {
+        this.CWORKID = CWORKID;
     }
 }

@@ -1,6 +1,6 @@
 package com.example.emedan_food_ordering_system;
 
-public class Student {
+public class Student implements java.io.Serializable{
     public int studentID;
     public String studentName;
     public String studentPhoneNum;
@@ -11,19 +11,13 @@ public class Student {
 
     }
 
-    public Student(String sName, String sEmail, String sPassword){
-        super();
-        this.studentName = sName;
-        this.studentEmail = sEmail;
-        this.studentPassword = sPassword;
-    }
 
-    public Student(int sID, String sName, String sPhoneNum, String studentEmail, String sPassword){
+    public Student(int sID, String sName, String sPhoneNum, String sEmail, String sPassword){
         super();
         this.studentID = sID;
         this.studentName = sName;
         this.studentPhoneNum = sPhoneNum;
-        this.studentEmail = studentEmail;
+        this.studentEmail = sEmail;
         this.studentPassword = sPassword;
     }
 

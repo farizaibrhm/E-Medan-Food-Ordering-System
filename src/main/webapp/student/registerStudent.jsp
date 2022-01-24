@@ -19,18 +19,18 @@
     <meta name="description" content="description">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Favicon -->
-    <link rel="shortcut icon" href="<%=application.getContextPath() %>/assets/images/e-Medan.svg" />
+    <link rel="shortcut icon" href="/assets/images/e-Medan.svg" />
     <!-- Plugins CSS -->
-    <link rel="stylesheet" href="<%=application.getContextPath() %>/assets/css/plugins.css">
+    <link rel="stylesheet" href="/assets/css/plugins.css">
     <!-- Bootstap CSS -->
-    <link rel="stylesheet" href="<%=application.getContextPath() %>/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
     <!-- Main Style CSS -->
-    <link rel="stylesheet" href="<%=application.getContextPath() %>/assets/css/style.css">
+    <link rel="stylesheet" href="/assets/css/style.css">
     <!-- Font Icon -->
-    <link rel="stylesheet" href="<%=application.getContextPath() %>/fonts/material-icon/css/material-design-iconic-font.min.css">
+    <link rel="stylesheet" href="/fonts/material-icon/css/material-design-iconic-font.min.css">
 
     <!-- Main css -->
-    <link rel="stylesheet" href="<%=application.getContextPath() %>/assets/css/styleregister.css">
+    <link rel="stylesheet" href="/assets/css/styleregister.css">
 </head>
 <body>
 <!--Top Header-->
@@ -106,7 +106,7 @@
                     <h2 class="form-title">Sign up</h2>
                     <h3 class="form-title">Student</h3>
 
-                    <form action="<%=request.getContextPath()%>StudentServlet"  method="POST" class="register-form" id="register-form">
+                    <form action="${pageContext.request.contextPath}/StudentServlet"  method="post" class="register-form" id="register-form">
 
                         <div class="form-group">
                             <label for="studentID"><i class="zmdi zmdi-account material-icons-name"></i></label>
@@ -128,6 +128,7 @@
                             <label for="studentPassword"><i class="zmdi zmdi-account material-icons-name"></i></label>
                             <input type="password" name="studentPassword" id="studentPassword" placeholder="Password" />
                         </div>
+                        <td><%=(request.getAttribute("errMessagge") == null) ? " " : request.getAttribute("errMessage")%></td>
                         <div class="form-group">
                             <input type="checkbox" name="agree-term" id="agree-term" class="agree-term" />
                             <label for="agree-term" class="label-agree-term"><span><span></span></span>I agree all statements in  <a href="#" class="term-service">Terms of service</a></label>
@@ -156,5 +157,20 @@
 <!-- JS -->
 <script src="assets/vendor/jquery/jquery.min.js"></script>
 <script src="assets/js/mainform.js"></script>
+
+<%
+    String mystudent = request.getParameter("studentID");
+    if (mystudent == null){
+
+    }else   {
+    session.setAttribute("studentID", request.getParameter("studentID"));
+    session.setAttribute("studentName", request.getParameter("studentName"));
+    session.setAttribute("studentPhoneNum", request.getParameter("studentPhoneNum"));
+    session.setAttribute("studentEmail", request.getParameter("studentEmail"));
+    session.setAttribute("studentPassword", request.getParameter("studentPassword"));
+
+    System.out.println("Session Created");
+    }
+%>
 </body><!-- This templates was made by Colorlib (https://colorlib.com) -->
 </html>

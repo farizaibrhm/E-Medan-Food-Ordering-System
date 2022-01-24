@@ -15,8 +15,6 @@ import java.io.IOException;
 
 public class AddMenuServlet extends HttpServlet
 {
-
-
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException
     {
@@ -38,12 +36,11 @@ public class AddMenuServlet extends HttpServlet
         filePart.write(savePath + File.separator);
 
         String MENUDESC = request.getParameter("MENUDESC");
-        double MENUPRICE = Double.parseDouble(request.getParameter("MENUPRICE"));
+        double MENUTPRICE = Double.parseDouble(request.getParameter("MENUTPRICE"));
         String MENUTYPE = request.getParameter("MENUTYPE");
-        String CWORKID = request.getParameter("CWORKID");
 
 
-        Menu addmenu = new Menu(MENUID, MENUNAME, fileName, savePath, MENUDESC, MENUPRICE, MENUTYPE, CWORKID);
+        Menu addmenu = new Menu(MENUID, MENUNAME, fileName, savePath, MENUDESC, MENUTPRICE, MENUTYPE);
         MenuDAO mn = new MenuDAO();
         String result = mn.addMenu(addmenu);
         response.getWriter().print(result);

@@ -3,18 +3,16 @@ package com.example.emedan_food_ordering_system;
 public class Menu {
     private String MENUID;
     private String MENUNAME;
-//    private InputStream MENUIMAGE;
     private String fileName;
     private String savePath;
     private String MENUDESC;
     private double MENUTPRICE;
     private String MENUTYPE;
-    private String CWORKID;
 
     public Menu() {
     }
 
-    public Menu(String MENUNAME, String fileName, String savePath, String MENUDESC, double MENUTPRICE, String MENUTYPE, String CWORKID) {
+    public Menu(String MENUNAME, String fileName, String savePath, String MENUDESC, double MENUTPRICE, String MENUTYPE) {
         super();
         this.MENUNAME = MENUNAME;
         this.fileName = fileName;
@@ -22,10 +20,9 @@ public class Menu {
         this.MENUDESC = MENUDESC;
         this.MENUTPRICE = MENUTPRICE;
         this.MENUTYPE = MENUTYPE;
-        this.CWORKID = CWORKID;
     }
 
-    public Menu(String MENUID, String MENUNAME, String fileName, String savePath, String MENUDESC, double MENUTPRICE, String MENUTYPE, String CWORKID) {
+    public Menu(String MENUID, String MENUNAME, String fileName, String savePath, String MENUDESC, double MENUTPRICE, String MENUTYPE) {
         this.MENUID = MENUID;
         this.MENUNAME = MENUNAME;
         this.fileName = fileName;
@@ -33,7 +30,6 @@ public class Menu {
         this.MENUDESC = MENUDESC;
         this.MENUTPRICE = MENUTPRICE;
         this.MENUTYPE = MENUTYPE;
-        this.CWORKID = CWORKID;
     }
 
     public String getMENUID() {
@@ -92,11 +88,4 @@ public class Menu {
         this.MENUTYPE = MENUTYPE;
     }
 
-    public String getCWORKID() {
-        return CWORKID;
-    }
-
-    public void setCWORKID(String CWORKID) {
-        this.CWORKID = CWORKID;
-    }
 }

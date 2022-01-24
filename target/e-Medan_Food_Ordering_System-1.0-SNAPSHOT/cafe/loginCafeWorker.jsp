@@ -58,7 +58,7 @@
             <!--Desktop Logo-->
             <div class="logo col-md-2 col-lg-2 d-none d-lg-block">
                 <a href="homepage.html">
-                    <img src="assets/images/e-Medan.svg" alt="e-Medan Food Ordering Website" title="e-Medan Food Ordering Website" />
+                    <img src="<%=request.getContextPath()%>/assets/images/e-Medan.svg" alt="e-Medan Food Ordering Website" title="e-Medan Food Ordering Website" />
                 </a>
             </div>
             <!--End Desktop Logo-->
@@ -83,7 +83,7 @@
             <div class="col-6 col-sm-6 col-md-6 col-lg-2 d-block d-lg-none mobile-logo">
                 <div class="logo">
                     <a href="homepage.html">
-                        <img src="assets/images/e-Medan.svg" alt="e-Medan Food Ordering Website" title="e-Medan Food Ordering Website" />
+                        <img src="<%=request.getContextPath()%>/assets/images/e-Medan.svg" alt="e-Medan Food Ordering Website" title="e-Medan Food Ordering Website" />
                     </a>
                 </div>
             </div>
@@ -100,7 +100,7 @@
         <div class="container">
             <div class="signin-content">
                 <div class="signin-image">
-                    <figure><img src="assets/images/signin-image-cafeworker.png" alt="sing up image"></figure>
+                    <figure><img src="<%=request.getContextPath()%>/assets/images/signin1-image.png" alt="sing up image"></figure>
                     <a href="<%=request.getContextPath()%>/register.jsp" class="signup-image-link">Create an account</a>
                 </div>
 
@@ -133,7 +133,7 @@
 </div>
 
 <!-- JS -->
-<script src="assets/vendor/jquery/jquery.min.js"></script>
-<script src="assets/js/mainform.js"></script>
+<script src="<%=request.getContextPath()%>assets/vendor/jquery/jquery.min.js"></script>
+<script src="<%=request.getContextPath()%>assets/js/mainform.js"></script>
 </body><!-- This templates was made by Colorlib (https://colorlib.com) -->
 </html>

@@ -21,7 +21,7 @@
 
     <servlet>
         <servlet-name>StudentServlet</servlet-name>
-        <servlet-class>com.example.emedan_food_ordering_system.StudentServlet</servlet-class>
+        <servlet-class>com.example.emedan_food_ordering_system.AddStudentServlet</servlet-class>
     </servlet>
 
     <servlet-mapping>

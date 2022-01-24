@@ -17,18 +17,18 @@
     <meta name="description" content="description">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Favicon -->
-    <link rel="shortcut icon" href="/assets/images/e-Medan.svg" />
+    <link rel="shortcut icon" href="${pageContext.request.contextPath}/assets/images/e-Medan.svg" />
     <!-- Plugins CSS -->
-    <link rel="stylesheet" href="/assets/css/plugins.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/plugins.css">
     <!-- Bootstap CSS -->
-    <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/bootstrap.min.css">
     <!-- Main Style CSS -->
-    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/style.css">
     <!-- Font Icon -->
-    <link rel="stylesheet" href="/fonts/material-icon/css/material-design-iconic-font.min.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/fonts/material-icon/css/material-design-iconic-font.min.css">
 
     <!-- Main css -->
-    <link rel="stylesheet" href="/assets/css/styleregister.css">
+    <link rel="stylesheet" href="<%=request.getContextPath()%>/assets/css/styleregister.css">
 </head>
 <body>
 <!--Top Header-->
@@ -106,7 +106,7 @@
                     <a href="./cafe/loginCafeWorker.jsp"><button class="btn btn-light">Cafe Worker</button></a>
                 </div>
                 <div class="signin-image">
-                    <figure><img src="<%=application.getContextPath() %>/assets/images/login@4x.png" alt="sing up image"></figure>
+                    <figure><img src="<%=application.getContextPath() %>/assets/images/signin-image.jpg" alt="sing up image"></figure>
                 </div>
             </div>
         </div>

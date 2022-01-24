@@ -14,10 +14,12 @@ import javax.servlet.ServletResponse;
 
 
 public class StudentDAO {
-    private String dbUrl = "jdbc:postgresql://ec2-44-199-52-133.compute-1.amazonaws.com:5432/danpunma7i9eh0";
-    private String dbUname = "kgkcfexavaezbv";
-    private String dbPassword = "452a173c45857bc5d4a0e09e553e6748e19271602a8311160d7dca2ee3cf40a6";
-    private String dbDriver = "org.postgresql.Driver";
+    private final String dbUrl = "jdbc:postgresql://ec2-44-199-52-133.compute-1.amazonaws.com:5432/danpunma7i9eh0";
+    private final String dbUname = "kgkcfexavaezbv";
+    private final String dbPassword = "452a173c45857bc5d4a0e09e553e6748e19271602a8311160d7dca2ee3cf40a6";
+    private final String dbDriver = "org.postgresql.Driver";
+
+
 
 //    private String dbUrl = "jdbc:postgresql://ec2-44-199-52-133.compute-1.amazonaws.com:5432/danpunma7i9eh0";
 //    private String dbUname = "kgkcfexavaezbv";
@@ -56,7 +58,7 @@ public class StudentDAO {
         Connection con = getConnection();
         String result = "Data successfully entered!";
         PreparedStatement ps;
-        String sql = "INSERT into STUDENT (STUDENTID, STUDENTNAME, STUDENTPHONENO, STUDENTEMAIL, STUDENTPASSWORD) VALUES ( ?,?, ?, ?, ?);";
+        String sql = "INSERT into STUDENT" + "(STUDENTID, STUDENTNAME, STUDENTPHONENO, STUDENTEMAIL, STUDENTPASSWORD)VALUES" + "( ?,?, ?, ?, ?);";
 
         try {
             ps = con.prepareStatement(sql);

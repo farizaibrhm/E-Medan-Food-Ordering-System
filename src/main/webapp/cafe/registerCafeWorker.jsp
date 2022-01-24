@@ -82,7 +82,7 @@
             <div class="col-6 col-sm-6 col-md-6 col-lg-2 d-block d-lg-none mobile-logo">
                 <div class="logo">
                     <a href="homepage.html">
-                        <img src="<%=application.getContextPath() %>/assets/images/e-Medan.svg" alt="e-Medan Food Ordering Website" title="e-Medan Food Ordering Website" />
+                        <img src="<%=application.getContextPath() %>assets/images/e-Medan.svg" alt="e-Medan Food Ordering Website" title="e-Medan Food Ordering Website" />
                     </a>
                 </div>
             </div>
@@ -141,7 +141,7 @@
                     </form>
                 </div>
                 <div class="signup-image">
-                    <figure><img src="${pageContext.request.contextPath}/assets/images/signup-image.jpg" alt="sing up image"></figure>
+                    <figure><img src="${pageContext.request.contextPath}/assets/images/signup1-image.png" alt="sing up image"></figure>
                     <a href="<%=request.getContextPath()%>/login.jsp" class="signup-image-link">I am already member</a>
                 </div>
             </div>

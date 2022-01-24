@@ -60,7 +60,7 @@
             <!--Desktop Logo-->
             <div class="logo col-md-2 col-lg-2 d-none d-lg-block">
                 <a href="homepage.html">
-                    <img src="/assets/images/e-Medan.svg" alt="e-Medan Food Ordering Website" title="e-Medan Food Ordering Website" />
+                    <img src="<%=request.getContextPath()%>/assets/images/e-Medan.svg" alt="e-Medan Food Ordering Website" title="e-Medan Food Ordering Website" />
                 </a>
             </div>
             <!--End Desktop Logo-->
@@ -86,7 +86,7 @@
             <div class="col-6 col-sm-6 col-md-6 col-lg-2 d-block d-lg-none mobile-logo">
                 <div class="logo">
                     <a href="homepage.html">
-                        <img src="/assets/images/e-Medan.svg" alt="e-Medan Food Ordering Website" title="e-Medan Food Ordering Website" />
+                        <img src="<%=request.getContextPath()%>/assets/images/e-Medan.svg" alt="e-Medan Food Ordering Website" title="e-Medan Food Ordering Website" />
                     </a>
                 </div>
             </div>
@@ -108,7 +108,7 @@
                     <a href="./cafe/registerCafeWorker.jsp"><button class="btn btn-light">Cafe Worker</button></a>
                 </div>
                 <div class="signin-image">
-                    <figure><img src="/assets/images/sign-up-govi.png" alt="sing up image"></figure>
+                    <figure><img src="<%=request.getContextPath()%>/assets/images/signup-image.jpg" alt="sing up image"></figure>
                 </div>
             </div>
         </div>

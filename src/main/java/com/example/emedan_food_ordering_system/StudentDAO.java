@@ -41,7 +41,7 @@ public class StudentDAO {
         loadDriver(dbDriver);
         Connection con =getConnection();
         String result = "Data entered successfully";
-        String sql = "INSERT INTO student VALUES (?, ?, ?, ?, ?)";
+        String sql = "INSERT INTO STUDENT(STUDENTID, STUDENTNAME, STUDENTPHONENO, STUDENTEMAIL, STUDENTPASSWORD) VALUES (?, ?, ?, ?, ?)";
         PreparedStatement ps;
         try {
             ps = con.prepareStatement(sql);

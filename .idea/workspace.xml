@@ -9,7 +9,23 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0811e3f3-8279-45dc-a825-752cd3ab05bb" name="Changes" comment="edit" />
+    <list default="true" id="0811e3f3-8279-45dc-a825-752cd3ab05bb" name="Changes" comment="edit">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/e-Medan_Food_Ordering_System.iml" beforeDir="false" afterPath="$PROJECT_DIR$/e-Medan_Food_Ordering_System.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/emedan_food_ordering_system/StudentDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/emedan_food_ordering_system/StudentDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/emedan_food_ordering_system/AddMenuServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/emedan_food_ordering_system/AddMenuServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/emedan_food_ordering_system/Menu.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/emedan_food_ordering_system/Menu.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/emedan_food_ordering_system/MenuDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/emedan_food_ordering_system/MenuDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/emedan_food_ordering_system/Student.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/emedan_food_ordering_system/Student.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/emedan_food_ordering_system/StudentDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/emedan_food_ordering_system/StudentDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/emedan_food_ordering_system/StudentServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/emedan_food_ordering_system/StudentServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/META-INF/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/META-INF/MANIFEST.MF" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/WEB-INF/classes/com/example/emedan_food_ordering_system/AddMenuServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/WEB-INF/classes/com/example/emedan_food_ordering_system/AddMenuServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/WEB-INF/classes/com/example/emedan_food_ordering_system/Menu.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/WEB-INF/classes/com/example/emedan_food_ordering_system/Menu.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/WEB-INF/classes/com/example/emedan_food_ordering_system/MenuDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/WEB-INF/classes/com/example/emedan_food_ordering_system/MenuDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/WEB-INF/classes/com/example/emedan_food_ordering_system/StudentDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/WEB-INF/classes/com/example/emedan_food_ordering_system/StudentDAO.class" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -32,13 +48,6 @@
     <option name="FILTER_DEBUG" value="true" />
     <option name="CUSTOM_FILTER" />
   </component>
-  <component name="MavenImportPreferences">
-    <option name="generalSettings">
-      <MavenGeneralSettings>
-        <option name="usePluginRegistry" value="true" />
-      </MavenGeneralSettings>
-    </option>
-  </component>
   <component name="ProjectId" id="242g43p8OynZf2KxPEVEEFxHZ08" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -53,7 +62,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$USER_HOME$/IdeaProjects/JEETry" />
-    <property name="project.structure.last.edited" value="Artifacts" />
+    <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.48762736" />
     <property name="settings.editor.selected.configurable" value="MavenSettings" />
@@ -171,6 +180,8 @@
       <workItem from="1642855617396" duration="15199000" />
       <workItem from="1642907819868" duration="30598000" />
       <workItem from="1642997171907" duration="911000" />
+      <workItem from="1642998171553" duration="617000" />
+      <workItem from="1642998823481" duration="2135000" />
     </task>
     <task id="LOCAL-00001" summary="add Student.java">
       <created>1642835988758</created>

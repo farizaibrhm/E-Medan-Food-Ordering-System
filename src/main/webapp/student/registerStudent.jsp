@@ -60,7 +60,7 @@
             <!--Desktop Logo-->
             <div class="logo col-md-2 col-lg-2 d-none d-lg-block">
                 <a href="homepage.html">
-                    <img src="<%=application.getContextPath() %>/assets/images/e-Medan.svg" alt="e-Medan Food Ordering Website" title="e-Medan Food Ordering Website" />
+                    <img src="/assets/images/e-Medan.svg" alt="e-Medan Food Ordering Website" title="e-Medan Food Ordering Website" />
                 </a>
             </div>
             <!--End Desktop Logo-->
@@ -85,7 +85,7 @@
             <div class="col-6 col-sm-6 col-md-6 col-lg-2 d-block d-lg-none mobile-logo">
                 <div class="logo">
                     <a href="homepage.html">
-                        <img src="${pageContext.request.contextPath}/assets/images/e-Medan.svg" alt="e-Medan Food Ordering Website" title="e-Medan Food Ordering Website" />
+                        <img src="/assets/images/e-Medan.svg" alt="e-Medan Food Ordering Website" title="e-Medan Food Ordering Website" />
                     </a>
                 </div>
             </div>
@@ -117,8 +117,8 @@
                             <input type="text" name="studentName" id="studentName" placeholder="Student Name" />
                         </div>
                         <div class="form-group">
-                            <label for="studentPhoneNum"><i class="zmdi zmdi-account material-icons-name"></i></label>
-                            <input type="text" name="studentPhoneNum" id="studentPhoneNum" placeholder="Phone Number"  />
+                            <label for="studentPhoneNo"><i class="zmdi zmdi-account material-icons-name"></i></label>
+                            <input type="text" name="studentPhoneNo" id="studentPhoneNo" placeholder="Phone Number"  />
                         </div>
                         <div class="form-group">
                             <label for="studentEmail"><i class="zmdi zmdi-account material-icons-name"></i></label>
@@ -157,20 +157,5 @@
 <!-- JS -->
 <script src="assets/vendor/jquery/jquery.min.js"></script>
 <script src="assets/js/mainform.js"></script>
-
-<%
-    String mystudent = request.getParameter("studentID");
-    if (mystudent == null){
-
-    }else   {
-    session.setAttribute("studentID", request.getParameter("studentID"));
-    session.setAttribute("studentName", request.getParameter("studentName"));
-    session.setAttribute("studentPhoneNum", request.getParameter("studentPhoneNum"));
-    session.setAttribute("studentEmail", request.getParameter("studentEmail"));
-    session.setAttribute("studentPassword", request.getParameter("studentPassword"));
-
-    System.out.println("Session Created");
-    }
-%>
 </body><!-- This templates was made by Colorlib (https://colorlib.com) -->
 </html>

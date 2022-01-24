@@ -56,13 +56,11 @@ public class StudentDAO {
         Connection con = getConnection();
         String result = "Data successfully entered!";
         PreparedStatement ps;
-        FileInputStream fis;
-        String sql = "INSERT into student (STUDENTID, STUDENTNAME, STUDENTPHONENO, STUDENTEMAIL, STUDENTPASSWORD) VALUES ( ?,?, ?, ?, ?);";
+        String sql = "INSERT into STUDENT (STUDENTID, STUDENTNAME, STUDENTPHONENO, STUDENTEMAIL, STUDENTPASSWORD) VALUES ( ?,?, ?, ?, ?);";
 
         try {
             ps = con.prepareStatement(sql);
-            //File image= new File(addmenu.getMENUIMAGE());
-            ps.setInt(1, addStudent.getStudentID());
+            ps.setString(1, addStudent.getStudentID());
             ps.setString(2, addStudent.getStudentName());
             ps.setString(3, addStudent.getStudentPhoneNum());
             ps.setString(4, addStudent.getStudentEmail());
@@ -75,10 +73,6 @@ public class StudentDAO {
             e.printStackTrace();
             result = "Data not entered";
         }
-        /*catch (FileNotFoundException e)
-        {
-            e.printStackTrace();
-        }*/
         return result;
 
 }}

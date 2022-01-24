@@ -1,9 +1,9 @@
 package com.example.emedan_food_ordering_system;
 
 public class Student implements java.io.Serializable{
-    public int studentID;
+    public String studentID;
     public String studentName;
-    public String studentPhoneNum;
+    public String studentPhoneNo;
     public String studentEmail;
     public String studentPassword;
 
@@ -12,20 +12,20 @@ public class Student implements java.io.Serializable{
     }
 
 
-    public Student(int sID, String sName, String sPhoneNum, String sEmail, String sPassword){
+    public Student(String sID, String sName, String sPhoneNo, String sEmail, String sPassword){
         super();
         this.studentID = sID;
         this.studentName = sName;
-        this.studentPhoneNum = sPhoneNum;
+        this.studentPhoneNo = sPhoneNo;
         this.studentEmail = sEmail;
         this.studentPassword = sPassword;
     }
 
-    public int getStudentID(){
+    public String getStudentID(){
         return studentID;
     }
 
-    public void setStudentID(int sID) {
+    public void setStudentID(String sID) {
         this.studentID = sID;
     }
 
@@ -38,10 +38,10 @@ public class Student implements java.io.Serializable{
     }
 
     public String getStudentPhoneNum(){
-        return studentPhoneNum;
+        return studentPhoneNo;
     }
-    public void setStudentPhoneNum(String sPhoneNum){
-        this.studentPhoneNum = sPhoneNum;
+    public void setStudentPhoneNum(String sPhoneNo){
+        this.studentPhoneNo = sPhoneNo;
     }
     public String getStudentEmail(){
         return studentEmail;

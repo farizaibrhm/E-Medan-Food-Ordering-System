@@ -13,7 +13,6 @@ public class Student implements java.io.Serializable{
 
 
     public Student(String sID, String sName, String sPhoneNo, String sEmail, String sPassword){
-        super();
         this.studentID = sID;
         this.studentName = sName;
         this.studentPhoneNo = sPhoneNo;
@@ -37,10 +36,10 @@ public class Student implements java.io.Serializable{
         this.studentName=sName;
     }
 
-    public String getStudentPhoneNum(){
+    public String getStudentPhoneNo(){
         return studentPhoneNo;
     }
-    public void setStudentPhoneNum(String sPhoneNo){
+    public void setStudentPhoneNo(String sPhoneNo){
         this.studentPhoneNo = sPhoneNo;
     }
     public String getStudentEmail(){

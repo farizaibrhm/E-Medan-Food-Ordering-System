@@ -14,68 +14,78 @@ import javax.servlet.ServletResponse;
 
 
 public class StudentDAO {
-    private final String dbUrl = "jdbc:postgresql://ec2-44-199-52-133.compute-1.amazonaws.com:5432/danpunma7i9eh0";
-    private final String dbUname = "kgkcfexavaezbv";
-    private final String dbPassword = "452a173c45857bc5d4a0e09e553e6748e19271602a8311160d7dca2ee3cf40a6";
-    private final String dbDriver = "org.postgresql.Driver";
 
+//    static ResultSet rs = null;
+//    public void loadDriver(String dbDriver)
+//    {
+//        try {
+//            Class.forName(dbDriver);
+//        } catch (ClassNotFoundException e) {
+//            // TODO Auto-generated catch block
+//            e.printStackTrace();
+//        }
+//    }
 
-
-//    private String dbUrl = "jdbc:postgresql://ec2-44-199-52-133.compute-1.amazonaws.com:5432/danpunma7i9eh0";
-//    private String dbUname = "kgkcfexavaezbv";
-//    private String dbPassword = "452a173c45857bc5d4a0e09e553e6748e19271602a8311160d7dca2ee3cf40a6";
-//    private String dbDriver = "org.postgresql.Driver";
-
-
-
-
-    static ResultSet rs = null;
-    public void loadDriver(String dbDriver)
-    {
-        try {
-            Class.forName(dbDriver);
-        } catch (ClassNotFoundException e) {
-            // TODO Auto-generated catch block
-            e.printStackTrace();
-        }
-    }
-
-    public Connection getConnection()
+    public static Connection getConnection()
     {
         Connection con = null;
         try {
-            con = DriverManager.getConnection(dbUrl, dbUname, dbPassword);
-        } catch (SQLException e) {
-            // TODO Auto-generated catch block
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            con = DriverManager.getConnection("jdbc:mysql://localhost:3306/emfos","root","");
+
+        } catch (SQLException e){
+            System.out.println(e);
+        } catch (ClassNotFoundException e) {
             e.printStackTrace();
         }
         return con;
     }
 
-    public String addStudent(Student addStudent)
-    {
-        loadDriver(dbDriver);
-        Connection con = getConnection();
-        String result = "Data successfully entered!";
-        PreparedStatement ps;
-        String sql = "INSERT into STUDENT" + "(STUDENTID, STUDENTNAME, STUDENTPHONENO, STUDENTEMAIL, STUDENTPASSWORD)VALUES" + "( ?,?, ?, ?, ?);";
-
+    public static int save(Student s){
+        int status = 0;
         try {
-            ps = con.prepareStatement(sql);
-            ps.setString(1, addStudent.getStudentID());
-            ps.setString(2, addStudent.getStudentName());
-            ps.setString(3, addStudent.getStudentPhoneNum());
-            ps.setString(4, addStudent.getStudentEmail());
-            ps.setString(5, addStudent.getStudentPassword());
-            ps.executeUpdate();
-        }
-        catch (SQLException e)
-        {
-            // TODO Auto-generated catch block
-            e.printStackTrace();
-            result = "Data not entered";
-        }
-        return result;
+            Connection con = StudentDAO.getConnection();
+            PreparedStatement ps = con.prepareStatement("INSERT INTO STUDENT(STUDENTID, STUDENTNAME, STUDENTPHONENO, STUDENTEMAIL, STUDENTPASSWORD) VALUES (?,?,?,?,?)");
+            ps.setString(1,s.getStudentID());
+            ps.setString(2,s.getStudentName());
+            ps.setString(3,s.getStudentPhoneNo());
+            ps.setString(4,s.getStudentEmail());
+            ps.setString(5, s.getStudentPassword());
 
-}}
+            status = ps.executeUpdate();
+                    con.close();
+        }catch (Exception ex){
+            ex.printStackTrace();
+        }
+        return status;
+    }
+
+//    public String addStudent(Student addStudent)
+//    {
+//        loadDriver(dbDriver);
+//        Connection con = getConnection();
+//        String result = "Data successfully entered!";
+//        PreparedStatement ps;
+//        String sql = "INSERT INTO student (STUDENTID, STUDENTNAME, STUDENTPHONENUM, STUDENTEMAIL, STUDENTPASSWORD) VALUES ('?','?','?','?','?')";
+//
+//        try {
+//            ps = con.prepareStatement(sql);
+//            ps.setString(1, addStudent.getStudentID());
+//            ps.setString(2, addStudent.getStudentName());
+//            ps.setString(3, addStudent.getStudentPhoneNo());
+//            ps.setString(4, addStudent.getStudentEmail());
+//            ps.setString(5, addStudent.getStudentPassword());
+//            ps.executeUpdate();
+//        }
+//        catch (SQLException e)
+//        {
+//            // TODO Auto-generated catch block
+//            e.printStackTrace();
+//            result = "Data not entered";
+//        }
+//        return result;
+//
+//}
+
+}
 

@@ -4,28 +4,46 @@ import javax.servlet.*;
 import javax.servlet.http.*;
 import javax.servlet.annotation.*;
 import java.io.IOException;
+import java.io.PrintWriter;
 
 @WebServlet(name = "AddStudentServlet", value = "/AddStudentServlet")
 public class AddStudentServlet extends HttpServlet {
     @Override
-    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
-    }
-
-    @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        response.setContentType("text/html");
+        PrintWriter out = response.getWriter();
+
         String STUDENTID = request.getParameter("STUDENTID");
         String STUDENTNAME = request.getParameter("STUDENTNAME");
         String STUDENTPHONENO= request.getParameter("STUDENTPHONENO");
         String STUDENTEMAIL = request.getParameter("STUDENTEMAIL");
         String STUDENTPASSWORD = request.getParameter("STUDENTPASSWORD");
-        Student addstudent = new Student(STUDENTID, STUDENTNAME, STUDENTPHONENO, STUDENTEMAIL, STUDENTPASSWORD);
-        StudentDAO st = new StudentDAO();
-        String result = st.addStudent(addstudent);
-        response.getWriter().print(result);
-//        response.sendRedirect("cafe/cafeMenuList.jsp");
+        Student s = new Student();
+        s.setStudentID(STUDENTID);
+        s.setStudentName(STUDENTNAME);
+        s.setStudentPhoneNo(STUDENTPHONENO);
+        s.setStudentEmail(STUDENTEMAIL);
+        s.setStudentPassword(STUDENTPASSWORD);
+
+        int status = StudentDAO.save(s);
+        if (status>0){
+            out.print("Record save wakmat");
+            request.getRequestDispatcher("index.jsp").include(request, response);
+        }else {
+            out.print("Sorry le waknat");
+        }
+        out.close();
+//        StudentDAO st = new StudentDAO();
+//        String result = st.addStudent(addstudent);
+//        response.getWriter().print(result);
 
     }
+    @Override
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+
+    }
+
+
 }
 //@ -1,14 +1,22 @@
 //        package com.example.emedan_food_ordering_system;

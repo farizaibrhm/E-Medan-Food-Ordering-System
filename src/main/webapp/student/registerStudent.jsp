@@ -3,8 +3,8 @@
 <%@page import="java.sql.ResultSet"%>
 <%@page import="java.sql.Statement"%>
 <%@page import="java.sql.Connection"%>
-<%@ page import="com.example.emedan_food_ordering_system.Student" %>
-
+<%@page import="com.example.emedan_food_ordering_system.Student" %>
+<%@page import="java.sql.*, java.util.*" %>>
 
 <html lang="en">
 <head>
@@ -157,5 +157,27 @@
 <!-- JS -->
 <script src="<%=request.getContextPath()%>assets/vendor/jquery/jquery.min.js"></script>
 <script src="<%=request.getContextPath()%>assets/js/mainform.js"></script>
+<%--<%--%>
+<%--    String STUDENTID = request.getParameter("studentID");--%>
+<%--    String STUDENTNAME = request.getParameter("studentName");--%>
+<%--    String STUDENTPHONENO = request.getParameter("studentPhoneNo");--%>
+<%--    String STUDENTEMAIL = request.getParameter("studentEmail");--%>
+<%--    String STUDENTPASSWORD = request.getParameter("StudentPassword");--%>
+
+<%--    try {--%>
+<%--        Class.forName("com.mysql.cj.jdbc.Driver");--%>
+<%--        Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/emfos","root","");--%>
+<%--        Statement st=conn.createStatement();--%>
+
+<%--        int i = st.executeUpdate("INSERT INTO student (STUDENTID, STUDENTNAME, STUDENTPHONENUM, STUDENTEMAIL, STUDENTPASSWORD) VALUES ('"+STUDENTID+"','"+STUDENTNAME+"','"+STUDENTPHONENO+"','"+STUDENTEMAIL+"'.'"+STUDENTPASSWORD+"')");--%>
+<%--        out.println("Data is successfully inserted !");}catch (Exception e){--%>
+<%--        System.out.println(e);--%>
+<%--        e.printStackTrace();--%>
+<%--    }--%>
+<%--%>--%>
+
+
+
+
 </body><!-- This templates was made by Colorlib (https://colorlib.com) -->
 </html>

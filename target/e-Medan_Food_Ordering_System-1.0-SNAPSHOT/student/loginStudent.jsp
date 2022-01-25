@@ -107,14 +107,14 @@
                 <div class="signin-form">
                     <h2 class="form-title">Sign In</h2>
                     <h3 class="form-title">Student</h3>
-                    <form method="POST" class="register-form" id="login-form" >
+                    <form action="${pageContext.request.contextPath}/LoginStudentServlet"     method="Post" class="register-form" id="login-form" >
                         <div class="form-group">
-                            <label for="studentID"><i class="zmdi zmdi-account material-icons-name"></i></label>
-                            <input type="text" name="studentID" id="studentID" placeholder="Student ID"/>
+                            <label for="STUDENTID"><i class="zmdi zmdi-account material-icons-name"></i></label>
+                            <input type="text" name="STUDENTID" id="STUDENTID" placeholder="Student ID"/>
                         </div>
                         <div class="form-group">
-                            <label for="studentPassword"><i class="zmdi zmdi-lock"></i></label>
-                            <input type="password" name="studentPassword" id="studentPassword" placeholder="Password"/>
+                            <label for="STUDENTPASSWORD"><i class="zmdi zmdi-lock"></i></label>
+                            <input type="password" name="STUDENTPASSWORD" id="STUDENTPASSWORD" placeholder="Password"/>
                         </div>
                         <div class="form-group">
                             <input type="checkbox" name="remember-me" id="remember-me" class="agree-term" />
@@ -133,7 +133,7 @@
 </div>
 
 <!-- JS -->
-<script src="assets/vendor/jquery/jquery.min.js"></script>
-<script src="assets/js/mainform.js"></script>
+<script src="${pageContext.request.contextPath}assets/vendor/jquery/jquery.min.js"></script>
+<script src="${pageContext.request.contextPath}assets/js/mainform.js"></script>
 </body><!-- This templates was made by Colorlib (https://colorlib.com) -->
 </html>

@@ -59,6 +59,20 @@ public class StudentDAO {
         }
         return status;
     }
+    public static int validate(Student s){
+        int status = 0;
+        try {
+            Connection con = StudentDAO.getConnection();
+            PreparedStatement ps = con.prepareStatement("SELECT * FROM student WHERE STUDENTID = ? AND STUDENTPASSWORD = ?");
+            ps.setString(1,s.getStudentID());
+            ps.setString(2, s.getStudentPassword());
+            status = ps.executeUpdate();
+            con.close();
+        }catch (Exception ex){
+            ex.printStackTrace();
+        }
+        return status;
+    }
 
 //    public String addStudent(Student addStudent)
 //    {

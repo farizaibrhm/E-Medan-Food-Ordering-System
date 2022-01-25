@@ -27,10 +27,10 @@ public class AddStudentServlet extends HttpServlet {
 
         int status = StudentDAO.save(s);
         if (status>0){
-            out.print("Record save wakmat");
+            out.print("Record save successfully ");
             request.getRequestDispatcher("index.jsp").include(request, response);
         }else {
-            out.print("Sorry le waknat");
+            out.print("Sorry, problem occur :(");
         }
         out.close();
 //        StudentDAO st = new StudentDAO();

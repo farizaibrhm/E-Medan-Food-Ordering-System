@@ -10,23 +10,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0811e3f3-8279-45dc-a825-752cd3ab05bb" name="Changes" comment="init">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/mysql_connector_java.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/emedan_food_ordering_system/ViewStudentServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/e_Medan_Food_Ordering_System_war_exploded.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/e_Medan_Food_Ordering_System_war_exploded.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/5506a286-2451-426e-a080-4e8501574762.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/5506a286-2451-426e-a080-4e8501574762.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/e-Medan_Food_Ordering_System.iml" beforeDir="false" afterPath="$PROJECT_DIR$/e-Medan_Food_Ordering_System.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/emedan_food_ordering_system/AddStudentServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/emedan_food_ordering_system/AddStudentServlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/emedan_food_ordering_system/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/emedan_food_ordering_system/Student.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/emedan_food_ordering_system/StudentDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/emedan_food_ordering_system/StudentDAO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/student/registerStudent.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/student/registerStudent.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/example/emedan_food_ordering_system/AddStudentServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/emedan_food_ordering_system/AddStudentServlet.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/example/emedan_food_ordering_system/Student.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/emedan_food_ordering_system/Student.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/emedan_food_ordering_system/StudentDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/emedan_food_ordering_system/StudentDAO.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/WEB-INF/classes/com/example/emedan_food_ordering_system/AddStudentServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/WEB-INF/classes/com/example/emedan_food_ordering_system/AddStudentServlet.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/WEB-INF/classes/com/example/emedan_food_ordering_system/Student.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/WEB-INF/classes/com/example/emedan_food_ordering_system/Student.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/WEB-INF/classes/com/example/emedan_food_ordering_system/StudentDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/WEB-INF/classes/com/example/emedan_food_ordering_system/StudentDAO.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/student/registerStudent.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/student/registerStudent.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -199,6 +188,7 @@
       <workItem from="1642998171553" duration="617000" />
       <workItem from="1642998823481" duration="2135000" />
       <workItem from="1643016889708" duration="3075000" />
+      <workItem from="1643077868169" duration="389000" />
     </task>
     <task id="LOCAL-00001" summary="add Student.java">
       <created>1642835988758</created>

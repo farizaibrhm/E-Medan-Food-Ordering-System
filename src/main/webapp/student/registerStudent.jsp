@@ -110,23 +110,23 @@
 
                         <div class="form-group">
                             <label for="studentID"><i class="zmdi zmdi-account material-icons-name"></i></label>
-                            <input type="text" name="studentID" id="studentID" placeholder="Identification number"  />
+                            <input type="text" name="STUDENTID" id="STUDENTID" placeholder="Identification number"  />
                         </div>
                         <div class="form-group">
                             <label for="studentName"><i class="zmdi zmdi-account material-icons-name"></i></label>
-                            <input type="text" name="studentName" id="studentName" placeholder="Student Name" />
+                            <input type="text" name="STUDENTNAME" id="STUDENTNAME" placeholder="Student Name" />
                         </div>
                         <div class="form-group">
                             <label for="studentPhoneNo"><i class="zmdi zmdi-account material-icons-name"></i></label>
-                            <input type="text" name="studentPhoneNo" id="studentPhoneNo" placeholder="Phone Number"  />
+                            <input type="text" name="STUDENTPHONENO" id="STUDENTPHONENO" placeholder="Phone Number"  />
                         </div>
                         <div class="form-group">
                             <label for="studentEmail"><i class="zmdi zmdi-account material-icons-name"></i></label>
-                            <input type="text" name="studentEmail" id="studentEmail" placeholder="Email" />
+                            <input type="text" name="STUDENTEMAIL" id="STUDENTEMAIL" placeholder="Email" />
                         </div>
                         <div class="form-group">
                             <label for="studentPassword"><i class="zmdi zmdi-account material-icons-name"></i></label>
-                            <input type="password" name="studentPassword" id="studentPassword" placeholder="Password" />
+                            <input type="password" name="STUDENTPASSWORD" id="STUDENTPASSWORD" placeholder="Password" />
                         </div>
                         <td><%=(request.getAttribute("errMessagge") == null) ? " " : request.getAttribute("errMessage")%></td>
                         <div class="form-group">

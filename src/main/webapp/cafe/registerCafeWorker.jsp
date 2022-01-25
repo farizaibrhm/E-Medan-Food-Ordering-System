@@ -1,7 +1,10 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@page import="java.sql.DriverManager" %>
 <%@page import="java.sql.ResultSet"%>
 <%@page import="java.sql.Statement"%>
 <%@page import="java.sql.Connection"%>
+<%@page import="com.example.emedan_food_ordering_system.Student" %>
+<%@page import="java.sql.*, java.util.*" %>>
 
 <html lang="en">
 <head>
@@ -102,35 +105,40 @@
 
                     <h2 class="form-title">Sign up</h2>
                     <h3 class="form-title">Cafe Worker</h3>
-                    <form method="POST" class="register-form" id="register-form">
+                    <form action="${pageContext.request.contextPath}/AddCafeWorkerServlet" method="Post" class="register-form" id="register-form">
                         <div class="form-group">
-                            <label for="cafeWorkerID"><i class="zmdi zmdi-account material-icons-name"></i></label>
-                            <input type="text" name="cafeWorkerID" id="cafeWorkerID" placeholder="Identification number"/>
+                            <label for="CWORKID"><i class="zmdi zmdi-account material-icons-name"></i></label>
+                            <input type="text" name="CWORKID" id="CWORKID" placeholder="Identification number"/>
                         </div>
                         <div class="form-group">
-                            <label for="cafeWorkerStallName"><i class="zmdi zmdi-account material-icons-name"></i></label>
-                            <input type="text" name="cafeWorkerStallName" id="cafeWorkerStallName" placeholder="Stall Name"/>
+                            <label for="CWORKSTALLNAME"><i class="zmdi zmdi-account material-icons-name"></i></label>
+                            <input type="text" name="CWORKSTALLNAME" id="CWORKSTALLNAME" placeholder="Stall Name"/>
                         </div>
                         <div class="form-group">
-                            <label for="cafeWorkerPhoneNum"><i class="zmdi zmdi-account material-icons-name"></i></label>
-                            <input type="text" name="cafeWorkerPhoneNum" id="cafeWorkerPhoneNum" placeholder="Phone Number"/>
+                            <label for="CWORKPHONENO"><i class="zmdi zmdi-account material-icons-name"></i></label>
+                            <input type="text" name="CWORKPHONENO" id="CWORKPHONENO" placeholder="Phone Number"/>
                         </div>
                         <div class="form-group">
-                            <label for="cafeWorkerEmail"><i class="zmdi zmdi-account material-icons-name"></i></label>
-                            <input type="text" name="cafeWorkerEmail" id="cafeWorkerEmail" placeholder="Email"/>
+                            <label for="CWORKEMAIL"><i class="zmdi zmdi-account material-icons-name"></i></label>
+                            <input type="text" name="CWORKEMAIL" id="CWORKEMAIL" placeholder="Email"/>
                         </div>
                         <div class="form-group">
-                            <label for="cafeWorkerPassword"><i class="zmdi zmdi-account material-icons-name"></i></label>
-                            <input type="text" name="cafeWorkerPassword" id="cafeWorkerPassword" placeholder="Password"/>
+                            <label for="CWORKPASSWORD"><i class="zmdi zmdi-account material-icons-name"></i></label>
+                            <input type="text" name="CWORKPASSWORD" id="CWORKPASSWORD" placeholder="Password"/>
                         </div>
                         <div class="form-group">
-                            <label for="cafeWorkerAccNum"><i class="zmdi zmdi-account material-icons-name"></i></label>
-                            <input type="text" name="cafeWorkerAccNum" id="cafeWorkerAccNum" placeholder="Phone Number"/>
+                            <label for="CWORKACCNUM"><i class="zmdi zmdi-account material-icons-name"></i></label>
+                            <input type="text" name="CWORKACCNUM" id="CWORKACCNUM" placeholder="Acc Number"/>
                         </div>
                         <div class="form-group">
-                            <label for="cafeWorkerAccName"><i class="zmdi zmdi-account material-icons-name"></i></label>
-                            <input type="text" name="cafeWorkerAccName" id="cafeWorkerAccName" placeholder="Email"/>
+                            <label for="CWORKACCNAME"><i class="zmdi zmdi-account material-icons-name"></i></label>
+                            <input type="text" name="CWORKACCNAME" id="CWORKACCNAME" placeholder="Acc Name"/>
                         </div>
+                        <div class="form-group">
+                            <label for="CWORKBANKNAME"><i class="zmdi zmdi-account material-icons-name"></i></label>
+                            <input type="text" name="CWORKBANKNAME" id="CWORKBANKNAME" placeholder="Bank Name"/>
+                        </div>
+                        <td><%=(request.getAttribute("errMessagge") == null) ? " " : request.getAttribute("errMessage")%></td>
                         <div class="form-group">
                             <input type="checkbox" name="agree-term" id="agree-term" class="agree-term" />
                             <label for="agree-term" class="label-agree-term"><span><span></span></span>I agree all statements in  <a href="#" class="term-service">Terms of service</a></label>

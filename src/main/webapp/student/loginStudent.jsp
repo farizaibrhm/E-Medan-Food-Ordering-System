@@ -107,7 +107,7 @@
                 <div class="signin-form">
                     <h2 class="form-title">Sign In</h2>
                     <h3 class="form-title">Student</h3>
-                    <form action="${pageContext.request.contextPath}/LoginStudentServlet"     method="Post" class="register-form" id="login-form" >
+                    <form action="${pageContext.request.contextPath}/LoginStudentServlet"  method="Post" class="register-form" id="login-form" >
                         <div class="form-group">
                             <label for="STUDENTID"><i class="zmdi zmdi-account material-icons-name"></i></label>
                             <input type="text" name="STUDENTID" id="STUDENTID" placeholder="Student ID"/>

@@ -59,47 +59,23 @@ public class StudentDAO {
         }
         return status;
     }
-    public static int validate(Student s){
-        int status = 0;
+    public  boolean validate(Student student) throws  ClassNotFoundException{
+        boolean status = false;
         try {
             Connection con = StudentDAO.getConnection();
             PreparedStatement ps = con.prepareStatement("SELECT * FROM student WHERE STUDENTID = ? AND STUDENTPASSWORD = ?");
-            ps.setString(1,s.getStudentID());
-            ps.setString(2, s.getStudentPassword());
-            status = ps.executeUpdate();
+            ps.setString(1,student.getStudentID());
+            ps.setString(2, student.getStudentPassword());
+            System.out.println(ps);
+            ResultSet rs = ps.executeQuery();
+            status = rs.next();
+
             con.close();
         }catch (Exception ex){
             ex.printStackTrace();
         }
         return status;
     }
-
-//    public String addStudent(Student addStudent)
-//    {
-//        loadDriver(dbDriver);
-//        Connection con = getConnection();
-//        String result = "Data successfully entered!";
-//        PreparedStatement ps;
-//        String sql = "INSERT INTO student (STUDENTID, STUDENTNAME, STUDENTPHONENUM, STUDENTEMAIL, STUDENTPASSWORD) VALUES ('?','?','?','?','?')";
-//
-//        try {
-//            ps = con.prepareStatement(sql);
-//            ps.setString(1, addStudent.getStudentID());
-//            ps.setString(2, addStudent.getStudentName());
-//            ps.setString(3, addStudent.getStudentPhoneNo());
-//            ps.setString(4, addStudent.getStudentEmail());
-//            ps.setString(5, addStudent.getStudentPassword());
-//            ps.executeUpdate();
-//        }
-//        catch (SQLException e)
-//        {
-//            // TODO Auto-generated catch block
-//            e.printStackTrace();
-//            result = "Data not entered";
-//        }
-//        return result;
-//
-//}
 
 }
 

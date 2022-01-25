@@ -7,32 +7,44 @@ import java.io.IOException;
 import java.io.PrintWriter;
 
 @WebServlet(name = "LoginStudentServlet", value = "/LoginStudentServlet")
-public class LoginStudentServlet {
+public class LoginStudentServlet extends HttpServlet {
+    private StudentDAO studentDAO;
+    private  static final long serialVersionUID = 1L;
+
+    public void init(){
+        studentDAO = new StudentDAO();
+    }
+
+    @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         response.setContentType("text/html");
         PrintWriter out = response.getWriter();
 
         String STUDENTID = request.getParameter("STUDENTID");
         String STUDENTPASSWORD = request.getParameter("STUDENTPASSWORD");
-        Student s = new Student();
-        s.setStudentID(STUDENTID);
-        s.setStudentPassword(STUDENTPASSWORD);
+        Student student = new Student();
+        student.setStudentID(STUDENTID);
+        student.setStudentPassword(STUDENTPASSWORD);
 
-        int status = StudentDAO.validate(s);
-        if (status>0){
-            out.print("Record save successfully ");
-            request.getRequestDispatcher("homepagestudent.jsp").include(request, response);
-        }else {
-            out.print("Sorry, problem occur :(");
+        try {
+            if(studentDAO.validate(student)){
+                response.sendRedirect("homepagestudent.jsp");
+            }else {
+                HttpSession session = request.getSession();
+            }
+
+        }catch (ClassNotFoundException e){
+            e.printStackTrace();
         }
         out.close();
-//        StudentDAO st = new StudentDAO();
-//        String result = st.addStudent(addstudent);
-//        response.getWriter().print(result);
 
     }
+
+    @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
+
     }
+
 
 }

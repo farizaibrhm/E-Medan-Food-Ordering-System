@@ -20,7 +20,7 @@ public class CafeWorkerDAO {
     public static int save(CafeWorker cw) {
         int status = 0;
         try {
-            Connection con = StudentDAO.getConnection();
+            Connection con = CafeWorkerDAO.getConnection();
             PreparedStatement ps = con.prepareStatement("INSERT INTO cafeworker(CWORKID, CWORKSTALLNAME, CWORKPHONENO, CWORKEMAIL, CWORKPASSWORD, CWORKACCNUM, CWORKACCNAME, CWORKBANKNAME) VALUES (?,?,?,?,?,?,?,?)");
             ps.setString(1, cw.getCWORKID());
             ps.setString(2, cw.getCWORKSTALLNAME());

@@ -1,35 +1,5 @@
-<%@page import = "java.sql.DriverManager"%>
-<%@page import="java.sql.ResultSet" %>
-<%@page import="java.sql.Statement" %>
-<%@page import="java.sql.Connection" %>
-
-<%
-    String STUDENTID = request.getParameter("STUDENTID");
-    String driver = "com.mysql.cj.jdbc.Driver";
-    String connectionUrl = "jdbc:mysql://localhost:3306/emfos";
-    String userid = "root";
-    String password = "";
-
-    try {
-        Class.forName(driver);
-    }catch (ClassNotFoundException e){
-        e.printStackTrace();
-    }
-    Connection connection = null;
-    Statement statement = null;
-    ResultSet resultSet = null;
-%>
 <!DOCTYPE html>
 <html class="no-js" lang="en">
-<%
-    try {
-        connection = DriverManager.getConnection(connectionUrl, userid, password);
-        statement=connection.createStatement();
-        String sql = "SELECT * FROM student WHERE STUDENTID='?'";
-        resultSet = statement.executeQuery(sql);
-        while (resultSet.next()){
-%>
-
 
 <!-- belle/home2-default.html   11 Nov 2019 12:22:28 GMT -->
 <head>
@@ -49,21 +19,23 @@
     <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/responsive.css">
 </head>
 <body class="template-index home2-default">
+<div id="pre-loader">
+    <img src="${pageContext.request.contextPath}assets/images/loader.gif" alt="Loading..." />
+</div>
 <div class="pageWrapper">
     <!--Promotion Bar-->
     <div class="notification-bar mobilehide">
-        <a href="#" class="notification-bar__message">Student Profile</a>
+        <a href="#" class="notification-bar__message">Cafe Worker Profile</a>
         <span class="close-announcement">×</span>
     </div>
     <!--End Promotion Bar-->
-
     <!--Header-->
     <div class="header-wrap animated d-flex border-bottom">
         <div class="container-fluid">
             <div class="row align-items-center">
                 <!--Desktop Logo-->
                 <div class="logo col-md-2 col-lg-2 d-none d-lg-block">
-                    <a href="${pageContext.request.contextPath}/student/homepagestudent.jsp">
+                    <a href="${pageContext.request.contextPath}/cafe/homepagecw.jsp">
                         <img src="${pageContext.request.contextPath}/assets/images/e-Medan.svg" alt="e-Medan Food Ordering Website" title="e-Medan Food Ordering Website" />
                     </a>
                 </div>
@@ -72,10 +44,12 @@
                     <!--Desktop Menu-->
                     <nav class="grid__item" id="AccessibleNav"><!-- for mobile -->
                         <ul id="siteNav" class="site-nav medium center hidearrow">
-                            <li class="lvl1 parent dropdown"><a href="${pageContext.request.contextPath}/student/homepagestudent.jsp">Home <i class="anm anm-angle-down-l"></i></a>
-                            <li class="lvl1 parent megamenu"><a href="${pageContext.request.contextPath}/student/about-us-student.jsp"> About <i class="anm anm-angle-down-l"></i></a></li>
-                            <li class="lvl1 parent megamenu"><a href="menupageStudent.html"> Menu <i class="anm anm-angle-down-l"></i></a></li>
-                            <li class="lvl1 parent megamenu"><a href="${pageContext.request.contextPath}/student/studentProfile.jsp"> Account <i class="anm anm-angle-down-l"></i></a></li>
+                            <li class="lvl1 parent dropdown"><a href="menucw.html">Menu <i class="anm anm-angle-down-l"></i></a>
+                            <li class="lvl1 parent megamenu"><a href="updateorder.html"> Order <i class="anm anm-angle-down-l"></i></a></li>
+                            <li class="lvl1 parent megamenu"><a href="feedbacklist.html"> Feedback <i class="anm anm-angle-down-l"></i></a></li>
+                            <li class="lvl1 parent megamenu"><a href="viewtotalsales.html"> Report <i class="anm anm-angle-down-l"></i></a></li>
+                            <li class="lvl1 parent megamenu"><a href="${pageContext.request.contextPath}/cafe/cafeWorkerProfile.jsp"> Account <i class="anm anm-angle-down-l"></i></a></li>
+
                             </li>
                         </ul>
                     </nav>
@@ -98,17 +72,13 @@
                 <div class="card h-100">
                     <div class="card-body">
                         <div class="account-settings">
-                            <!-- Start display about read from database after student register account -->
                             <div class="user-profile">
                                 <div class="user-avatar">
-                                    <img src="${pageContext.request.contextPath}/assets/images/female-student.jpg" alt="Maxwell Admin">
+                                    <img src="${pageContext.request.contextPath}/assets/images/stallicon.png" alt="Maxwell Admin">
                                 </div>
-                                    <td><%=resultSet.getString(2)%></td>
-                                    <br>
-                                    <td><%=resultSet.getString(1)%></td>
+                                <h5 class="user-name">Gerai A</h5>
+                                <h6 class="user-id">881015149872</h6>
                             </div>
-
-                            <!-- End display about read from database after student register account -->
                         </div>
                     </div>
                 </div>
@@ -120,32 +90,50 @@
                             <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                                 <h6 class="mb-2 text-primary">Personal Details</h6>
                             </div>
-                            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
-                                <div class="form-group">
-                                    <label for="STUDENTID">Student ID</label>
-                                    <input type="text" class="form-control" id="STUDENTID" >
-                                </div>
-                            </div>
-                            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
-                                <div class="form-group">
-                                    <label for="STUDENTNAME">Name</label>
-                                    <input type="text" class="form-control" id="STUDENTNAME" >
-                                </div>
-                            </div>
-                            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
-                                <div class="form-group">
-                                    <label for="STUDENTEMAIL">Email</label>
-                                    <input type="email" class="form-control" id="STUDENTEMAIL">
-                                </div>
-                            </div>
 
+                            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+                                <div class="form-group">
+                                    <label for="cafeWorkerID">Cafe Worker ID</label>
+                                    <input type="text" class="form-control" id="cafeWorkerID">
+                                </div>
+                            </div>
+                            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+                                <div class="form-group">
+                                    <label for="fullName">Name</label>
+                                    <input type="text" class="form-control" id="fullName" >
+                                </div>
+                            </div>
+                            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+                                <div class="form-group">
+                                    <label for="eMail">Email</label>
+                                    <input type="email" class="form-control" id="eMail">
+                                </div>
+                            </div>
+                            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+                                <div class="form-group">
+                                    <label for="website">Bank Account Number</label>
+                                    <input type="url" class="form-control" id="website">
+                                </div>
+                            </div>
+                            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+                                <div class="form-group">
+                                    <label for="website">Bank Name</label>
+                                    <input type="url" class="form-control" id="website" >
+                                </div>
+                            </div>
+                            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+                                <div class="form-group">
+                                    <label for="website">Bank Account Name</label>
+                                    <input type="url" class="form-control" id="website">
+                                </div>
+                            </div>
                         </div>
 
                         <div class="row gutters">
                             <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                                 <div class="text-right">
-                                    <a href="studentEditProfile.html"  id="submit" name="submit" class="btn btn-primary">Edit Profile</button></a>
-                                    <a href="deleteAccStudent.html"  id="submit" name="submit" class="btn btn-primary">Delete Account</button></a>
+                                    <a href= "cafeWorkerEditProfile.html"><button type="button" id="submit" name="submit" class="btn btn-primary">Edit Profile</button></a>
+                                    <a href= "deleteAccCafeWorker.html"><button type="button" id="submit" name="submit" class="btn btn-primary">Delete Account</button></a>
                                 </div>
                             </div>
                         </div>
@@ -154,7 +142,6 @@
             </div>
         </div>
     </div>
-
 
     <style type="text/css">
         body {
@@ -226,13 +213,6 @@
 
     </script>
 </div>
-<%
-        }
-        connection.close();
-    }catch (Exception e){
-        e.printStackTrace();
-    }
-%>
 </body>
 
 

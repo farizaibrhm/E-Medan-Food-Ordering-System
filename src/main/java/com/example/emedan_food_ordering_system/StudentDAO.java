@@ -15,22 +15,11 @@ import javax.servlet.ServletResponse;
 
 public class StudentDAO {
 
-//    static ResultSet rs = null;
-//    public void loadDriver(String dbDriver)
-//    {
-//        try {
-//            Class.forName(dbDriver);
-//        } catch (ClassNotFoundException e) {
-//            // TODO Auto-generated catch block
-//            e.printStackTrace();
-//        }
-//    }
-
     public static Connection getConnection() {
         Connection con = null;
         try {
-            Class.forName("com.mysql.cj.jdbc.Driver");
-            con = DriverManager.getConnection("jdbc:mysql://localhost:3306/emfos", "root", "");
+            Class.forName("org.postgresql.Driver");
+            con = DriverManager.getConnection("jdbc:postgresql://ec2-44-199-52-133.compute-1.amazonaws.com:5432/danpunma7i9eh0", "kgkcfexavaezbv", "452a173c45857bc5d4a0e09e553e6748e19271602a8311160d7dca2ee3cf40a6");
 
         } catch (SQLException e) {
             System.out.println(e);
@@ -44,7 +33,8 @@ public class StudentDAO {
         int status = 0;
         try {
             Connection con = StudentDAO.getConnection();
-            PreparedStatement ps = con.prepareStatement("INSERT INTO STUDENT(STUDENTID, STUDENTNAME, STUDENTPHONENO, STUDENTEMAIL, STUDENTPASSWORD) VALUES (?,?,?,?,?)");
+            PreparedStatement ps = con.prepareStatement("INSERT INTO public.student (\"STUDENTID\", \"STUDENTNAME\", \"STUDENTPHONENO\", \"STUDENTEMAIL\", \"STUDENTPASSWORD\") VALUES  (?,?,?,?,?)");
+
             ps.setString(1, s.getStudentID());
             ps.setString(2, s.getStudentName());
             ps.setString(3, s.getStudentPhoneNo());
@@ -63,7 +53,8 @@ public class StudentDAO {
         boolean status = false;
         try {
             Connection con = StudentDAO.getConnection();
-            PreparedStatement ps = con.prepareStatement("SELECT * FROM student WHERE STUDENTID = ? AND STUDENTPASSWORD = ?");
+            PreparedStatement ps = con.prepareStatement("SELECT \"STUDENTID\", \"STUDENTPASSWORD\"\n" +
+                    "\tFROM public.student WHERE \"STUDENTID\"=? AND \"STUDENTPASSWORD\"=?;");
             ps.setString(1, student.getStudentID());
             ps.setString(2, student.getStudentPassword());
             System.out.println(ps);

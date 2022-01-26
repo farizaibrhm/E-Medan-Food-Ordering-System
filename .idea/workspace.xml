@@ -9,7 +9,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0811e3f3-8279-45dc-a825-752cd3ab05bb" name="Changes" comment="edit" />
+    <list default="true" id="0811e3f3-8279-45dc-a825-752cd3ab05bb" name="Changes" comment="edit">
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/emedan_food_ordering_system/StudentDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/emedan_food_ordering_system/StudentDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/student/studentProfile.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/student/studentProfile.jsp" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -44,9 +49,9 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="project.structure.last.edited" value="Facets" />
-    <property name="project.structure.proportion" value="0.0" />
-    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="project.structure.last.edited" value="Artifacts" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.3321839" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -149,7 +154,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1643211017721</updated>
-      <workItem from="1643211023745" duration="1031000" />
+      <workItem from="1643211023745" duration="6152000" />
+      <workItem from="1643264263097" duration="6418000" />
     </task>
     <task id="LOCAL-00001" summary="edit">
       <created>1643211857027</created>

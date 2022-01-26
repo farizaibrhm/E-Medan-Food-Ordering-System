@@ -111,7 +111,7 @@
                   <div class="product-details">
                     <a href="#" class="remove"><i class="anm anm-times-l" aria-hidden="true"></i></a>
                     <a href="#" class="edit-i remove"><i class="anm anm-edit" aria-hidden="true"></i></a>
-                    <a class="pName" href="cart.html">Sleeve Kimono Dress</a>
+                    <a class="pName" href="${pageContext.request.contextPath}/student/cart.jsp">Sleeve Kimono Dress</a>
                     <div class="variant-cart">Black / XL</div>
                     <div class="wrapQtyBtn">
                       <div class="qtyField">
@@ -158,7 +158,7 @@
                   <span class="label">Cart Subtotal:</span><span class="product-price"><span class="money">$748.00</span></span>
                 </div>
                 <div class="buttonSet text-center">
-                  <a href="cart.html" class="btn btn-secondary btn--small">View Cart</a>
+                  <a href="${pageContext.request.contextPath}/student/cart.jsp" class="btn btn-secondary btn--small">View Cart</a>
                   <a href="checkout.html" class="btn btn-secondary btn--small">Checkout</a>
                 </div>
               </div>

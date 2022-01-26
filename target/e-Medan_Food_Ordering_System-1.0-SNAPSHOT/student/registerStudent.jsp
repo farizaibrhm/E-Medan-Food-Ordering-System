@@ -110,7 +110,7 @@
 
                         <div class="form-group">
                             <label for="studentID"><i class="zmdi zmdi-account material-icons-name"></i></label>
-                            <input type="text" name="STUDENTID" id="STUDENTID" placeholder="Identification number"  />
+                            <input type="text" name="STUDENTID" id="STUDENTID" placeholder="Student ID"  />
                         </div>
                         <div class="form-group">
                             <label for="studentName"><i class="zmdi zmdi-account material-icons-name"></i></label>

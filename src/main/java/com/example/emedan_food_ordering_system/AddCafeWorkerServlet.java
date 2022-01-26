@@ -33,6 +33,7 @@ public class AddCafeWorkerServlet extends HttpServlet {
 
         int status = CafeWorkerDAO.save(cw);
         if (status>0){
+
             out.print("Record save successfully");
             request.getRequestDispatcher("index.jsp").include(request, response);
         }else {

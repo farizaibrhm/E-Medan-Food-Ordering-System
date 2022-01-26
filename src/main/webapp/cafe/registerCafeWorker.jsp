@@ -74,9 +74,9 @@
                 <!--Desktop Menu-->
                 <nav class="grid__item" id="AccessibleNav"><!-- for mobile -->
                     <ul id="siteNav" class="site-nav medium center hidearrow">
-                        <li class="lvl1 parent megamenu"><a href="homepage.html">Home <i class="anm anm-angle-down-l"></i></a></li>
-                        <li class="lvl1 parent megamenu"><a href="about-us.html">About <i class="anm anm-angle-down-l"></i></a></li>
-                        <li class="lvl1 parent dropdown"><a href="menupagenotlogin.html">Menu <i class="anm anm-angle-down-l"></i></a></li>
+                        <li class="lvl1 parent megamenu"><a href="${pageContext.request.contextPath}/index.jsp">Home <i class="anm anm-angle-down-l"></i></a></li>
+                        <li class="lvl1 parent megamenu"><a href="${pageContext.request.contextPath}/about-us-notlogin.jsp">About <i class="anm anm-angle-down-l"></i></a></li>
+                        <li class="lvl1 parent dropdown"><a href="${pageContext.request.contextPath}/menupagenotlogin.jsp">Menu <i class="anm anm-angle-down-l"></i></a></li>
                         </li>
                     </ul>
                 </nav>
@@ -124,7 +124,7 @@
                         </div>
                         <div class="form-group">
                             <label for="CWORKPASSWORD"><i class="zmdi zmdi-account material-icons-name"></i></label>
-                            <input type="text" name="CWORKPASSWORD" id="CWORKPASSWORD" placeholder="Password"/>
+                            <input type="password" name="CWORKPASSWORD" id="CWORKPASSWORD" placeholder="Password"/>
                         </div>
                         <div class="form-group">
                             <label for="CWORKACCNUM"><i class="zmdi zmdi-account material-icons-name"></i></label>

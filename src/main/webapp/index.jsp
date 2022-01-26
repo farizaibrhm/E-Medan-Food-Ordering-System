@@ -83,7 +83,7 @@
                         <ul id="siteNav" class="site-nav medium center hidearrow">
                             <li class="lvl1 parent megamenu"><a href="index.jsp">Home <i class="anm anm-angle-down-l"></i></a></li>
                             <li class="lvl1 parent megamenu"><a href="${pageContext.request.contextPath}/about-us-notlogin.jsp">About <i class="anm anm-angle-down-l"></i></a></li>
-                            <li class="lvl1 parent dropdown"><a href="menupagenotlogin.html">Menu <i class="anm anm-angle-down-l"></i></a>
+                            <li class="lvl1 parent dropdown"><a href="${pageContext.request.contextPath}/menupagenotlogin.jsp">Menu <i class="anm anm-angle-down-l"></i></a>
                                 <ul class="dropdown">
                                     <li><a href="checkout.html" class="site-nav">Food</a></li>
                                     <li><a href="about-us.html" class="site-nav">Beverages <span class="lbl nm_label1">New</span> </a></li>

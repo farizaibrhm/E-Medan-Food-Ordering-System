@@ -1,9 +1,6 @@
 package com.example.emedan_food_ordering_system;
 
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.PreparedStatement;
-import java.sql.SQLException;
+import java.sql.*;
 
 public class CafeWorkerDAO {
     public static Connection getConnection(){
@@ -37,6 +34,22 @@ public class CafeWorkerDAO {
             status = ps.executeUpdate();
             con.close();
         } catch (Exception ex) {
+            ex.printStackTrace();
+        }
+        return status;
+    }
+
+    public boolean validate(CafeWorker cafeWorker) throws ClassNotFoundException{
+        boolean status = false;
+        try {
+            Connection con = CafeWorkerDAO.getConnection();
+            PreparedStatement ps = con.prepareStatement("SELECT * FROM cafeworker WHERE CWORKID = ? AND CWORKPASSWORD = ?");
+            ps.setString(1, cafeWorker.getCWORKID());
+            ps.setString(2, cafeWorker.getCWORKPASSWORD());
+            System.out.println(ps);
+            ResultSet rs = ps.executeQuery();
+            status = rs.next();
+        }catch (Exception ex) {
             ex.printStackTrace();
         }
         return status;

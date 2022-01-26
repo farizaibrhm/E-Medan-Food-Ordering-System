@@ -124,7 +124,7 @@
                         </div>
                         <div class="form-group">
                             <label for="CWORKPASSWORD"><i class="zmdi zmdi-account material-icons-name"></i></label>
-                            <input type="text" name="CWORKPASSWORD" id="CWORKPASSWORD" placeholder="Password"/>
+                            <input type="password" name="CWORKPASSWORD" id="CWORKPASSWORD" placeholder="Password"/>
                         </div>
                         <div class="form-group">
                             <label for="CWORKACCNUM"><i class="zmdi zmdi-account material-icons-name"></i></label>

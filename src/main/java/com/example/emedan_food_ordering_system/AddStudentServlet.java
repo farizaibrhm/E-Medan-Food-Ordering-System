@@ -27,6 +27,7 @@ public class AddStudentServlet extends HttpServlet {
 
         int status = StudentDAO.save(s);
         if (status>0){
+
             out.print("Record save successfully ");
             request.getRequestDispatcher("index.jsp").include(request, response);
         }else {

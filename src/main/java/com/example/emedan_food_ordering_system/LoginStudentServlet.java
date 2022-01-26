@@ -1,17 +1,26 @@
 package com.example.emedan_food_ordering_system;
 
+
 import javax.servlet.*;
 import javax.servlet.http.*;
 import javax.servlet.annotation.*;
+
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+import javax.sql.rowset.serial.SerialException;
+
 import java.io.IOException;
 import java.io.PrintWriter;
 
 @WebServlet(name = "LoginStudentServlet", value = "/LoginStudentServlet")
 public class LoginStudentServlet extends HttpServlet {
     private StudentDAO studentDAO;
-    private  static final long serialVersionUID = 1L;
+    private static final long serialVersionUID = 1L;
 
-    public void init(){
+    public void init() {
         studentDAO = new StudentDAO();
     }
 
@@ -27,13 +36,13 @@ public class LoginStudentServlet extends HttpServlet {
         student.setStudentPassword(STUDENTPASSWORD);
 
         try {
-            if(studentDAO.validate(student)){
+            if (studentDAO.validate(student)) {
                 response.sendRedirect("homepagestudent.jsp");
-            }else {
+            } else {
                 HttpSession session = request.getSession();
             }
 
-        }catch (ClassNotFoundException e){
+        } catch (ClassNotFoundException e) {
             e.printStackTrace();
         }
         out.close();

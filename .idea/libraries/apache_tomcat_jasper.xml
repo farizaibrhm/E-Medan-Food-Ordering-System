@@ -1,0 +1,18 @@
+<component name="libraryTable">
+  <library name="apache.tomcat.jasper" type="repository">
+    <properties maven-id="org.apache.tomcat:tomcat-jasper:7.0.22" />
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/apache/tomcat/tomcat-jasper/7.0.22/tomcat-jasper-7.0.22.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/apache/tomcat/tomcat-servlet-api/7.0.22/tomcat-servlet-api-7.0.22.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/apache/tomcat/tomcat-juli/7.0.22/tomcat-juli-7.0.22.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/apache/tomcat/tomcat-jsp-api/7.0.22/tomcat-jsp-api-7.0.22.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/apache/tomcat/tomcat-el-api/7.0.22/tomcat-el-api-7.0.22.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/eclipse/jdt/core/compiler/ecj/3.7/ecj-3.7.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/apache/tomcat/tomcat-jasper-el/7.0.22/tomcat-jasper-el-7.0.22.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/apache/tomcat/tomcat-api/7.0.22/tomcat-api-7.0.22.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/apache/tomcat/tomcat-util/7.0.22/tomcat-util-7.0.22.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

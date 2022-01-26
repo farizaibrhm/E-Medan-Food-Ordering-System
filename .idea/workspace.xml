@@ -10,16 +10,36 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0811e3f3-8279-45dc-a825-752cd3ab05bb" name="Changes" comment="init">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/apache_tomcat_jasper.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/artifacts/e_Medan_Food_Ordering_System_war_exploded.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/e_Medan_Food_Ordering_System_war_exploded.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__javax_ejb_javax_ejb_api_3_2_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__javax_mvc_javax_mvc_api_1_0_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__javax_servlet_javax_servlet_api_4_0_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__javax_servlet_jstl_1_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__javax_transaction_javax_transaction_api_1_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apiguardian_apiguardian_api_1_1_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_checkerframework_checker_qual_3_5_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_api_5_7_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_engine_5_7_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_platform_junit_platform_commons_1_7_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_platform_junit_platform_engine_1_7_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_opentest4j_opentest4j_1_2_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_postgresql_postgresql_42_3_1.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/e-Medan_Food_Ordering_System.iml" beforeDir="false" afterPath="$PROJECT_DIR$/e-Medan_Food_Ordering_System.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/emedan_food_ordering_system/LoginStudentServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/emedan_food_ordering_system/LoginStudentServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/emedan_food_ordering_system/StudentDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/emedan_food_ordering_system/StudentDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/about.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/about-us-notlogin.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/cafe/loginCafeWorker.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/cafe/loginCafeWorker.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/cafe/registerCafeWorker.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/cafe/registerCafeWorker.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/login.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/register.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/register.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/student/loginStudent.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/student/loginStudent.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/emedan_food_ordering_system/LoginStudentServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/emedan_food_ordering_system/LoginStudentServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/emedan_food_ordering_system/StudentDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/emedan_food_ordering_system/StudentDAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/WEB-INF/classes/com/example/emedan_food_ordering_system/LoginStudentServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/WEB-INF/classes/com/example/emedan_food_ordering_system/LoginStudentServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/WEB-INF/classes/com/example/emedan_food_ordering_system/StudentDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/WEB-INF/classes/com/example/emedan_food_ordering_system/StudentDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/student/registerStudent.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/student/registerStudent.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/WEB-INF/lib/checker-qual-3.5.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/WEB-INF/lib/javax.mvc-api-1.0.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/WEB-INF/lib/jstl-1.2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/WEB-INF/lib/postgresql-42.3.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/cafe/loginCafeWorker.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/cafe/loginCafeWorker.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/cafe/registerCafeWorker.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/cafe/registerCafeWorker.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/student/loginStudent.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/student/loginStudent.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -30,8 +50,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Jsp File" />
         <option value="Class" />
+        <option value="Jsp File" />
       </list>
     </option>
   </component>
@@ -72,7 +92,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$USER_HOME$/IdeaProjects/JEETry" />
-    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.3321839" />
     <property name="settings.editor.selected.configurable" value="MavenSettings" />
@@ -195,7 +215,7 @@
       <workItem from="1643016889708" duration="3075000" />
       <workItem from="1643077868169" duration="4870000" />
       <workItem from="1643085128217" duration="1591000" />
-      <workItem from="1643086762925" duration="2901000" />
+      <workItem from="1643086762925" duration="8681000" />
     </task>
     <task id="LOCAL-00001" summary="add Student.java">
       <created>1642835988758</created>
@@ -267,7 +287,21 @@
       <option name="project" value="LOCAL" />
       <updated>1643086711706</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="init">
+      <created>1643089791282</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1643089791282</updated>
+    </task>
+    <task id="LOCAL-00012" summary="init">
+      <created>1643089804365</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1643089804365</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

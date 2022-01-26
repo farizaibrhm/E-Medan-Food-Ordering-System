@@ -110,12 +110,12 @@
                     <h3 class="form-title">Cafe Worker</h3>
                     <form method="POST" class="register-form" id="login-form">
                         <div class="form-group">
-                            <label for="cafeWorkerID"><i class="zmdi zmdi-account material-icons-name"></i></label>
-                            <input type="text" name="cafeWorkerID" id="cafeWorkerID" placeholder="Cafe Worker ID"/>
+                            <label for="CWORKID"><i class="zmdi zmdi-account material-icons-name"></i></label>
+                            <input type="text" name="CWORKID" id="CWORKID" placeholder="Cafe Worker ID"/>
                         </div>
                         <div class="form-group">
-                            <label for="cafeWorkerPassword"><i class="zmdi zmdi-lock"></i></label>
-                            <input type="password" name="cafeWorkerPassword" id="cafeWorkerPassword" placeholder="Password"/>
+                            <label for="CWORKPASSWORD"><i class="zmdi zmdi-lock"></i></label>
+                            <input type="password" name="CWORKPASSWORD" id="CWORKPASSWORD" placeholder="Password"/>
                         </div>
                         <div class="form-group">
                             <input type="checkbox" name="remember-me" id="remember-me" class="agree-term" />

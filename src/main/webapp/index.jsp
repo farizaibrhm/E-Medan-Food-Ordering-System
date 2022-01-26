@@ -53,7 +53,7 @@
                     <span class="user-menu d-block d-lg-none"><i class="anm anm-user-al" aria-hidden="true"></i></span>
                     <ul class="customer-links list-inline">
                         <li><a href="<%=request.getContextPath()%>/login.jsp">Login</a></li>
-                        <li><a href="<%=request.getContextPath()%>/register.jsp">Create Account</a></li>
+                        <li><a href="<%=request.getContextPath()%>/register.jsp">Register Account</a></li>
                     </ul>
                 </div>
             </div>
@@ -82,7 +82,7 @@
                     <nav class="grid__item" id="AccessibleNav"><!-- for mobile -->
                         <ul id="siteNav" class="site-nav medium center hidearrow">
                             <li class="lvl1 parent megamenu"><a href="index.jsp">Home <i class="anm anm-angle-down-l"></i></a></li>
-                            <li class="lvl1 parent megamenu"><a href="about-us-notlogin.html">About <i class="anm anm-angle-down-l"></i></a></li>
+                            <li class="lvl1 parent megamenu"><a href="${pageContext.request.contextPath}/about-us-notlogin.jsp">About <i class="anm anm-angle-down-l"></i></a></li>
                             <li class="lvl1 parent dropdown"><a href="menupagenotlogin.html">Menu <i class="anm anm-angle-down-l"></i></a>
                                 <ul class="dropdown">
                                     <li><a href="checkout.html" class="site-nav">Food</a></li>
@@ -321,7 +321,7 @@
                                     <div class="wrap-caption center">
                                         <br><br><br><br><br><br>
                                         <br><br><br><br><br><br>
-                                        <a href= "login.html" class= "btn">Order now</a>
+                                        <a href= "${pageContext.request.contextPath}/login.jsp" class= "btn">Order now</a>
                                     </div>
                                 </div>
                             </div>

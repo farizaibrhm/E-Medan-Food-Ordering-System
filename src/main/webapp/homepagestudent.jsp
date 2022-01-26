@@ -1,4 +1,4 @@
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+
 <%@page import="java.sql.DriverManager" %>
 <%@page import="java.sql.ResultSet"%>
 <%@page import="java.sql.Statement"%>
@@ -17,19 +17,17 @@
     <meta name="description" content="description">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Favicon -->
-    <link rel="shortcut icon" href="${pageContext.request.contextPath}assets/images/favicon.png" />
+    <link rel="shortcut icon" href="${pageContext.request.contextPath}/assets/images/favicon.png" />
     <!-- Plugins CSS -->
-    <link rel="stylesheet" href="${pageContext.request.contextPath}assets/css/plugins.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/plugins.css">
     <!-- Bootstap CSS -->
-    <link rel="stylesheet" href="${pageContext.request.contextPath}assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/bootstrap.min.css">
     <!-- Main Style CSS -->
-    <link rel="stylesheet" href="${pageContext.request.contextPath}assets/css/style.css">
-    <link rel="stylesheet" href="${pageContext.request.contextPath}assets/css/responsive.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/style.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/responsive.css">
 </head>
 <body class="template-index home2-default">
-<div id="pre-loader">
-    <img src="${pageContext.request.contextPath}assets/images/loader.gif" alt="Loading..." />
-</div>
+
 <div class="pageWrapper">
     <!--Promotion Bar-->
     <div class="notification-bar mobilehide">
@@ -61,8 +59,8 @@
                 <div class="col-2 col-sm-4 col-md-3 col-lg-4 text-right">
                     <span class="user-menu d-block d-lg-none"><i class="anm anm-user-al" aria-hidden="true"></i></span>
                     <ul class="customer-links list-inline">
-                        <li><a href="${pageContext.request.contextPath}login.jsp">Login</a></li>
-                        <li><a href="${pageContext.request.contextPath}register.jsp">Create Account</a></li>
+                        <li><a href="${pageContext.request.contextPath}/login.jsp">Login</a></li>
+                        <li><a href="${pageContext.request.contextPath}/register.jsp">Create Account</a></li>
                     </ul>
                 </div>
             </div>
@@ -75,8 +73,8 @@
             <div class="row align-items-center">
                 <!--Desktop Logo-->
                 <div class="logo col-md-2 col-lg-2 d-none d-lg-block">
-                    <a href="homepagestudent.html">
-                        <img src="${pageContext.request.contextPath}assets/images/e-Medan.svg" alt="e-Medan Food Ordering Website" title="e-Medan Food Ordering Website" />
+                    <a href="${pageContext.request.contextPath}/homepagestudent.jsp">
+                        <img src="${pageContext.request.contextPath}/assets/images/e-Medan.svg" alt="e-Medan Food Ordering Website" title="e-Medan Food Ordering Website" />
                     </a>
                 </div>
                 <!--End Desktop Logo-->
@@ -90,7 +88,7 @@
                     <!--Desktop Menu-->
                     <nav class="grid__item" id="AccessibleNav"><!-- for mobile -->
                         <ul id="siteNav" class="site-nav medium center hidearrow">
-                            <li class="lvl1 parent megamenu"><a href="homepagestudent.html">Home <i class="anm anm-angle-down-l"></i></a></li>
+                            <li class="lvl1 parent megamenu"><a href="${pageContext.request.contextPath}/homepagestudent.jsp">Home <i class="anm anm-angle-down-l"></i></a></li>
                             <li class="lvl1 parent megamenu"><a href="about-us-student.html">About <i class="anm anm-angle-down-l"></i></a></li>
                             <li class="lvl1 parent dropdown"><a href="menupagestudent.html">Menu <i class="anm anm-angle-down-l"></i></a>
                             <li class="lvl1 parent dropdown"><a href="studentProfile.html"> Account <i class="anm anm-angle-down-l"></i></a>
@@ -103,8 +101,8 @@
                 <!--Mobile Logo-->
                 <div class="col-6 col-sm-6 col-md-6 col-lg-2 d-block d-lg-none mobile-logo">
                     <div class="logo">
-                        <a href="${pageContext.request.contextPath}homepagestudent.jsp">
-                            <img src="${pageContext.request.contextPath}assets/images/e-Medan.svg" alt="e-Medan Food Ordering Website" title="e-Medan Food Ordering Website" />
+                        <a href="${pageContext.request.contextPath}/homepagestudent.jsp">
+                            <img src="${pageContext.request.contextPath}/assets/images/e-Medan.svg" alt="e-Medan Food Ordering Website" title="e-Medan Food Ordering Website" />
                         </a>
                     </div>
                 </div>
@@ -120,7 +118,7 @@
                             <ul class="mini-products-list">
                                 <li class="item">
                                     <a class="product-image" href="#">
-                                        <img src="${pageContext.request.contextPath}assets/images/product-images/cape-dress-1.jpg" alt="3/4 Sleeve Kimono Dress" title="" />
+                                        <img src="${pageContext.request.contextPath}/assets/images/product-images/cape-dress-1.jpg" alt="3/4 Sleeve Kimono Dress" title="" />
                                     </a>
                                     <div class="product-details">
                                         <a href="#" class="remove"><i class="anm anm-times-l" aria-hidden="true"></i></a>
@@ -131,7 +129,7 @@
                                             <div class="qtyField">
                                                 <span class="label">Qty:</span>
                                                 <a class="qtyBtn minus" href="javascript:void(0);"><i class="fa anm anm-minus-r" aria-hidden="true"></i></a>
-                                                <input type="text" id="Quantity" name="quantity" value="1" class="product-form__input qty">
+                                                <input type="text" id="1quantity" name="quantity" value="1" class="product-form__input qty">
                                                 <a class="qtyBtn plus" href="javascript:void(0);"><i class="fa anm anm-plus-r" aria-hidden="true"></i></a>
                                             </div>
                                         </div>
@@ -144,7 +142,7 @@
                                 </li>
                                 <li class="item">
                                     <a class="product-image" href="#">
-                                        <img src="${pageContext.request.contextPath}assets/images/product-images/cape-dress-2.jpg" alt="Elastic Waist Dress - Black / Small" title="" />
+                                        <img src="${pageContext.request.contextPath}/assets/images/product-images/cape-dress-2.jpg" alt="Elastic Waist Dress - Black / Small" title="" />
                                     </a>
                                     <div class="product-details">
                                         <a href="#" class="remove"><i class="anm anm-times-l" aria-hidden="true"></i></a>
@@ -196,7 +194,7 @@
             <div class="home-slideshow">
                 <div class="slide">
                     <div class="blur-up lazyload">
-                        <img class="blur-up lazyload" data-src="assets/images/headernasilemak.png" src="${pageContext.request.contextPath}assets/images/headernasilemak.png" alt="Shop Our New Collection" title="Shop Our New Collection" />
+                        <img class="blur-up lazyload" data-src="assets/images/headernasilemak.png" src="${pageContext.request.contextPath}/assets/images/headernasilemak.png" alt="Shop Our New Collection" title="Shop Our New Collection" />
                         <div class="slideshow__text-wrap slideshow__overlay classic middle">
                             <div class="slideshow__text-content middle">
                                 <div class="container">
@@ -213,7 +211,7 @@
                 </div>
                 <div class="slide">
                     <div class="blur-up lazyload">
-                        <img class="blur-up lazyload" data-src="assets/images/headerfoods.png" src="${pageContext.request.contextPath}assets/images/headerfoods.png" alt="Summer Bikini Collection" title="Summer Bikini Collection" />
+                        <img class="blur-up lazyload" data-src="assets/images/headerfoods.png" src="${pageContext.request.contextPath}/assets/images/headerfoods.png" alt="Summer Bikini Collection" title="Summer Bikini Collection" />
                         <div class="slideshow__text-wrap slideshow__overlay classic middle">
                             <div class="slideshow__text-content middle">
                                 <div class="container">
@@ -252,7 +250,7 @@
                                         <img class="hover blur-up lazyload" data-src="assets/images/product-images/nasibujang.png" src="${pageContext.request.contextPath}assets/images/product-images/nasibujang.png" alt="image" title="product">
                                         <!-- End hover image -->
                                         <!-- Variant Image-->
-                                        <img class="grid-view-item__image hover variantImg" src="${pageContext.request.contextPath}assets/images/product-images/nasibujang.png" alt="image" title="product">
+                                        <img class="grid-view-item__image hover variantImg" src="${pageContext.request.contextPath}/assets/images/product-images/nasibujang.png" alt="image" title="product">
                                         <!-- Variant Image-->
                                     </a>
                                     <!-- end product image -->
@@ -291,13 +289,13 @@
                                     <!-- start product image -->
                                     <a href="product-layout-1.html" class="grid-view-item__link">
                                         <!-- image -->
-                                        <img class="primary blur-up lazyload" data-src="assets/images/product-images/dagingkicap.png" src="${pageContext.request.contextPath}assets/images/product-images/dagingkicap.png" alt="image" title="product">
+                                        <img class="primary blur-up lazyload" data-src="assets/images/product-images/dagingkicap.png" src="${pageContext.request.contextPath}/assets/images/product-images/dagingkicap.png" alt="image" title="product">
                                         <!-- End image -->
                                         <!-- Hover image -->
-                                        <img class="hover blur-up lazyload" data-src="assets/images/product-images/dagingkicap.png" src="${pageContext.request.contextPath}assets/images/product-images/dagingkicap.png" alt="image" title="product">
+                                        <img class="hover blur-up lazyload" data-src="assets/images/product-images/dagingkicap.png" src="${pageContext.request.contextPath}/assets/images/product-images/dagingkicap.png" alt="image" title="product">
                                         <!-- End hover image -->
                                         <!-- Variant Image-->
-                                        <img class="grid-view-item__image hover variantImg" src="${pageContext.request.contextPath}assets/images/product-images/dagingkicap.png" alt="image" title="product">
+                                        <img class="grid-view-item__image hover variantImg" src="${pageContext.request.contextPath}/assets/images/product-images/dagingkicap.png" alt="image" title="product">
                                         <!-- Variant Image-->
                                     </a>
                                     <!-- end product image -->
@@ -337,13 +335,13 @@
                                     <!-- start product image -->
                                     <a href="product-layout-1.html" class="grid-view-item__link">
                                         <!-- image -->
-                                        <img class="primary blur-up lazyload" data-src="assets/images/product-images/nasikerabu.png" src="${pageContext.request.contextPath}assets/images/product-images/nasikerabu.png" alt="image" title="product">
+                                        <img class="primary blur-up lazyload" data-src="assets/images/product-images/nasikerabu.png" src="${pageContext.request.contextPath}/assets/images/product-images/nasikerabu.png" alt="image" title="product">
                                         <!-- End image -->
                                         <!-- Hover image -->
-                                        <img class="hover blur-up lazyload" data-src="assets/images/product-images/nasikerabu.png" src="${pageContext.request.contextPath}assets/images/product-images/nasikerabu.png" alt="image" title="product">
+                                        <img class="hover blur-up lazyload" data-src="assets/images/product-images/nasikerabu.png" src="${pageContext.request.contextPath}/assets/images/product-images/nasikerabu.png" alt="image" title="product">
                                         <!-- End hover image -->
                                         <!-- Variant Image-->
-                                        <img class="grid-view-item__image hover variantImg" src="${pageContext.request.contextPath}assets/images/product-images/nasikerabu.png" alt="image" title="product">
+                                        <img class="grid-view-item__image hover variantImg" src="${pageContext.request.contextPath}/assets/images/product-images/nasikerabu.png" alt="image" title="product">
                                         <!-- Variant Image-->
                                     </a>
                                     <!-- end product image -->
@@ -383,13 +381,13 @@
                                     <!-- start product image -->
                                     <a href="product-layout-1.html" class="grid-view-item__link">
                                         <!-- image -->
-                                        <img class="primary blur-up lazyload" data-src="assets/images/product-images/butterchicken.png" src="${pageContext.request.contextPath}assets/images/product-images/butterchicken.png" alt="image" title="product" />
+                                        <img class="primary blur-up lazyload" data-src="assets/images/product-images/butterchicken.png" src="${pageContext.request.contextPath}/assets/images/product-images/butterchicken.png" alt="image" title="product" />
                                         <!-- End image -->
                                         <!-- Hover image -->
-                                        <img class="hover blur-up lazyload" data-src="assets/images/product-images/butterchicken.png" src="${pageContext.request.contextPath}assets/images/product-images/butterchicken.png" alt="image" title="product" />
+                                        <img class="hover blur-up lazyload" data-src="assets/images/product-images/butterchicken.png" src="${pageContext.request.contextPath}/assets/images/product-images/butterchicken.png" alt="image" title="product" />
                                         <!-- End hover image -->
                                         <!-- Variant Image-->
-                                        <img class="grid-view-item__image hover variantImg" src="${pageContext.request.contextPath}assets/images/product-images/butterchicken.png" alt="image" title="product">
+                                        <img class="grid-view-item__image hover variantImg" src="${pageContext.request.contextPath}/assets/images/product-images/butterchicken.png" alt="image" title="product">
                                         <!-- Variant Image-->
                                     </a>
                                     <!-- end product image -->
@@ -428,13 +426,13 @@
                                     <!-- start product image -->
                                     <a href="product-layout-1.html" class="grid-view-item__link">
                                         <!-- image -->
-                                        <img class="primary blur-up lazyload" data-src="assets/images/product-images/nasigorengayam.png" src="${pageContext.request.contextPath}assets/images/product-images/nasigorengayam.png" alt="image" title="product" />
+                                        <img class="primary blur-up lazyload" data-src="assets/images/product-images/nasigorengayam.png" src="${pageContext.request.contextPath}/assets/images/product-images/nasigorengayam.png" alt="image" title="product" />
                                         <!-- End image -->
                                         <!-- Hover image -->
-                                        <img class="hover blur-up lazyload" data-src="assets/images/product-images/nasigorengayam.png" src="${pageContext.request.contextPath}assets/images/product-images/nasigorengayam.png" alt="image" title="product" />
+                                        <img class="hover blur-up lazyload" data-src="assets/images/product-images/nasigorengayam.png" src="${pageContext.request.contextPath}/assets/images/product-images/nasigorengayam.png" alt="image" title="product" />
                                         <!-- End hover image -->
                                         <!-- Variant Image-->
-                                        <img class="grid-view-item__image hover variantImg" src="${pageContext.request.contextPath}assets/images/product-images/nasigorengayam.png" alt="image" title="product">
+                                        <img class="grid-view-item__image hover variantImg" src="${pageContext.request.contextPath}/assets/images/product-images/nasigorengayam.png" alt="image" title="product">
                                         <!-- Variant Image-->
                                     </a>
                                     <!-- end product image -->
@@ -476,7 +474,7 @@
         <!--Parallax Section-->
         <div class="section">
             <div class="hero hero--large hero__overlay bg-size">
-                <img class="bg-img" src="${pageContext.request.contextPath}assets/images/parallax-banners/parallax-banner.png" alt="" />
+                <img class="bg-img" src="${pageContext.request.contextPath}/assets/images/parallax-banners/parallax-banner.png" alt="" />
                 <div class="hero__inner">
                     <div class="container">
                         <div class="wrap-text left text-small font-bold">
@@ -507,13 +505,13 @@
                                 <!-- start product image -->
                                 <a href="product-layout-1.html" class="grid-view-item__link">
                                     <!-- image -->
-                                    <img class="primary blur-up lazyload" data-src="assets/images/product-images/meatball.png" src="${pageContext.request.contextPath}assets/images/product-images/meatball.png" alt="image" title="product">
+                                    <img class="primary blur-up lazyload" data-src="assets/images/product-images/meatball.png" src="${pageContext.request.contextPath}/assets/images/product-images/meatball.png" alt="image" title="product">
                                     <!-- End image -->
                                     <!-- Hover image -->
-                                    <img class="hover blur-up lazyload" data-src="assets/images/product-images/meatball.png" src="${pageContext.request.contextPath}assets/images/product-images/meatball.png" alt="image" title="product">
+                                    <img class="hover blur-up lazyload" data-src="assets/images/product-images/meatball.png" src="${pageContext.request.contextPath}/assets/images/product-images/meatball.png" alt="image" title="product">
                                     <!-- End hover image -->
                                     <!-- Variant Image-->
-                                    <img class="grid-view-item__image hover variantImg" src="${pageContext.request.contextPath}assets/images/product-images/meatball.png" alt="image" title="product">
+                                    <img class="grid-view-item__image hover variantImg" src="${pageContext.request.contextPath}/assets/images/product-images/meatball.png" alt="image" title="product">
                                     <!-- Variant Image-->
                                 </a>
                                 <!-- end product image -->
@@ -551,13 +549,13 @@
                                 <!-- start product image -->
                                 <a href="product-layout-1.html" class="grid-view-item__link">
                                     <!-- image -->
-                                    <img class="primary blur-up lazyload" data-src="assets/images/product-images/sirapbandung.png" src="${pageContext.request.contextPath}assets/images/product-images/sirapbandung.png" alt="image" title="product">
+                                    <img class="primary blur-up lazyload" data-src="assets/images/product-images/sirapbandung.png" src="${pageContext.request.contextPath}/assets/images/product-images/sirapbandung.png" alt="image" title="product">
                                     <!-- End image -->
                                     <!-- Hover image -->
-                                    <img class="hover blur-up lazyload" data-src="assets/images/product-images/sirapbandung.png" src="${pageContext.request.contextPath}assets/images/product-images/sirapbandung.png" alt="image" title="product">
+                                    <img class="hover blur-up lazyload" data-src="assets/images/product-images/sirapbandung.png" src="${pageContext.request.contextPath}/assets/images/product-images/sirapbandung.png" alt="image" title="product">
                                     <!-- End hover image -->
                                     <!-- Variant Image-->
-                                    <img class="grid-view-item__image hover variantImg" src="${pageContext.request.contextPath}assets/images/product-images/sirapbandung.png" alt="image" title="product">
+                                    <img class="grid-view-item__image hover variantImg" src="${pageContext.request.contextPath}/assets/images/product-images/sirapbandung.png" alt="image" title="product">
                                     <!-- Variant Image-->
                                 </a>
                                 <!-- end product image -->
@@ -596,10 +594,10 @@
                                 <!-- start product image -->
                                 <a href="product-layout-1.html" class="grid-view-item__link">
                                     <!-- image -->
-                                    <img class="primary blur-up lazyload" data-src="assets/images/product-images/ayampaprik.png" src="${pageContext.request.contextPath}assets/images/product-images/ayampaprik.png" alt="image" title="product">
+                                    <img class="primary blur-up lazyload" data-src="assets/images/product-images/ayampaprik.png" src="${pageContext.request.contextPath}/assets/images/product-images/ayampaprik.png" alt="image" title="product">
                                     <!-- End image -->
                                     <!-- Hover image -->
-                                    <img class="hover blur-up lazyload" data-src="assets/images/product-images/ayampaprik.png" src="${pageContext.request.contextPath}assets/images/product-images/ayampaprik.png" alt="image" title="product">
+                                    <img class="hover blur-up lazyload" data-src="assets/images/product-images/ayampaprik.png" src="${pageContext.request.contextPath}/assets/images/product-images/ayampaprik.png" alt="image" title="product">
                                     <!-- End hover image -->
                                     <!-- Variant Image-->
                                     <img class="grid-view-item__image hover variantImg" src="${pageContext.request.contextPath}assets/images/product-images/ayampaprik.png" alt="image" title="product">
@@ -641,13 +639,13 @@
                                 <!-- start product image -->
                                 <a href="product-layout-1.html" class="grid-view-item__link">
                                     <!-- image -->
-                                    <img class="primary blur-up lazyload" data-src="assets/images/product-images/nasiayam.png" src="${pageContext.request.contextPath}assets/images/product-images/nasiayam.png" alt="image" title="product" />
+                                    <img class="primary blur-up lazyload" data-src="assets/images/product-images/nasiayam.png" src="${pageContext.request.contextPath}/assets/images/product-images/nasiayam.png" alt="image" title="product" />
                                     <!-- End image -->
                                     <!-- Hover image -->
-                                    <img class="hover blur-up lazyload" data-src="assets/images/product-images/nasiayam.png" src="${pageContext.request.contextPath}assets/images/product-images/nasiayam.png" alt="image" title="product" />
+                                    <img class="hover blur-up lazyload" data-src="assets/images/product-images/nasiayam.png" src="${pageContext.request.contextPath}/assets/images/product-images/nasiayam.png" alt="image" title="product" />
                                     <!-- End hover image -->
                                     <!-- Variant Image-->
-                                    <img class="grid-view-item__image hover variantImg" src="${pageContext.request.contextPath}assets/images/product-images/nasiayam.png" alt="image" title="product">
+                                    <img class="grid-view-item__image hover variantImg" src="${pageContext.request.contextPath}/assets/images/product-images/nasiayam.png" alt="image" title="product">
                                     <!-- Variant Image-->
                                 </a>
                                 <!-- end product image -->
@@ -688,13 +686,13 @@
                                 <!-- start product image -->
                                 <a href="product-layout-1.html" class="grid-view-item__link">
                                     <!-- image -->
-                                    <img class="primary blur-up lazyload" data-src="assets/images/product-images/abc.png" src="${pageContext.request.contextPath}assets/images/product-images/abc.png" alt="image" title="product" />
+                                    <img class="primary blur-up lazyload" data-src="assets/images/product-images/abc.png" src="${pageContext.request.contextPath}/assets/images/product-images/abc.png" alt="image" title="product" />
                                     <!-- End image -->
                                     <!-- Hover image -->
-                                    <img class="hover blur-up lazyload" data-src="assets/images/product-images/abc.png" src="${pageContext.request.contextPath}assets/images/product-images/abc.png" alt="image" title="product" />
+                                    <img class="hover blur-up lazyload" data-src="assets/images/product-images/abc.png" src="${pageContext.request.contextPath}/assets/images/product-images/abc.png" alt="image" title="product" />
                                     <!-- End hover image -->
                                     <!-- Variant Image-->
-                                    <img class="grid-view-item__image hover variantImg" src="${pageContext.request.contextPath}assets/images/product-images/abc.png" alt="image" title="product">
+                                    <img class="grid-view-item__image hover variantImg" src="${pageContext.request.contextPath}/assets/images/product-images/abc.png" alt="image" title="product">
                                     <!-- Variant Image-->
                                 </a>
                                 <!-- end product image -->
@@ -732,10 +730,10 @@
                                 <!--start product image -->
                                 <a href="product-layout-1.html" class="grid-view-item__link">
                                     <!-- image -->
-                                    <img class="primary blur-up lazyload" data-src="assets/images/product-images/keligoreng.png" src="${pageContext.request.contextPath}assets/images/product-images/keligoreng.png" alt="image" title="product" />
+                                    <img class="primary blur-up lazyload" data-src="assets/images/product-images/keligoreng.png" src="${pageContext.request.contextPath}/assets/images/product-images/keligoreng.png" alt="image" title="product" />
                                     <!-- End image -->
                                     <!-- Hover image -->
-                                    <img class="hover blur-up lazyload" data-src="assets/images/product-images/keligoreng.png" src="${pageContext.request.contextPath}assets/images/product-images/keligoreng.png" alt="image" title="product" />
+                                    <img class="hover blur-up lazyload" data-src="assets/images/product-images/keligoreng.png" src="${pageContext.request.contextPath}/assets/images/product-images/keligoreng.png" alt="image" title="product" />
                                     <!-- End hover image -->
                                 </a>
                                 <!-- end product image -->
@@ -773,10 +771,10 @@
                                 <!-- start product image -->
                                 <a href="product-layout-1.html" class="grid-view-item__link">
                                     <!-- image -->
-                                    <img class="primary blur-up lazyload" data-src="assets/images/product-images/kentanggoreng.png" src="${pageContext.request.contextPath}assets/images/product-images/kentanggoreng.png" alt="image" title="product" />
+                                    <img class="primary blur-up lazyload" data-src="assets/images/product-images/kentanggoreng.png" src="${pageContext.request.contextPath}/assets/images/product-images/kentanggoreng.png" alt="image" title="product" />
                                     <!-- End image -->
                                     <!-- Hover image -->
-                                    <img class="hover blur-up lazyload" data-src="assets/images/product-images/kentanggoreng.png" src="${pageContext.request.contextPath}assets/images/product-images/kentanggoreng.png" alt="image" title="product" />
+                                    <img class="hover blur-up lazyload" data-src="assets/images/product-images/kentanggoreng.png" src="${pageContext.request.contextPath}/assets/images/product-images/kentanggoreng.png" alt="image" title="product" />
                                     <!-- End hover image -->
                                 </a>
                                 <!-- end product image -->
@@ -813,10 +811,10 @@
                                 <!-- start product image -->
                                 <a href="product-layout-1.html" class="grid-view-item__link">
                                     <!-- image -->
-                                    <img class="primary blur-up lazyload" data-src="assets/images/product-images/miloais.png" src="${pageContext.request.contextPath}assets/images/product-images/miloais.png" alt="image" title="product">
+                                    <img class="primary blur-up lazyload" data-src="assets/images/product-images/miloais.png" src="${pageContext.request.contextPath}/assets/images/product-images/miloais.png" alt="image" title="product">
                                     <!-- End image -->
                                     <!-- Hover image -->
-                                    <img class="hover blur-up lazyload" data-src="assets/images/product-images/miloais.png" src="${pageContext.request.contextPath}assets/images/product-images/miloais.png" alt="image" title="product">
+                                    <img class="hover blur-up lazyload" data-src="assets/images/product-images/miloais.png" src="${pageContext.request.contextPath}/assets/images/product-images/miloais.png" alt="image" title="product">
                                     <!-- End hover image -->
                                 </a>
                                 <!-- product button -->
@@ -902,13 +900,13 @@
                     <div id="ProductSection-product-template" class="product-template__container prstyle1">
                         <div class="product-single">
                             <!-- Start model close -->
-                            <a href="javascript:void()" data-dismiss="modal" class="model-close-btn pull-right" title="close"><span class="icon icon anm anm-times-l"></span></a>
+                            <a href="javascript:void{}" data-dismiss="modal" class="model-close-btn pull-right" title="close"><span class="icon icon anm anm-times-l"></span></a>
                             <!-- End model close -->
                             <div class="row">
                                 <div class="col-lg-6 col-md-6 col-sm-12 col-12">
                                     <div class="product-details-img">
                                         <div class="pl-20">
-                                            <img src="assets/images/signup-image.jpg" alt="" />
+                                            <img src="${pageContext.request.contextPath}/assets/images/signup-image.jpg" alt="" />
                                         </div>
                                     </div>
                                 </div>
@@ -935,7 +933,7 @@
                                                                 <input type="password" name="pass" id="pass" placeholder="Password"/>
                                                             </div>
                                                             <div class="form-group">
-                                                                <label for="re-pass"><i class="zmdi zmdi-lock-outline"></i></label>
+                                                                <%--@declare id="re-pass"--%><label for="re-pass"><i class="zmdi zmdi-lock-outline"></i></label>
                                                                 <input type="password" name="re_pass" id="re_pass" placeholder="Repeat your password"/>
                                                             </div>
                                                             <div class="form-group">

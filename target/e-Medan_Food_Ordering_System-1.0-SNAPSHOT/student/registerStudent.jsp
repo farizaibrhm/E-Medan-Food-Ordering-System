@@ -46,7 +46,7 @@
                 <span class="user-menu d-block d-lg-none"><i class="anm anm-user-al" aria-hidden="true"></i></span>
                 <ul class="customer-links list-inline">
                     <li><a href="<%=request.getContextPath()%>/login.jsp">Login</a></li>
-                    <li><a href="<%=request.getContextPath()%>/register.jsp">Create Account</a></li>
+                    <li><a href="<%=request.getContextPath()%>/register.jsp">Register Account</a></li>
                 </ul>
             </div>
         </div>
@@ -59,7 +59,7 @@
         <div class="row align-items-center">
             <!--Desktop Logo-->
             <div class="logo col-md-2 col-lg-2 d-none d-lg-block">
-                <a href="homepage.html">
+                <a href="${pageContext.request.contextPath}/index.jsp">
                     <img src="<%=request.getContextPath()%>/assets/images/e-Medan.svg" alt="e-Medan Food Ordering Website" title="e-Medan Food Ordering Website" />
                 </a>
             </div>
@@ -74,8 +74,8 @@
                 <!--Desktop Menu-->
                 <nav class="grid__item" id="AccessibleNav"><!-- for mobile -->
                     <ul id="siteNav" class="site-nav medium center hidearrow">
-                        <li class="lvl1 parent megamenu"><a href="homepage.html">Home <i class="anm anm-angle-down-l"></i></a></li>
-                        <li class="lvl1 parent megamenu"><a href="about-us.html">About <i class="anm anm-angle-down-l"></i></a></li>
+                        <li class="lvl1 parent megamenu"><a href="${pageContext.request.contextPath}/index.jsp">Home <i class="anm anm-angle-down-l"></i></a></li>
+                        <li class="lvl1 parent megamenu"><a href="${pageContext.request.contextPath}/about-us-notlogin.jsp">About <i class="anm anm-angle-down-l"></i></a></li>
                         <li class="lvl1 parent dropdown"><a href="menupagenotlogin.html">Menu <i class="anm anm-angle-down-l"></i></a></li>
 
                     </ul>
@@ -84,7 +84,7 @@
             </div>
             <div class="col-6 col-sm-6 col-md-6 col-lg-2 d-block d-lg-none mobile-logo">
                 <div class="logo">
-                    <a href="homepage.html">
+                    <a href="${pageContext.request.contextPath}/index.jsp">
                         <img src="<%=request.getContextPath()%>/assets/images/e-Medan.svg" alt="e-Medan Food Ordering Website" title="e-Medan Food Ordering Website" />
                     </a>
                 </div>

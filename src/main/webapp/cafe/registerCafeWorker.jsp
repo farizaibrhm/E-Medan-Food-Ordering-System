@@ -46,7 +46,7 @@
                 <span class="user-menu d-block d-lg-none"><i class="anm anm-user-al" aria-hidden="true"></i></span>
                 <ul class="customer-links list-inline">
                     <li><a href="<%=request.getContextPath() %>/login.jsp">Login</a></li>
-                    <li><a href="<%=request.getContextPath() %>/register.jsp">Create Account</a></li>
+                    <li><a href="<%=request.getContextPath() %>/register.jsp">Register Account</a></li>
                 </ul>
             </div>
         </div>
@@ -59,7 +59,7 @@
         <div class="row align-items-center">
             <!--Desktop Logo-->
             <div class="logo col-md-2 col-lg-2 d-none d-lg-block">
-                <a href="homepage.html">
+                <a href="${pageContext.request.contextPath}/index.jsp">
                     <img src="<%=application.getContextPath() %>/assets/images/e-Medan.svg" alt="e-Medan Food Ordering Website" title="e-Medan Food Ordering Website" />
                 </a>
             </div>

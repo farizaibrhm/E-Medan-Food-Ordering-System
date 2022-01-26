@@ -9,14 +9,14 @@
     <meta name="description" content="description">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Favicon -->
-    <link rel="shortcut icon" href="${pageContext.request.contextPath}assets/images/e-favicon.svg" />
+    <link rel="shortcut icon" href="${pageContext.request.contextPath}/assets/images/e-favicon.svg" />
     <!-- Plugins CSS -->
-    <link rel="stylesheet" href="${pageContext.request.contextPath}assets/css/plugins.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/plugins.css">
     <!-- Bootstap CSS -->
-    <link rel="stylesheet" href="${pageContext.request.contextPath}assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/bootstrap.min.css">
     <!-- Main Style CSS -->
-    <link rel="stylesheet" href="${pageContext.request.contextPath}assets/css/style.css">
-    <link rel="stylesheet" href="${pageContext.request.contextPath}assets/css/responsive.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/style.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/responsive.css">
 </head>
 <body class="page-template belle">
 <div class="pageWrapper">
@@ -49,8 +49,8 @@
                 <div class="col-2 col-sm-4 col-md-3 col-lg-4 text-right">
                     <span class="user-menu d-block d-lg-none"><i class="anm anm-user-al" aria-hidden="true"></i></span>
                     <ul class="customer-links list-inline">
-                        <li><a href="${pageContext.request.contextPath}login.jsp">Login</a></li>
-                        <li><a href="${pageContext.request.contextPath}register.jsp">Create Account</a></li>
+                        <li><a href="${pageContext.request.contextPath}/login.jsp">Login</a></li>
+                        <li><a href="${pageContext.request.contextPath}/register.jsp">Register Account</a></li>
                     </ul>
                 </div>
             </div>
@@ -63,7 +63,7 @@
             <div class="row align-items-center">
                 <!--Desktop Logo-->
                 <div class="logo col-md-2 col-lg-2 d-none d-lg-block">
-                    <a href="${pageContext.request.contextPath}index.jsp">
+                    <a href="${pageContext.request.contextPath}/index.jsp">
                         <img src="assets/images/e-Medan.svg" alt="Belle Multipurpose Html Template" title="Belle Multipurpose Html Template" />
                     </a>
                 </div>
@@ -78,8 +78,8 @@
                     <!--Desktop Menu-->
                     <nav class="grid__item" id="AccessibleNav"><!-- for mobile -->
                         <ul id="siteNav" class="site-nav medium center hidearrow">
-                            <li class="lvl1 parent megamenu"><a href="${pageContext.request.contextPath}index.jsp">Home <i class="anm anm-angle-down-l"></i></a></li>
-                            <li class="lvl1 parent megamenu"><a href="${pageContext.request.contextPath}about-us-notlogin.jsp">About <i class="anm anm-angle-down-l"></i></a></li>
+                            <li class="lvl1 parent megamenu"><a href="${pageContext.request.contextPath}/index.jsp">Home <i class="anm anm-angle-down-l"></i></a></li>
+                            <li class="lvl1 parent megamenu"><a href="${pageContext.request.contextPath}/about-us-notlogin.jsp">About <i class="anm anm-angle-down-l"></i></a></li>
                             <li class="lvl1 parent dropdown"><a href="menupagenotlogin.html">Menu <i class="anm anm-angle-down-l"></i></a></li>
                         </ul>
                     </nav>
@@ -87,8 +87,8 @@
                 </div>
                 <div class="col-6 col-sm-6 col-md-6 col-lg-2 d-block d-lg-none mobile-logo">
                     <div class="logo">
-                        <a href="${pageContext.request.contextPath}index.jsp">
-                            <img src="${pageContext.request.contextPath}assets/images/logo.svg" alt="Belle Multipurpose Html Template" title="Belle Multipurpose Html Template" />
+                        <a href="${pageContext.request.contextPath}/index.jsp">
+                            <img src="${pageContext.request.contextPath}/assets/images/logo.svg" alt="Belle Multipurpose Html Template" title="Belle Multipurpose Html Template" />
                         </a>
                     </div>
                 </div>
@@ -123,9 +123,9 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-12 col-sm-4 col-md-4 col-lg-4 mb-4"><img class="blur-up lazyload" data-src="${pageContext.request.contextPath}assets/images/burger.jpg" src="assets/images/burger.jpg" alt="About Us" /></div>
-                <div class="col-12 col-sm-4 col-md-4 col-lg-4 mb-4"><img class="blur-up lazyload" data-src="${pageContext.request.contextPath}assets/images/nasi ayam.jpg" src="assets/images/nasi ayam.jpg" alt="About Us" /></div>
-                <div class="col-12 col-sm-4 col-md-4 col-lg-4 mb-4"><img class="blur-up lazyload" data-src="${pageContext.request.contextPath}assets/images/nasi goreng pataya.jpg" src="assets/images/nasi goreng pataya.jpg" alt="About Us" /></div>
+                <div class="col-12 col-sm-4 col-md-4 col-lg-4 mb-4"><img class="blur-up lazyload" data-src="${pageContext.request.contextPath}/assets/images/burger.jpg" src="assets/images/burger.jpg" alt="About Us" /></div>
+                <div class="col-12 col-sm-4 col-md-4 col-lg-4 mb-4"><img class="blur-up lazyload" data-src="${pageContext.request.contextPath}/assets/images/nasi ayam.jpg" src="assets/images/nasi ayam.jpg" alt="About Us" /></div>
+                <div class="col-12 col-sm-4 col-md-4 col-lg-4 mb-4"><img class="blur-up lazyload" data-src="${pageContext.request.contextPath}/assets/images/nasi goreng pataya.jpg" src="assets/images/nasi goreng pataya.jpg" alt="About Us" /></div>
             </div>
             <div class="row">
                 <div class="col-12">
@@ -188,16 +188,16 @@
     <!--End Scoll Top-->
 
     <!-- Including Jquery -->
-    <script src="${pageContext.request.contextPath}assets/js/vendor/jquery-3.3.1.min.js"></script>
-    <script src="${pageContext.request.contextPath}assets/js/vendor/jquery.cookie.js"></script>
-    <script src="${pageContext.request.contextPath}assets/js/vendor/modernizr-3.6.0.min.js"></script>
-    <script src="${pageContext.request.contextPath}assets/js/vendor/wow.min.js"></script>
+    <script src="${pageContext.request.contextPath}/assets/js/vendor/jquery-3.3.1.min.js"></script>
+    <script src="${pageContext.request.contextPath}/assets/js/vendor/jquery.cookie.js"></script>
+    <script src="${pageContext.request.contextPath}/assets/js/vendor/modernizr-3.6.0.min.js"></script>
+    <script src="${pageContext.request.contextPath}/assets/js/vendor/wow.min.js"></script>
     <!-- Including Javascript -->
-    <script src="${pageContext.request.contextPath}assets/js/bootstrap.min.js"></script>
-    <script src="assets/js/plugins.js"></script>
-    <script src="assets/js/popper.min.js"></script>
-    <script src="assets/js/lazysizes.js"></script>
-    <script src="assets/js/main.js"></script>
+    <script src="${pageContext.request.contextPath}/assets/js/bootstrap.min.js"></script>
+    <script src="${pageContext.request.contextPath}/assets/js/plugins.js"></script>
+    <script src="${pageContext.request.contextPath}/assets/js/popper.min.js"></script>
+    <script src="${pageContext.request.contextPath}/assets/js/lazysizes.js"></script>
+    <script src="${pageContext.request.contextPath}/assets/js/main.js"></script>
 </div>
 </body>
 

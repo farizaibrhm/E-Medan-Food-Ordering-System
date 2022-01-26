@@ -108,7 +108,7 @@
                 <div class="signin-form">
                     <h2 class="form-title">Sign In</h2>
                     <h3 class="form-title">Cafe Worker</h3>
-                    <form method="POST" class="register-form" id="login-form">
+                    <form  action="${pageContext.request.contextPath}/LoginCafeWorkerServlet"   method="POST" class="register-form" id="login-form">
                         <div class="form-group">
                             <label for="CWORKID"><i class="zmdi zmdi-account material-icons-name"></i></label>
                             <input type="text" name="CWORKID" id="CWORKID" placeholder="Cafe Worker ID"/>

@@ -14,14 +14,14 @@
     <meta name="description" content="description">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Favicon -->
-    <link rel="shortcut icon" href="../assets/images/e-favicon.svg" />
+    <link rel="shortcut icon" href="${pageContext.request.contextPath}/assets/images/e-favicon.svg" />
     <!-- Plugins CSS -->
-    <link rel="stylesheet" href="../assets/css/plugins.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/plugins.css">
     <!-- Bootstap CSS -->
-    <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/bootstrap.min.css">
     <!-- Main Style CSS -->
-    <link rel="stylesheet" href="../assets/css/style.css">
-    <link rel="stylesheet" href="../assets/css/responsive.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/style.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/responsive.css">
 </head>
 <body class="template-collection belle">
 <div class="pageWrapper">
@@ -62,8 +62,8 @@
             <div class="row align-items-center">
                 <!--Desktop Logo-->
                 <div class="logo col-md-2 col-lg-2 d-none d-lg-block">
-                    <a href="../index.html">
-                        <img src="../assets/images/e-Medan.svg" alt="e-Medan Food Ordering System" title="e-Medan Food Ordering System" />
+                    <a href="${pageContext.request.contextPath}/cafe/homepagecw.jsp">
+                        <img src="${pageContext.request.contextPath}/assets/images/e-Medan.svg" alt="e-Medan Food Ordering System" title="e-Medan Food Ordering System" />
                     </a>
                 </div>
                 <!--End Desktop Logo-->
@@ -261,8 +261,8 @@
                 </div>
                 <div class="col-6 col-sm-6 col-md-6 col-lg-2 d-block d-lg-none mobile-logo">
                     <div class="logo">
-                        <a href="../index.html">
-                            <img src="../assets/images/logo.svg" alt="Belle Multipurpose Html Template" title="Belle Multipurpose Html Template" />
+                        <a href="${pageContext.request.contextPath}/cafe/cafeWorkerProfile.jsp">
+                            <img src="${pageContext.request.contextPath}/assets/images/logo.svg" alt="Belle Multipurpose Html Template" title="Belle Multipurpose Html Template" />
                         </a>
                     </div>
                 </div>
@@ -374,16 +374,16 @@
     <!--End Footer-->
 
     <!-- Including Jquery -->
-    <script src="../assets/js/vendor/jquery-3.3.1.min.js"></script>
-    <script src="../assets/js/vendor/jquery.cookie.js"></script>
-    <script src="../assets/js/vendor/modernizr-3.6.0.min.js"></script>
-    <script src="../assets/js/vendor/wow.min.js"></script>
+    <script src="${pageContext.request.contextPath}/assets/js/vendor/jquery-3.3.1.min.js"></script>
+    <script src="${pageContext.request.contextPath}/assets/js/vendor/jquery.cookie.js"></script>
+    <script src="${pageContext.request.contextPath}/assets/js/vendor/modernizr-3.6.0.min.js"></script>
+    <script src="${pageContext.request.contextPath}/assets/js/vendor/wow.min.js"></script>
     <!-- Including Javascript -->
-    <script src="../assets/js/bootstrap.min.js"></script>
-    <script src="../assets/js/plugins.js"></script>
-    <script src="../assets/js/popper.min.js"></script>
-    <script src="../assets/js/lazysizes.js"></script>
-    <script src="../assets/js/main.js"></script>
+    <script src="${pageContext.request.contextPath}/assets/js/bootstrap.min.js"></script>
+    <script src="${pageContext.request.contextPath}/assets/js/plugins.js"></script>
+    <script src="${pageContext.request.contextPath}/assets/js/popper.min.js"></script>
+    <script src="${pageContext.request.contextPath}/assets/js/lazysizes.js"></script>
+    <script src="${pageContext.request.contextPath}/assets/js/main.js"></script>
 </div>
 </body>
 </html>

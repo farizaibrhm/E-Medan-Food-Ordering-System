@@ -15,17 +15,6 @@ import javax.servlet.ServletResponse;
 
 public class StudentDAO {
 
-//    static ResultSet rs = null;
-//    public void loadDriver(String dbDriver)
-//    {
-//        try {
-//            Class.forName(dbDriver);
-//        } catch (ClassNotFoundException e) {
-//            // TODO Auto-generated catch block
-//            e.printStackTrace();
-//        }
-//    }
-
     public static Connection getConnection() {
         Connection con = null;
         try {

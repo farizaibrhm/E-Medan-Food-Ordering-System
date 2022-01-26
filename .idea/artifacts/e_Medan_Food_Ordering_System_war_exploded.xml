@@ -13,14 +13,15 @@
       <element id="directory" name="WEB-INF">
         <element id="directory" name="classes">
           <element id="module-output" name="e-Medan_Food_Ordering_System" />
+          <element id="library" level="application" name="font-awesome" />
         </element>
         <element id="directory" name="lib">
           <element id="library" level="project" name="Maven: javax.mvc:javax.mvc-api:1.0.0" />
           <element id="library" level="project" name="Maven: javax.servlet:jstl:1.2" />
           <element id="library" level="project" name="Maven: org.postgresql:postgresql:42.3.1" />
           <element id="library" level="project" name="Maven: org.checkerframework:checker-qual:3.5.0" />
-          <element id="library" level="project" name="apache.tomcat.jasper" />
           <element id="library" level="project" name="mysql.connector.java" />
+          <element id="library" level="project" name="apache.tomcat.jasper" />
         </element>
       </element>
       <element id="directory" name="META-INF">

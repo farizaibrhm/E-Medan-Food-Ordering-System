@@ -26,7 +26,7 @@ public class LoginCafeWorkerServlet extends HttpServlet {
 
         try {
             if (cafeWorkerDAO.validate(cafeWorker)){
-                response.sendRedirect(request.getContextPath() + "/cafe/homepagecafeworker.jsp");
+                response.sendRedirect(request.getContextPath() + "/cafe/homepagecw.jsp");
             }else {
                 HttpSession session = request.getSession();
             }

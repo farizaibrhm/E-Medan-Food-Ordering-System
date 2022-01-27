@@ -7,7 +7,6 @@
     String STUDENTID = request.getParameter("STUDENTID");
     String driver = "com.mysql.cj.jdbc.Driver";
     String connectionUrl = "jdbc:mysql://localhost:3306/emfos";
-    String database = "emfos";
     String userid = "root";
     String password = "";
 
@@ -24,9 +23,9 @@
 <html class="no-js" lang="en">
 <%
     try {
-        connection = DriverManager.getConnection(connectionUrl+database,userid,password);
+        connection = DriverManager.getConnection(connectionUrl, userid, password);
         statement=connection.createStatement();
-        String sql = "SELECT * FROM student WHERE STUDENTID=?";
+        String sql = "SELECT * FROM student WHERE STUDENTID='?'";
         resultSet = statement.executeQuery(sql);
         while (resultSet.next()){
 %>
@@ -104,8 +103,9 @@
                                 <div class="user-avatar">
                                     <img src="${pageContext.request.contextPath}/assets/images/female-student.jpg" alt="Maxwell Admin">
                                 </div>
-                                <h5 class="user-name"><%=resultSet.getString(2)%></h5>
-                                <h6 class="user-id"><%=resultSet.getString(1)%></h6>
+                                    <td><%=resultSet.getString(2)%></td>
+                                    <br>
+                                    <td><%=resultSet.getString(1)%></td>
                             </div>
 
                             <!-- End display about read from database after student register account -->

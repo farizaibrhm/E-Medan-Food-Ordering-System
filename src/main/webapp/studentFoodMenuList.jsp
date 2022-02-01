@@ -1,4 +1,4 @@
-<%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/sql" prefix="sql" %>
 <%@page import="java.sql.DriverManager"%>
@@ -18,15 +18,17 @@
     Statement statement = null;
     ResultSet resultSet = null;
 %>
-
 <!DOCTYPE html>
-<html>
+<html class="no-js" lang="en">
+
+<!-- belle/shop-grid-4.html   11 Nov 2019 12:39:07 GMT -->
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>e-Medan Food Ordering Website</title>
+    <title>Menu Page &ndash; Food</title>
     <meta name="description" content="description">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- Favicon -->
     <link rel="shortcut icon" href="assets/images/e-favicon.svg" />
     <!-- Plugins CSS -->
@@ -37,10 +39,7 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/responsive.css">
 </head>
-<body class="template-index home2-default">
-<div id="pre-loader">
-    <img src="assets/images/loader.gif" alt="Loading..." />
-</div>
+<body class="template-blog belle">
 <div class="pageWrapper">
     <!--Search Form Drawer-->
     <div class="search">
@@ -49,16 +48,15 @@
                 <button class="go-btn search__button" type="submit"><i class="icon anm anm-search-l"></i></button>
                 <input class="search__input" type="search" name="q" value="" placeholder="Search entire store..." aria-label="Search" autocomplete="off">
             </form>
-            <button type="button" class="search-trigger close-btn"><i class="anm anm-times-l"></i></button>
+            <button type="button" class="search-trigger close-btn"><i class="icon anm anm-times-l"></i></button>
         </div>
     </div>
     <!--End Search Form Drawer-->
-
-    <%
+        <%
         String STUDENTNAME = (String) session.getAttribute("STUDENTNAME");
         if (STUDENTNAME== null)
         { %>
-            <!--Top Header-->
+    <!--Top Header-->
     <div class="top-header">
         <div class="container-fluid">
             <div class="row">
@@ -190,7 +188,7 @@
         </div>
     </div>
     <!--End Header-->
-   <% } else{
+        <% } else{
     %>
 
     <!--Top Header-->
@@ -324,258 +322,169 @@
         </div>
     </div>
     <!--End Header-->
-    <% }%>
-
-
+        <% }%>
     <!--Body Content-->
     <div id="page-content">
-        <!--Home slider-->
-        <div class="slideshow slideshow-wrapper pb-section">
-            <div class="home-slideshow">
-                <div class="slide">
-                    <div class="blur-up lazyload">
-                        <img class="blur-up lazyload" data-src="assets/images/headernasilemak.png" src="assets/images/headernasilemak.png"  />
-                        <div class="slideshow__text-wrap slideshow__overlay classic middle">
-                            <div class="slideshow__text-content middle">
-                                <div class="container">
-                                    <div class="wrap-caption left" >
-                                        <br><br><br><br><br><br><br><br>
-                                        <br><br><br><br><br><br>
-                                        <br><br>
-                                        <a href= "studentLogin.jsp" class= "btn">Order now</a>
+        <!--Collection Banner-->
+        <div class="collection-header">
+            <div class="collection-hero">
+                <div class="collection-hero__image"><img class="blur-up lazyload" src="assets/images/headerfoods.png" /></div>
+                <div class="collection-hero__title-wrapper"><h1 class="collection-hero__title page-width">Food Menu Page</h1></div>
+            </div>
+        </div>
+        <!--End Collection Banner-->
+        <br>
+        <br>
+        <div class="container">
+            <div class="row">
+
+                <!--Main Content-->
+                <div class="col-12 col-sm-12 col-md-12 col-lg-12 main-col">
+                    <div class="productList">
+                        <!--Toolbar-->
+                        <button type="button" class="btn btn-filter d-block d-md-none d-lg-none"> Product Filters</button>
+                        <div class="toolbar">
+                            <div class="filters-toolbar-wrapper">
+                                <div class="row">
+                                    <div class="col-4 col-md-4 col-lg-4 filters-toolbar__item collection-view-as d-flex justify-content-start align-items-center">
+
                                     </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="slide">
-                    <div class="blur-up lazyload">
-                        <img class="blur-up lazyload" data-src="assets/images/headerfoods.png" src="assets/images/headerfoods.png" alt="Summer Bikini Collection" title="Summer Bikini Collection" />
-                        <div class="slideshow__text-wrap slideshow__overlay classic middle">
-                            <div class="slideshow__text-content middle">
-                                <div class="container">
-                                    <div class="wrap-caption center">
-                                        <br><br><br><br><br><br>
-                                        <br><br><br><br><br><br>
-                                        <a href= "login.html" class= "btn">Order now</a>
+                                    <div class="col-4 col-md-4 col-lg-4 text-center filters-toolbar__item filters-toolbar__item--count d-flex justify-content-center align-items-center">
+                                        <%
+                                            try{
+                                                con = DriverManager.getConnection("jdbc:postgresql://ec2-44-199-52-133.compute-1.amazonaws.com:5432/danpunma7i9eh0", "kgkcfexavaezbv", "452a173c45857bc5d4a0e09e553e6748e19271602a8311160d7dca2ee3cf40a6");
+                                                statement=con.createStatement();
+
+                                                String sql ="SELECT COUNT (\"MENUID\") FROM public.menu WHERE \"MENUTYPE\" = 'F';";
+                                                resultSet = statement.executeQuery(sql);
+
+                                                while(resultSet.next()){
+                                        %>
+                                        <span class="filters-toolbar__product-count">Showing: <%=resultSet.getInt(1)%></span>
+
+                                        <%
+
+                                                }
+                                                con.close();
+                                            }
+                                            catch (Exception e) {
+                                                e.printStackTrace();
+                                            }
+                                        %>
+
                                     </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!--End Home slider-->
-
-
-        <!--New Arrivals-->
-        <div class="product-rows section">
-            <div class="container">
-                <div class="row">
-                    <div class="col-12 col-sm-12 col-md-12 col-lg-12">
-                        <div class="section-header text-center">
-                            <h2 class="h2">Foods & Beverages</h2>
-                        </div>
-                    </div>
-                </div>
-                <div class="grid-products">
-                    <div class="row">
-<%--                        //sini okay--%>
-    <%
-        try{
-            con = DriverManager.getConnection("jdbc:postgresql://ec2-44-199-52-133.compute-1.amazonaws.com:5432/danpunma7i9eh0", "kgkcfexavaezbv", "452a173c45857bc5d4a0e09e553e6748e19271602a8311160d7dca2ee3cf40a6");
-            statement=con.createStatement();
-
-            String sql ="SELECT \"MENUID\", \"MENUNAME\", \"MENUDESC\", \"MENUTPRICE\", \"MENUTYPE\", \"fileName\", \"savePath\"\n" +
-                    "\tFROM public.menu;";
-            resultSet = statement.executeQuery(sql);
-
-            while(resultSet.next()){
-    %>
-                        <div class="col-6 col-sm-2 col-md-3 col-lg-3 item">
-                            <!-- start product image -->
-                            <div class="product-image">
-                                <!-- start product image -->
-                                <a href="#" class="grid-view-item__link">
-                                    <!-- image -->
-                                    <img class="primary blur-up lazyload" data-src="images/<%=resultSet.getString("fileName")%>" src="images/<%=resultSet.getString("fileName")%>" alt="image">
-                                    <!-- End image -->
-                                    <!-- Hover image -->
-                                    <img class="hover blur-up lazyload" data-src="images/<%=resultSet.getString("fileName")%>" src=images/<%=resultSet.getString("fileName")%> alt="image">
-                                    <!-- End hover image -->
-                                </a>
-                                <!-- end product image -->
-
-                                <!-- Start product button -->
-                                <form class="variants add" action="#" onclick="window.location.href='cart.html'"method="post">
-                                    <button class="btn btn-addto-cart" type="button" tabindex="0">Add To Cart</button>
-                                </form>
-                                <!-- end product button -->
-                            </div>
-                            <!--start product details -->
-                            <div class="product-details text-center">
-                                <!-- product name -->
-                                <div class="product-name">
-                                    <a href="#"><%=resultSet.getString("MENUNAME")%></a>
-                                </div>
-                                <!-- End product name -->
-                                <!-- product price -->
-                                <div class="product-price">
-                                    <span class="price">RM <%=resultSet.getString("MENUTPRICE")%></span>
-                                </div>
-                                <!-- End product price -->
-                            </div>
-                            <!-- End product details -->
-                        </div>
-    <%
-
-            }
-            con.close();
-        }
-        catch (Exception e) {
-            e.printStackTrace();
-        }
-    %>
-<%--                        //habis sini--%>
-                    </div>
-                    <div class="row">
-                        <div class="col-12 col-sm-12 col-md-12 col-lg-12 text-center">
-                            <a href="studentMenuList.jsp" class="btn">View all</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!--End Featured Product-->
-    </div>
-    <!--End Body Content-->
-    <!--Google map-->
-    <div id="map-container-google-1" class="z-depth-1-half map-container" style="height: 100px">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3986.8200168934977!2d102.450926814574!3d2.2213963983808642!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31d1c2904d683dc3%3A0x216b1d164eba26a1!2sUniversiti%20Teknologi%20MARA%20Cawangan%20Melaka%20Kampus%20Jasin!5e0!3m2!1sen!2smy!4v1642058261291!5m2!1sen!2smy" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-    </div>
-
-    <!--Google Maps-->
-    <!--Footer-->
-    <footer id="footer" class="footer-2">
-        <div class="site-footer">
-            <div class="container">
-                <!--Footer Links-->
-                <div class="footer-top">
-                    <div class="row">
-                        <div class="col-12 col-sm-12 col-md-3 col-lg-3 contact-box">
-                            <h4 class="h4">Contact Us</h4>
-                            <ul class="addressFooter">
-                                <li><i class="icon anm anm-map-marker-al"></i><p>Jalan Lembah Kesang 1/1-2, Kampung <br>Seri Mendapat, 77300 Merlimau, Melaka</p></li>
-                                <li class="phone"><i class="icon anm anm-phone-s"></i><p>(+606) 264 5000</p></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <!--End Footer Links-->
-                <hr>
-                <div class="footer-bottom">
-                    <div class="row">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
-    <!--End Footer-->
-    <!--Scoll Top-->
-    <span id="site-scroll"><i class="icon anm anm-angle-up-r"></i></span>
-    <!--End Scoll Top-->
-
-    <!--Quick View popup-->
-    <div class="modal fade quick-view-popup" id="content_quickview">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-body">
-                    <div id="ProductSection-product-template" class="product-template__container prstyle1">
-                        <div class="product-single">
-                            <!-- Start model close -->
-                            <a href="javascript:void(0)" data-dismiss="modal" class="model-close-btn pull-right" title="close"><span class="icon icon anm anm-times-l"></span></a>
-                            <!-- End model close -->
-                            <div class="row">
-                                <div class="col-lg-6 col-md-6 col-sm-12 col-12">
-                                    <div class="product-details-img">
-                                        <div class="pl-20">
-                                            <img src="assets/images/signup-image.jpg" alt="" />
+                                    <div class="col-4 col-md-4 col-lg-4 text-right">
+                                        <div class="filters-toolbar__item">
+                                            <label for="SortBy" class="hidden">Sort</label>
+                                            <select name="SortBy" id="SortBy" class="filters-toolbar__input filters-toolbar__input--sort">
+                                                <option value="title-ascending" selected="selected">Sort</option>
+                                                <option>Best Selling</option>
+                                                <option>Alphabetically, A-Z</option>
+                                                <option>Alphabetically, Z-A</option>
+                                                <option>Price, low to high</option>
+                                                <option>Price, high to low</option>
+                                                <option>Date, new to old</option>
+                                                <option>Date, old to new</option>
+                                            </select>
+                                            <input class="collection-header__default-sort" type="hidden" value="manual">
                                         </div>
                                     </div>
-                                </div>
-                                <div class="col-lg-6 col-md-6 col-sm-12 col-12">
-                                    <div class="product-single__meta">
-                                        <h2 class="product-single__title">&nbsp &nbsp &nbsp Don't have account?</h2>
 
-                                        <section class="signup">
-                                            <div class="container">
-                                                <div class="signup-content">
-                                                    <div class="signup-form">
-                                                        <h2 class="form-title">Sign up</h2>
-                                                        <form method="POST" class="register-form" id="register-form">
-                                                            <div class="form-group">
-                                                                <label for="name"><i class="zmdi zmdi-account material-icons-name"></i></label>
-                                                                <input type="text" name="name" id="name" placeholder="Your Name"/>
-                                                            </div>
-                                                            <div class="form-group">
-                                                                <label for="email"><i class="zmdi zmdi-email"></i></label>
-                                                                <input type="email" name="email" id="email" placeholder="Your Email"/>
-                                                            </div>
-                                                            <div class="form-group">
-                                                                <label for="pass"><i class="zmdi zmdi-lock"></i></label>
-                                                                <input type="password" name="pass" id="pass" placeholder="Password"/>
-                                                            </div>
-                                                            <div class="form-group">
-                                                                <label for="re-pass3"><i class="zmdi zmdi-lock-outline"></i></label>
-                                                                <input type="password" name="re_pass" id="re_pass3" placeholder="Repeat your password"/>
-                                                            </div>
-                                                            <div class="form-group">
-                                                                <input type="checkbox" name="agree-term" id="agree-term" class="agree-term" />
-                                                                <label for="agree-term" class="label-agree-term"><span><span></span></span>I agree all statements in  <a href="#" class="term-service">Terms of service</a></label>
-                                                            </div>
-                                                            <a href="login.html" class="signup-image-link">I am already member</a>
-                                                            <div class="form-group form-button">
-                                                                <input type="submit" name="signup" id="signup" class="form-submit" value="Register"/>
-                                                            </div>
-                                                        </form>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </section>
-
-                                    </div>
                                 </div>
                             </div>
-                            <!--End-product-single-->
+                        </div>
+                        <!--End Toolbar-->
+
+                        <div class="grid-products grid--view-items">
+                            <div class="row">
+                                <%
+                                    try{
+                                        con = DriverManager.getConnection("jdbc:postgresql://ec2-44-199-52-133.compute-1.amazonaws.com:5432/danpunma7i9eh0", "kgkcfexavaezbv", "452a173c45857bc5d4a0e09e553e6748e19271602a8311160d7dca2ee3cf40a6");
+                                        statement=con.createStatement();
+
+                                        String sql ="SELECT \"MENUID\", \"MENUNAME\", \"MENUDESC\", \"MENUTPRICE\", \"MENUTYPE\", \"fileName\", \"savePath\"\n" +
+                                                "\tFROM public.menu WHERE \"MENUTYPE\" = 'F';";
+                                        resultSet = statement.executeQuery(sql);
+
+                                        while(resultSet.next()){
+                                %>
+                                <div class="list-view-items grid--view-items">
+                                    <!--ListView Item-->
+                                    <div class="list-product list-view-item">
+                                        <div class="list-view-item__image-column">
+                                            <div class="list-view-item__image-wrapper">
+                                                <!-- Image -->
+                                                <a href="#"><image src="images/<%=resultSet.getString("fileName")%>" width="100" height="100"/></a>
+                                                <!-- End Image -->
+                                            </div>
+                                        </div>
+                                        <div class="list-view-item__title-column">
+                                            <!-- Product Name -->
+                                            <div class="h4 grid-view-item__title"><a href="product-layout-2.html"><%=resultSet.getString("MENUNAME")%></a></div>
+                                            <!-- End Product Name-->
+                                            <!-- Gerai Name -->
+                                            <p class="product-review"><i class="font-13 fa fa-star"></i><i class="font-13 fa fa-star"></i><i class="font-13 fa fa-star"></i><i class="font-13 fa fa-star-o"></i><i class="font-13 fa fa-star-o"></i></p>
+                                            <!-- End Gerai Name -->
+                                            <!-- Sort Description -->
+                                            <%=resultSet.getString("MENUDESC")%>
+                                            <!-- End Sort Description -->
+                                            <!-- Price -->
+                                            <p class="product-price grid-view-item__meta">
+                                                <span class="product-price__price product-price__sale"><span class="money">RM <%=resultSet.getString("MENUTPRICE")%></span></span>
+                                            </p>
+                                            <!-- End Price -->
+                                            <form class="variants" action="#">
+                                                <button class="btn btn--small" type="button">Add to Cart</button>
+                                            </form>
+                                        </div>
+                                    </div>
+                                    <!--End ListView Item-->
+                                </div>
+
+                                <%
+
+                                        }
+                                        con.close();
+                                    }
+                                    catch (Exception e) {
+                                        e.printStackTrace();
+                                    }
+                                %>
+                            </div>
+                        </div>
+                        <div class="infinitpaginOuter">
+                            <div class="infinitpagin">
+                                <a href="#" class="btn loadMore">Load More</a>
+                            </div>
                         </div>
                     </div>
+
+                    <!--End Main Content-->
                 </div>
             </div>
+
         </div>
+        <!--End Body Content-->
+
+        <!--Scoll Top-->
+        <span id="site-scroll"><i class="icon anm anm-angle-up-r"></i></span>
+        <!--End Scoll Top-->
+
+
+
+        <!-- Including Jquery -->
+        <script src="assets/js/vendor/jquery-3.3.1.min.js"></script>
+        <script src="assets/js/vendor/jquery.cookie.js"></script>
+        <script src="assets/js/vendor/modernizr-3.6.0.min.js"></script>
+        <script src="assets/js/vendor/wow.min.js"></script>
+        <!-- Including Javascript -->
+        <script src="assets/js/bootstrap.min.js"></script>
+        <script src="assets/js/plugins.js"></script>
+        <script src="assets/js/popper.min.js"></script>
+        <script src="assets/js/lazysizes.js"></script>
+        <script src="assets/js/main.js"></script>
     </div>
-    <!--End Quick View popup-->
-
-    <!-- Newsletter Popup -->
-    <!-- End Newsletter Popup -->
-
-    <!-- Including Jquery -->
-    <script src="assets/js/vendor/jquery-3.3.1.min.js"></script>
-    <script src="assets/js/vendor/modernizr-3.6.0.min.js"></script>
-    <script src="assets/js/vendor/jquery.cookie.js"></script>
-    <script src="assets/js/vendor/wow.min.js"></script>
-    <!-- Including Javascript -->
-    <script src="assets/js/bootstrap.min.js"></script>
-    <script src="assets/js/plugins.js"></script>
-    <script src="assets/js/popper.min.js"></script>
-    <script src="assets/js/lazysizes.js"></script>
-    <script src="assets/js/main.js"></script>
-
-    <!-- JS -->
-    <script src="assets/vendor/jquery/jquery.min.js"></script>
-    <script src="assets/js/mainform.js"></script>
-</div>
-
 </body>
+
+<!-- belle/shop-grid-4.html   11 Nov 2019 12:39:07 GMT -->
 </html>

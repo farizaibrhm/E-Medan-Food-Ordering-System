@@ -1,4 +1,24 @@
 <%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/sql" prefix="sql" %>
+<%@page import="java.sql.DriverManager"%>
+<%@page import="java.sql.ResultSet"%>
+<%@page import="java.sql.Statement"%>
+<%@page import="java.sql.Connection"%>
+
+<%
+    String dbDriver = "org.postgresql.Driver";
+
+    try {
+        Class.forName(dbDriver);
+    } catch (ClassNotFoundException e) {
+        e.printStackTrace();
+    }
+    Connection con = null;
+    Statement statement = null;
+    ResultSet resultSet = null;
+%>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -22,12 +42,6 @@
     <img src="assets/images/loader.gif" alt="Loading..." />
 </div>
 <div class="pageWrapper">
-    <!--Promotion Bar-->
-    <div class="notification-bar mobilehide">
-        <a href="#" class="notification-bar__message">e-Medan Food Ordering System</a>
-        <span class="close-announcement">×</span>
-    </div>
-    <!--End Promotion Bar-->
     <!--Search Form Drawer-->
     <div class="search">
         <div class="search__form">
@@ -39,13 +53,16 @@
         </div>
     </div>
     <!--End Search Form Drawer-->
-    <!--Top Header-->
-    <div class="top-header">
 
+    <%
+        String STUDENTNAME = (String) session.getAttribute("STUDENTNAME");
+        if (STUDENTNAME== null)
+        { %>
+            <!--Top Header-->
+    <div class="top-header">
         <div class="container-fluid">
             <div class="row">
                 <div class="col-10 col-sm-8 col-md-5 col-lg-4">
-
                     <p class="phone-no"><i class="anm anm-phone-s"></i> (+606) 264 5000</p>
                 </div>
                 <div class="col-sm-4 col-md-4 col-lg-4 d-none d-lg-none d-md-block d-lg-block">
@@ -53,8 +70,8 @@
                 <div class="col-2 col-sm-4 col-md-3 col-lg-4 text-right">
                     <span class="user-menu d-block d-lg-none"><i class="anm anm-user-al" aria-hidden="true"></i></span>
                     <ul class="customer-links list-inline">
-                        <li><a href="login.html">Login</a></li>
-                        <li><a href="register.html">Create Account</a></li>
+                        <li><a href="studentLogin.jsp">Student Login</a></li>
+                        <li><a href="cafeworkerLogin.jsp">Cafeworker Login</a></li>
                     </ul>
                 </div>
             </div>
@@ -83,11 +100,11 @@
                     <nav class="grid__item" id="AccessibleNav"><!-- for mobile -->
                         <ul id="siteNav" class="site-nav medium center hidearrow">
                             <li class="lvl1 parent megamenu"><a href="index.jsp">Home <i class="anm anm-angle-down-l"></i></a></li>
-                            <li class="lvl1 parent megamenu"><a href="about-us-notlogin.html">About <i class="anm anm-angle-down-l"></i></a></li>
-                            <li class="lvl1 parent dropdown"><a href="menupagenotlogin.html">Menu <i class="anm anm-angle-down-l"></i></a>
+                            <li class="lvl1 parent megamenu"><a href="aboutus.jsp">About Us <i class="anm anm-angle-down-l"></i></a></li>
+                            <li class="lvl1 parent dropdown"><a href="studentMenuList.jsp">Menu <i class="anm anm-angle-down-l"></i></a>
                                 <ul class="dropdown">
-                                    <li><a href="checkout.html" class="site-nav">Food</a></li>
-                                    <li><a href="about-us.html" class="site-nav">Beverages <span class="lbl nm_label1">New</span> </a></li>
+                                    <li><a href="studentFoodMenuList.jsp" class="site-nav">Food</a></li>
+                                    <li><a href="studentDrinkMenuList.jsp" class="site-nav">Drink</a></li>
                                 </ul>
                             </li>
                             </li>
@@ -95,17 +112,12 @@
                     </nav>
                     <!--End Desktop Menu-->
                 </div>
-                <!--Mobile Logo-->
-                <div class="col-6 col-sm-6 col-md-6 col-lg-2 d-block d-lg-none mobile-logo">
-                    <div class="logo">
-                        <a href="index.jsp">
-                            <img src="assets/images/e-Medan.svg" alt="e-Medan Food Ordering Website" title="e-Medan Food Ordering Website" />
-                        </a>
-                    </div>
-                </div>
-                <!--Mobile Logo-->
                 <div class="col-4 col-sm-3 col-md-3 col-lg-2">
                     <div class="site-cart">
+                        <a href="#" class="site-header__cart" title="Cart">
+                            <i class="icon anm anm-bag-l"></i>
+                            <span id="CartCount" class="site-header__cart-count" data-cart-render="item_count">2</span>
+                        </a>
                         <!--Minicart Popup-->
                         <div id="header-cart" class="block block-cart">
                             <ul class="mini-products-list">
@@ -122,13 +134,13 @@
                                             <div class="qtyField">
                                                 <span class="label">Qty:</span>
                                                 <a class="qtyBtn minus" href="javascript:void(0);"><i class="fa anm anm-minus-r" aria-hidden="true"></i></a>
-                                                <input type="text" id="Quantity" name="quantity" value="1" class="product-form__input qty">
+                                                <input type="text" id="Quantity1" name="quantity" value="1" class="product-form__input qty">
                                                 <a class="qtyBtn plus" href="javascript:void(0);"><i class="fa anm anm-plus-r" aria-hidden="true"></i></a>
                                             </div>
                                         </div>
                                         <div class="priceRow">
                                             <div class="product-price">
-                                                <span class="money">24.00</span>
+                                                <span class="money">$59.00</span>
                                             </div>
                                         </div>
                                     </div>
@@ -170,126 +182,150 @@
                         </div>
                         <!--End Minicart Popup-->
                     </div>
+                    <div class="site-header__search">
+                        <button type="button" class="search-trigger"><i class="icon anm anm-search-l"></i></button>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
     <!--End Header-->
+   <% } else{
+    %>
 
-    <!--Mobile Menu-->
-    <div class="mobile-nav-wrapper" role="navigation">
-        <div class="closemobileMenu"><i class="icon anm anm-times-l pull-right"></i> Close Menu</div>
-        <ul id="MobileNav" class="mobile-nav">
-            <li class="lvl1 parent megamenu"><a href="index.jsp">Home<i class="anm anm-plus-l"></i></a></li>
-        </ul>
-        </li>
-        <li class="lvl1 parent megamenu"><a href="#">Shop <i class="anm anm-plus-l"></i></a>
-            <ul>
-                <li><a href="#" class="site-nav">Shop Pages<i class="anm anm-plus-l"></i></a>
-                    <ul>
-                        <li><a href="shop-left-sidebar.html" class="site-nav">Left Sidebar</a></li>
-                        <li><a href="shop-right-sidebar.html" class="site-nav">Right Sidebar</a></li>
-                        <li><a href="shop-fullwidth.html" class="site-nav">Fullwidth</a></li>
-                        <li><a href="shop-grid-3.html" class="site-nav">3 items per row</a></li>
-                        <li><a href="shop-grid-4.html" class="site-nav">4 items per row</a></li>
-                        <li><a href="shop-grid-5.html" class="site-nav">5 items per row</a></li>
-                        <li><a href="shop-grid-6.html" class="site-nav">6 items per row</a></li>
-                        <li><a href="shop-grid-7.html" class="site-nav">7 items per row</a></li>
-                        <li><a href="shop-listview.html" class="site-nav last">Product Listview</a></li>
+    <!--Top Header-->
+    <div class="top-header">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-10 col-sm-8 col-md-5 col-lg-4">
+                </div>
+                <div class="col-sm-4 col-md-4 col-lg-4 d-none d-lg-none d-md-block d-lg-block">
+                    <div class="text-center"><p class="top-header_middle-text">Welcome, <%=session.getAttribute("STUDENTNAME")%>!</p></div>
+                </div>
+                <div class="col-2 col-sm-4 col-md-3 col-lg-4 text-right">
+                    <span class="user-menu d-block d-lg-none"><i class="anm anm-user-al" aria-hidden="true"></i></span>
+                    <ul class="customer-links list-inline">
+                        <li><a href="${pageContext.request.contextPath}/studentLogoutServlet">Logout</a></li>
                     </ul>
-                </li>
-                <li><a href="#" class="site-nav">Shop Features<i class="anm anm-plus-l"></i></a>
-                    <ul>
-                        <li><a href="shop-left-sidebar.html" class="site-nav">Product Countdown </a></li>
-                        <li><a href="shop-right-sidebar.html" class="site-nav">Infinite Scrolling</a></li>
-                        <li><a href="shop-grid-3.html" class="site-nav">Pagination - Classic</a></li>
-                        <li><a href="shop-grid-6.html" class="site-nav">Pagination - Load More</a></li>
-                        <li><a href="product-labels.html" class="site-nav">Dynamic Product Labels</a></li>
-                        <li><a href="product-swatches-style.html" class="site-nav">Product Swatches </a></li>
-                        <li><a href="product-hover-info.html" class="site-nav">Product Hover Info</a></li>
-                        <li><a href="shop-grid-3.html" class="site-nav">Product Reviews</a></li>
-                        <li><a href="shop-left-sidebar.html" class="site-nav last">Discount Label </a></li>
-                    </ul>
-                </li>
-            </ul>
-        </li>
-        <li class="lvl1 parent megamenu"><a href="product-layout-1.html">Product <i class="anm anm-plus-l"></i></a>
-            <ul>
-                <li><a href="product-layout-1.html" class="site-nav">Product Page<i class="anm anm-plus-l"></i></a>
-                    <ul>
-                        <li><a href="product-layout-1.html" class="site-nav">Product Layout 1</a></li>
-                        <li><a href="product-layout-2.html" class="site-nav">Product Layout 2</a></li>
-                        <li><a href="product-layout-3.html" class="site-nav">Product Layout 3</a></li>
-                        <li><a href="product-with-left-thumbs.html" class="site-nav">Product With Left Thumbs</a></li>
-                        <li><a href="product-with-right-thumbs.html" class="site-nav">Product With Right Thumbs</a></li>
-                        <li><a href="product-with-bottom-thumbs.html" class="site-nav last">Product With Bottom Thumbs</a></li>
-                    </ul>
-                </li>
-                <li><a href="short-description.html" class="site-nav">Product Features<i class="anm anm-plus-l"></i></a>
-                    <ul>
-                        <li><a href="short-description.html" class="site-nav">Short Description</a></li>
-                        <li><a href="product-countdown.html" class="site-nav">Product Countdown</a></li>
-                        <li><a href="product-video.html" class="site-nav">Product Video</a></li>
-                        <li><a href="product-quantity-message.html" class="site-nav">Product Quantity Message</a></li>
-                        <li><a href="product-visitor-sold-count.html" class="site-nav">Product Visitor/Sold Count </a></li>
-                        <li><a href="product-zoom-lightbox.html" class="site-nav last">Product Zoom/Lightbox </a></li>
-                    </ul>
-                </li>
-                <li><a href="#" class="site-nav">Product Features<i class="anm anm-plus-l"></i></a>
-                    <ul>
-                        <li><a href="product-with-variant-image.html" class="site-nav">Product with Variant Image</a></li>
-                        <li><a href="product-with-color-swatch.html" class="site-nav">Product with Color Swatch</a></li>
-                        <li><a href="product-with-image-swatch.html" class="site-nav">Product with Image Swatch</a></li>
-                        <li><a href="product-with-dropdown.html" class="site-nav">Product with Dropdown</a></li>
-                        <li><a href="product-with-rounded-square.html" class="site-nav">Product with Rounded Square</a></li>
-                        <li><a href="swatches-style.html" class="site-nav last">Product Swatches All Style</a></li>
-                    </ul>
-                </li>
-                <li><a href="#" class="site-nav">Product Features<i class="anm anm-plus-l"></i></a>
-                    <ul>
-                        <li><a href="product-accordion.html" class="site-nav">Product Accordion</a></li>
-                        <li><a href="product-pre-orders.html" class="site-nav">Product Pre-orders </a></li>
-                        <li><a href="product-labels-detail.html" class="site-nav">Product Labels</a></li>
-                        <li><a href="product-discount.html" class="site-nav">Product Discount In %</a></li>
-                        <li><a href="product-shipping-message.html" class="site-nav">Product Shipping Message</a></li>
-                        <li><a href="product-shipping-message.html" class="site-nav last">Size Guide </a></li>
-                    </ul>
-                </li>
-            </ul>
-        </li>
-        <li class="lvl1 parent megamenu"><a href="about-us.html">Pages <i class="anm anm-plus-l"></i></a>
-            <ul>
-                <li><a href="cart-variant1.html" class="site-nav">Cart Page <i class="anm anm-plus-l"></i></a>
-                    <ul class="dropdown">
-                        <li><a href="cart-variant1.html" class="site-nav">Cart Variant1</a></li>
-                        <li><a href="cart-variant2.html" class="site-nav">Cart Variant2</a></li>
-                    </ul>
-                </li>
-                <li><a href="compare-variant1.html" class="site-nav">Compare Product <i class="anm anm-plus-l"></i></a>
-                    <ul class="dropdown">
-                        <li><a href="compare-variant1.html" class="site-nav">Compare Variant1</a></li>
-                        <li><a href="compare-variant2.html" class="site-nav">Compare Variant2</a></li>
-                    </ul>
-                </li>
-                <li><a href="checkout.html" class="site-nav">Checkout</a></li>
-                <li><a href="about-us.html" class="site-nav">About Us<span class="lbl nm_label1">New</span></a></li>
-                <li><a href="contact-us.html" class="site-nav">Contact Us</a></li>
-                <li><a href="faqs.html" class="site-nav">FAQs</a></li>
-                <li><a href="lookbook1.html" class="site-nav">Lookbook<i class="anm anm-plus-l"></i></a>
-                    <ul>
-                        <li><a href="lookbook1.html" class="site-nav">Style 1</a></li>
-                        <li><a href="lookbook2.html" class="site-nav last">Style 2</a></li>
-                    </ul>
-                </li>
-                <li><a href="404.html" class="site-nav">404</a></li>
-                <li><a href="coming-soon.html" class="site-nav">Coming soon<span class="lbl nm_label1">New</span></a></li>
-            </ul>
-        </li>
-        <li class="lvl1"><a href="#"><b>Contact Us</b></a>
-        </li>
-        </ul>
+                </div>
+            </div>
+        </div>
     </div>
-    <!--End Mobile Menu-->
+    <!--End Top Header-->
+    <!--Header-->
+    <div class="header-wrap animated d-flex border-bottom">
+        <div class="container-fluid">
+            <div class="row align-items-center">
+                <!--Desktop Logo-->
+                <div class="logo col-md-2 col-lg-2 d-none d-lg-block">
+                    <a href="index.jsp">
+                        <img src="assets/images/e-Medan.svg" alt="e-Medan Food Ordering Website" title="e-Medan Food Ordering Website" />
+                    </a>
+                </div>
+                <!--End Desktop Logo-->
+                <div class="col-2 col-sm-3 col-md-3 col-lg-8">
+                    <div class="d-block d-lg-none">
+                        <button type="button" class="btn--link site-header__menu js-mobile-nav-toggle mobile-nav--open">
+                            <i class="icon anm anm-times-l"></i>
+                            <i class="anm anm-bars-r"></i>
+                        </button>
+                    </div>
+                    <!--Desktop Menu-->
+                    <nav class="grid__item" id="AccessibleNav"><!-- for mobile -->
+                        <ul id="siteNav" class="site-nav medium center hidearrow">
+                            <li class="lvl1 parent megamenu"><a href="index.jsp">Home <i class="anm anm-angle-down-l"></i></a></li>
+                            <li class="lvl1 parent megamenu"><a href="aboutus.jsp">About Us <i class="anm anm-angle-down-l"></i></a></li>
+                            <li class="lvl1 parent dropdown"><a href="studentMenuList.jsp">Menu <i class="anm anm-angle-down-l"></i></a>
+                                <ul class="dropdown">
+                                    <li><a href="studentFoodMenuList.jsp" class="site-nav">Food</a></li>
+                                    <li><a href="studentDrinkMenuList.jsp" class="site-nav">Drink</a></li>
+                                </ul>
+                            </li>
+                            <li class="lvl1 parent megamenu"><a href="studentProfile.jsp">Account <i class="anm anm-angle-down-l"></i></a></li>
+                        </ul>
+                    </nav>
+                    <!--End Desktop Menu-->
+                </div>
+                <div class="col-4 col-sm-3 col-md-3 col-lg-2">
+                    <div class="site-cart">
+                        <a href="#" class="site-header__cart" title="Cart">
+                            <i class="icon anm anm-bag-l"></i>
+                            <span id="CartCount" class="site-header__cart-count" data-cart-render="item_count">2</span>
+                        </a>
+                        <!--Minicart Popup-->
+                        <div id="header-cart" class="block block-cart">
+                            <ul class="mini-products-list">
+                                <li class="item">
+                                    <a class="product-image" href="#">
+                                        <img src="assets/images/product-images/cape-dress-1.jpg" alt="3/4 Sleeve Kimono Dress" title="" />
+                                    </a>
+                                    <div class="product-details">
+                                        <a href="#" class="remove"><i class="anm anm-times-l" aria-hidden="true"></i></a>
+                                        <a href="#" class="edit-i remove"><i class="anm anm-edit" aria-hidden="true"></i></a>
+                                        <a class="pName" href="cart.html">Sleeve Kimono Dress</a>
+                                        <div class="variant-cart">Black / XL</div>
+                                        <div class="wrapQtyBtn">
+                                            <div class="qtyField">
+                                                <span class="label">Qty:</span>
+                                                <a class="qtyBtn minus" href="javascript:void(0);"><i class="fa anm anm-minus-r" aria-hidden="true"></i></a>
+                                                <input type="text" id="Quantity1" name="quantity" value="1" class="product-form__input qty">
+                                                <a class="qtyBtn plus" href="javascript:void(0);"><i class="fa anm anm-plus-r" aria-hidden="true"></i></a>
+                                            </div>
+                                        </div>
+                                        <div class="priceRow">
+                                            <div class="product-price">
+                                                <span class="money">$59.00</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="item">
+                                    <a class="product-image" href="#">
+                                        <img src="assets/images/product-images/cape-dress-2.jpg" alt="Elastic Waist Dress - Black / Small" title="" />
+                                    </a>
+                                    <div class="product-details">
+                                        <a href="#" class="remove"><i class="anm anm-times-l" aria-hidden="true"></i></a>
+                                        <a href="#" class="edit-i remove"><i class="anm anm-edit" aria-hidden="true"></i></a>
+                                        <a class="pName" href="cart.html">Elastic Waist Dress</a>
+                                        <div class="variant-cart">Gray / XXL</div>
+                                        <div class="wrapQtyBtn">
+                                            <div class="qtyField">
+                                                <span class="label">Qty:</span>
+                                                <a class="qtyBtn minus" href="javascript:void(0);"><i class="fa anm anm-minus-r" aria-hidden="true"></i></a>
+                                                <input type="text" id="Quantity" name="quantity" value="1" class="product-form__input qty">
+                                                <a class="qtyBtn plus" href="javascript:void(0);"><i class="fa anm anm-plus-r" aria-hidden="true"></i></a>
+                                            </div>
+                                        </div>
+                                        <div class="priceRow">
+                                            <div class="product-price">
+                                                <span class="money">$99.00</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                            <div class="total">
+                                <div class="total-in">
+                                    <span class="label">Cart Subtotal:</span><span class="product-price"><span class="money">$748.00</span></span>
+                                </div>
+                                <div class="buttonSet text-center">
+                                    <a href="cart.html" class="btn btn-secondary btn--small">View Cart</a>
+                                    <a href="checkout.html" class="btn btn-secondary btn--small">Checkout</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!--End Minicart Popup-->
+                    </div>
+                    <div class="site-header__search">
+                        <button type="button" class="search-trigger"><i class="icon anm anm-search-l"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--End Header-->
+    <% }%>
+
 
     <!--Body Content-->
     <div id="page-content">
@@ -306,7 +342,7 @@
                                         <br><br><br><br><br><br><br><br>
                                         <br><br><br><br><br><br>
                                         <br><br>
-                                        <a href= "login.html" class= "btn">Order now</a>
+                                        <a href= "studentLogin.jsp" class= "btn">Order now</a>
                                     </div>
                                 </div>
                             </div>
@@ -332,265 +368,8 @@
             </div>
         </div>
         <!--End Home slider-->
-        <!--Weekly Bestseller-->
-        <div class="section">
-            <div class="container">
-                <div class="row">
-                    <div class="col-12 col-sm-12 col-md-12 col-lg-12">
-                        <div class="section-header text-center">
-                            <h2 class="h2">Most Ordered</h2>
-                            <p>Our most popular foods ordered by customers</p>
-                        </div>
-                        <div class="productSlider grid-products">
-                            <div class="col-12 item">
-                                <!-- start product image -->
-                                <div class="product-image">
-                                    <!-- start product image -->
-                                    <a href="product-layout-1.html" class="grid-view-item__link">
-                                        <!-- image -->
-                                        <img class="primary blur-up lazyload" data-src="assets/images/product-images/nasibujang.png" src="assets/images/product-images/nasibujang.png" alt="image" title="product">
-                                        <!-- End image -->
-                                        <!-- Hover image -->
-                                        <img class="hover blur-up lazyload" data-src="assets/images/product-images/nasibujang.png" src="assets/images/product-images/nasibujang.png" alt="image" title="product">
-                                        <!-- End hover image -->
-                                        <!-- Variant Image-->
-                                        <img class="grid-view-item__image hover variantImg" src="assets/images/product-images/nasibujang.png" alt="image" title="product">
-                                        <!-- Variant Image-->
-                                    </a>
-                                    <!-- end product image -->
 
-                                    <!-- Start product button -->
-                                    <form class="variants add" action="#" onclick="window.location.href='cart.html'"method="post">
-                                        <button class="btn btn-addto-cart"  type="button" tabindex="0">Add To Cart</button>
-                                    </form>
-                                    <div class="button-set">
-                                        <a href="javascript:void(0)" title="Quick View" class="quick-view-popup quick-view" data-toggle="modal" data-target="#content_quickview">
-                                            <i class="icon anm anm-search-plus-r"></i>
-                                        </a>
 
-                                    </div>
-                                    <!-- end product button -->
-                                </div>
-                                <!-- end product image -->
-                                <!--start product details -->
-                                <div class="product-details text-center">
-                                    <!-- product name -->
-                                    <div class="product-name">
-                                        <a href="product-layout-1.html">Nasi Bujang</a>
-                                    </div>
-                                    <!-- End product name -->
-                                    <!-- product price -->
-                                    <div class="product-price">
-                                        <span class="price">RM 3.50</span>
-                                    </div>
-                                    <!-- End product price -->
-                                </div>
-                                <!-- End product details -->
-                            </div>
-                            <div class="col-12 item">
-                                <!-- start product image -->
-                                <div class="product-image">
-                                    <!-- start product image -->
-                                    <a href="product-layout-1.html" class="grid-view-item__link">
-                                        <!-- image -->
-                                        <img class="primary blur-up lazyload" data-src="assets/images/product-images/dagingkicap.png" src="assets/images/product-images/dagingkicap.png" alt="image" title="product">
-                                        <!-- End image -->
-                                        <!-- Hover image -->
-                                        <img class="hover blur-up lazyload" data-src="assets/images/product-images/dagingkicap.png" src="assets/images/product-images/dagingkicap.png" alt="image" title="product">
-                                        <!-- End hover image -->
-                                        <!-- Variant Image-->
-                                        <img class="grid-view-item__image hover variantImg" src="assets/images/product-images/dagingkicap.png" alt="image" title="product">
-                                        <!-- Variant Image-->
-                                    </a>
-                                    <!-- end product image -->
-
-                                    <!-- Start product button -->
-                                    <form class="variants add" action="#" onclick="window.location.href='cart.html'"method="post">
-                                        <button class="btn btn-addto-cart" type="button" tabindex="0">Add To Cart</button>
-                                    </form>
-                                    <div class="button-set">
-                                        <a href="javascript:void(0)" title="Quick View" class="quick-view-popup quick-view" data-toggle="modal" data-target="#content_quickview">
-                                            <i class="icon anm anm-search-plus-r"></i>
-                                        </a>
-                                    </div>
-                                    <!-- end product button -->
-                                </div>
-                                <!-- end product image -->
-
-                                <!--start product details -->
-                                <div class="product-details text-center">
-                                    <!-- product name -->
-                                    <div class="product-name">
-                                        <a href="product-layout-1.html">Daging Masak Kicap</a>
-                                    </div>
-                                    <!-- End product name -->
-                                    <!-- product price -->
-                                    <div class="product-price">
-                                        <span class="price">RM 3.00</span>
-                                    </div>
-                                    <!-- End product price -->
-
-                                </div>
-                                <!-- End product details -->
-                            </div>
-                            <div class="col-12 item">
-                                <!-- start product image -->
-                                <div class="product-image">
-                                    <!-- start product image -->
-                                    <a href="product-layout-1.html" class="grid-view-item__link">
-                                        <!-- image -->
-                                        <img class="primary blur-up lazyload" data-src="assets/images/product-images/nasikerabu.png" src="assets/images/product-images/nasikerabu.png" alt="image" title="product">
-                                        <!-- End image -->
-                                        <!-- Hover image -->
-                                        <img class="hover blur-up lazyload" data-src="assets/images/product-images/nasikerabu.png" src="assets/images/product-images/nasikerabu.png" alt="image" title="product">
-                                        <!-- End hover image -->
-                                        <!-- Variant Image-->
-                                        <img class="grid-view-item__image hover variantImg" src="assets/images/product-images/nasikerabu.png" alt="image" title="product">
-                                        <!-- Variant Image-->
-                                    </a>
-                                    <!-- end product image -->
-
-                                    <!-- Start product button -->
-                                    <form class="variants add" action="#" onclick="window.location.href='cart.html'"method="post">
-                                        <button class="btn btn-addto-cart" type="button" tabindex="0">Add To Cart</button>
-                                    </form>
-                                    <div class="button-set">
-                                        <a href="javascript:void(0)" title="Quick View" class="quick-view-popup quick-view" data-toggle="modal" data-target="#content_quickview">
-                                            <i class="icon anm anm-search-plus-r"></i>
-                                        </a>
-                                    </div>
-                                    <!-- end product button -->
-                                </div>
-                                <!-- end product image -->
-
-                                <!--start product details -->
-                                <div class="product-details text-center">
-                                    <!-- product name -->
-                                    <div class="product-name">
-                                        <a href="product-layout-1.html">Nasi Kerabu</a>
-                                    </div>
-                                    <!-- End product name -->
-                                    <!-- product price -->
-                                    <div class="product-price">
-                                        <span class="price">RM 6.50</span>
-                                    </div>
-                                    <!-- End product price -->
-
-                                </div>
-                                <!-- End product details -->
-                            </div>
-                            <div class="col-12 item">
-                                <!-- start product image -->
-                                <div class="product-image">
-                                    <!-- start product image -->
-                                    <a href="product-layout-1.html" class="grid-view-item__link">
-                                        <!-- image -->
-                                        <img class="primary blur-up lazyload" data-src="assets/images/product-images/butterchicken.png" src="assets/images/product-images/butterchicken.png" alt="image" title="product" />
-                                        <!-- End image -->
-                                        <!-- Hover image -->
-                                        <img class="hover blur-up lazyload" data-src="assets/images/product-images/butterchicken.png" src="assets/images/product-images/butterchicken.png" alt="image" title="product" />
-                                        <!-- End hover image -->
-                                        <!-- Variant Image-->
-                                        <img class="grid-view-item__image hover variantImg" src="assets/images/product-images/butterchicken.png" alt="image" title="product">
-                                        <!-- Variant Image-->
-                                    </a>
-                                    <!-- end product image -->
-
-                                    <!-- Start product button -->
-                                    <form class="variants add" action="#" onclick="window.location.href='cart.html'"method="post">
-                                        <button class="btn btn-addto-cart" type="button" tabindex="0">Add To Cart</button>
-                                    </form>
-                                    <div class="button-set">
-                                        <a href="javascript:void(0)" title="Quick View" class="quick-view-popup quick-view" data-toggle="modal" data-target="#content_quickview">
-                                            <i class="icon anm anm-search-plus-r"></i>
-                                        </a>
-                                    </div>
-                                    <!-- end product button -->
-                                </div>
-                                <!-- end product image -->
-
-                                <!--start product details -->
-                                <div class="product-details text-center">
-                                    <!-- product name -->
-                                    <div class="product-name">
-                                        <a href="product-layout-1.html">Butter Chicken</a>
-                                    </div>
-                                    <!-- End product name -->
-                                    <!-- product price -->
-                                    <div class="product-price">
-                                        <span class="price">RM 5.00</span>
-                                    </div>
-                                    <!-- End product price -->
-                                </div>
-                                <!-- End product details -->
-                            </div>
-                            <div class="col-12 item">
-                                <!-- start product image -->
-                                <div class="product-image">
-                                    <!-- start product image -->
-                                    <a href="product-layout-1.html" class="grid-view-item__link">
-                                        <!-- image -->
-                                        <img class="primary blur-up lazyload" data-src="assets/images/product-images/nasigorengayam.png" src="assets/images/product-images/nasigorengayam.png" alt="image" title="product" />
-                                        <!-- End image -->
-                                        <!-- Hover image -->
-                                        <img class="hover blur-up lazyload" data-src="assets/images/product-images/nasigorengayam.png" src="assets/images/product-images/nasigorengayam.png" alt="image" title="product" />
-                                        <!-- End hover image -->
-                                        <!-- Variant Image-->
-                                        <img class="grid-view-item__image hover variantImg" src="assets/images/product-images/nasigorengayam.png" alt="image" title="product">
-                                        <!-- Variant Image-->
-                                    </a>
-                                    <!-- end product image -->
-
-                                    <!-- Start product button -->
-                                    <form class="variants add" action="#" onclick="window.location.href='cart.html'"method="post">
-                                        <button class="btn btn-addto-cart" type="button" tabindex="0">Add To Cart</button>
-                                    </form>
-                                    <div class="button-set">
-                                        <a href="javascript:void(0)" title="Quick View" class="quick-view-popup quick-view" data-toggle="modal" data-target="#content_quickview">
-                                            <i class="icon anm anm-search-plus-r"></i>
-                                        </a>
-                                    </div>
-                                    <!-- end product button -->
-                                </div>
-                                <!-- end product image -->
-
-                                <!--start product details -->
-                                <div class="product-details text-center">
-                                    <!-- product name -->
-                                    <div class="product-name">
-                                        <a href="product-layout-1.html">Nasi Goreng Ayam</a>
-                                    </div>
-                                    <!-- End product name -->
-                                    <!-- product price -->
-                                    <div class="product-price">
-                                        <span class="price">RM 4.00</span>
-                                    </div>
-                                    <!-- End product price -->
-                                </div>
-                                <!-- End product details -->
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!--Weekly Bestseller-->
-        <!--Parallax Section-->
-        <div class="section">
-            <div class="hero hero--large hero__overlay bg-size">
-                <img class="bg-img" src="assets/images/parallax-banners/parallax-banner.png" alt="" />
-                <div class="hero__inner">
-                    <div class="container">
-                        <div class="wrap-text left text-small font-bold">
-                            <h2 class="h2 mega-title"> Order delicious foods from your fingertips.</h2>
-                            <div class="rte-setting mega-subtitle">No more excuses of you forget eating with e-Medan website by your side.</div>
-                            <a href="#" class="btn">Order Now</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!--End Parallax Section-->
         <!--New Arrivals-->
         <div class="product-rows section">
             <div class="container">
@@ -603,20 +382,29 @@
                 </div>
                 <div class="grid-products">
                     <div class="row">
+<%--                        //sini okay--%>
+    <%
+        try{
+            con = DriverManager.getConnection("jdbc:postgresql://ec2-44-199-52-133.compute-1.amazonaws.com:5432/danpunma7i9eh0", "kgkcfexavaezbv", "452a173c45857bc5d4a0e09e553e6748e19271602a8311160d7dca2ee3cf40a6");
+            statement=con.createStatement();
+
+            String sql ="SELECT \"MENUID\", \"MENUNAME\", \"MENUDESC\", \"MENUTPRICE\", \"MENUTYPE\", \"fileName\", \"savePath\"\n" +
+                    "\tFROM public.menu;";
+            resultSet = statement.executeQuery(sql);
+
+            while(resultSet.next()){
+    %>
                         <div class="col-6 col-sm-2 col-md-3 col-lg-3 item">
                             <!-- start product image -->
                             <div class="product-image">
                                 <!-- start product image -->
-                                <a href="product-layout-1.html" class="grid-view-item__link">
+                                <a href="#" class="grid-view-item__link">
                                     <!-- image -->
-                                    <img class="primary blur-up lazyload" data-src="assets/images/product-images/meatball.png" src="assets/images/product-images/meatball.png" alt="image" title="product">
+                                    <img class="primary blur-up lazyload" data-src="images/<%=resultSet.getString("fileName")%>" src="images/<%=resultSet.getString("fileName")%>" alt="image">
                                     <!-- End image -->
                                     <!-- Hover image -->
-                                    <img class="hover blur-up lazyload" data-src="assets/images/product-images/meatball.png" src="assets/images/product-images/meatball.png" alt="image" title="product">
+                                    <img class="hover blur-up lazyload" data-src="images/<%=resultSet.getString("fileName")%>" src=images/<%=resultSet.getString("fileName")%> alt="image">
                                     <!-- End hover image -->
-                                    <!-- Variant Image-->
-                                    <img class="grid-view-item__image hover variantImg" src="assets/images/product-images/meatball.png" alt="image" title="product">
-                                    <!-- Variant Image-->
                                 </a>
                                 <!-- end product image -->
 
@@ -624,334 +412,37 @@
                                 <form class="variants add" action="#" onclick="window.location.href='cart.html'"method="post">
                                     <button class="btn btn-addto-cart" type="button" tabindex="0">Add To Cart</button>
                                 </form>
-                                <div class="button-set">
-                                    <a href="javascript:void(0)" title="Quick View" class="quick-view-popup quick-view" data-toggle="modal" data-target="#content_quickview">
-                                        <i class="icon anm anm-search-plus-r"></i>
-                                    </a>
-                                </div>
                                 <!-- end product button -->
                             </div>
-                            <!-- end product image -->
                             <!--start product details -->
                             <div class="product-details text-center">
                                 <!-- product name -->
                                 <div class="product-name">
-                                    <a href="product-layout-1.html">Meatball</a>
+                                    <a href="#"><%=resultSet.getString("MENUNAME")%></a>
                                 </div>
                                 <!-- End product name -->
                                 <!-- product price -->
                                 <div class="product-price">
-                                    <span class="price">RM 8.00</span>
+                                    <span class="price">RM <%=resultSet.getString("MENUTPRICE")%></span>
                                 </div>
                                 <!-- End product price -->
                             </div>
                             <!-- End product details -->
                         </div>
-                        <div class="col-6 col-sm-2 col-md-3 col-lg-3 item">
-                            <!-- start product image -->
-                            <div class="product-image">
-                                <!-- start product image -->
-                                <a href="product-layout-1.html" class="grid-view-item__link">
-                                    <!-- image -->
-                                    <img class="primary blur-up lazyload" data-src="assets/images/product-images/sirapbandung.png" src="assets/images/product-images/sirapbandung.png" alt="image" title="product">
-                                    <!-- End image -->
-                                    <!-- Hover image -->
-                                    <img class="hover blur-up lazyload" data-src="assets/images/product-images/sirapbandung.png" src="assets/images/product-images/sirapbandung.png" alt="image" title="product">
-                                    <!-- End hover image -->
-                                    <!-- Variant Image-->
-                                    <img class="grid-view-item__image hover variantImg" src="assets/images/product-images/sirapbandung.png" alt="image" title="product">
-                                    <!-- Variant Image-->
-                                </a>
-                                <!-- end product image -->
+    <%
 
-                                <!-- Start product button -->
-                                <form class="variants add" action="#" onclick="window.location.href='cart.html'"method="post">
-                                    <button class="btn btn-addto-cart" type="button" tabindex="0">Add To Cart</button>
-                                </form>
-                                <div class="button-set">
-                                    <a href="javascript:void(0)" title="Quick View" class="quick-view-popup quick-view" data-toggle="modal" data-target="#content_quickview">
-                                        <i class="icon anm anm-search-plus-r"></i>
-                                    </a>
-                                </div>
-                                <!-- end product button -->
-                            </div>
-                            <!-- end product image -->
-
-                            <!--start product details -->
-                            <div class="product-details text-center">
-                                <!-- product name -->
-                                <div class="product-name">
-                                    <a href="product-layout-1.html">Sirap Bandung</a>
-                                </div>
-                                <!-- End product name -->
-                                <!-- product price -->
-                                <div class="product-price">
-                                    <span class="price">RM 1.50</span>
-                                </div>
-                                <!-- End product price -->
-                            </div>
-                            <!-- End product details -->
-                        </div>
-                        <div class="col-6 col-sm-2 col-md-3 col-lg-3 item">
-                            <!-- start product image -->
-                            <div class="product-image">
-                                <!-- start product image -->
-                                <a href="product-layout-1.html" class="grid-view-item__link">
-                                    <!-- image -->
-                                    <img class="primary blur-up lazyload" data-src="assets/images/product-images/ayampaprik.png" src="assets/images/product-images/ayampaprik.png" alt="image" title="product">
-                                    <!-- End image -->
-                                    <!-- Hover image -->
-                                    <img class="hover blur-up lazyload" data-src="assets/images/product-images/ayampaprik.png" src="assets/images/product-images/ayampaprik.png" alt="image" title="product">
-                                    <!-- End hover image -->
-                                    <!-- Variant Image-->
-                                    <img class="grid-view-item__image hover variantImg" src="assets/images/product-images/ayampaprik.png" alt="image" title="product">
-                                    <!-- Variant Image-->
-                                </a>
-                                <!-- end product image -->
-
-                                <!-- Start product button -->
-                                <form class="variants add" action="#" onclick="window.location.href='cart.html'"method="post">
-                                    <button class="btn btn-addto-cart" type="button" tabindex="0">Add To Cart</button>
-                                </form>
-                                <div class="button-set">
-                                    <a href="javascript:void(0)" title="Quick View" class="quick-view-popup quick-view" data-toggle="modal" data-target="#content_quickview">
-                                        <i class="icon anm anm-search-plus-r"></i>
-                                    </a>
-                                </div>
-                                <!-- end product button -->
-                            </div>
-                            <!-- end product image -->
-
-                            <!--start product details -->
-                            <div class="product-details text-center">
-                                <!-- product name -->
-                                <div class="product-name">
-                                    <a href="product-layout-1.html">Ayam Paprik</a>
-                                </div>
-                                <!-- End product name -->
-                                <!-- product price -->
-                                <div class="product-price">
-                                    <span class="price">RM 3.50</span>
-                                </div>
-                                <!-- End product price -->
-                            </div>
-                            <!-- End product details -->
-                        </div>
-                        <div class="col-6 col-sm-2 col-md-3 col-lg-3 item">
-                            <!-- start product image -->
-                            <div class="product-image">
-                                <!-- start product image -->
-                                <a href="product-layout-1.html" class="grid-view-item__link">
-                                    <!-- image -->
-                                    <img class="primary blur-up lazyload" data-src="assets/images/product-images/nasiayam.png" src="assets/images/product-images/nasiayam.png" alt="image" title="product" />
-                                    <!-- End image -->
-                                    <!-- Hover image -->
-                                    <img class="hover blur-up lazyload" data-src="assets/images/product-images/nasiayam.png" src="assets/images/product-images/nasiayam.png" alt="image" title="product" />
-                                    <!-- End hover image -->
-                                    <!-- Variant Image-->
-                                    <img class="grid-view-item__image hover variantImg" src="assets/images/product-images/nasiayam.png" alt="image" title="product">
-                                    <!-- Variant Image-->
-                                </a>
-                                <!-- end product image -->
-
-                                <!-- Start product button -->
-                                <form class="variants add" action="#" onclick="window.location.href='cart.html'"method="post">
-                                    <button class="btn btn-addto-cart" type="button" tabindex="0">Add To Cart</button>
-                                </form>
-                                <div class="button-set">
-                                    <a href="javascript:void(0)" title="Quick View" class="quick-view-popup quick-view" data-toggle="modal" data-target="#content_quickview">
-                                        <i class="icon anm anm-search-plus-r"></i>
-                                    </a>
-                                </div>
-                                <!-- end product button -->
-                            </div>
-                            <!-- end product image -->
-
-                            <!--start product details -->
-                            <div class="product-details text-center">
-                                <!-- product name -->
-                                <div class="product-name">
-                                    <a href="product-layout-1.html">Nasi Ayam</a>
-                                </div>
-                                <!-- End product name -->
-                                <!-- product price -->
-                                <div class="product-price">
-                                    <span class="price">RM 4.50</span>
-                                </div>
-                                <!-- End product price -->
-                            </div>
-                            <!-- End product details -->
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-6 col-sm-2 col-md-3 col-lg-3 item">
-                            <!-- start product image -->
-                            <div class="product-image">
-                                <!-- start product image -->
-                                <a href="product-layout-1.html" class="grid-view-item__link">
-                                    <!-- image -->
-                                    <img class="primary blur-up lazyload" data-src="assets/images/product-images/abc.png" src="assets/images/product-images/abc.png" alt="image" title="product" />
-                                    <!-- End image -->
-                                    <!-- Hover image -->
-                                    <img class="hover blur-up lazyload" data-src="assets/images/product-images/abc.png" src="assets/images/product-images/abc.png" alt="image" title="product" />
-                                    <!-- End hover image -->
-                                    <!-- Variant Image-->
-                                    <img class="grid-view-item__image hover variantImg" src="assets/images/product-images/abc.png" alt="image" title="product">
-                                    <!-- Variant Image-->
-                                </a>
-                                <!-- end product image -->
-
-                                <!-- Start product button -->
-                                <form class="variants add" action="#" onclick="window.location.href='cart.html'"method="post">
-                                    <button class="btn btn-addto-cart" type="button" tabindex="0">Add To Cart</button>
-                                </form>
-                                <div class="button-set">
-                                    <a href="javascript:void(0)" title="Quick View" class="quick-view-popup quick-view" data-toggle="modal" data-target="#content_quickview">
-                                        <i class="icon anm anm-search-plus-r"></i>
-                                    </a>
-                                </div>
-                                <!-- end product button -->
-                            </div>
-                            <!-- end product image -->
-
-                            <!--start product details -->
-                            <div class="product-details text-center">
-                                <!-- product name -->
-                                <div class="product-name">
-                                    <a href="product-layout-1.html">ABC</a>
-                                </div>
-                                <!-- End product name -->
-                                <!-- product price -->
-                                <div class="product-price">
-                                    <span class="price">RM 6.00</span>
-                                </div>
-                                <!-- End product price -->
-                            </div>
-                            <!-- End product details -->
-                        </div>
-                        <div class="col-6 col-sm-2 col-md-3 col-lg-3 item">
-                            <div class="product-image">
-                                <!--start product image -->
-                                <a href="product-layout-1.html" class="grid-view-item__link">
-                                    <!-- image -->
-                                    <img class="primary blur-up lazyload" data-src="assets/images/product-images/keligoreng.png" src="assets/images/product-images/keligoreng.png" alt="image" title="product" />
-                                    <!-- End image -->
-                                    <!-- Hover image -->
-                                    <img class="hover blur-up lazyload" data-src="assets/images/product-images/keligoreng.png" src="assets/images/product-images/keligoreng.png" alt="image" title="product" />
-                                    <!-- End hover image -->
-                                </a>
-                                <!-- end product image -->
-                                <!-- product button -->
-                                <form class="variants add" action="#" onclick="window.location.href='cart.html'"method="post">
-                                    <button class="btn btn-addto-cart" type="button" tabindex="0">Add To Cart</button>
-                                </form>
-                                <div class="button-set">
-                                    <a href="javascript:void(0)" title="Quick View" class="quick-view-popup quick-view" data-toggle="modal" data-target="#content_quickview">
-                                        <i class="icon anm anm-search-plus-r"></i>
-                                    </a>
-                                    <!-- Start product button -->
-                                </div>
-                                <!-- End product button -->
-                            </div>
-                            <!--End start product image -->
-
-                            <!--start product details -->
-                            <div class="product-details text-center">
-                                <!-- product name -->
-                                <div class="product-name">
-                                    <a href="product-layout-1.html">Ikan Keli Goreng Berempah</a>
-                                </div>
-                                <!-- End product name -->
-                                <!-- product price -->
-                                <div class="product-price">
-                                    <span class="price">RM 3.00</span>
-                                </div>
-                                <!-- End product price -->
-                            </div>
-                            <!-- End product details -->
-                        </div>
-                        <div class="col-6 col-sm-2 col-md-3 col-lg-3 item">
-                            <div class="product-image">
-                                <!-- start product image -->
-                                <a href="product-layout-1.html" class="grid-view-item__link">
-                                    <!-- image -->
-                                    <img class="primary blur-up lazyload" data-src="assets/images/product-images/kentanggoreng.png" src="assets/images/product-images/kentanggoreng.png" alt="image" title="product" />
-                                    <!-- End image -->
-                                    <!-- Hover image -->
-                                    <img class="hover blur-up lazyload" data-src="assets/images/product-images/kentanggoreng.png" src="assets/images/product-images/kentanggoreng.png" alt="image" title="product" />
-                                    <!-- End hover image -->
-                                </a>
-                                <!-- end product image -->
-                                <!-- Start product button -->
-                                <form class="variants add" action="#" onclick="window.location.href='cart.html'"method="post">
-                                    <button class="btn btn-addto-cart" type="button" tabindex="0">Add To Cart</button>
-                                </form>
-                                <div class="button-set">
-                                    <a href="javascript:void(0)" title="Quick View" class="quick-view-popup quick-view" data-toggle="modal" data-target="#content_quickview">
-                                        <i class="icon anm anm-search-plus-r"></i>
-                                    </a>
-                                </div>
-                                <!-- End product button -->
-                            </div>
-                            <!--End start product image -->
-                            <!--start product details -->
-                            <div class="product-details text-center">
-                                <!-- product name -->
-                                <div class="product-name">
-                                    <a href="product-layout-1.html">Kentang Goreng</a>
-                                </div>
-                                <!-- End product name -->
-                                <!-- product price -->
-                                <div class="product-price">
-                                    <span class="price">RM 4.50</span>
-                                </div>
-                                <!-- End product price -->
-                            </div>
-                            <!-- End product details -->
-
-                        </div>
-                        <div class="col-6 col-sm-2 col-md-3 col-lg-3 item">
-                            <div class="product-image">
-                                <!-- start product image -->
-                                <a href="product-layout-1.html" class="grid-view-item__link">
-                                    <!-- image -->
-                                    <img class="primary blur-up lazyload" data-src="assets/images/product-images/miloais.png" src="assets/images/product-images/miloais.png" alt="image" title="product">
-                                    <!-- End image -->
-                                    <!-- Hover image -->
-                                    <img class="hover blur-up lazyload" data-src="assets/images/product-images/miloais.png" src="assets/images/product-images/miloais.png" alt="image" title="product">
-                                    <!-- End hover image -->
-                                </a>
-                                <!-- product button -->
-                                <form class="variants add" action="#" onclick="window.location.href='cart.html'"method="post">
-                                    <button class="btn btn-addto-cart" type="button" tabindex="0">Add To Cart</button>
-                                </form>
-                                <div class="button-set">
-                                    <a href="javascript:void(0)" title="Quick View" class="quick-view-popup quick-view" data-toggle="modal" data-target="#content_quickview">
-                                        <i class="icon anm anm-search-plus-r"></i>
-                                    </a>
-                                </div>
-                                <!-- End product button -->
-                            </div>
-                            <!-- End start product image -->
-                            <!--start product details -->
-                            <div class="product-details text-center">
-                                <!-- product name -->
-                                <div class="product-name">
-                                    <a href="product-layout-1.html">Milo Ais Special</a>
-                                </div>
-                                <!-- End product name -->
-                                <!-- product price -->
-                                <div class="product-price">
-                                    <span class="price">RM 3.00</span>
-                                </div>
-                                <!-- End product price -->
-                            </div>
-                            <!-- End product details -->
-                        </div>
+            }
+            con.close();
+        }
+        catch (Exception e) {
+            e.printStackTrace();
+        }
+    %>
+<%--                        //habis sini--%>
                     </div>
                     <div class="row">
                         <div class="col-12 col-sm-12 col-md-12 col-lg-12 text-center">
-                            <a href="shop-left-sidebar.html" class="btn">View all</a>
+                            <a href="studentMenuList.jsp" class="btn">View all</a>
                         </div>
                     </div>
                 </div>
@@ -1004,7 +495,7 @@
                     <div id="ProductSection-product-template" class="product-template__container prstyle1">
                         <div class="product-single">
                             <!-- Start model close -->
-                            <a href="javascript:void()" data-dismiss="modal" class="model-close-btn pull-right" title="close"><span class="icon icon anm anm-times-l"></span></a>
+                            <a href="javascript:void(0)" data-dismiss="modal" class="model-close-btn pull-right" title="close"><span class="icon icon anm anm-times-l"></span></a>
                             <!-- End model close -->
                             <div class="row">
                                 <div class="col-lg-6 col-md-6 col-sm-12 col-12">
@@ -1037,8 +528,8 @@
                                                                 <input type="password" name="pass" id="pass" placeholder="Password"/>
                                                             </div>
                                                             <div class="form-group">
-                                                                <label for="re-pass"><i class="zmdi zmdi-lock-outline"></i></label>
-                                                                <input type="password" name="re_pass" id="re_pass" placeholder="Repeat your password"/>
+                                                                <label for="re-pass3"><i class="zmdi zmdi-lock-outline"></i></label>
+                                                                <input type="password" name="re_pass" id="re_pass3" placeholder="Repeat your password"/>
                                                             </div>
                                                             <div class="form-group">
                                                                 <input type="checkbox" name="agree-term" id="agree-term" class="agree-term" />

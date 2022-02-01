@@ -1,36 +1,13 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@page import = "java.sql.DriverManager"%>
 <%@page import="java.sql.ResultSet" %>
 <%@page import="java.sql.Statement" %>
 <%@page import="java.sql.Connection" %>
+<%@ page import="com.example.emedan_food_ordering_system.StudentDAO" %>
+<%@ page import="com.example.emedan_food_ordering_system.Student" %>
 
-<%
-    String STUDENTID = request.getParameter("STUDENTID");
-    String driver = "com.mysql.cj.jdbc.Driver";
-    String connectionUrl = "jdbc:mysql://localhost:3306/emfos";
-    String userid = "root";
-    String password = "";
-
-    try {
-        Class.forName(driver);
-    }catch (ClassNotFoundException e){
-        e.printStackTrace();
-    }
-    Connection connection = null;
-    Statement statement = null;
-    ResultSet resultSet = null;
-%>
 <!DOCTYPE html>
 <html class="no-js" lang="en">
-<%
-    try {
-        connection = DriverManager.getConnection(connectionUrl, userid, password);
-        statement=connection.createStatement();
-        String sql = "SELECT * FROM student WHERE STUDENTID='?'";
-        resultSet = statement.executeQuery(sql);
-        while (resultSet.next()){
-%>
-
-
 <!-- belle/home2-default.html   11 Nov 2019 12:22:28 GMT -->
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -49,6 +26,11 @@
     <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/responsive.css">
 </head>
 <body class="template-index home2-default">
+<%
+    Student student = new Student();
+
+%>
+<form action="${pageContext.request.contextPath}/ReadStudentProfileServlet" method="post">
 <div class="pageWrapper">
     <!--Promotion Bar-->
     <div class="notification-bar mobilehide">
@@ -103,9 +85,9 @@
                                 <div class="user-avatar">
                                     <img src="${pageContext.request.contextPath}/assets/images/female-student.jpg" alt="Maxwell Admin">
                                 </div>
-                                    <td><%=resultSet.getString(2)%></td>
+                                <c:out value="${requestScope.STUDENTID.getStudentID()}">
                                     <br>
-                                    <td><%=resultSet.getString(1)%></td>
+                                <label><%=student.getStudentName()%></label>
                             </div>
 
                             <!-- End display about read from database after student register account -->
@@ -226,13 +208,7 @@
 
     </script>
 </div>
-<%
-        }
-        connection.close();
-    }catch (Exception e){
-        e.printStackTrace();
-    }
-%>
+</form>
 </body>
 
 

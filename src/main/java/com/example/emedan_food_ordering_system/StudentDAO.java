@@ -15,6 +15,7 @@ import javax.servlet.ServletResponse;
 
 public class StudentDAO {
 
+
     public static Connection getConnection() {
         Connection con = null;
         try {
@@ -63,6 +64,24 @@ public class StudentDAO {
 
 
         } catch (Exception ex) {
+            ex.printStackTrace();
+        }
+        return status;
+    }
+
+    public boolean readprofile(Student student) throws ClassNotFoundException{
+        boolean status = false;
+        try {
+            Connection con = StudentDAO.getConnection();
+            PreparedStatement ps = con.prepareStatement("SELECT * FROM public.student WHERE \"STUDENTID\"=? ;");
+            ps.setString(1,student.getStudentID());
+            ResultSet rs = ps.executeQuery();
+            if (rs.next()){
+                student.setStudentID(rs.getString("STUDENTID"));
+                student.setStudentName(rs.getString("STUDENTNAME"));
+            }
+
+        }catch (Exception ex){
             ex.printStackTrace();
         }
         return status;

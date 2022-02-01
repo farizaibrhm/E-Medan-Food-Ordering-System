@@ -10,10 +10,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0811e3f3-8279-45dc-a825-752cd3ab05bb" name="Changes" comment="edit">
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/emedan_food_ordering_system/ReadStudentProfileServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/e_Medan_Food_Ordering_System_war_exploded.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/e_Medan_Food_Ordering_System_war_exploded.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/emedan_food_ordering_system/CafeWorkerDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/emedan_food_ordering_system/CafeWorkerDAO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/emedan_food_ordering_system/StudentDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/emedan_food_ordering_system/StudentDAO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/student/studentProfile.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/student/studentProfile.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/emedan_food_ordering_system/CafeWorkerDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/emedan_food_ordering_system/CafeWorkerDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/emedan_food_ordering_system/StudentDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/emedan_food_ordering_system/StudentDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/WEB-INF/classes/com/example/emedan_food_ordering_system/CafeWorkerDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/WEB-INF/classes/com/example/emedan_food_ordering_system/CafeWorkerDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/WEB-INF/classes/com/example/emedan_food_ordering_system/StudentDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/WEB-INF/classes/com/example/emedan_food_ordering_system/StudentDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/student/studentProfile.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/student/studentProfile.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,6 +53,7 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="oracle" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -155,9 +163,9 @@
       <option name="presentableId" value="Default" />
       <updated>1643211017721</updated>
       <workItem from="1643211023745" duration="6152000" />
-
       <workItem from="1643264263097" duration="6418000" />
-
+      <workItem from="1643301401719" duration="6934000" />
+      <workItem from="1643338178388" duration="484000" />
     </task>
     <task id="LOCAL-00001" summary="edit">
       <created>1643211857027</created>

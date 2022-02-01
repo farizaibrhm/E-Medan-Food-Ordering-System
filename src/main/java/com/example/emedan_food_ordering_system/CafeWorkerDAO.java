@@ -6,8 +6,8 @@ public class CafeWorkerDAO {
     public static Connection getConnection(){
         Connection con = null;
         try {
-            Class.forName("com.mysql.cj.jdbc.Driver");
-            con = DriverManager.getConnection("jdbc:mysql://localhost:3306/emfos","root","");
+            Class.forName("org.postgresql.Driver");
+            con = DriverManager.getConnection("jdbc:postgresql://ec2-44-199-52-133.compute-1.amazonaws.com:5432/danpunma7i9eh0","kgkcfexavaezbv","452a173c45857bc5d4a0e09e553e6748e19271602a8311160d7dca2ee3cf40a6");
 
         } catch (SQLException e){
             System.out.println(e);
@@ -21,7 +21,7 @@ public class CafeWorkerDAO {
         int status = 0;
         try {
             Connection con = CafeWorkerDAO.getConnection();
-            PreparedStatement ps = con.prepareStatement("INSERT INTO cafeworker(CWORKID, CWORKSTALLNAME, CWORKPHONENO, CWORKEMAIL, CWORKPASSWORD, CWORKACCNUM, CWORKACCNAME, CWORKBANKNAME) VALUES (?,?,?,?,?,?,?,?)");
+            PreparedStatement ps = con.prepareStatement("INSERT INTO public.cafeworker(\"CWORKID\", \"CWORKSTALLNAME\", \"CWORKPHONENO\", \"CWORKEMAIL\", \"CWORKPASSWORD\", \"CWORKACCNUM\", \"CWORKACCNAME\", \"CWORKBANKNAME\") VALUES (?,?,?,?,?,?,?,?)");
             ps.setString(1, cw.getCWORKID());
             ps.setString(2, cw.getCWORKSTALLNAME());
             ps.setString(3, cw.getCWORKPHONENO());
@@ -43,7 +43,7 @@ public class CafeWorkerDAO {
         boolean status = false;
         try {
             Connection con = CafeWorkerDAO.getConnection();
-            PreparedStatement ps = con.prepareStatement("SELECT * FROM cafeworker WHERE CWORKID = ? AND CWORKPASSWORD = ?");
+            PreparedStatement ps = con.prepareStatement("SELECT \"CWORKID\", \"CWORKPASSWORD\" WHERE \"CWORKID\"=? AND \"CWORKPASSWORD\"=?;");
             ps.setString(1, cafeWorker.getCWORKID());
             ps.setString(2, cafeWorker.getCWORKPASSWORD());
             System.out.println(ps);

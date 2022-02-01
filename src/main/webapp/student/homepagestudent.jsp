@@ -4,7 +4,7 @@
 <%@page import="java.sql.Statement"%>
 <%@page import="java.sql.Connection"%>
 <%@page import="com.example.emedan_food_ordering_system.Student" %>
-<%@page import="java.sql.*, java.util.*" %>>
+<%@page import="java.sql.*, java.util.*" %>
 
 <!DOCTYPE html>
 <html class="no-js" lang="en">

@@ -393,6 +393,21 @@
                     </div>
                 </form>
 
+                <%--<%
+                    String mytext = request.getParameter("MENUNAME");
+                    if(mytext == null){
+                    }
+                    else{
+                        session.setAttribute("MENUNAME",request.getParameter("menuName"));
+                        session.setAttribute("MENUDESC",request.getParameter("menuDesc"));
+                        session.setAttribute("MENUPRICE",request.getParameter("menuPrice"));
+                        session.setAttribute("MENUTYPE",request.getParameter("menuType"));
+                        session.setAttribute("CWORKID",request.getParameter("cworkID"));
+                        session.setAttribute("MENUIMAGE",request.getParameter("menuImage"));
+                        out.println("session created");
+                    }
+                %>--%>
+
             </div>
             <!--MainContent-->
         </div>

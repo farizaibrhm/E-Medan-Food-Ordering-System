@@ -18,7 +18,7 @@
         Connection con = DriverManager.getConnection(dbURL, user, pass);
         Statement st=con.createStatement();
         int i=st.executeUpdate("DELETE FROM public.menu\n" + "\tWHERE \"MENUID\"="+id);
-        out.println("Menu Deleted Successfully!");
+        out.println("Data Deleted Successfully!");
 
     }
     catch(Exception e)

@@ -1,20 +1,20 @@
-
-
 package com.example.emedan_food_ordering_system;
-import java.io.File;
+
+
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.InputStream;
 import java.sql.*;
-import java.util.Properties;
+import java.util.ArrayList;
+import java.util.List;
 
 
 public class MenuDAO
 {
-    private String dbUrl = "jdbc:mysql://localhost:3306/emfos";
-    private String dbUname = "root";
-    private String dbPassword = "";
-    private String dbDriver = "com.mysql.cj.jdbc.Driver";
+
+    private String dbUrl = "jdbc:postgresql://ec2-44-199-52-133.compute-1.amazonaws.com:5432/danpunma7i9eh0";
+    private String dbUname = "kgkcfexavaezbv";
+    private String dbPassword = "452a173c45857bc5d4a0e09e553e6748e19271602a8311160d7dca2ee3cf40a6";
+    private String dbDriver = "org.postgresql.Driver";
+
 
 
 
@@ -32,9 +32,11 @@ public class MenuDAO
     public Connection getConnection()
     {
         Connection con = null;
-        try {
-            con = DriverManager.getConnection(dbUrl, dbUname, dbPassword);
-        } catch (SQLException e) {
+        try
+        {
+            con = DriverManager.getConnection(dbUrl,dbUname,dbPassword);
+        }
+        catch (SQLException e) {
             // TODO Auto-generated catch block
             e.printStackTrace();
         }
@@ -47,25 +49,23 @@ public class MenuDAO
         Connection con = getConnection();
         String result = "Data successfully entered!";
         PreparedStatement ps;
-        FileInputStream fis;
-        String sql = "INSERT into menu (MENUID, MENUNAME,MENUIMAGE, MENUDESC, MENUTPRICE, MENUTYPE, CWORKID) VALUES ( ?,?, ?, ?, ?, ?,?);";
+        String sql = "INSERT INTO public.menu(\n" +
+                "\t\"MENUID\", \"MENUNAME\", \"MENUDESC\", \"MENUTPRICE\", \"MENUTYPE\", \"fileName\", \"savePath\")\n" + "\tVALUES (default, ?, ?, ?, ?, ?, ?);";
+
+        try
+        {
+            ps = con.prepareStatement(sql);
+
+            ps.setString(1, addmenu.getMENUNAME());
+            ps.setString(2, addmenu.getMENUDESC());
+            ps.setDouble(3, addmenu.getMENUTPRICE());
+            ps.setString(4, addmenu.getMENUTYPE());
+            ps.setString(5, addmenu.getFileName());
+            ps.setString(6, addmenu.getSavePath());
+            //ps.setString(8, addmenu.getCWORKID());
 
 
-
-
-        try {
-                ps = con.prepareStatement(sql);
-                //File image= new File(addmenu.getMENUIMAGE());
-                ps.setString(1, addmenu.getMENUID());
-                ps.setString(2, addmenu.getMENUNAME());
-                //fis=new FileInputStream(image);
-                //ps.setBinaryStream(3,fis, (int) (image.length()))
-                ps.setBlob(3, addmenu.getMENUIMAGE());
-                ps.setString(4, addmenu.getMENUDESC());
-                ps.setDouble(5, addmenu.getMENUPRICE());
-                ps.setString(6, addmenu.getMENUTYPE());
-                ps.setInt(7, addmenu.getCWORKID());
-                ps.executeUpdate();
+            ps.executeUpdate();
         }
         catch (SQLException e)
         {
@@ -73,14 +73,109 @@ public class MenuDAO
             e.printStackTrace();
             result = "Data not entered";
         }
-        /*catch (FileNotFoundException e)
-        {
-            e.printStackTrace();
-        }*/
         return result;
     }
 
+  public boolean updateMenu(Menu mn)
+    {
+        loadDriver(dbDriver);
+        Connection con = getConnection();
+
+        int i = 0;
+        try
+        {
+            PreparedStatement preparedStatement = (PreparedStatement)
+                    con.prepareStatement("UPDATE public.menu \n" +
+                            "\tSET  \"MENUNAME\"=?, \"MENUDESC\"=?, \"MENUTPRICE\"=?, \"MENUTYPE\"=?" +
+                            "\tWHERE \"MENUID\" =?;");
+            // Parameters start with 1
+
+            preparedStatement.setString(1, mn.getMENUNAME());
+            preparedStatement.setString(2, mn.getMENUDESC());
+            preparedStatement.setDouble(3, mn.getMENUTPRICE());
+            preparedStatement.setString(4, mn.getMENUTYPE());
+            preparedStatement.setInt(5, mn.getMENUID());
+            //preparedStatement.setString(5, mn.getFileName());
+            //preparedStatement.setString(6, mn.getSavePath());
+
+            //preparedStatement.setString(8, upMenu.getCWORKID());
+            i = preparedStatement.executeUpdate();
+        }
+
+        catch (SQLException e)
+        {
+            e.printStackTrace();
+        }
+        if (i == 0)
+        {
+            return false;
+        } else {
+            return true;
+        }
+    }
+
+    public List<Menu> getAllUsers()
+    {
+        List<Menu> menus = new ArrayList<Menu>();
+        try
+        {
+            loadDriver(dbDriver);
+            Connection con = getConnection();
+            Statement statement = con.createStatement();
+            ResultSet rs = statement.executeQuery("SELECT \"MENUID\", \"MENUNAME\", \"MENUDESC\", \"MENUTPRICE\", \"MENUTYPE\", \"fileName\",\"savePath\"\n" +
+                    "\tFROM public.menu;");
+            while (rs.next()) {
+                int MENUID = rs.getInt("MENUID");
+                String MENUNAME = rs.getString("MENUNAME");
+                String fileName = rs.getString("MENUIMAGE");
+                String savePath = rs.getString("MENUIMAGE");
+                String MENUDESC = rs.getString("MENUDESC");
+                double MENUPRICE = rs.getDouble("MENUPRICE");
+                String MENUTYPE = rs.getString("MENUTYPE");
+                Menu menu = new Menu(MENUID,MENUNAME,fileName,savePath,MENUDESC,MENUPRICE,MENUTYPE);
+                menus.add(menu);
+            }
+        }
+        catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        return menus;
+    }
+
+   public Menu getMenuID (int menuId)
+   {
+        loadDriver(dbDriver);
+        Connection con = getConnection();
+        Menu mn = new Menu();
+        try {
+              PreparedStatement preparedStatement = (PreparedStatement)
+                      con.prepareStatement("SELECT * FROM public.menu WHERE \"MENUID\" = ?;");
+              preparedStatement.setInt(1, menuId);
+              ResultSet rs = preparedStatement.executeQuery();
+
+              if (rs.next()) {
+
+                  mn.setMENUID(rs.getInt("MENUID"));
+                  mn.setMENUNAME(rs.getString("MENUNAME"));
+                  mn.setMENUDESC( rs.getString("MENUDESC"));
+                  mn.setMENUTPRICE(rs.getDouble("MENUTPRICE")); ;
+                  mn.setMENUTYPE( rs.getString("MENUTYPE"));
+                  mn.setFileName(rs.getString("fileName"));
+                  mn.setSavePath(rs.getString("savePath"));
+                  //int menuId= rs.getInt("MENUID");
+                  //String cworkid = rs.getString("CWORKID");
+
+           }
+        }
+
+           catch (SQLException e)
+            {
+              e.printStackTrace();
+            }
+
+           return mn;
+     }
+
 
 }
-
-

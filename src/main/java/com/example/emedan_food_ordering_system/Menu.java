@@ -1,39 +1,46 @@
 package com.example.emedan_food_ordering_system;
 
-import java.io.InputStream;
-import java.sql.Blob;
-
 public class Menu implements java.io.Serializable
 {
-    private String MENUID;
+    private int MENUID;
     private String MENUNAME;
-    private InputStream MENUIMAGE;
+    private String fileName;
+    private String savePath;
     private String MENUDESC;
-    private double MENUPRICE;
+    private double MENUTPRICE;
     private String MENUTYPE;
-    private int CWORKID;
-
+    //private String CWORKID;
 
     public Menu()
     {
 
     }
 
-    public Menu(String MENUID, String MENUNAME, InputStream MENUIMAGE, String MENUDESC, double MENUPRICE, String MENUTYPE, int CWORKID) {
-        this.MENUID = MENUID;
+    public Menu(String MENUNAME, String fileName, String savePath, String MENUDESC, double MENUTPRICE, String MENUTYPE) {
         this.MENUNAME = MENUNAME;
-        this.MENUIMAGE = MENUIMAGE;
+        this.fileName = fileName;
+        this.savePath = savePath;
         this.MENUDESC = MENUDESC;
-        this.MENUPRICE = MENUPRICE;
+        this.MENUTPRICE = MENUTPRICE;
         this.MENUTYPE = MENUTYPE;
-        this.CWORKID = CWORKID;
     }
 
-    public String getMENUID() {
+    public Menu(int MENUID, String MENUNAME, String fileName, String savePath, String MENUDESC, double MENUTPRICE, String MENUTYPE)
+    {
+        this.MENUID = MENUID;
+        this.MENUNAME = MENUNAME;
+        this.fileName = fileName;
+        this.savePath = savePath;
+        this.MENUDESC = MENUDESC;
+        this.MENUTPRICE = MENUTPRICE;
+        this.MENUTYPE = MENUTYPE;
+    }
+
+    public int getMENUID() {
         return MENUID;
     }
 
-    public void setMENUID(String MENUID) {
+    public void setMENUID(int MENUID) {
         this.MENUID = MENUID;
     }
 
@@ -45,12 +52,20 @@ public class Menu implements java.io.Serializable
         this.MENUNAME = MENUNAME;
     }
 
-    public InputStream getMENUIMAGE() {
-        return MENUIMAGE;
+    public String getFileName() {
+        return fileName;
     }
 
-    public void setMENUIMAGE(InputStream MENUIMAGE) {
-        this.MENUIMAGE = MENUIMAGE;
+    public void setFileName(String fileName) {
+        this.fileName = fileName;
+    }
+
+    public String getSavePath() {
+        return savePath;
+    }
+
+    public void setSavePath(String savePath) {
+        this.savePath = savePath;
     }
 
     public String getMENUDESC() {
@@ -61,12 +76,12 @@ public class Menu implements java.io.Serializable
         this.MENUDESC = MENUDESC;
     }
 
-    public double getMENUPRICE() {
-        return MENUPRICE;
+    public double getMENUTPRICE() {
+        return MENUTPRICE;
     }
 
-    public void setMENUPRICE(double MENUPRICE) {
-        this.MENUPRICE = MENUPRICE;
+    public void setMENUTPRICE(double MENUTPRICE) {
+        this.MENUTPRICE = MENUTPRICE;
     }
 
     public String getMENUTYPE() {
@@ -77,11 +92,11 @@ public class Menu implements java.io.Serializable
         this.MENUTYPE = MENUTYPE;
     }
 
-    public int getCWORKID() {
+    /*public String getCWORKID() {
         return CWORKID;
     }
 
-    public void setCWORKID(int CWORKID) {
+    public void setCWORKID(String CWORKID) {
         this.CWORKID = CWORKID;
-    }
+    }*/
 }

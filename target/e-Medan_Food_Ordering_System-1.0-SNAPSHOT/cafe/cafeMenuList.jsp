@@ -148,6 +148,35 @@
             </thead>
             <tbody>
 
+            <%--        <c:forEach var="menu" items="${listMenu}">--%>
+            <%--        <tr>--%>
+            <%--            <td><c:out value="${menu.MENUIMAGE}" /></td>--%>
+            <%--            <td><image src="../images/${menu.fileName}" width="100" height="100"/></td>--%>
+            <%--            <td><c:out value="${menu.MENUNAME}" /></td>--%>
+            <%--            <td><c:out value="${menu.MENUDESC}" /></td>--%>
+            <%--            <td>RM <c:out value="${menu.MENUTPRICE}" /></td>--%>
+
+            <%--            <td>--%>
+            <%--                <a  href="updateMenu.jsp" class="button" style="color: black;">UPDATE </a>--%>
+            <%--&lt;%&ndash;                <a  href="deleteMenu.jsp" class="button" style="color: black;">DELETE </a>&ndash;%&gt;--%>
+            <%--                <button type="button" id="${menu.MENUID}" class="btn btn-sm btn-danger">Delete</button>--%>
+
+            <%--            </td>--%>
+            <%--        </tr>--%>
+            <%--        </c:forEach>--%>
+          <%--      <%
+            String MENUID = request.getParameter("MENUID");
+
+            try{
+                Class.forName("com.mysql.cj.jdbc.Driver");
+                Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/emfos", "root", "");
+                Statement st = con.createStatement();
+                String sql = "SELECT * from menu";
+                ResultSet rs = st.executeQuery(sql);
+                int i=1;
+                while (rs.next()){
+//                    String fileName = rs.getString("fileName");
+            %>--%>
         <%
                 String MENUID = request.getParameter("MENUID");
 
@@ -161,6 +190,7 @@
                 int i=1;
                 while (rs.next())
                 {
+//                    String fileName = rs.getString("fileName");
         %>
 
             <tr>
@@ -173,6 +203,7 @@
 
                 <td>
                     <a  href="updateMenu.jsp?id=<%=rs.getInt("MENUID")%>" class="button" style="color: black;"> UPDATE </a>
+<%--                     <a  href="deleteMenu.jsp" class="button" style="color: black;">DELETE </a>--%>
                     <button type="button" id="<%=rs.getString("MENUID")%>" style="background-color: #d9534f;" class="del btn btn--sm">Delete</button>
                 </td>
             </tr>

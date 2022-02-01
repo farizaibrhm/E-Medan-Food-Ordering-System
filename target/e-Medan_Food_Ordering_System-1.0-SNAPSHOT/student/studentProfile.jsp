@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@page import = "java.sql.DriverManager"%>
 <%@page import="java.sql.ResultSet" %>
 <%@page import="java.sql.Statement" %>
@@ -84,7 +85,7 @@
                                 <div class="user-avatar">
                                     <img src="${pageContext.request.contextPath}/assets/images/female-student.jpg" alt="Maxwell Admin">
                                 </div>
-                                <label><%=student.getStudentID()%></label>
+                                <c:out value="${requestScope.STUDENTID.getStudentID()}">
                                     <br>
                                 <label><%=student.getStudentName()%></label>
                             </div>

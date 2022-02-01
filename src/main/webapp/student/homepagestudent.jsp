@@ -32,7 +32,7 @@
     <!--Promotion Bar-->
     <div class="notification-bar mobilehide">
         <a href="#" class="notification-bar__message">e-Medan Food Ordering System</a>
-        <span class="close-announcement">×</span>
+        <span class="close-announcement">*</span>
     </div>
     <!--End Promotion Bar-->
     <!--Search Form Drawer-->
@@ -69,8 +69,8 @@
             <div class="row align-items-center">
                 <!--Desktop Logo-->
                 <div class="logo col-md-2 col-lg-2 d-none d-lg-block">
-                    <a href="${pageContext.request.contextPath}/student/homepagestudent.jsp">
-                        <img src="${pageContext.request.contextPath}/assets/images/e-Medan.svg" alt="e-Medan Food Ordering Website" title="e-Medan Food Ordering Website" />
+                    <a href="<%=request.getContextPath()%>/student/homepagestudent.jsp">
+                        <img src="<%=request.getContextPath()%>/assets/images/e-Medan.svg" alt="e-Medan Food Ordering Website" title="e-Medan Food Ordering Website" />
                     </a>
                 </div>
                 <!--End Desktop Logo-->
@@ -98,7 +98,7 @@
                 <div class="col-6 col-sm-6 col-md-6 col-lg-2 d-block d-lg-none mobile-logo">
                     <div class="logo">
                         <a href="${pageContext.request.contextPath}/student/homepagestudent.jsp">
-                            <img src="${pageContext.request.contextPath}/assets/images/e-Medan.svg" alt="e-Medan Food Ordering Website" title="e-Medan Food Ordering Website" />
+                            <img src="<%=request.getContextPath()%>/assets/images/e-Medan.svg" alt="e-Medan Food Ordering Website" title="e-Medan Food Ordering Website" />
                         </a>
                     </div>
                 </div>
@@ -114,7 +114,7 @@
                             <ul class="mini-products-list">
                                 <li class="item">
                                     <a class="product-image" href="#">
-                                        <img src="${pageContext.request.contextPath}/assets/images/product-images/cape-dress-1.jpg" alt="3/4 Sleeve Kimono Dress" title="" />
+                                        <img src="<%=request.getContextPath()%>/assets/images/product-images/cape-dress-1.jpg" alt="3/4 Sleeve Kimono Dress" title="" />
                                     </a>
                                     <div class="product-details">
                                         <a href="#" class="remove"><i class="anm anm-times-l" aria-hidden="true"></i></a>
@@ -240,10 +240,10 @@
                                     <!-- start product image -->
                                     <a href="product-layout-1.html" class="grid-view-item__link">
                                         <!-- image -->
-                                        <img class="primary blur-up lazyload" data-src="assets/images/product-images/nasibujang.png" src="${pageContext.request.contextPath}assets/images/product-images/nasibujang.png" alt="image" title="product">
+                                        <img class="primary blur-up lazyload" data-src="assets/images/product-images/nasibujang.png" src="${pageContext.request.contextPath}/assets/images/product-images/nasibujang.png" alt="image" title="product">
                                         <!-- End image -->
                                         <!-- Hover image -->
-                                        <img class="hover blur-up lazyload" data-src="assets/images/product-images/nasibujang.png" src="${pageContext.request.contextPath}assets/images/product-images/nasibujang.png" alt="image" title="product">
+                                        <img class="hover blur-up lazyload" data-src="assets/images/product-images/nasibujang.png" src="${pageContext.request.contextPath}/assets/images/product-images/nasibujang.png" alt="image" title="product">
                                         <!-- End hover image -->
                                         <!-- Variant Image-->
                                         <img class="grid-view-item__image hover variantImg" src="${pageContext.request.contextPath}/assets/images/product-images/nasibujang.png" alt="image" title="product">
@@ -962,20 +962,21 @@
     <!-- End Newsletter Popup -->
 
     <!-- Including Jquery -->
-    <script src="${pageContext.request.contextPath}assets/js/vendor/jquery-3.3.1.min.js"></script>
-    <script src="${pageContext.request.contextPath}assets/js/vendor/modernizr-3.6.0.min.js"></script>
-    <script src="${pageContext.request.contextPath}assets/js/vendor/jquery.cookie.js"></script>
-    <script src="${pageContext.request.contextPath}assets/js/vendor/wow.min.js"></script>
+    <script src="<%=request.getContextPath()%>/assets/js/vendor/jquery-3.3.1.min.js"></script>
+    <script src="<%=request.getContextPath()%>/assets/js/vendor/modernizr-3.6.0.min.js"></script>
+    <script src="<%=request.getContextPath()%>/assets/js/vendor/jquery.cookie.js"></script>
+    <script src="<%=request.getContextPath()%>/assets/js/vendor/wow.min.js"></script>
     <!-- Including Javascript -->
-    <script src="${pageContext.request.contextPath}assets/js/bootstrap.min.js"></script>
-    <script src="${pageContext.request.contextPath}assets/js/plugins.js"></script>
-    <script src="${pageContext.request.contextPath}assets/js/popper.min.js"></script>
-    <script src="${pageContext.request.contextPath}assets/js/lazysizes.js"></script>
-    <script src="${pageContext.request.contextPath}assets/js/main.js"></script>
+    <script src="<%=request.getContextPath()%>/assets/js/bootstrap.min.js"></script>
+    <script src="<%=request.getContextPath()%>/assets/js/plugins.js"></script>
+    <script src="<%=request.getContextPath()%>/assets/js/popper.min.js"></script>
+    <script src="<%=request.getContextPath()%>/assets/js/lazysizes.js"></script>
+    <script src="<%=request.getContextPath()%>/assets/js/main.js"></script>
 
     <!-- JS -->
-    <script src="${pageContext.request.contextPath}assets/vendor/jquery/jquery.min.js"></script>
-    <script src="${pageContext.request.contextPath}assets/js/mainform.js"></script>
+    <script src="<%=request.getContextPath()%>/assets/vendor/jquery/jquery.min.js"></script>
+    <script src="<%=request.getContextPath()%>/assets/js/mainform.js"></script>
+
 </div>
 
 </body>

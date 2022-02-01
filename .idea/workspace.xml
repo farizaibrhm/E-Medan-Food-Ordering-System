@@ -10,8 +10,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0811e3f3-8279-45dc-a825-752cd3ab05bb" name="Changes" comment="edit">
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/student/menuPage.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/student/about-us-student.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/student/about-us-student.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/student/homepagestudent.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/student/homepagestudent.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/student/menuPage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/student/menuPage.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/student/studentProfile.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/student/studentProfile.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/student/about-us-student.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/student/about-us-student.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/student/homepagestudent.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/student/homepagestudent.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/student/studentProfile.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/student/studentProfile.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,9 +50,11 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="DatabaseDriversLRU" value="oracle" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
@@ -157,7 +165,7 @@
       <workItem from="1643264263097" duration="6418000" />
       <workItem from="1643301401719" duration="6934000" />
       <workItem from="1643338178388" duration="484000" />
-      <workItem from="1643727108648" duration="792000" />
+      <workItem from="1643727108648" duration="2224000" />
     </task>
     <task id="LOCAL-00001" summary="edit">
       <created>1643211857027</created>
@@ -187,7 +195,14 @@
       <option name="project" value="LOCAL" />
       <updated>1643727240564</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="edit">
+      <created>1643727930892</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1643727930892</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

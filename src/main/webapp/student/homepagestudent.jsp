@@ -889,74 +889,74 @@
     <!--End Scoll Top-->
 
     <!--Quick View popup-->
-    <div class="modal fade quick-view-popup" id="content_quickview">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-body">
-                    <div id="ProductSection-product-template" class="product-template__container prstyle1">
-                        <div class="product-single">
-                            <!-- Start model close -->
-                            <a href="javascript:void{}" data-dismiss="modal" class="model-close-btn pull-right" title="close"><span class="icon icon anm anm-times-l"></span></a>
-                            <!-- End model close -->
-                            <div class="row">
-                                <div class="col-lg-6 col-md-6 col-sm-12 col-12">
-                                    <div class="product-details-img">
-                                        <div class="pl-20">
-                                            <img src="${pageContext.request.contextPath}/assets/images/signup-image.jpg" alt="" />
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6 col-md-6 col-sm-12 col-12">
-                                    <div class="product-single__meta">
-                                        <h2 class="product-single__title">&nbsp &nbsp &nbsp Don't have account?</h2>
+<%--    <div class="modal fade quick-view-popup" id="content_quickview">--%>
+<%--        <div class="modal-dialog">--%>
+<%--            <div class="modal-content">--%>
+<%--                <div class="modal-body">--%>
+<%--                    <div id="ProductSection-product-template" class="product-template__container prstyle1">--%>
+<%--                        <div class="product-single">--%>
+<%--                            <!-- Start model close -->--%>
+<%--                            <a href="javascript:void{}" data-dismiss="modal" class="model-close-btn pull-right" title="close"><span class="icon icon anm anm-times-l"></span></a>--%>
+<%--                            <!-- End model close -->--%>
+<%--                            <div class="row">--%>
+<%--                                <div class="col-lg-6 col-md-6 col-sm-12 col-12">--%>
+<%--                                    <div class="product-details-img">--%>
+<%--                                        <div class="pl-20">--%>
+<%--                                            <img src="${pageContext.request.contextPath}/assets/images/signup-image.jpg" alt="" />--%>
+<%--                                        </div>--%>
+<%--                                    </div>--%>
+<%--                                </div>--%>
+<%--                                <div class="col-lg-6 col-md-6 col-sm-12 col-12">--%>
+<%--                                    <div class="product-single__meta">--%>
+<%--                                        <h2 class="product-single__title">&nbsp &nbsp &nbsp Don't have account?</h2>--%>
 
-                                        <section class="signup">
-                                            <div class="container">
-                                                <div class="signup-content">
-                                                    <div class="signup-form">
-                                                        <h2 class="form-title">Sign up</h2>
-                                                        <form method="POST" class="register-form" id="register-form">
-                                                            <div class="form-group">
-                                                                <label for="name"><i class="zmdi zmdi-account material-icons-name"></i></label>
-                                                                <input type="text" name="name" id="name" placeholder="Your Name"/>
-                                                            </div>
-                                                            <div class="form-group">
-                                                                <label for="email"><i class="zmdi zmdi-email"></i></label>
-                                                                <input type="email" name="email" id="email" placeholder="Your Email"/>
-                                                            </div>
-                                                            <div class="form-group">
-                                                                <label for="pass"><i class="zmdi zmdi-lock"></i></label>
-                                                                <input type="password" name="pass" id="pass" placeholder="Password"/>
-                                                            </div>
-                                                            <div class="form-group">
-                                                                <%--@declare id="re-pass"--%><label for="re-pass"><i class="zmdi zmdi-lock-outline"></i></label>
-                                                                <input type="password" name="re_pass" id="re_pass" placeholder="Repeat your password"/>
-                                                            </div>
-                                                            <div class="form-group">
-                                                                <input type="checkbox" name="agree-term" id="agree-term" class="agree-term" />
-                                                                <label for="agree-term" class="label-agree-term"><span><span></span></span>I agree all statements in  <a href="#" class="term-service">Terms of service</a></label>
-                                                            </div>
-                                                            <a href="login.html" class="signup-image-link">I am already member</a>
-                                                            <div class="form-group form-button">
-                                                                <input type="submit" name="signup" id="signup" class="form-submit" value="Register"/>
-                                                            </div>
-                                                        </form>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </section>
+<%--                                        <section class="signup">--%>
+<%--                                            <div class="container">--%>
+<%--                                                <div class="signup-content">--%>
+<%--                                                    <div class="signup-form">--%>
+<%--                                                        <h2 class="form-title">Sign up</h2>--%>
+<%--                                                        <form method="POST" class="register-form" id="register-form">--%>
+<%--                                                            <div class="form-group">--%>
+<%--                                                                <label for="name"><i class="zmdi zmdi-account material-icons-name"></i></label>--%>
+<%--                                                                <input type="text" name="name" id="name" placeholder="Your Name"/>--%>
+<%--                                                            </div>--%>
+<%--                                                            <div class="form-group">--%>
+<%--                                                                <label for="email"><i class="zmdi zmdi-email"></i></label>--%>
+<%--                                                                <input type="email" name="email" id="email" placeholder="Your Email"/>--%>
+<%--                                                            </div>--%>
+<%--                                                            <div class="form-group">--%>
+<%--                                                                <label for="pass"><i class="zmdi zmdi-lock"></i></label>--%>
+<%--                                                                <input type="password" name="pass" id="pass" placeholder="Password"/>--%>
+<%--                                                            </div>--%>
+<%--                                                            <div class="form-group">--%>
+<%--                                                                &lt;%&ndash;@declare id="re-pass"&ndash;%&gt;<label for="re-pass"><i class="zmdi zmdi-lock-outline"></i></label>--%>
+<%--                                                                <input type="password" name="re_pass" id="re_pass" placeholder="Repeat your password"/>--%>
+<%--                                                            </div>--%>
+<%--                                                            <div class="form-group">--%>
+<%--                                                                <input type="checkbox" name="agree-term" id="agree-term" class="agree-term" />--%>
+<%--                                                                <label for="agree-term" class="label-agree-term"><span><span></span></span>I agree all statements in  <a href="#" class="term-service">Terms of service</a></label>--%>
+<%--                                                            </div>--%>
+<%--                                                            <a href="login.html" class="signup-image-link">I am already member</a>--%>
+<%--                                                            <div class="form-group form-button">--%>
+<%--                                                                <input type="submit" name="signup" id="signup" class="form-submit" value="Register"/>--%>
+<%--                                                            </div>--%>
+<%--                                                        </form>--%>
+<%--                                                    </div>--%>
+<%--                                                </div>--%>
+<%--                                            </div>--%>
+<%--                                        </section>--%>
 
-                                    </div>
-                                </div>
-                            </div>
-                            <!--End-product-single-->
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!--End Quick View popup-->
+<%--                                    </div>--%>
+<%--                                </div>--%>
+<%--                            </div>--%>
+<%--                            <!--End-product-single-->--%>
+<%--                        </div>--%>
+<%--                    </div>--%>
+<%--                </div>--%>
+<%--            </div>--%>
+<%--        </div>--%>
+<%--    </div>--%>
+<%--    <!--End Quick View popup-->--%>
 
     <!-- Newsletter Popup -->
     <!-- End Newsletter Popup -->

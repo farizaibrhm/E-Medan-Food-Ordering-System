@@ -4,7 +4,7 @@
 <%@page import="java.sql.Statement"%>
 <%@page import="java.sql.Connection"%>
 <%@page import="com.example.emedan_food_ordering_system.Student" %>
-<%@page import="java.sql.*, java.util.*" %>>
+<%@page import="java.sql.*, java.util.*" %>
 
 <!DOCTYPE html>
 <html class="no-js" lang="en">
@@ -32,7 +32,7 @@
     <!--Promotion Bar-->
     <div class="notification-bar mobilehide">
         <a href="#" class="notification-bar__message">e-Medan Food Ordering System</a>
-        <span class="close-announcement">×</span>
+        <span class="close-announcement">*</span>
     </div>
     <!--End Promotion Bar-->
     <!--Search Form Drawer-->
@@ -69,8 +69,8 @@
             <div class="row align-items-center">
                 <!--Desktop Logo-->
                 <div class="logo col-md-2 col-lg-2 d-none d-lg-block">
-                    <a href="${pageContext.request.contextPath}/student/homepagestudent.jsp">
-                        <img src="${pageContext.request.contextPath}/assets/images/e-Medan.svg" alt="e-Medan Food Ordering Website" title="e-Medan Food Ordering Website" />
+                    <a href="<%=request.getContextPath()%>/student/homepagestudent.jsp">
+                        <img src="<%=request.getContextPath()%>/assets/images/e-Medan.svg" alt="e-Medan Food Ordering Website" title="e-Medan Food Ordering Website" />
                     </a>
                 </div>
                 <!--End Desktop Logo-->
@@ -84,10 +84,10 @@
                     <!--Desktop Menu-->
                     <nav class="grid__item" id="AccessibleNav"><!-- for mobile -->
                         <ul id="siteNav" class="site-nav medium center hidearrow">
-                            <li class="lvl1 parent megamenu"><a href="${pageContext.request.contextPath}/student/homepagestudent.jsp">Home <i class="anm anm-angle-down-l"></i></a></li>
-                            <li class="lvl1 parent megamenu"><a href="${pageContext.request.contextPath}/student/about-us-student.jsp">About <i class="anm anm-angle-down-l"></i></a></li>
-                            <li class="lvl1 parent dropdown"><a href="menupagestudent.html">Menu <i class="anm anm-angle-down-l"></i></a>
-                            <li class="lvl1 parent dropdown"><a href="${pageContext.request.contextPath}/student/studentProfile.jsp"> Account <i class="anm anm-angle-down-l"></i></a>
+                            <li class="lvl1 parent megamenu"><a href="<%=request.getContextPath()%>/student/homepagestudent.jsp">Home <i class="anm anm-angle-down-l"></i></a></li>
+                            <li class="lvl1 parent megamenu"><a href="<%=request.getContextPath()%>/student/about-us-student.jsp">About <i class="anm anm-angle-down-l"></i></a></li>
+                            <li class="lvl1 parent dropdown"><a href="<%=request.getContextPath()%>/student/menuPage.jsp">Menu <i class="anm anm-angle-down-l"></i></a>
+                            <li class="lvl1 parent dropdown"><a href="<%=request.getContextPath()%>/student/studentProfile.jsp"> Account <i class="anm anm-angle-down-l"></i></a>
                             </li>
                             </li>
                         </ul>
@@ -97,8 +97,8 @@
                 <!--Mobile Logo-->
                 <div class="col-6 col-sm-6 col-md-6 col-lg-2 d-block d-lg-none mobile-logo">
                     <div class="logo">
-                        <a href="${pageContext.request.contextPath}/student/homepagestudent.jsp">
-                            <img src="${pageContext.request.contextPath}/assets/images/e-Medan.svg" alt="e-Medan Food Ordering Website" title="e-Medan Food Ordering Website" />
+                        <a href="<%=request.getContextPath()%>/student/homepagestudent.jsp">
+                            <img src="<%=application.getContextPath() %>/assets/images/e-Medan.svg" alt="e-Medan Food Ordering Website" title="e-Medan Food Ordering Website" />
                         </a>
                     </div>
                 </div>
@@ -114,7 +114,7 @@
                             <ul class="mini-products-list">
                                 <li class="item">
                                     <a class="product-image" href="#">
-                                        <img src="${pageContext.request.contextPath}/assets/images/product-images/cape-dress-1.jpg" alt="3/4 Sleeve Kimono Dress" title="" />
+                                        <img src="<%=application.getContextPath() %>/assets/images/product-images/cape-dress-1.jpg" alt="3/4 Sleeve Kimono Dress" title="" />
                                     </a>
                                     <div class="product-details">
                                         <a href="#" class="remove"><i class="anm anm-times-l" aria-hidden="true"></i></a>
@@ -138,7 +138,7 @@
                                 </li>
                                 <li class="item">
                                     <a class="product-image" href="#">
-                                        <img src="${pageContext.request.contextPath}/assets/images/product-images/cape-dress-2.jpg" alt="Elastic Waist Dress - Black / Small" title="" />
+                                        <img src="<%=application.getContextPath() %>/assets/images/product-images/cape-dress-2.jpg" alt="Elastic Waist Dress - Black / Small" title="" />
                                     </a>
                                     <div class="product-details">
                                         <a href="#" class="remove"><i class="anm anm-times-l" aria-hidden="true"></i></a>
@@ -240,10 +240,10 @@
                                     <!-- start product image -->
                                     <a href="product-layout-1.html" class="grid-view-item__link">
                                         <!-- image -->
-                                        <img class="primary blur-up lazyload" data-src="assets/images/product-images/nasibujang.png" src="${pageContext.request.contextPath}assets/images/product-images/nasibujang.png" alt="image" title="product">
+                                        <img class="primary blur-up lazyload" data-src="assets/images/product-images/nasibujang.png" src="${pageContext.request.contextPath}/assets/images/product-images/nasibujang.png" alt="image" title="product">
                                         <!-- End image -->
                                         <!-- Hover image -->
-                                        <img class="hover blur-up lazyload" data-src="assets/images/product-images/nasibujang.png" src="${pageContext.request.contextPath}assets/images/product-images/nasibujang.png" alt="image" title="product">
+                                        <img class="hover blur-up lazyload" data-src="assets/images/product-images/nasibujang.png" src="${pageContext.request.contextPath}/assets/images/product-images/nasibujang.png" alt="image" title="product">
                                         <!-- End hover image -->
                                         <!-- Variant Image-->
                                         <img class="grid-view-item__image hover variantImg" src="${pageContext.request.contextPath}/assets/images/product-images/nasibujang.png" alt="image" title="product">
@@ -889,74 +889,74 @@
     <!--End Scoll Top-->
 
     <!--Quick View popup-->
-    <div class="modal fade quick-view-popup" id="content_quickview">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-body">
-                    <div id="ProductSection-product-template" class="product-template__container prstyle1">
-                        <div class="product-single">
-                            <!-- Start model close -->
-                            <a href="javascript:void{}" data-dismiss="modal" class="model-close-btn pull-right" title="close"><span class="icon icon anm anm-times-l"></span></a>
-                            <!-- End model close -->
-                            <div class="row">
-                                <div class="col-lg-6 col-md-6 col-sm-12 col-12">
-                                    <div class="product-details-img">
-                                        <div class="pl-20">
-                                            <img src="${pageContext.request.contextPath}/assets/images/signup-image.jpg" alt="" />
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6 col-md-6 col-sm-12 col-12">
-                                    <div class="product-single__meta">
-                                        <h2 class="product-single__title">&nbsp &nbsp &nbsp Don't have account?</h2>
+<%--    <div class="modal fade quick-view-popup" id="content_quickview">--%>
+<%--        <div class="modal-dialog">--%>
+<%--            <div class="modal-content">--%>
+<%--                <div class="modal-body">--%>
+<%--                    <div id="ProductSection-product-template" class="product-template__container prstyle1">--%>
+<%--                        <div class="product-single">--%>
+<%--                            <!-- Start model close -->--%>
+<%--                            <a href="javascript:void{}" data-dismiss="modal" class="model-close-btn pull-right" title="close"><span class="icon icon anm anm-times-l"></span></a>--%>
+<%--                            <!-- End model close -->--%>
+<%--                            <div class="row">--%>
+<%--                                <div class="col-lg-6 col-md-6 col-sm-12 col-12">--%>
+<%--                                    <div class="product-details-img">--%>
+<%--                                        <div class="pl-20">--%>
+<%--                                            <img src="${pageContext.request.contextPath}/assets/images/signup-image.jpg" alt="" />--%>
+<%--                                        </div>--%>
+<%--                                    </div>--%>
+<%--                                </div>--%>
+<%--                                <div class="col-lg-6 col-md-6 col-sm-12 col-12">--%>
+<%--                                    <div class="product-single__meta">--%>
+<%--                                        <h2 class="product-single__title">&nbsp &nbsp &nbsp Don't have account?</h2>--%>
 
-                                        <section class="signup">
-                                            <div class="container">
-                                                <div class="signup-content">
-                                                    <div class="signup-form">
-                                                        <h2 class="form-title">Sign up</h2>
-                                                        <form method="POST" class="register-form" id="register-form">
-                                                            <div class="form-group">
-                                                                <label for="name"><i class="zmdi zmdi-account material-icons-name"></i></label>
-                                                                <input type="text" name="name" id="name" placeholder="Your Name"/>
-                                                            </div>
-                                                            <div class="form-group">
-                                                                <label for="email"><i class="zmdi zmdi-email"></i></label>
-                                                                <input type="email" name="email" id="email" placeholder="Your Email"/>
-                                                            </div>
-                                                            <div class="form-group">
-                                                                <label for="pass"><i class="zmdi zmdi-lock"></i></label>
-                                                                <input type="password" name="pass" id="pass" placeholder="Password"/>
-                                                            </div>
-                                                            <div class="form-group">
-                                                                <%--@declare id="re-pass"--%><label for="re-pass"><i class="zmdi zmdi-lock-outline"></i></label>
-                                                                <input type="password" name="re_pass" id="re_pass" placeholder="Repeat your password"/>
-                                                            </div>
-                                                            <div class="form-group">
-                                                                <input type="checkbox" name="agree-term" id="agree-term" class="agree-term" />
-                                                                <label for="agree-term" class="label-agree-term"><span><span></span></span>I agree all statements in  <a href="#" class="term-service">Terms of service</a></label>
-                                                            </div>
-                                                            <a href="login.html" class="signup-image-link">I am already member</a>
-                                                            <div class="form-group form-button">
-                                                                <input type="submit" name="signup" id="signup" class="form-submit" value="Register"/>
-                                                            </div>
-                                                        </form>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </section>
+<%--                                        <section class="signup">--%>
+<%--                                            <div class="container">--%>
+<%--                                                <div class="signup-content">--%>
+<%--                                                    <div class="signup-form">--%>
+<%--                                                        <h2 class="form-title">Sign up</h2>--%>
+<%--                                                        <form method="POST" class="register-form" id="register-form">--%>
+<%--                                                            <div class="form-group">--%>
+<%--                                                                <label for="name"><i class="zmdi zmdi-account material-icons-name"></i></label>--%>
+<%--                                                                <input type="text" name="name" id="name" placeholder="Your Name"/>--%>
+<%--                                                            </div>--%>
+<%--                                                            <div class="form-group">--%>
+<%--                                                                <label for="email"><i class="zmdi zmdi-email"></i></label>--%>
+<%--                                                                <input type="email" name="email" id="email" placeholder="Your Email"/>--%>
+<%--                                                            </div>--%>
+<%--                                                            <div class="form-group">--%>
+<%--                                                                <label for="pass"><i class="zmdi zmdi-lock"></i></label>--%>
+<%--                                                                <input type="password" name="pass" id="pass" placeholder="Password"/>--%>
+<%--                                                            </div>--%>
+<%--                                                            <div class="form-group">--%>
+<%--                                                                &lt;%&ndash;@declare id="re-pass"&ndash;%&gt;<label for="re-pass"><i class="zmdi zmdi-lock-outline"></i></label>--%>
+<%--                                                                <input type="password" name="re_pass" id="re_pass" placeholder="Repeat your password"/>--%>
+<%--                                                            </div>--%>
+<%--                                                            <div class="form-group">--%>
+<%--                                                                <input type="checkbox" name="agree-term" id="agree-term" class="agree-term" />--%>
+<%--                                                                <label for="agree-term" class="label-agree-term"><span><span></span></span>I agree all statements in  <a href="#" class="term-service">Terms of service</a></label>--%>
+<%--                                                            </div>--%>
+<%--                                                            <a href="login.html" class="signup-image-link">I am already member</a>--%>
+<%--                                                            <div class="form-group form-button">--%>
+<%--                                                                <input type="submit" name="signup" id="signup" class="form-submit" value="Register"/>--%>
+<%--                                                            </div>--%>
+<%--                                                        </form>--%>
+<%--                                                    </div>--%>
+<%--                                                </div>--%>
+<%--                                            </div>--%>
+<%--                                        </section>--%>
 
-                                    </div>
-                                </div>
-                            </div>
-                            <!--End-product-single-->
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!--End Quick View popup-->
+<%--                                    </div>--%>
+<%--                                </div>--%>
+<%--                            </div>--%>
+<%--                            <!--End-product-single-->--%>
+<%--                        </div>--%>
+<%--                    </div>--%>
+<%--                </div>--%>
+<%--            </div>--%>
+<%--        </div>--%>
+<%--    </div>--%>
+<%--    <!--End Quick View popup-->--%>
 
     <!-- Newsletter Popup -->
     <!-- End Newsletter Popup -->
@@ -976,6 +976,7 @@
     <!-- JS -->
     <script src="${pageContext.request.contextPath}assets/vendor/jquery/jquery.min.js"></script>
     <script src="${pageContext.request.contextPath}assets/js/mainform.js"></script>
+
 </div>
 
 </body>

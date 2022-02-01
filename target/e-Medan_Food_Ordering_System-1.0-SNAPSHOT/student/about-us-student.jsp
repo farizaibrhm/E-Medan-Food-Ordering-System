@@ -46,13 +46,6 @@
         <div class="col-sm-4 col-md-4 col-lg-4 d-none d-lg-none d-md-block d-lg-block align-items-center">
           <div class="text-center"><p class="top-header_middle-text"> e-Medan Food Ordering System</p></div>
         </div>
-        <div class="col-2 col-sm-4 col-md-3 col-lg-4 text-right">
-          <span class="user-menu d-block d-lg-none"><i class="anm anm-user-al" aria-hidden="true"></i></span>
-          <ul class="customer-links list-inline">
-            <li><a href="${pageContext.request.contextPath}/login.jsp">Login</a></li>
-            <li><a href="${pageContext.request.contextPath}/register.jsp">Register Account</a></li>
-          </ul>
-        </div>
       </div>
     </div>
   </div>
@@ -79,8 +72,8 @@
           <nav class="grid__item" id="AccessibleNav"><!-- for mobile -->
             <ul id="siteNav" class="site-nav medium center hidearrow">
               <li class="lvl1 parent megamenu"><a href="${pageContext.request.contextPath}/student/homepagestudent.jsp">Home <i class="anm anm-angle-down-l"></i></a></li>
-              <li class="lvl1 parent megamenu"><a href="${pageContext.request.contextPath}/about-us-notlogin.jsp">About <i class="anm anm-angle-down-l"></i></a></li>
-              <li class="lvl1 parent dropdown"><a href="menupagestudent.html">Menu <i class="anm anm-angle-down-l"></i></a>
+              <li class="lvl1 parent megamenu"><a href="${pageContext.request.contextPath}/student/about-us-student.jsp">About <i class="anm anm-angle-down-l"></i></a></li>
+              <li class="lvl1 parent dropdown"><a href="${pageContext.request.contextPath}/student/menuPage.jsp">Menu <i class="anm anm-angle-down-l"></i></a>
               <li class="lvl1 parent dropdown"><a href="${pageContext.request.contextPath}/student/studentProfile.jsp"> Account <i class="anm anm-angle-down-l"></i></a>
               </li>
               </li>

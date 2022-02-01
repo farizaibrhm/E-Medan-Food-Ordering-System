@@ -1,4 +1,4 @@
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+
 <%@page import = "java.sql.DriverManager"%>
 <%@page import="java.sql.ResultSet" %>
 <%@page import="java.sql.Statement" %>
@@ -6,7 +6,6 @@
 <%@ page import="com.example.emedan_food_ordering_system.StudentDAO" %>
 <%@ page import="com.example.emedan_food_ordering_system.Student" %>
 
-<!DOCTYPE html>
 <html class="no-js" lang="en">
 <!-- belle/home2-default.html   11 Nov 2019 12:22:28 GMT -->
 <head>
@@ -26,10 +25,6 @@
     <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/responsive.css">
 </head>
 <body class="template-index home2-default">
-<%
-    Student student = new Student();
-
-%>
 <form action="${pageContext.request.contextPath}/ReadStudentProfileServlet" method="post">
 <div class="pageWrapper">
     <!--Promotion Bar-->
@@ -56,7 +51,7 @@
                         <ul id="siteNav" class="site-nav medium center hidearrow">
                             <li class="lvl1 parent dropdown"><a href="${pageContext.request.contextPath}/student/homepagestudent.jsp">Home <i class="anm anm-angle-down-l"></i></a>
                             <li class="lvl1 parent megamenu"><a href="${pageContext.request.contextPath}/student/about-us-student.jsp"> About <i class="anm anm-angle-down-l"></i></a></li>
-                            <li class="lvl1 parent megamenu"><a href="menupageStudent.html"> Menu <i class="anm anm-angle-down-l"></i></a></li>
+                            <li class="lvl1 parent megamenu"><a href="${pageContext.request.contextPath}/student/menuPage.jsp"> Menu <i class="anm anm-angle-down-l"></i></a></li>
                             <li class="lvl1 parent megamenu"><a href="${pageContext.request.contextPath}/student/studentProfile.jsp"> Account <i class="anm anm-angle-down-l"></i></a></li>
                             </li>
                         </ul>
@@ -85,9 +80,7 @@
                                 <div class="user-avatar">
                                     <img src="${pageContext.request.contextPath}/assets/images/female-student.jpg" alt="Maxwell Admin">
                                 </div>
-                                <c:out value="${requestScope.STUDENTID.getStudentID()}">
                                     <br>
-                                <label><%=student.getStudentName()%></label>
                             </div>
 
                             <!-- End display about read from database after student register account -->
@@ -126,8 +119,8 @@
                         <div class="row gutters">
                             <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                                 <div class="text-right">
-                                    <a href="studentEditProfile.html"  id="submit" name="submit" class="btn btn-primary">Edit Profile</button></a>
-                                    <a href="deleteAccStudent.html"  id="submit" name="submit" class="btn btn-primary">Delete Account</button></a>
+                                    <a href="studentEditProfile.html"  id="submit1" name="submit" class="btn btn-primary">Edit Profile</button></a>
+                                    <a href="deleteAccStudent.html"  id="submit2" name="submit3" class="btn btn-primary">Delete Account</button></a>
                                 </div>
                             </div>
                         </div>
@@ -203,13 +196,10 @@
 
 
     </style>
+                                    </div>
 
-    <script type="text/javascript">
-
-    </script>
-</div>
 </form>
-</body>
+
 
 
 <!--End Body Content-->
@@ -229,10 +219,5 @@
 <script src="${pageContext.request.contextPath}/assets/js/lazysizes.js"></script>
 <script src="${pageContext.request.contextPath}/assets/js/main.js"></script>
 
-</div>
-
 </body>
-
-
-<!-- belle/home2-default.html   11 Nov 2019 12:23:42 GMT -->
 </html>

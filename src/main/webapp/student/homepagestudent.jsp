@@ -84,10 +84,10 @@
                     <!--Desktop Menu-->
                     <nav class="grid__item" id="AccessibleNav"><!-- for mobile -->
                         <ul id="siteNav" class="site-nav medium center hidearrow">
-                            <li class="lvl1 parent megamenu"><a href="${pageContext.request.contextPath}/student/homepagestudent.jsp">Home <i class="anm anm-angle-down-l"></i></a></li>
-                            <li class="lvl1 parent megamenu"><a href="${pageContext.request.contextPath}/student/about-us-student.jsp">About <i class="anm anm-angle-down-l"></i></a></li>
-                            <li class="lvl1 parent dropdown"><a href="menupagestudent.html">Menu <i class="anm anm-angle-down-l"></i></a>
-                            <li class="lvl1 parent dropdown"><a href="${pageContext.request.contextPath}/student/studentProfile.jsp"> Account <i class="anm anm-angle-down-l"></i></a>
+                            <li class="lvl1 parent megamenu"><a href="<%=request.getContextPath()%>/student/homepagestudent.jsp">Home <i class="anm anm-angle-down-l"></i></a></li>
+                            <li class="lvl1 parent megamenu"><a href="<%=request.getContextPath()%>/student/about-us-student.jsp">About <i class="anm anm-angle-down-l"></i></a></li>
+                            <li class="lvl1 parent dropdown"><a href="<%=request.getContextPath()%>/student/menuPage.jsp">Menu <i class="anm anm-angle-down-l"></i></a>
+                            <li class="lvl1 parent dropdown"><a href="<%=request.getContextPath()%>/student/studentProfile.jsp"> Account <i class="anm anm-angle-down-l"></i></a>
                             </li>
                             </li>
                         </ul>
@@ -97,8 +97,8 @@
                 <!--Mobile Logo-->
                 <div class="col-6 col-sm-6 col-md-6 col-lg-2 d-block d-lg-none mobile-logo">
                     <div class="logo">
-                        <a href="${pageContext.request.contextPath}/student/homepagestudent.jsp">
-                            <img src="<%=request.getContextPath()%>/assets/images/e-Medan.svg" alt="e-Medan Food Ordering Website" title="e-Medan Food Ordering Website" />
+                        <a href="<%=request.getContextPath()%>/student/homepagestudent.jsp">
+                            <img src="<%=application.getContextPath() %>/assets/images/e-Medan.svg" alt="e-Medan Food Ordering Website" title="e-Medan Food Ordering Website" />
                         </a>
                     </div>
                 </div>
@@ -114,7 +114,7 @@
                             <ul class="mini-products-list">
                                 <li class="item">
                                     <a class="product-image" href="#">
-                                        <img src="<%=request.getContextPath()%>/assets/images/product-images/cape-dress-1.jpg" alt="3/4 Sleeve Kimono Dress" title="" />
+                                        <img src="<%=application.getContextPath() %>/assets/images/product-images/cape-dress-1.jpg" alt="3/4 Sleeve Kimono Dress" title="" />
                                     </a>
                                     <div class="product-details">
                                         <a href="#" class="remove"><i class="anm anm-times-l" aria-hidden="true"></i></a>
@@ -138,7 +138,7 @@
                                 </li>
                                 <li class="item">
                                     <a class="product-image" href="#">
-                                        <img src="${pageContext.request.contextPath}/assets/images/product-images/cape-dress-2.jpg" alt="Elastic Waist Dress - Black / Small" title="" />
+                                        <img src="<%=application.getContextPath() %>/assets/images/product-images/cape-dress-2.jpg" alt="Elastic Waist Dress - Black / Small" title="" />
                                     </a>
                                     <div class="product-details">
                                         <a href="#" class="remove"><i class="anm anm-times-l" aria-hidden="true"></i></a>
@@ -962,20 +962,20 @@
     <!-- End Newsletter Popup -->
 
     <!-- Including Jquery -->
-    <script src="<%=request.getContextPath()%>/assets/js/vendor/jquery-3.3.1.min.js"></script>
-    <script src="<%=request.getContextPath()%>/assets/js/vendor/modernizr-3.6.0.min.js"></script>
-    <script src="<%=request.getContextPath()%>/assets/js/vendor/jquery.cookie.js"></script>
-    <script src="<%=request.getContextPath()%>/assets/js/vendor/wow.min.js"></script>
+    <script src="${pageContext.request.contextPath}assets/js/vendor/jquery-3.3.1.min.js"></script>
+    <script src="${pageContext.request.contextPath}assets/js/vendor/modernizr-3.6.0.min.js"></script>
+    <script src="${pageContext.request.contextPath}assets/js/vendor/jquery.cookie.js"></script>
+    <script src="${pageContext.request.contextPath}assets/js/vendor/wow.min.js"></script>
     <!-- Including Javascript -->
-    <script src="<%=request.getContextPath()%>/assets/js/bootstrap.min.js"></script>
-    <script src="<%=request.getContextPath()%>/assets/js/plugins.js"></script>
-    <script src="<%=request.getContextPath()%>/assets/js/popper.min.js"></script>
-    <script src="<%=request.getContextPath()%>/assets/js/lazysizes.js"></script>
-    <script src="<%=request.getContextPath()%>/assets/js/main.js"></script>
+    <script src="${pageContext.request.contextPath}assets/js/bootstrap.min.js"></script>
+    <script src="${pageContext.request.contextPath}assets/js/plugins.js"></script>
+    <script src="${pageContext.request.contextPath}assets/js/popper.min.js"></script>
+    <script src="${pageContext.request.contextPath}assets/js/lazysizes.js"></script>
+    <script src="${pageContext.request.contextPath}assets/js/main.js"></script>
 
     <!-- JS -->
-    <script src="<%=request.getContextPath()%>/assets/vendor/jquery/jquery.min.js"></script>
-    <script src="<%=request.getContextPath()%>/assets/js/mainform.js"></script>
+    <script src="${pageContext.request.contextPath}assets/vendor/jquery/jquery.min.js"></script>
+    <script src="${pageContext.request.contextPath}assets/js/mainform.js"></script>
 
 </div>
 

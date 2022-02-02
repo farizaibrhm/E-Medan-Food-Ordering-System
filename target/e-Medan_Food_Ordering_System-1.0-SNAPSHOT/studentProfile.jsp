@@ -1,3 +1,26 @@
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/sql" prefix="sql" %>
+<%@page import="java.sql.DriverManager"%>
+<%@page import="java.sql.ResultSet"%>
+<%@page import="java.sql.Statement"%>
+<%@page import="java.sql.Connection"%>
+<%@page import="emfos.student" %>
+<%@page import="emfos.studentDAO" %>
+
+<%
+    String dbDriver = "org.postgresql.Driver";
+
+    try {
+        Class.forName(dbDriver);
+    } catch (ClassNotFoundException e) {
+        e.printStackTrace();
+    }
+    Connection con = null;
+    Statement statement = null;
+    ResultSet resultSet = null;
+%>
+
 <%--
   Created by IntelliJ IDEA.
   User: Lenovo
@@ -26,6 +49,11 @@
     <link rel="stylesheet" href="assets/css/responsive.css">
 </head>
 <body class="template-index home2-default">
+
+<% student st = new student();%>
+<% studentDAO upstu = new studentDAO();%>
+
+
 <div class="pageWrapper">
     <%
         String STUDENTNAME = (String) session.getAttribute("STUDENTNAME");
@@ -192,6 +220,7 @@
                     </div>
                 </div>
             </div>
+
             <div class="col-xl-9 col-lg-9 col-md-12 col-sm-12 col-12">
                 <div class="card h-100">
                     <div class="card-body">

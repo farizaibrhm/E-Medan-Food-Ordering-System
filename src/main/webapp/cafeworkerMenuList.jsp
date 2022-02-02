@@ -2,7 +2,8 @@
 <%@ page import="java.sql.ResultSet" %>
 <%@ page import="java.sql.Statement" %>
 <%@ page import="java.sql.Connection" %>
-<%@ page import="emfos.cafeworker" %><%--
+<%@ page import="emfos.cafeworker" %>
+<%--
   Created by IntelliJ IDEA.
   User: Lenovo
   Date: 29/1/2022
@@ -97,9 +98,9 @@
                             <%--                                    <li><a href="deleteMenu.html" class="site-nav">Delete Menu </a></li>--%>
                             <%--                                </ul>--%>
                             <li class="lvl1 parent megamenu"><a href="cafeworkerMenuList.jsp"> Menu <i class="anm anm-angle-down-l"></i></a></li>
-                            <li class="lvl1 parent megamenu"><a href="#"> Order <i class="anm anm-angle-down-l"></i></a></li>
-                            <li class="lvl1 parent megamenu"><a href="#"> Feedback <i class="anm anm-angle-down-l"></i></a></li>
-                            <li class="lvl1 parent megamenu"><a href="#"> Report <i class="anm anm-angle-down-l"></i></a></li>
+                            <li class="lvl1 parent megamenu"><a href="cafeworkerOrderList.jsp#"> Order <i class="anm anm-angle-down-l"></i></a></li>
+                            <li class="lvl1 parent megamenu"><a href="cafeworkerFeedbackList.jsp#"> Feedback <i class="anm anm-angle-down-l"></i></a></li>
+                            <li class="lvl1 parent megamenu"><a href="cafeworkerTotalSales.jsp#"> Report <i class="anm anm-angle-down-l"></i></a></li>
                             <li class="lvl1 parent megamenu"><a href="cafeworkerProfile.jsp"> Account <i class="anm anm-angle-down-l"></i></a></li>
                         </ul>
                     </nav>

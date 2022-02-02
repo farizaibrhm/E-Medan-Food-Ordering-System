@@ -9,16 +9,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0811e3f3-8279-45dc-a825-752cd3ab05bb" name="Changes" comment="edit">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/student/about-us-student.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/student/about-us-student.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/student/homepagestudent.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/student/homepagestudent.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/student/menuPage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/student/menuPage.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/student/studentProfile.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/student/studentProfile.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/student/about-us-student.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/student/about-us-student.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/student/homepagestudent.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/student/homepagestudent.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/student/studentProfile.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/student/studentProfile.jsp" afterDir="false" />
-    </list>
+    <list default="true" id="0811e3f3-8279-45dc-a825-752cd3ab05bb" name="Changes" comment="edit" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -165,7 +156,7 @@
       <workItem from="1643264263097" duration="6418000" />
       <workItem from="1643301401719" duration="6934000" />
       <workItem from="1643338178388" duration="484000" />
-      <workItem from="1643727108648" duration="2224000" />
+      <workItem from="1643727108648" duration="2930000" />
     </task>
     <task id="LOCAL-00001" summary="edit">
       <created>1643211857027</created>
@@ -202,7 +193,21 @@
       <option name="project" value="LOCAL" />
       <updated>1643727930892</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="edit">
+      <created>1643731509801</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1643731509801</updated>
+    </task>
+    <task id="LOCAL-00007" summary="edit">
+      <created>1643731518727</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1643731518727</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

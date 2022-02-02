@@ -216,7 +216,7 @@
       <workItem from="1643743929290" duration="3447000" />
       <workItem from="1643772753799" duration="1029000" />
       <workItem from="1643785874766" duration="738000" />
-      <workItem from="1643786650201" duration="329000" />
+      <workItem from="1643786650201" duration="1139000" />
     </task>
     <task id="LOCAL-00001" summary="Merge remote-tracking branch 'origin/dev' into dev">
       <created>1642837016272</created>
@@ -260,7 +260,14 @@
       <option name="project" value="LOCAL" />
       <updated>1643786613519</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="edit">
+      <created>1643787413666</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1643787413666</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

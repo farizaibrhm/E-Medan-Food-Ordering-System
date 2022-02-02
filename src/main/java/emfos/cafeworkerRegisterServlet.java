@@ -10,7 +10,7 @@ import emfos.cafeworker;
 import emfos.cafeworkerDAO;
 
 
-@WebServlet(name = "cafworkerRegisterServlet", value = "/cafworkerRegisterServlet")
+@WebServlet(name = "cafeworkerRegisterServlet", value = "/cafeworkerRegisterServlet")
 public class cafeworkerRegisterServlet extends HttpServlet {
 
     public cafeworkerRegisterServlet(){

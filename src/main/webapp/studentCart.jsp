@@ -11,7 +11,7 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Your cart &ndash; e-Medan Food Ordering System</title>
+    <title>Your cart</title>
     <meta name="description" content="description">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Favicon -->
@@ -178,12 +178,12 @@
                                         <div class="cart__qty text-center">
                                             <div class="qtyField">
                                                 <input type="hidden" name="menuid" value="<%=rs2.getInt("MENUID") %>">
-                                                <input type="number" name="quantity" value="<%=rs2.getInt("CARTQUANTITY") %>">
-<%--                                                <a class="qtyBtn minus" href="javascript:void(0);"><i class="icon icon-minus"></i></a>--%>
-<%--                                                <input class="cart__qty-input qty" type="text" name="quantity" id="qty" value="<%=rs2.getString("CARTQUANTITY")%>" pattern="[0-9]*">--%>
-<%--                                                <a class="qtyBtn plus" href="javascript:void(0);"><i class="icon icon-plus"></i></a><br>--%>
-                                                <button type="submit" class="btn btn-danger btn-sm rounded-0"  name="Action" value="Update Quantity"><i class="material-icons" title="Update">&#xe5d5;</i></button>
-<%--                                                <button type="submit" name="Action" value="Update Quantity" class="btn--link cart-update"><i class="fa fa-refresh"></i></button>--%>
+<%--                                                <input type="number" name="quantity" value="<%=rs2.getInt("CARTQUANTITY") %>">--%>
+                                                <a class="qtyBtn minus" href="javascript:void(0);"><i class="icon icon-minus"></i></a>
+                                                <input class="cart__qty-input qty" type="text" name="quantity" id="qty" value="<%=rs2.getString("CARTQUANTITY")%>" pattern="[0-9]*">
+                                                <a class="qtyBtn plus" href="javascript:void(0);"><i class="icon icon-plus"></i></a><br>
+<%--                                                <button class="btn btn-danger btn-sm rounded-0"  name="Action" value="Update Quantity"><i class="material-icons" title="Update">&#xe5d5;</i></button>--%>
+                                                <button type="submit" name="Action" value="Update Quantity" class="btn--link cart-update"><i class="fa fa-refresh"></i></button>
                                             </div>
                                         </div>
                                     </form>
@@ -212,7 +212,7 @@
                     Statement st3 = con.createStatement();
                     ResultSet rs3 = st3.executeQuery("SELECT sum(\"CARTTOTALPRICE\") FROM public.cart WHERE \"STUDENTID\"='" + session.getAttribute("STUDENTID")+"'");
                     if (rs3.next()) {
-                        subtotal = rs3.getInt(1);
+                        subtotal = rs3.getDouble(1);
                     }
                 %>
 
@@ -220,7 +220,7 @@
                     <div class="solid-border">
                         <div class="row border-bottom pb-2">
                             <span class="col-12 col-sm-6 cart__subtotal-title">Subtotal</span>
-                            <span class="col-12 col-sm-6 text-right"><span class="money">RM <%=subtotal%></span></span>
+                            <span class="col-12 col-sm-6 text-right">RM <%=subtotal%></span></span>
                         </div>
 
                         <div class="row border-bottom pb-2 pt-2">
@@ -229,10 +229,10 @@
                         </div>
                         <div class="row border-bottom pb-2 pt-2">
                             <span class="col-12 col-sm-6 cart__subtotal-title"><strong>Grand Total</strong></span>
-                            <span class="col-12 col-sm-6 cart__subtotal-title cart__subtotal text-right"><span class="money">RM <%=subtotal%></span></span>
+                            <span class="col-12 col-sm-6 cart__subtotal-title cart__subtotal text-right">RM <%=subtotal%></span></span>
                         </div>
-                        <a href="checkout.html">
-                            <input type="submit" name="checkout" id="cartCheckout" class="btn btn--small-wide checkout" value="Proceed to Checkout">
+                        <a href="studentCheckout.jsp">
+                            <input type="button" name="checkout" id="cartCheckout" class="btn btn--small-wide checkout" value="Proceed to Checkout">
                         </a>
                     </div>
 
@@ -244,48 +244,17 @@
     <!--End Body Content-->
 
     <!--Footer-->
-    <footer id="footer">
+    <footer id="footer" class="footer-2">
         <div class="site-footer">
             <div class="container">
                 <!--Footer Links-->
                 <div class="footer-top">
                     <div class="row">
-                        <div class="col-12 col-sm-12 col-md-3 col-lg-3 footer-links">
-                            <h4 class="h4">Quick Shop</h4>
-                            <ul>
-                                <li><a href="#">Women</a></li>
-                                <li><a href="#">Men</a></li>
-                                <li><a href="#">Kids</a></li>
-                                <li><a href="#">Sportswear</a></li>
-                                <li><a href="#">Sale</a></li>
-                            </ul>
-                        </div>
-                        <div class="col-12 col-sm-12 col-md-3 col-lg-3 footer-links">
-                            <h4 class="h4">Informations</h4>
-                            <ul>
-                                <li><a href="#">About us</a></li>
-                                <li><a href="#">Careers</a></li>
-                                <li><a href="#">Privacy policy</a></li>
-                                <li><a href="#">Terms &amp; condition</a></li>
-                                <li><a href="#">My Account</a></li>
-                            </ul>
-                        </div>
-                        <div class="col-12 col-sm-12 col-md-3 col-lg-3 footer-links">
-                            <h4 class="h4">Customer Services</h4>
-                            <ul>
-                                <li><a href="#">Request Personal Data</a></li>
-                                <li><a href="#">FAQ's</a></li>
-                                <li><a href="#">Contact Us</a></li>
-                                <li><a href="#">Orders and Returns</a></li>
-                                <li><a href="#">Support Center</a></li>
-                            </ul>
-                        </div>
                         <div class="col-12 col-sm-12 col-md-3 col-lg-3 contact-box">
                             <h4 class="h4">Contact Us</h4>
                             <ul class="addressFooter">
-                                <li><i class="icon anm anm-map-marker-al"></i><p>55 Gallaxy Enque,<br>2568 steet, 23568 NY</p></li>
-                                <li class="phone"><i class="icon anm anm-phone-s"></i><p>(440) 000 000 0000</p></li>
-                                <li class="email"><i class="icon anm anm-envelope-l"></i><p>sales@yousite.com</p></li>
+                                <li><i class="icon anm anm-map-marker-al"></i><p>Jalan Lembah Kesang 1/1-2, Kampung <br>Seri Mendapat, 77300 Merlimau, Melaka</p></li>
+                                <li class="phone"><i class="icon anm anm-phone-s"></i><p>(+606) 264 5000</p></li>
                             </ul>
                         </div>
                     </div>
@@ -294,21 +263,6 @@
                 <hr>
                 <div class="footer-bottom">
                     <div class="row">
-                        <!--Footer Copyright-->
-                        <div class="col-12 col-sm-12 col-md-6 col-lg-6 order-1 order-md-0 order-lg-0 order-sm-1 copyright text-sm-center text-md-left text-lg-left"><span></span> <a href="templateshub.net">Templates Hub</a></div>
-                        <!--End Footer Copyright-->
-                        <!--Footer Payment Icon-->
-                        <div class="col-12 col-sm-12 col-md-6 col-lg-6 order-0 order-md-1 order-lg-1 order-sm-0 payment-icons text-right text-md-center">
-                            <ul class="payment-icons list--inline">
-                                <li><i class="icon fa fa-cc-visa" aria-hidden="true"></i></li>
-                                <li><i class="icon fa fa-cc-mastercard" aria-hidden="true"></i></li>
-                                <li><i class="icon fa fa-cc-discover" aria-hidden="true"></i></li>
-                                <li><i class="icon fa fa-cc-paypal" aria-hidden="true"></i></li>
-                                <li><i class="icon fa fa-cc-amex" aria-hidden="true"></i></li>
-                                <li><i class="icon fa fa-credit-card" aria-hidden="true"></i></li>
-                            </ul>
-                        </div>
-                        <!--End Footer Payment Icon-->
                     </div>
                 </div>
             </div>

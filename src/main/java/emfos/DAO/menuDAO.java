@@ -1,11 +1,9 @@
-package emfos;
+package emfos.DAO;
 
-import java.io.FileInputStream;
 import java.sql.*;
-import java.util.ArrayList;
-import java.util.List;
 
 import emfos.DBConnect.DBConnection;
+import emfos.Model.menu;
 
 public class menuDAO {
     static ResultSet rs = null;

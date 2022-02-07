@@ -1,4 +1,7 @@
-package emfos;
+package emfos.Controller;
+
+import emfos.DAO.cafeworkerDAO;
+import emfos.Model.cafeworker;
 
 import javax.servlet.*;
 import javax.servlet.http.*;
@@ -11,7 +14,7 @@ public class cafeworkerUpdateProfileServlet extends HttpServlet {
 
     private static final long serialVersionUID = 1L;
     private static String EDIT = "cafeworkerProfile.jsp";
-    private  cafeworkerDAO cwdao;
+    private cafeworkerDAO cwdao;
 
     public cafeworkerUpdateProfileServlet() {
         super();

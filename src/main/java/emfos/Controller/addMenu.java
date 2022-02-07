@@ -1,4 +1,4 @@
-package emfos;
+package emfos.Controller;
 
 import emfos.DBConnect.DBConnection;
 

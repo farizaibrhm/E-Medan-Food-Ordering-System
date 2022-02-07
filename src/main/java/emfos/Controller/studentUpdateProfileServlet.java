@@ -1,4 +1,7 @@
-package emfos;
+package emfos.Controller;
+
+import emfos.DAO.studentDAO;
+import emfos.Model.student;
 
 import javax.servlet.*;
 import javax.servlet.http.*;

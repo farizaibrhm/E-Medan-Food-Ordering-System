@@ -25,16 +25,16 @@ public class DBConnection {
     }
 
     //Creating universal method to close connect will mysql database
-    public static void CloseConnection() {
-        if (con!= null) {
-            try {
-                con.close();
-                con = null;
-            } catch (SQLException ex) {
-                ex.printStackTrace();
-            }
-        }
-    }
+//    public static void CloseConnection() {
+//        if (con!= null) {
+//            try {
+//                con.close();
+//                con = null;
+//            } catch (SQLException ex) {
+//                ex.printStackTrace();
+//            }
+//        }
+//    }
 
 
         //Creating universal method to query for inserting or updating information in mysql database

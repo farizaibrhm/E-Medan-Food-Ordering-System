@@ -1,4 +1,7 @@
-package emfos;
+package emfos.Controller;
+
+import emfos.DAO.menuDAO;
+import emfos.Model.menu;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.MultipartConfig;
@@ -38,7 +41,7 @@ public class cafeworkerAddMenuServlet extends HttpServlet {
         String MENUTYPE = request.getParameter("MENUTYPE");
         System.out.println("Menu type " + MENUTYPE);//nak check betul ke data yang dia get
 
-        HttpSession session = request.getSession();
+        HttpSession session = request.getSession(); //start session
 
         try{
             if ((String) session.getAttribute("CWORKID") == null){

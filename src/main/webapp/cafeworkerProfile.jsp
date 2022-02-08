@@ -5,10 +5,10 @@
   Time: 9:29 PM
   To change this template use File | Settings | File Templates.
 --%>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page contentType="text/html;charset=UTF-8" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html>
 <html class="no-js" lang="en">
-
 <!-- belle/home2-default.html   11 Nov 2019 12:22:28 GMT -->
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -27,12 +27,24 @@
     <link rel="stylesheet" href="assets/css/responsive.css">
 </head>
 
-<%
-    String CWORKSTALLNAME = (String) session.getAttribute("CWORKSTALLNAME");
-    if (CWORKSTALLNAME== null)
-    { response.sendRedirect("cafeworkerLogin.jsp")
-    ;}
-%>
+<%--<%--%>
+<%--    String CWORKSTALLNAME = (String) session.getAttribute("CWORKSTALLNAME");--%>
+<%--    if (CWORKSTALLNAME== null)--%>
+<%--    { response.sendRedirect("cafeworkerLogin.jsp")--%>
+<%--    ;}--%>
+<%--%>--%>
+
+<%--<%--%>
+<%--    String CWORKID = (String) session.getAttribute("CWORKID");--%>
+<%--    String CWORKSTALLNAME = (String) session.getAttribute("CWORKSTALLNAME");--%>
+<%--    String CWORKPHONENO = (String) session.getAttribute("CWORKPHONENO");--%>
+<%--    String CWORKEMAIL = (String) session.getAttribute("CWORKEMAIL");--%>
+<%--    String CWORKPASSWORD = (String) session.getAttribute("CWORKPASSWORD");--%>
+<%--    String CWORKACCNUM = (String) session.getAttribute("CWORKACCNUM");--%>
+<%--    String CWORKACCNAME = (String) session.getAttribute("CWORKACCNAME");--%>
+<%--    String CWORKBANKNAME = (String) session.getAttribute("CWORKBANKNAME");--%>
+
+<%--%>--%>
 
 <body class="template-index home2-default">
 <div class="pageWrapper">
@@ -48,7 +60,7 @@
                 <div class="col-2 col-sm-4 col-md-3 col-lg-4 text-right">
                     <span class="user-menu d-block d-lg-none"><i class="anm anm-user-al" aria-hidden="true"></i></span>
                     <ul class="customer-links list-inline">
-                        <li><a href="${pageContext.request.contextPath}/cafeworkerLogoutServlet">Logout</a></li>
+                        <li><a href="cafeworkerLogoutServlet">Logout</a></li>
                     </ul>
                 </div>
             </div>
@@ -99,11 +111,12 @@
     <!--End Header-->
 
 
+
     <!--Body Content-->
     <div class="col-2 col-sm-3 col-md-3 col-lg-8">
 
     </div>
-    <form method="POST" action="${pageContext.request.contextPath}/cafeworkerUpdateProfileServlet?action=edit">
+    <form method="POST" action="${pageContext.request.contextPath}/cafeworkerUpdateProfileServlet">
     <div class="container">
         <div class="row gutters">
             <div class="col-xl-3 col-lg-3 col-md-12 col-sm-12 col-12">
@@ -132,56 +145,72 @@
 
                             <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
                                 <div class="form-group">
-                                    <label for="cid">IC Number</label>
-                                    <input disabled type="text" class="form-control" name="CWORKID"  value="<%=session.getAttribute("CWORKID")%>" id="cid">
+                                    <label>IC Number</label>
+                                    <label>
+                                        <input type="text" class="form-control" name="CWORKID" placeholder="<%=session.getAttribute("CWORKID")%>"/>
+                                    </label>
                                 </div>
                             </div>
 
                             <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
                                 <div class="form-group">
-                                    <label for="cname">Stall Name</label>
-                                    <input type="text" class="form-control" name="CWORKSTALLNAME"  value="<%=session.getAttribute("CWORKSTALLNAME")%>" id="cname">
+                                    <label>Stall Name</label>
+                                    <label>
+                                        <input type="text" class="form-control" name="CWORKSTALLNAME" placeholder="<%=session.getAttribute("CWORKSTALLNAME")%>" />
+                                    </label>
                                 </div>
                             </div>
 
                             <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
                                 <div class="form-group">
-                                    <label for="eMail">Email</label>
-                                    <input type="email" class="form-control" name="CWORKEMAIL"  value="<%=session.getAttribute("CWORKEMAIL")%>" id="eMail">
+                                    <label>Email</label>
+                                    <label>
+                                        <input type="email" class="form-control" name="CWORKEMAIL" placeholder="<%=session.getAttribute("CWORKEMAIL")%>"   />
+                                    </label>
                                 </div>
                             </div>
 
                             <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
                                 <div class="form-group">
-                                    <label for="eMail2">Password</label>
-                                    <input type="password" class="form-control" name="CWORKPASSWORD"  value="<%=session.getAttribute("CWORKPASSWORD")%>" id="eMail2">
+                                    <label>Password</label>
+                                    <label>
+                                        <input type="password" class="form-control" name="CWORKPASSWORD" placeholder="<%=session.getAttribute("CWORKPASSWORD")%>"  />
+                                    </label>
                                 </div>
                             </div>
 
                             <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
                                 <div class="form-group">
-                                    <label for="fullName">Phone Number</label>
-                                    <input type="text" class="form-control" name="CWORKPHONENO" value="<%=session.getAttribute("CWORKPHONENO")%>" id="fullName" >
+                                    <label>Phone Number</label>
+                                    <label>
+                                        <input type="text" class="form-control" name="CWORKPHONENO" placeholder="<%=session.getAttribute("CWORKPHONENO")%>">
+                                    </label>
                                 </div>
                             </div>
 
                             <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
                                 <div class="form-group">
-                                    <label for="website">Bank Account Number</label>
-                                    <input type="text" class="form-control"  name="CWORKACCNUM" value="<%=session.getAttribute("CWORKACCNUM")%>" id="website">
+                                    <label>Bank Account Number</label>
+                                    <label>
+                                        <input type="text" class="form-control"  name="CWORKACCNUM" placeholder="<%=session.getAttribute("CWORKACCNUM")%>" />
+                                    </label>
                                 </div>
                             </div>
 
                             <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
                                 <div class="form-group">
-                                    <label for="website2">Bank Name</label>
-                                    <input type="text" class="form-control"  name="CWORKACCNAME" value="<%=session.getAttribute("CWORKACCNAME")%>" id="website2" >
+                                    <label>Bank Name</label>
+                                    <label>
+                                        <input type="text" class="form-control"  name="CWORKACCNAME" placeholder="<%=session.getAttribute("CWORKACCNAME")%>"/>
+                                    </label>
                                 </div>
                             </div>
                             <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
                                 <div class="form-group">
-                                    <label for="website3">Bank Account Name</label>
-                                    <input type="text" class="form-control"  name="CWORKBANKNAME" value="<%=session.getAttribute("CWORKBANKNAME")%>" id="website3">
+                                    <label>Bank Account Name</label>
+                                    <label>
+                                        <input type="text" class="form-control"  name="CWORKBANKNAME" placeholder="<%=session.getAttribute("CWORKBANKNAME")%>">
+                                    </label>
                                 </div>
                             </div>
                         </div>
@@ -229,16 +258,16 @@
         .account-settings .user-profile h5.user-name {
             margin: 0 0 0.5rem 0;
         }
-        .account-settings .user-profile h6.user-email {
-            margin: 0;
-            font-size: 0.8rem;
-            font-weight: 400;
-            color: #9fa8b9;
-        }
-        .account-settings .about {
-            margin: 2rem 0 0 0;
-            text-align: center;
-        }
+        /*.account-settings .user-profile h6.user-email {*/
+        /*    margin: 0;*/
+        /*    font-size: 0.8rem;*/
+        /*    font-weight: 400;*/
+        /*    color: #9fa8b9;*/
+        /*}*/
+        /*.account-settings .about {*/
+        /*    margin: 2rem 0 0 0;*/
+        /*    text-align: center;*/
+        /*}*/
         .account-settings .about h5 {
             margin: 0 0 15px 0;
             color: #007ae1;
@@ -246,25 +275,24 @@
         .account-settings .about p {
             font-size: 0.825rem;
         }
-        .form-control {
-            border: 1px solid #cfd1d8;
-            -webkit-border-radius: 2px;
-            -moz-border-radius: 2px;
-            border-radius: 2px;
-            font-size: .825rem;
-            background: #ffffff;
-            color: #2e323c;
-        }
+        /*.form-control {*/
+        /*    border: 1px solid #cfd1d8;*/
+        /*    -webkit-border-radius: 2px;*/
+        /*    -moz-border-radius: 2px;*/
+        /*    border-radius: 2px;*/
+        /*    font-size: .825rem;*/
+        /*    background: #ffffff;*/
+        /*    color: #2e323c;*/
+        /*}*/
 
-        .card {
-            background: #ffffff;
-            -webkit-border-radius: 5px;
-            -moz-border-radius: 5px;
-            border-radius: 5px;
-            border: 0;
-            margin-bottom: 1rem;
-        }
-
+        /*.card {*/
+        /*    background: #ffffff;*/
+        /*    -webkit-border-radius: 5px;*/
+        /*    -moz-border-radius: 5px;*/
+        /*    border-radius: 5px;*/
+        /*    border: 0;*/
+        /*    margin-bottom: 1rem;*/
+        /*}*/
 
     </style>
 
@@ -291,9 +319,5 @@
 <script src="assets/js/popper.min.js"></script>
 <script src="assets/js/lazysizes.js"></script>
 <script src="assets/js/main.js"></script>
-
-</div>
-
-</body>
 
 </html>

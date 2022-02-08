@@ -1,16 +1,18 @@
 package emfos;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.Statement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-
 import emfos.DBConnect.DBConnection;
+
+import java.sql.*;
+import java.util.ArrayList;
+import java.util.List;
 
 public class studentDAO {
 
     //registration
+
+    static PreparedStatement ps = null;
+    static ResultSet rs = null;
+
     public String registerStudent (student streg){
 
         String result = "User successfully registered!";
@@ -66,53 +68,106 @@ public class studentDAO {
         return status;
     }
 
-    public void updateStudent(student st){
-        Connection con = DBConnection.getConn();
-        String sql = "UPDATE public.student\n" +
-                "\tSET \"STUDENTNAME\"=?, \"STUDENTPHONENO\"=?, \"STUDENTEMAIL\"=?, \"STUDENTPASSWORD\"=?\n" +
-                "\tWHERE \"STUDENTID\"=?";
-
-        PreparedStatement ps;
-
+    public void updateStudent(student bean)
+    {
+        String STUDENTID = bean.getSTUDENTID();
+        String STUDENTNAME = bean.getSTUDENTNAME();
+        String STUDENTPHONENO = bean.getSTUDENTPHONENO();
+        String STUDENTEMAIL = bean.getSTUDENTEMAIL();
+        String STUDENTPASSWORD = bean.getSTUDENTPASSWORD();
         try {
-            ps = con.prepareStatement(sql);
 
-            ps.setString(1, st.getSTUDENTNAME());
-            ps.setString(2, st.getSTUDENTPHONENO());
-            ps.setString(3, st.getSTUDENTEMAIL());
-            ps.setString(4, st.getSTUDENTPASSWORD());
-            ps.setString(5, st.getSTUDENTID());
+            //New step using CONNECTION MANAGER
+            //Call getConnection() method
+            Connection con = DBConnection.getConn();
+            //3. create statement
+            //Statement stmt = con.createStatement();
+            ps = con.prepareStatement("UPDATE public.student SET  \"STUDENTNAME\"=?," +
+                    " \"STUDENTPHONENO\"=?, \"STUDENTEMAIL\"=?, \"STUDENTPASSWORD\"=? WHERE \"STUDENTID\"=?");
+            //ps.setString(1,bean.getName());
+            ps.setString(1, STUDENTNAME);
+            ps.setString(2, STUDENTPHONENO);
+            ps.setString(3, STUDENTEMAIL);
+            ps.setString(4, STUDENTPASSWORD);
+            ps.setString(5, STUDENTID);
+
+            //4. execute query
+            //execute, executequery(select stmt), executeupdate(ddl,dml)
             ps.executeUpdate();
+            System.out.println("Successfully updated");
 
-        }catch(SQLException e)
-        {
+            //5. close connection
+            con.close();
+            //can use exception only, if using sqlexception add surround
+        }catch(SQLException e) {
             e.printStackTrace();
+            //System.out.print(e);}
         }
     }
+    public static List<student> getAllStudents()
+    {
+        List<student> sts = new ArrayList<student>();
 
-    public student getById (String STUDENTID){
-        Connection con = DBConnection.getConn();
-        student st = null;
+        try {
+            //2. create connection
+            Connection con = DBConnection.getConn();
 
-        String sql ="SELECT * FROM public.student WHERE \"STUDENTID\"=?;";
-        PreparedStatement ps;
+            //3. create statement
+            Statement stmt = con.createStatement();
+            String sql = "SELECT \"*\" FROM public.student order by \"STUDENTID\"";
+            ResultSet rs = stmt.executeQuery(sql);
+            //4. execute query
 
-        try{
-            ps = con.prepareStatement(sql);
-            ps.setString(1, STUDENTID);
-            ResultSet rs = ps.executeQuery();
+            while(rs.next()) {	//process result
+                student st = new student();
+                st.setSTUDENTID(rs.getString("STUDENTID"));
+                st.setSTUDENTNAME(rs.getString("STUDENTNAME"));
+                st.setSTUDENTPHONENO(rs.getString("STUDENTPHONENO"));
+                st.setSTUDENTEMAIL(rs.getString("STUDENTEMAIL"));
+                st.setSTUDENTPASSWORD(rs.getString("STUDENTPASSWORD"));
+                sts.add(st);
 
-            if (rs.next()) {
-                String STUDENTNAME = rs.getString("STUDENTNAME") ;
-                String STUDENTPHONENO = rs.getString("STUDENTPHONENO") ;
-                String STUDENTEMAIL = rs.getString("STUDENTEMAIL");
-                String STUDENTPASSWORD = rs.getString("STUDENTPASSWORD");
-
-                st = new student (STUDENTID, STUDENTNAME, STUDENTPHONENO, STUDENTEMAIL, STUDENTPASSWORD);
             }
-        }catch (SQLException e){
+            //5. close connection
+            con.close();
+            //can use exception only, if using sqlexception add surround
+        }catch(SQLException e) {
             e.printStackTrace();
+            //System.out.print(e);}
         }
+        return sts;
+    }
+
+
+    public static student getStudentsById(String STUDENTID)
+    {
+        student st = new student();
+
+        try {
+            //2. create connection
+            Connection con = DBConnection.getConn();
+
+            //3. create statement
+            ps = con.prepareStatement("SELECT \"*\" FROM public.student WHERE \"STUDENTID\"=?"); //? refer to id we pass
+            ps.setString(1, STUDENTID);
+
+            //4. execute query
+            rs = ps.executeQuery();
+            if(rs.next()) {
+                st.setSTUDENTID(rs.getString("STUDENTID"));
+                st.setSTUDENTNAME(rs.getString("STUDENTNAME"));
+                st.setSTUDENTPHONENO(rs.getString("STUDENTPHONENO"));
+                st.setSTUDENTEMAIL(rs.getString("STUDENTEMAIL"));
+                st.setSTUDENTPASSWORD(rs.getString("STUDENTPASSWORD"));
+            }
+            //5. close connection
+            con.close();
+            //can use exception only, if using sqlexception add surround
+        }catch(SQLException e) {
+            e.printStackTrace();
+            //System.out.print(e);}
+        }
+
         return st;
     }
 

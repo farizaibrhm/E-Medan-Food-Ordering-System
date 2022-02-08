@@ -27,11 +27,11 @@
 </head>
 <body class="template-index home2-default">
 <div class="pageWrapper">
-    <%
-        String STUDENTNAME = (String) session.getAttribute("STUDENTNAME");
-        if (STUDENTNAME== null)
-        { response.sendRedirect("studentLogin.jsp");} else{
-    %>
+<%--    <%--%>
+<%--        String STUDENTNAME = (String) session.getAttribute("STUDENTNAME");--%>
+<%--        if (STUDENTNAME== null)--%>
+<%--        { response.sendRedirect("studentLogin.jsp");} else{--%>
+<%--    %>--%>
 
     <!--Top Header-->
     <div class="top-header">
@@ -45,7 +45,7 @@
                 <div class="col-2 col-sm-4 col-md-3 col-lg-4 text-right">
                     <span class="user-menu d-block d-lg-none"><i class="anm anm-user-al" aria-hidden="true"></i></span>
                     <ul class="customer-links list-inline">
-                        <li><a href="${pageContext.request.contextPath}/studentLogoutServlet">Logout</a></li>
+                        <li><a href="studentLogoutServlet">Logout</a></li>
                     </ul>
                 </div>
             </div>
@@ -164,14 +164,13 @@
         </div>
     </div>
     <!--End Header-->
-    <% }%>
 
 
     <!--Body Content-->
     <div class="col-2 col-sm-3 col-md-3 col-lg-8">
 
     </div>
-    <form method="POST" action="${pageContext.request.contextPath}/studentUpdateProfileServlet?action=edit">
+    <form method="POST" action="studentUpdateProfileServlet">
     <div class="container">
         <div class="row gutters">
             <div class="col-xl-3 col-lg-3 col-md-12 col-sm-12 col-12">
@@ -201,32 +200,32 @@
                             </div>
                             <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
                                 <div class="form-group">
-                                    <label for="studentID">Student ID</label>
-                                    <input disabled type="text" class="form-control"  id="studentID" name="STUDENTID" value="<%=session.getAttribute("STUDENTID")%>">
+                                    <label >Student ID</label>
+                                    <input type="text" class="form-control" name="STUDENTID" placeholder="<%=session.getAttribute("STUDENTID")%>">
                                 </div>
                             </div>
                             <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
                                 <div class="form-group">
-                                    <label for="studentName">Name</label>
-                                    <input type="text" class="form-control" id="studentName" name="STUDENTNAME" value="<%=session.getAttribute("STUDENTNAME")%>" >
+                                    <label>Name</label>
+                                    <input type="text" class="form-control"  name="STUDENTNAME" placeholder="<%=session.getAttribute("STUDENTNAME")%>" >
                                 </div>
                             </div>
                             <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
                                 <div class="form-group">
-                                    <label for="studentPN">Phone Number</label>
-                                    <input type="text" class="form-control" id="studentPN" name="STUDENTPHONENO" value="<%=session.getAttribute("STUDENTPHONENO")%>" >
+                                    <label>Phone Number</label>
+                                    <input type="text" class="form-control" name="STUDENTPHONENO" placeholder="<%=session.getAttribute("STUDENTPHONENO")%>" >
                                 </div>
                             </div>
                             <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
                                 <div class="form-group">
-                                    <label for="studentEmail">Email</label>
-                                    <input type="email" class="form-control" id="studentEmail" name="STUDENTEMAIL" value="<%=session.getAttribute("STUDENTEMAIL")%>">
+                                    <label>Email</label>
+                                    <input type="email" class="form-control"  name="STUDENTEMAIL" placeholder="<%=session.getAttribute("STUDENTEMAIL")%>">
                                 </div>
                             </div>
                             <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
                                 <div class="form-group">
-                                    <label for="studentPassword">Password</label>
-                                    <input type="password" class="form-control" id="studentPassword" name="STUDENTPASSWORD" value="<%=session.getAttribute("STUDENTPASSWORD")%>">
+                                    <label >Password</label>
+                                    <input type="password" class="form-control"  name="STUDENTPASSWORD" placeholder="<%=session.getAttribute("STUDENTPASSWORD")%>">
                                 </div>
                             </div>
 
@@ -340,8 +339,4 @@
 </div>
 
 </body>
-
-
-<!-- belle/home2-default.html   11 Nov 2019 12:23:42 GMT -->
 </html>
-

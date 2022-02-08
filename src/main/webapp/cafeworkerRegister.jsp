@@ -83,35 +83,35 @@
                     <form method="POST" class="register-form" id="register-form" action="${pageContext.request.contextPath}/cafeworkerRegisterServlet">
                         <div class="form-group">
                             <label for="cafeWorkerID"><i class="zmdi zmdi-account material-icons-name"></i></label>
-                            <input type="text" name="CWORKID" id="cafeWorkerID" placeholder="IC Number"/>
+                            <input type="text" value="CWORKID" id="cafeWorkerID" placeholder="IC Number"/>
                         </div>
                         <div class="form-group">
                             <label for="cafeWorkerStallName"><i class="zmdi zmdi-account material-icons-name"></i></label>
-                            <input type="text" name="CWORKSTALLNAME" id="cafeWorkerStallName" placeholder="Stall Name"/>
+                            <input type="text" value="CWORKSTALLNAME" id="cafeWorkerStallName" placeholder="Stall Name"/>
                         </div>
                         <div class="form-group">
                             <label for="cafeWorkerPhoneNum"><i class="zmdi zmdi-account material-icons-name"></i></label>
-                            <input type="text" name="CWORKPHONENO" id="cafeWorkerPhoneNum" placeholder="Phone Number"/>
+                            <input type="text" value="CWORKPHONENO" id="cafeWorkerPhoneNum" placeholder="Phone Number"/>
                         </div>
                         <div class="form-group">
                             <label for="cafeWorkerEmail"><i class="zmdi zmdi-account material-icons-name"></i></label>
-                            <input type="text" name="CWORKEMAIL" id="cafeWorkerEmail" placeholder="Email"/>
+                            <input type="text" value="CWORKEMAIL" id="cafeWorkerEmail" placeholder="Email"/>
                         </div>
                         <div class="form-group">
                             <label for="cafeWorkerPassword"><i class="zmdi zmdi-account material-icons-name"></i></label>
-                            <input type="password" name="CWORKPASSWORD" id="cafeWorkerPassword" placeholder="Password"/>
+                            <input type="password" value="CWORKPASSWORD" id="cafeWorkerPassword" placeholder="Password"/>
                         </div>
                         <div class="form-group">
                             <label for="cafeWorkerAccNum"><i class="zmdi zmdi-account material-icons-name"></i></label>
-                            <input type="text" name="CWORKACCNUM" id="cafeWorkerAccNum" placeholder="Bank Account Number"/>
+                            <input type="text" value="CWORKACCNUM" id="cafeWorkerAccNum" placeholder="Bank Account Number"/>
                         </div>
                         <div class="form-group">
                             <label for="cafeWorkerAccName"><i class="zmdi zmdi-account material-icons-name"></i></label>
-                            <input type="text" name="CWORKACCNAME" id="cafeWorkerAccName" placeholder="Bank Account Name"/>
+                            <input type="text" value="CWORKACCNAME" id="cafeWorkerAccName" placeholder="Bank Account Name"/>
                         </div>
                         <div class="form-group">
                             <label for="cafeWorkerBankName"><i class="zmdi zmdi-account material-icons-name"></i></label>
-                            <input type="text" name="CWORKBANKNAME" id="cafeWorkerBankName" placeholder="Bank Name"/>
+                            <input type="text" value="CWORKBANKNAME" id="cafeWorkerBankName" placeholder="Bank Name"/>
                         </div>
                         <div class="form-group form-button">
                             <input type="submit" name="signup" id="signup" class="form-submit" value="Register"/>

@@ -1,14 +1,15 @@
 package emfos;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.Statement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-
 import emfos.DBConnect.DBConnection;
 
+import java.sql.*;
+import java.util.ArrayList;
+import java.util.List;
+
 public class cafeworkerDAO {
+
+    static PreparedStatement ps = null;
+    static ResultSet rs = null;
 
     //registration
     public String registerCafeworker (cafeworker cwreg){
@@ -105,7 +106,7 @@ public class cafeworkerDAO {
 
             ps = con.prepareStatement(sql);
             ps.setString(1,cwlogin.getCWORKID());
-            ps.setString(2, cwlogin.getCWORKPASSWORD());
+            ps.setString(2,cwlogin.getCWORKPASSWORD());
 
             ResultSet rs = ps.executeQuery();
             status = rs.next();
@@ -125,59 +126,121 @@ public class cafeworkerDAO {
         return status;
     }
 
-    public void updateCafeworker(cafeworker cw){
-        Connection con = DBConnection.getConn();
-        String sql ="UPDATE public.cafeworker\n" +
-                "\tSET \"CWORKSTALLNAME\"=?, \"CWORKPHONENO\"=?, \"CWORKEMAIL\"=?, \"CWORKPASSWORD\"=?, \"CWORKACCNUM\"=?, \"CWORKACCNAME\"=?, \"CWORKBANKNAME\"=?\n" +
-                "\tWHERE \"CWORKID\"=?;";
-        PreparedStatement ps;
+    public void updateCafeWorker(cafeworker bean)
+    {
+        String CWORKID = bean.getCWORKID();
+        String CWORKSTALLNAME = bean.getCWORKSTALLNAME();
+        String CWORKPHONENO = bean.getCWORKPHONENO();
+        String CWORKEMAIL = bean.getCWORKEMAIL();
+        String CWORKPASSWORD = bean.getCWORKPASSWORD();
+        String CWORKACCNUM = bean.getCWORKACCNUM();
+        String CWORKACCNAME = bean.getCWORKACCNAME();
+        String CWORKBANKNAME = bean.getCWORKBANKNAME();
+        try {
 
-        try{
-            ps = con.prepareStatement(sql);
-            ps.setString(1, cw.getCWORKSTALLNAME());
-            ps.setString(2, cw.getCWORKPHONENO());
-            ps.setString(3, cw.getCWORKEMAIL());
-            ps.setString(4, cw.getCWORKPASSWORD());
-            ps.setString(5, cw.getCWORKACCNUM());
-            ps.setString(6, cw.getCWORKACCNAME());
-            ps.setString(7, cw.getCWORKBANKNAME());
-            ps.setString(8, cw.getCWORKID());
+            //New step using CONNECTION MANAGER
+            //Call getConnection() method
+            Connection con = DBConnection.getConn();
+            //3. create statement
+            //Statement stmt = con.createStatement();
+            ps = con.prepareStatement("UPDATE public.cafeworker SET  \"CWORKSTALLNAME\"=?," +
+                    " \"CWORKPHONENO\"=?, \"CWORKEMAIL\"=?, \"CWORKPASSWORD\"=?, \"CWORKACCNUM\"=?, " +
+                    "\"CWORKACCNAME\"=? , \"CWORKBANKNAME\"=? WHERE \"CWORKID\"=?");
+            //ps.setString(1,bean.getName());
+            ps.setString(1, CWORKSTALLNAME);
+            ps.setString(2, CWORKPHONENO);
+            ps.setString(3, CWORKEMAIL);
+            ps.setString(4, CWORKPASSWORD);
+            ps.setString(5, CWORKACCNUM);
+            ps.setString(6, CWORKACCNAME);
+            ps.setString(7, CWORKBANKNAME);
+            ps.setString(8, CWORKID);
+
+            //4. execute query
+            //execute, executequery(select stmt), executeupdate(ddl,dml)
             ps.executeUpdate();
+            System.out.println("Successfully updated");
 
-        } catch(SQLException e)
-        {
+            //5. close connection
+            con.close();
+            //can use exception only, if using sqlexception add surround
+        }catch(SQLException e) {
             e.printStackTrace();
+            //System.out.print(e);}
         }
     }
 
-    public cafeworker getById (String CWORKID){
-        Connection con = DBConnection.getConn();
-        cafeworker cw = null;
-
-        String sql ="SELECT * FROM public.cafeworker WHERE \"CWORKID\"=?;";
-        PreparedStatement ps;
+    public static List <cafeworker> getAllCafeWorkers()
+    {
+        List<cafeworker> cws = new ArrayList<cafeworker>();
 
         try {
-            ps = con.prepareStatement(sql);
-            ps.setString(1, CWORKID);
-            ResultSet rs = ps.executeQuery();
+            //2. create connection
+            Connection con = DBConnection.getConn();
 
-            if (rs.next()) {
+            //3. create statement
+            Statement stmt = con.createStatement();
+            String sql = "SELECT \"*\" FROM public.cafeworker order by \"CWORKID\"";
+            ResultSet rs = stmt.executeQuery(sql);
+            //4. execute query
 
-                String CWORKSTALLNAME =rs.getString("CWORKSTALLNAME") ;
-                String CWORKPHONENO = rs.getString("CWORKPHONENO");
-                String CWORKEMAIL = rs.getString("CWORKEMAIL");
-                String CWORKPASSWORD = rs.getString("CWORKPASSWORD");
-                String CWORKACCNUM = rs.getString("CWORKACCNUM");
-                String CWORKACCNAME =rs.getString("CWORKACCNAME") ;
-                String CWORKBANKNAME = rs.getString("CWORKBANKNAME");
-                cw = new cafeworker(CWORKID, CWORKSTALLNAME, CWORKPHONENO, CWORKEMAIL, CWORKPASSWORD, CWORKACCNUM, CWORKACCNAME, CWORKBANKNAME);
+            while(rs.next()) {	//process result
+                cafeworker cw = new cafeworker();
+                cw.setCWORKID(rs.getString("CWORKID"));
+                cw.setCWORKSTALLNAME(rs.getString("CWORKSTALLNAME"));
+                cw.setCWORKPHONENO(rs.getString("CWORKPHONENO"));
+                cw.setCWORKEMAIL(rs.getString("CWORKEMAIL"));
+                cw.setCWORKPASSWORD(rs.getString("CWORKPASSWORD"));
+                cw.setCWORKACCNUM(rs.getString("CWORKACCNUM"));
+                cw.setCWORKACCNAME(rs.getString("CWORKACCNAME"));
+                cw.setCWORKBANKNAME(rs.getString("CWORKBANKNAME"));
+                cws.add(cw);
 
             }
-        } catch (SQLException e){
+            //5. close connection
+            con.close();
+            //can use exception only, if using sqlexception add surround
+        }catch(SQLException e) {
             e.printStackTrace();
+            //System.out.print(e);}
         }
+        return cws;
+    }
+
+    public static cafeworker getCafeWorkersById(String CWORKID)
+    {
+        cafeworker cw = new cafeworker();
+
+        try {
+            //2. create connection
+            Connection con = DBConnection.getConn();
+
+            //3. create statement
+            ps = con.prepareStatement("SELECT \"*\" FROM public.cafeworker WHERE \"CWORKID\"=?"); //? refer to id we pass
+            ps.setString(1, CWORKID);
+
+            //4. execute query
+            rs = ps.executeQuery();
+            if(rs.next()) {
+                cw.setCWORKID(rs.getString("CWORKID"));
+                cw.setCWORKSTALLNAME(rs.getString("CWORKSTALLNAME"));
+                cw.setCWORKPHONENO(rs.getString("CWORKPHONENO"));
+                cw.setCWORKEMAIL(rs.getString("CWORKEMAIL"));
+                cw.setCWORKPASSWORD(rs.getString("CWORKPASSWORD"));
+                cw.setCWORKACCNUM(rs.getString("CWORKACCNUM"));
+                cw.setCWORKACCNAME(rs.getString("CWORKACCNAME"));
+                cw.setCWORKBANKNAME(rs.getString("CWORKBANKNAME"));
+            }
+            //5. close connection
+            con.close();
+            //can use exception only, if using sqlexception add surround
+        }catch(SQLException e) {
+            e.printStackTrace();
+            //System.out.print(e);}
+        }
+
         return cw;
     }
+
 
 }

@@ -89,7 +89,7 @@
                         <ul id="siteNav" class="site-nav medium center hidearrow">
                             <li class="lvl1 parent megamenu"><a href="index.jsp">Home <i class="anm anm-angle-down-l"></i></a></li>
                             <li class="lvl1 parent megamenu"><a href="aboutus.jsp">About Us <i class="anm anm-angle-down-l"></i></a></li>
-                            <li class="lvl1 parent dropdown"><a href="studentMenuList.jsp">Gerai <i class="anm anm-angle-down-l"></i></a>
+                            <li class="lvl1 parent dropdown"><a href="#">Gerai <i class="anm anm-angle-down-l"></i></a>
                                 <ul class="dropdown">
                                     <li><a href="GeraiAMenuList.jsp" class="site-nav">Gerai A</a></li>
                                     <li><a href="GeraiBMenuList.jsp" class="site-nav">Gerai B</a></li>
@@ -148,7 +148,7 @@
                                     <ul id="siteNav" class="site-nav medium center hidearrow">
                                         <li class="lvl1 parent megamenu"><a href="index.jsp">Home <i class="anm anm-angle-down-l"></i></a></li>
                                         <li class="lvl1 parent megamenu"><a href="aboutus.jsp">About Us <i class="anm anm-angle-down-l"></i></a></li>
-                                        <li class="lvl1 parent dropdown"><a href="studentMenuList.jsp">Gerai <i class="anm anm-angle-down-l"></i></a>
+                                        <li class="lvl1 parent dropdown"><a href="#">Gerai <i class="anm anm-angle-down-l"></i></a>
                                             <ul class="dropdown">
                                                 <li><a href="GeraiAMenuList.jsp" class="site-nav">Gerai A</a></li>
                                                 <li><a href="GeraiBMenuList.jsp" class="site-nav">Gerai B</a></li>

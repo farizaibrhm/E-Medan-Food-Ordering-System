@@ -158,6 +158,7 @@
 
                         <div class="table-responsive-sm order-table">
                             <table class="table table-borderless text-center">
+
                                 <tr>
                                     <td class="text-left">
                                         <h3 class="font-15 xs-font-13">Sold to:</h3>

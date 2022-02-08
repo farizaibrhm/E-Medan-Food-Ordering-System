@@ -23,6 +23,8 @@
     <!-- Main Style CSS -->
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/responsive.css">
+    <link rel="stylesheet" href="assets/css/deletemodal.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 </head>
 <body class="page-template belle">
 <div class="pageWrapper">
@@ -191,7 +193,10 @@
                                 <td class="text-right small--hide cart-price">
                                     <div><span class="money">RM <%=rs2.getString("CARTTOTALPRICE")%></span></div>
                                 </td>
-                                <td class="text-center small--hide"><a href="#" class="btn btn--secondary cart__remove" title="Remove tem"><i class="icon icon anm anm-times-l"></i></a></td>
+<%--                                <td class="text-center small--hide"><a href="#" class="btn btn--secondary cart__remove" title="Remove"><i class="icon icon anm anm-times-l"></i></a></td>--%>
+                                <td>
+                                    <button type="button" data-toggle="modal" data-target="#removeFromCart" id="<%=rs2.getInt("MENUID")%>" class="btn btn--secondary cart__remove" title="Remove"><i class="icon icon anm anm-times-l"></i></button>
+                                </td>
                             </tr>
                             <%
                                 }
@@ -241,6 +246,25 @@
         </div>
 
     </div>
+
+    <!-- Delete Pop up -->
+    <div class="modal fade" id="removeFromCart" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel2" aria-hidden="true">
+        <div class="modal-dialog modal-confirm">
+            <div class="modal-content">
+                <div class="modal-header flex-column">
+                    <div class="icon-box">
+                        <i class="material-icons">&#xE5CD;</i>
+                    </div>
+                    <h4 class="modal-title w-100">Are you sure?</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <div id="show-data2"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Delete Pop up -->
     <!--End Body Content-->
 
     <!--Footer-->
@@ -272,6 +296,24 @@
     <!--Scoll Top-->
     <span id="site-scroll"><i class="icon anm anm-angle-up-r"></i></span>
     <!--End Scoll Top-->
+
+    <script type="text/javascript">
+        $(document).ready(function (){
+            $('.del').click(function(){
+                var id = +this.id;
+                $.ajax({
+                    url: "studentRemoveFromCart.jsp",
+                    type:"post",
+                    data:{
+                        id: id,
+                    },
+                    success:function (data){
+                        $("#show-data2").html(data);
+                    }
+                });
+            });
+        });
+    </script>
 
     <!-- Including Jquery -->
     <script src="assets/js/vendor/jquery-3.3.1.min.js"></script>

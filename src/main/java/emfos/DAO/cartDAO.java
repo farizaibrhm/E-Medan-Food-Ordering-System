@@ -48,7 +48,8 @@ public class cartDAO {
 
         String sql="SELECT \"CARTPRICE\" FROM public.cart WHERE \"MENUID\"=? AND \"STUDENTID\"=? ;";
 
-        try{PreparedStatement ps = con.prepareStatement(sql);
+        try{
+            PreparedStatement ps = con.prepareStatement(sql);
             ps.setInt(1, id);
             ps.setString(2, stuid);
             ResultSet rs = ps.executeQuery();
@@ -77,6 +78,57 @@ public class cartDAO {
             i = ps.executeUpdate();
 
         }catch (SQLException e){
+            e.printStackTrace();
+        }
+        if (i == 0){
+            return false;
+        } else {
+            return true;
+        }
+    }
+
+    public cart getItemByMENUID (int id, String stuid){
+        Connection con = DBConnection.getConn();
+
+        cart crt = new cart();
+
+        String sql = "SELECT * FROM public.cart WHERE \"MENUID\"=? AND \"STUDENTID\"=?;";
+
+        try {
+            PreparedStatement ps = con.prepareStatement(sql);
+            ps.setInt(1, id);
+            ps.setString(2, stuid);
+            ResultSet rs = ps.executeQuery();
+
+            if (rs.next()) {
+                crt.setCARTID(rs.getInt("CARTID"));
+                crt.setMENUID(rs.getInt("MENUID"));
+                crt.setCARTPRICE(rs.getDouble("CARTPRICE"));
+                crt.setCARTQUANTITY(rs.getInt("CARTQUANTITY"));
+                crt.setCARTTOTALPRICE(rs.getDouble("CARTTOTALPRICE"));
+                crt.setCWORKID(rs.getString("CWORKID"));
+                crt.setSTUDENTID(rs.getString("STUDENTID"));
+            }
+        }catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return crt;
+    }
+
+    public boolean removeItemFromCart(int id, String stuid){
+        Connection con = DBConnection.getConn();
+
+        String sql = "DELETE FROM public.cart WHERE \"MENUID\"=? AND \"STUDENTID\"=?;";
+
+        int i = 0;
+
+        try {
+            PreparedStatement ps = con.prepareStatement(sql);
+            ps.setInt(1, id);
+            ps.setString(2, stuid);
+
+            i = ps.executeUpdate();
+        } catch (SQLException e){
             e.printStackTrace();
         }
         if (i == 0){

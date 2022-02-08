@@ -9,12 +9,25 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ee72d468-6c94-46a4-8c84-170d520e2088" name="Changes" comment="add to cart">
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/studentCheckout.jsp" afterDir="false" />
+    <list default="true" id="ee72d468-6c94-46a4-8c84-170d520e2088" name="Changes" comment="update quantity item in cart">
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/GeraiBMenuList.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/GeraiCMenuList.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/GeraiDMenuList.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/css/deletemodal.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/images/smallbanner.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/studentRemoveFromCart.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/emfos/Controller/studentCartServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/emfos/Controller/studentCartServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/emfos/DAO/cartDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/emfos/DAO/cartDAO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/GeraiAMenuList.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/GeraiAMenuList.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/aboutus.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/aboutus.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/studentCart.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/studentCart.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/studentFoodMenuList.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/studentFoodMenuList.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/studentCheckout.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/studentCheckout.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/studentDrinkMenuList.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/studentFoodMenuList.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/studentMenuList.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/index.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,13 +80,15 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/webapp/images" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/webapp/assets/images" />
     <property name="project.structure.last.edited" value="Facets" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.37241378" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Lenovo\IdeaProjects\E-Medan-Food-Ordering-System\src\main\webapp\assets\images" />
+      <recent name="C:\Users\Lenovo\IdeaProjects\E-Medan-Food-Ordering-System\src\main\webapp\assets\css" />
       <recent name="C:\Users\Lenovo\IdeaProjects\E-Medan-Food-Ordering-System\src\main\webapp\images" />
       <recent name="C:\Users\Lenovo\IdeaProjects\E-Medan-Food-Ordering-System\src\main\java\com\example\emedan_food_ordering_system" />
     </key>
@@ -220,7 +235,8 @@
       <workItem from="1643772753799" duration="4867000" />
       <workItem from="1644094510930" duration="723000" />
       <workItem from="1644137792244" duration="268000" />
-      <workItem from="1644218778564" duration="33634000" />
+      <workItem from="1644218778564" duration="36204000" />
+      <workItem from="1644300276427" duration="6806000" />
     </task>
     <task id="LOCAL-00001" summary="Merge remote-tracking branch 'origin/dev' into dev">
       <created>1642837016272</created>
@@ -264,7 +280,14 @@
       <option name="project" value="LOCAL" />
       <updated>1644259724558</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="update quantity item in cart">
+      <created>1644262403257</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1644262403257</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -289,6 +312,7 @@
     <MESSAGE value="update dengan delete menu belum edit for session." />
     <MESSAGE value="fix url servlet" />
     <MESSAGE value="add to cart" />
-    <option name="LAST_COMMIT_MESSAGE" value="add to cart" />
+    <MESSAGE value="update quantity item in cart" />
+    <option name="LAST_COMMIT_MESSAGE" value="update quantity item in cart" />
   </component>
 </project>

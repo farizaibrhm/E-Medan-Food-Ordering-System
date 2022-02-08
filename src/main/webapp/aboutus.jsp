@@ -5,6 +5,11 @@
   Time: 6:38 PM
   To change this template use File | Settings | File Templates.
 --%>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@page import="java.sql.ResultSet"%>
+<%@page import="java.sql.Statement"%>
+<%@page import="java.sql.Connection"%>
+<%@page import="emfos.DBConnect.DBConnection"%>
 <!DOCTYPE html>
 <html class="no-js" lang="en">
 
@@ -38,7 +43,8 @@
         </div>
     </div>
     <!--End Search Form Drawer-->
-    <%
+    <!--End Search Form Drawer-->
+        <%
         String STUDENTNAME = (String) session.getAttribute("STUDENTNAME");
         if (STUDENTNAME== null)
         { %>
@@ -85,10 +91,12 @@
                         <ul id="siteNav" class="site-nav medium center hidearrow">
                             <li class="lvl1 parent megamenu"><a href="index.jsp">Home <i class="anm anm-angle-down-l"></i></a></li>
                             <li class="lvl1 parent megamenu"><a href="aboutus.jsp">About Us <i class="anm anm-angle-down-l"></i></a></li>
-                            <li class="lvl1 parent dropdown"><a href="studentMenuList.jsp">Menu <i class="anm anm-angle-down-l"></i></a>
+                            <li class="lvl1 parent dropdown"><a href="studentMenuList.jsp">Gerai <i class="anm anm-angle-down-l"></i></a>
                                 <ul class="dropdown">
-                                    <li><a href="studentFoodMenuList.jsp" class="site-nav">Food</a></li>
-                                    <li><a href="studentDrinkMenuList.jsp" class="site-nav">Drink</a></li>
+                                    <li><a href="GeraiAMenuList.jsp" class="site-nav">Gerai A</a></li>
+                                    <li><a href="GeraiBMenuList.jsp" class="site-nav">Gerai B</a></li>
+                                    <li><a href="GeraiCMenuList.jsp" class="site-nav">Gerai C</a></li>
+                                    <li><a href="GeraiDMenuList.jsp" class="site-nav">Gerai D</a></li>
                                 </ul>
                             </li>
                             </li>
@@ -96,219 +104,91 @@
                     </nav>
                     <!--End Desktop Menu-->
                 </div>
-                <div class="col-4 col-sm-3 col-md-3 col-lg-2">
-                    <div class="site-cart">
-                        <a href="#" class="site-header__cart" title="Cart">
-                            <i class="icon anm anm-bag-l"></i>
-                            <span id="CartCount" class="site-header__cart-count" data-cart-render="item_count">2</span>
-                        </a>
-                        <!--Minicart Popup-->
-                        <div id="header-cart" class="block block-cart">
-                            <ul class="mini-products-list">
-                                <li class="item">
-                                    <a class="product-image" href="#">
-                                        <img src="assets/images/product-images/cape-dress-1.jpg" alt="3/4 Sleeve Kimono Dress" title="" />
-                                    </a>
-                                    <div class="product-details">
-                                        <a href="#" class="remove"><i class="anm anm-times-l" aria-hidden="true"></i></a>
-                                        <a href="#" class="edit-i remove"><i class="anm anm-edit" aria-hidden="true"></i></a>
-                                        <a class="pName" href="cart.html">Sleeve Kimono Dress</a>
-                                        <div class="variant-cart">Black / XL</div>
-                                        <div class="wrapQtyBtn">
-                                            <div class="qtyField">
-                                                <span class="label">Qty:</span>
-                                                <a class="qtyBtn minus" href="javascript:void(0);"><i class="fa anm anm-minus-r" aria-hidden="true"></i></a>
-                                                <input type="text" id="Quantity1" name="quantity" value="1" class="product-form__input qty">
-                                                <a class="qtyBtn plus" href="javascript:void(0);"><i class="fa anm anm-plus-r" aria-hidden="true"></i></a>
-                                            </div>
-                                        </div>
-                                        <div class="priceRow">
-                                            <div class="product-price">
-                                                <span class="money">$59.00</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="item">
-                                    <a class="product-image" href="#">
-                                        <img src="assets/images/product-images/cape-dress-2.jpg" alt="Elastic Waist Dress - Black / Small" title="" />
-                                    </a>
-                                    <div class="product-details">
-                                        <a href="#" class="remove"><i class="anm anm-times-l" aria-hidden="true"></i></a>
-                                        <a href="#" class="edit-i remove"><i class="anm anm-edit" aria-hidden="true"></i></a>
-                                        <a class="pName" href="cart.html">Elastic Waist Dress</a>
-                                        <div class="variant-cart">Gray / XXL</div>
-                                        <div class="wrapQtyBtn">
-                                            <div class="qtyField">
-                                                <span class="label">Qty:</span>
-                                                <a class="qtyBtn minus" href="javascript:void(0);"><i class="fa anm anm-minus-r" aria-hidden="true"></i></a>
-                                                <input type="text" id="Quantity" name="quantity" value="1" class="product-form__input qty">
-                                                <a class="qtyBtn plus" href="javascript:void(0);"><i class="fa anm anm-plus-r" aria-hidden="true"></i></a>
-                                            </div>
-                                        </div>
-                                        <div class="priceRow">
-                                            <div class="product-price">
-                                                <span class="money">$99.00</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </li>
-                            </ul>
-                            <div class="total">
-                                <div class="total-in">
-                                    <span class="label">Cart Subtotal:</span><span class="product-price"><span class="money">$748.00</span></span>
-                                </div>
-                                <div class="buttonSet text-center">
-                                    <a href="cart.html" class="btn btn-secondary btn--small">View Cart</a>
-                                    <a href="checkout.html" class="btn btn-secondary btn--small">Checkout</a>
-                                </div>
-                            </div>
-                        </div>
-                        <!--End Minicart Popup-->
-                    </div>
-                    <div class="site-header__search">
-                        <button type="button" class="search-trigger"><i class="icon anm anm-search-l"></i></button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!--End Header-->
-    <% } else{
-    %>
 
-    <!--Top Header-->
-    <div class="top-header">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-10 col-sm-8 col-md-5 col-lg-4">
-                </div>
-                <div class="col-sm-4 col-md-4 col-lg-4 d-none d-lg-none d-md-block d-lg-block">
-                    <div class="text-center"><p class="top-header_middle-text">Welcome, <%=session.getAttribute("STUDENTNAME")%>!</p></div>
-                </div>
-                <div class="col-2 col-sm-4 col-md-3 col-lg-4 text-right">
-                    <span class="user-menu d-block d-lg-none"><i class="anm anm-user-al" aria-hidden="true"></i></span>
-                    <ul class="customer-links list-inline">
-                        <li><a href="${pageContext.request.contextPath}/studentLogoutServlet">Logout</a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!--End Top Header-->
-    <!--Header-->
-    <div class="header-wrap animated d-flex border-bottom">
-        <div class="container-fluid">
-            <div class="row align-items-center">
-                <!--Desktop Logo-->
-                <div class="logo col-md-2 col-lg-2 d-none d-lg-block">
-                    <a href="index.jsp">
-                        <img src="assets/images/e-Medan.svg" alt="e-Medan Food Ordering Website" title="e-Medan Food Ordering Website" />
-                    </a>
-                </div>
-                <!--End Desktop Logo-->
-                <div class="col-2 col-sm-3 col-md-3 col-lg-8">
-                    <div class="d-block d-lg-none">
-                        <button type="button" class="btn--link site-header__menu js-mobile-nav-toggle mobile-nav--open">
-                            <i class="icon anm anm-times-l"></i>
-                            <i class="anm anm-bars-r"></i>
-                        </button>
-                    </div>
-                    <!--Desktop Menu-->
-                    <nav class="grid__item" id="AccessibleNav"><!-- for mobile -->
-                        <ul id="siteNav" class="site-nav medium center hidearrow">
-                            <li class="lvl1 parent megamenu"><a href="index.jsp">Home <i class="anm anm-angle-down-l"></i></a></li>
-                            <li class="lvl1 parent megamenu"><a href="aboutus.jsp">About Us <i class="anm anm-angle-down-l"></i></a></li>
-                            <li class="lvl1 parent dropdown"><a href="studentMenuList.jsp">Menu <i class="anm anm-angle-down-l"></i></a>
-                                <ul class="dropdown">
-                                    <li><a href="studentFoodMenuList.jsp" class="site-nav">Food</a></li>
-                                    <li><a href="studentDrinkMenuList.jsp" class="site-nav">Drink</a></li>
+                <% } else{
+                %>
+
+                <!--Top Header-->
+                <div class="top-header">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-10 col-sm-8 col-md-5 col-lg-4">
+                            </div>
+                            <div class="col-sm-4 col-md-4 col-lg-4 d-none d-lg-none d-md-block d-lg-block">
+                                <div class="text-center"><p class="top-header_middle-text">Welcome, <%=session.getAttribute("STUDENTNAME")%>!</p></div>
+                            </div>
+                            <div class="col-2 col-sm-4 col-md-3 col-lg-4 text-right">
+                                <span class="user-menu d-block d-lg-none"><i class="anm anm-user-al" aria-hidden="true"></i></span>
+                                <ul class="customer-links list-inline">
+                                    <li><a href="${pageContext.request.contextPath}/studentLogoutServlet">Logout</a></li>
                                 </ul>
-                            </li>
-                            <li class="lvl1 parent megamenu"><a href="studentProfile.jsp">Account <i class="anm anm-angle-down-l"></i></a></li>
-                        </ul>
-                    </nav>
-                    <!--End Desktop Menu-->
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="col-4 col-sm-3 col-md-3 col-lg-2">
-                    <div class="site-cart">
-                        <a href="#" class="site-header__cart" title="Cart">
-                            <i class="icon anm anm-bag-l"></i>
-                            <span id="CartCount" class="site-header__cart-count" data-cart-render="item_count">2</span>
-                        </a>
-                        <!--Minicart Popup-->
-                        <div id="header-cart" class="block block-cart">
-                            <ul class="mini-products-list">
-                                <li class="item">
-                                    <a class="product-image" href="#">
-                                        <img src="assets/images/product-images/cape-dress-1.jpg" alt="3/4 Sleeve Kimono Dress" title="" />
-                                    </a>
-                                    <div class="product-details">
-                                        <a href="#" class="remove"><i class="anm anm-times-l" aria-hidden="true"></i></a>
-                                        <a href="#" class="edit-i remove"><i class="anm anm-edit" aria-hidden="true"></i></a>
-                                        <a class="pName" href="cart.html">Sleeve Kimono Dress</a>
-                                        <div class="variant-cart">Black / XL</div>
-                                        <div class="wrapQtyBtn">
-                                            <div class="qtyField">
-                                                <span class="label">Qty:</span>
-                                                <a class="qtyBtn minus" href="javascript:void(0);"><i class="fa anm anm-minus-r" aria-hidden="true"></i></a>
-                                                <input type="text" id="Quantity1" name="quantity" value="1" class="product-form__input qty">
-                                                <a class="qtyBtn plus" href="javascript:void(0);"><i class="fa anm anm-plus-r" aria-hidden="true"></i></a>
-                                            </div>
-                                        </div>
-                                        <div class="priceRow">
-                                            <div class="product-price">
-                                                <span class="money">$59.00</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="item">
-                                    <a class="product-image" href="#">
-                                        <img src="assets/images/product-images/cape-dress-2.jpg" alt="Elastic Waist Dress - Black / Small" title="" />
-                                    </a>
-                                    <div class="product-details">
-                                        <a href="#" class="remove"><i class="anm anm-times-l" aria-hidden="true"></i></a>
-                                        <a href="#" class="edit-i remove"><i class="anm anm-edit" aria-hidden="true"></i></a>
-                                        <a class="pName" href="cart.html">Elastic Waist Dress</a>
-                                        <div class="variant-cart">Gray / XXL</div>
-                                        <div class="wrapQtyBtn">
-                                            <div class="qtyField">
-                                                <span class="label">Qty:</span>
-                                                <a class="qtyBtn minus" href="javascript:void(0);"><i class="fa anm anm-minus-r" aria-hidden="true"></i></a>
-                                                <input type="text" id="Quantity" name="quantity" value="1" class="product-form__input qty">
-                                                <a class="qtyBtn plus" href="javascript:void(0);"><i class="fa anm anm-plus-r" aria-hidden="true"></i></a>
-                                            </div>
-                                        </div>
-                                        <div class="priceRow">
-                                            <div class="product-price">
-                                                <span class="money">$99.00</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </li>
-                            </ul>
-                            <div class="total">
-                                <div class="total-in">
-                                    <span class="label">Cart Subtotal:</span><span class="product-price"><span class="money">$748.00</span></span>
+                <!--End Top Header-->
+                <!--Header-->
+                <div class="header-wrap animated d-flex border-bottom">
+                    <div class="container-fluid">
+                        <div class="row align-items-center">
+                            <!--Desktop Logo-->
+                            <div class="logo col-md-2 col-lg-2 d-none d-lg-block">
+                                <a href="index.jsp">
+                                    <img src="assets/images/e-Medan.svg" alt="e-Medan Food Ordering Website" title="e-Medan Food Ordering Website" />
+                                </a>
+                            </div>
+                            <!--End Desktop Logo-->
+                            <div class="col-2 col-sm-3 col-md-3 col-lg-8">
+                                <div class="d-block d-lg-none">
+                                    <button type="button" class="btn--link site-header__menu js-mobile-nav-toggle mobile-nav--open">
+                                        <i class="icon anm anm-times-l"></i>
+                                        <i class="anm anm-bars-r"></i>
+                                    </button>
                                 </div>
-                                <div class="buttonSet text-center">
-                                    <a href="cart.html" class="btn btn-secondary btn--small">View Cart</a>
-                                    <a href="checkout.html" class="btn btn-secondary btn--small">Checkout</a>
+                                <!--Desktop Menu-->
+                                <nav class="grid__item" id="AccessibleNav"><!-- for mobile -->
+                                    <ul id="siteNav" class="site-nav medium center hidearrow">
+                                        <li class="lvl1 parent megamenu"><a href="index.jsp">Home <i class="anm anm-angle-down-l"></i></a></li>
+                                        <li class="lvl1 parent megamenu"><a href="aboutus.jsp">About Us <i class="anm anm-angle-down-l"></i></a></li>
+                                        <li class="lvl1 parent dropdown"><a href="studentMenuList.jsp">Gerai <i class="anm anm-angle-down-l"></i></a>
+                                            <ul class="dropdown">
+                                                <li><a href="GeraiAMenuList.jsp" class="site-nav">Gerai A</a></li>
+                                                <li><a href="GeraiBMenuList.jsp" class="site-nav">Gerai B</a></li>
+                                                <li><a href="GeraiCMenuList.jsp" class="site-nav">Gerai C</a></li>
+                                                <li><a href="GeraiDMenuList.jsp" class="site-nav">Gerai D</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="lvl1 parent megamenu"><a href="studentProfile.jsp">Account <i class="anm anm-angle-down-l"></i></a></li>
+                                    </ul>
+                                </nav>
+                                <!--End Desktop Menu-->
+                            </div>
+                            <% }%>
+                            <div class="col-4 col-sm-3 col-md-3 col-lg-2">
+                                <div class="site-cart">
+                                    <a href="studentCart.jsp" class="site-header__cart" title="Cart">
+                                        <i class="icon anm anm-bag-l"></i>
+                                        <%
+                                            Connection con = emfos.DBConnect.DBConnection.getConn();
+
+                                            Statement st=con.createStatement();
+                                            ResultSet rs = st.executeQuery("SELECT COUNT (*) FROM public.cart WHERE \"STUDENTID\" ='" + session.getAttribute("STUDENTID")+"'");
+
+                                            rs.next();
+                                            int count = rs.getInt(1);
+                                        %>
+                                        <span id="CartCount" class="site-header__cart-count" data-cart-render="item_count"><%=count%></span>
+                                    </a>
+
+                                </div>
+                                <div class="site-header__search">
+                                    <button type="button" class="search-trigger"><i class="icon anm anm-search-l"></i></button>
                                 </div>
                             </div>
                         </div>
-                        <!--End Minicart Popup-->
-                    </div>
-                    <div class="site-header__search">
-                        <button type="button" class="search-trigger"><i class="icon anm anm-search-l"></i></button>
                     </div>
                 </div>
-            </div>
-        </div>
-    </div>
-    <!--End Header-->
-    <% }%>
+                <!--End Header-->
 
     <!--Body Content-->
     <div id="page-content">
@@ -393,10 +273,39 @@
     </div>
     <!--End Body Content-->
 
+                <!--Footer-->
+                <footer id="footer" class="footer-2">
+                    <div class="site-footer">
+                        <div class="container">
+                            <!--Footer Links-->
+                            <div class="footer-top">
+                                <div class="row">
+                                    <div class="col-12 col-sm-12 col-md-3 col-lg-3 contact-box">
+                                        <h4 class="h4">Contact Us</h4>
+                                        <ul class="addressFooter">
+                                            <li><i class="icon anm anm-map-marker-al"></i><p>Jalan Lembah Kesang 1/1-2, Kampung <br>Seri Mendapat, 77300 Merlimau, Melaka</p></li>
+                                            <li class="phone"><i class="icon anm anm-phone-s"></i><p>(+606) 264 5000</p></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--End Footer Links-->
+                            <hr>
+                            <div class="footer-bottom">
+                                <div class="row">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </footer>
+                <!--End Footer-->
+
 
     <!--Scoll Top-->
     <span id="site-scroll"><i class="icon anm anm-angle-up-r"></i></span>
     <!--End Scoll Top-->
+
+
 
     <!-- Including Jquery -->
     <script src="assets/js/vendor/jquery-3.3.1.min.js"></script>

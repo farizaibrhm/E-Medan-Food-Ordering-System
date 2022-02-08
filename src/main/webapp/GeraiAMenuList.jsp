@@ -86,10 +86,12 @@
                         <ul id="siteNav" class="site-nav medium center hidearrow">
                             <li class="lvl1 parent megamenu"><a href="index.jsp">Home <i class="anm anm-angle-down-l"></i></a></li>
                             <li class="lvl1 parent megamenu"><a href="aboutus.jsp">About Us <i class="anm anm-angle-down-l"></i></a></li>
-                            <li class="lvl1 parent dropdown"><a href="studentMenuList.jsp">Menu <i class="anm anm-angle-down-l"></i></a>
+                            <li class="lvl1 parent dropdown"><a href="studentMenuList.jsp">Gerai <i class="anm anm-angle-down-l"></i></a>
                                 <ul class="dropdown">
-                                    <li><a href="studentFoodMenuList.jsp" class="site-nav">Food</a></li>
-                                    <li><a href="studentDrinkMenuList.jsp" class="site-nav">Drink</a></li>
+                                    <li><a href="GeraiAMenuList.jsp" class="site-nav">Gerai A</a></li>
+                                    <li><a href="GeraiBMenuList.jsp" class="site-nav">Gerai B</a></li>
+                                    <li><a href="GeraiCMenuList.jsp" class="site-nav">Gerai C</a></li>
+                                    <li><a href="GeraiDMenuList.jsp" class="site-nav">Gerai D</a></li>
                                 </ul>
                             </li>
                             </li>
@@ -143,10 +145,12 @@
                         <ul id="siteNav" class="site-nav medium center hidearrow">
                             <li class="lvl1 parent megamenu"><a href="index.jsp">Home <i class="anm anm-angle-down-l"></i></a></li>
                             <li class="lvl1 parent megamenu"><a href="aboutus.jsp">About Us <i class="anm anm-angle-down-l"></i></a></li>
-                            <li class="lvl1 parent dropdown"><a href="studentMenuList.jsp">Menu <i class="anm anm-angle-down-l"></i></a>
+                            <li class="lvl1 parent dropdown"><a href="studentMenuList.jsp">Gerai <i class="anm anm-angle-down-l"></i></a>
                                 <ul class="dropdown">
-                                    <li><a href="studentFoodMenuList.jsp" class="site-nav">Food</a></li>
-                                    <li><a href="studentDrinkMenuList.jsp" class="site-nav">Drink</a></li>
+                                    <li><a href="GeraiAMenuList.jsp" class="site-nav">Gerai A</a></li>
+                                    <li><a href="GeraiBMenuList.jsp" class="site-nav">Gerai B</a></li>
+                                    <li><a href="GeraiCMenuList.jsp" class="site-nav">Gerai C</a></li>
+                                    <li><a href="GeraiDMenuList.jsp" class="site-nav">Gerai D</a></li>
                                 </ul>
                             </li>
                             <li class="lvl1 parent megamenu"><a href="studentProfile.jsp">Account <i class="anm anm-angle-down-l"></i></a></li>
@@ -209,9 +213,10 @@
                                     </div>
                                     <div class="col-4 col-md-4 col-lg-4 text-center filters-toolbar__item filters-toolbar__item--count d-flex justify-content-center align-items-center">
                                         <%
+
                                             Statement statement=con.createStatement();
 
-                                                String sql ="SELECT COUNT (\"m\".\"MENUID\") FROM public.menu \"m\", public.cafeworker \"c\" WHERE \"m\".\"CWORKID\" = \"c\".\"CWORKID\" AND \"c\".\"CWORKSTALLNAME\" = 'try2';\n";
+                                                String sql ="SELECT COUNT (\"m\".\"MENUID\") FROM public.menu \"m\", public.cafeworker \"c\" WHERE \"m\".\"CWORKID\" = \"c\".\"CWORKID\" AND \"c\".\"CWORKSTALLNAME\" = 'Gerai A';\n";
                                                 ResultSet resultSet = statement.executeQuery(sql);
 
                                                 while(resultSet.next()){
@@ -249,9 +254,9 @@
                             <div class="row">
                                 <%
 
-                                    Statement statement2= con.createStatement();
+                                        Statement statement2= con.createStatement();
 
-                                        ResultSet resultSet2 = statement2.executeQuery("SELECT * FROM public.menu \"m\", public.cafeworker \"c\" WHERE \"m\".\"CWORKID\" = \"c\".\"CWORKID\" AND \"c\".\"CWORKSTALLNAME\" = 'try2';\n");
+                                        ResultSet resultSet2 = statement2.executeQuery("SELECT * FROM public.menu \"m\", public.cafeworker \"c\" WHERE \"m\".\"CWORKID\" = \"c\".\"CWORKID\" AND \"c\".\"CWORKSTALLNAME\" = 'Gerai A';\n");
 
                                         while(resultSet2.next()){
                                 %>
@@ -290,11 +295,12 @@
                                     </div>
                                     <!--End ListView Item-->
                                 </div>
-
                                 <%
 
-                                        }
+                                    }
                                 %>
+
+
                             </div>
                         </div>
                         <div class="infinitpaginOuter">

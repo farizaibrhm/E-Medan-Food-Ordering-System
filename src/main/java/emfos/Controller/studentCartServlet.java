@@ -105,5 +105,33 @@ public class studentCartServlet extends HttpServlet {
                     }
         }
 
+        if (request.getParameter("Action").equals("Remove from Cart")) {
+            System.out.println("in");
+            PrintWriter out = response.getWriter();
+
+            cart crt = new cart();
+            cartDAO cdao = new cartDAO();
+
+            HttpSession session = request.getSession();
+
+            int id = Integer.parseInt(request.getParameter("id"));
+            String stuid = (String) session.getAttribute("STUDENTID");
+
+
+            boolean result = cdao.removeItemFromCart(id,stuid);
+
+            if (result == true){
+                out.println("<script type=\"text/javascript\">");
+                out.println("alert('Item successfully removed from cart!');");
+                out.println("location='studentCart.jsp';");
+                out.println("</script>");
+            }else {
+                out.println("<script type=\"text/javascript\">");
+                out.println("alert('Item unsuccessfully removed from cart. Please try again.');");
+                out.println("location='studentCart.jsp';");
+                out.println("</script>");
+            }
+        }
+
     }
 }

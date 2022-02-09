@@ -95,7 +95,8 @@
     input[type="date"]::-webkit-inner-spin-button {
         display: none;
     }
-    .item i, input[type="date"]::-webkit-calendar-picker-indicator {
+    .item i, input[type="date"]::-webkit-calendar-picker-indicator
+    {
         position: absolute;
         font-size: 20px;
         color: #a9a9a9;

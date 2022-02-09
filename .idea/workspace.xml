@@ -10,14 +10,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ee72d468-6c94-46a4-8c84-170d520e2088" name="Changes" comment="edit">
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/studentCart.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/studentCheckout.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/0bdc59ce-c3d0-42cb-9e73-bfbd3923cb41.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/0bdc59ce-c3d0-42cb-9e73-bfbd3923cb41.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/0bdc59ce-c3d0-42cb-9e73-bfbd3923cb41/storage_v2/_src_/database/danpunma7i9eh0.kg9-EQ/schema/public.abK9xQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/0bdc59ce-c3d0-42cb-9e73-bfbd3923cb41/storage_v2/_src_/database/danpunma7i9eh0.kg9-EQ/schema/public.abK9xQ.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/studentProfile.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/studentProfile.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/emfos/DBConnect/DBConnection.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/emfos/DBConnect/DBConnection.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/studentProfile.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/studentProfile.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/e-Medan_Food_Ordering_System.iml" beforeDir="false" afterPath="$PROJECT_DIR$/e-Medan_Food_Ordering_System.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/studentCheckout.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/studentCheckout.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -230,6 +225,7 @@
       <workItem from="1643861322956" duration="429000" />
       <workItem from="1643977443362" duration="2946000" />
       <workItem from="1644303843889" duration="2277000" />
+      <workItem from="1644412540589" duration="6461000" />
     </task>
     <task id="LOCAL-00001" summary="Merge remote-tracking branch 'origin/dev' into dev">
       <created>1642837016272</created>

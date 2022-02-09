@@ -3,6 +3,7 @@
 <%@page import="java.sql.Statement"%>
 <%@page import="java.sql.Connection"%>
 <%@page import="emfos.DBConnect.DBConnection"%>
+<%@ page import="emfos.cafeworker" %>
 <!DOCTYPE html>
 <html class="no-js" lang="en">
 
@@ -153,9 +154,6 @@
         <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 sm-margin-30px-bottom">
           <div class="create-ac-content bg-light-gray padding-20px-all">
             <h2 class="order-title mb-3">Your Order</h2>
-
-
-
             <div class="table-responsive-sm order-table">
               <table class="table table-borderless text-center">
                 <tr>
@@ -193,61 +191,74 @@
                 </tr>
                 </thead>
                 <tbody>
+                <%
+                  Statement st2 = con.createStatement();
+                  ResultSet rs2 = st2.executeQuery("SELECT * FROM public.cart \"c\", public.menu \"m\" WHERE \"c\".\"MENUID\" = \"m\".\"MENUID\" AND \"c\".\"STUDENTID\" ='" + session.getAttribute("STUDENTID")+"'");
+                  while (rs2.next()){
+                %>
                 <tr>
-                  <td class="text-left">Burger Daging Supreme</td>
-                  <td>RM 12.00</td>
-                  <td>1</td>
-                  <td>RM 12.00</td>
+                  <td class="text-left"><%=rs2.getString("MENUNAME")%></td>
+                  <td>RM <%=rs2.getString("CARTPRICE")%></td>
+                  <td><%=rs2.getString("CARTQUANTITY")%></td>
+                  <td>RM <%=rs2.getString("CARTTOTALPRICE")%></td>
                 </tr>
-                <tr>
-                  <td class="text-left">Oren Jus</td>
-                  <td>RM 6.00</td>
-                  <td>1</td>
-                  <td>RM 6.00</td>
-                </tr>
-                <tr>
-                  <td class="text-left">Chicken Cheeza</td>
-                  <td>RM 6.00</td>
-                  <td>1</td>
-                  <td>RM 6.00</td>
-                </tr>
+                <%
+                  }
+                %>
                 </tbody>
+                <%
+                  double subtotal = 0.00;
+                  Statement st3 = con.createStatement();
+                  ResultSet rs3 = st3.executeQuery("SELECT sum(\"CARTTOTALPRICE\") FROM public.cart WHERE \"STUDENTID\"='" + session.getAttribute("STUDENTID")+"'");
+                  if (rs3.next()) {
+                    subtotal = rs3.getDouble(1);
+                  }
+                %>
                 <tfoot class="font-weight-600">
                 <tr>
-                  <td colspan="3" class="text-right">Tax </td>
-                  <td>RM 0.36</td>
-                </tr>
-                <tr>
-                  <td colspan="3" class="text-right">Shipping </td>
-                  <td>RM 0.00</td>
+                  <td colspan="3" class="text-right">SubTotal </td>
+                  <td>RM <%=subtotal%></td>
                 </tr>
                 <tr>
                   <td colspan="3" class="text-right">Total</td>
-                  <td>RM 24.36</td>
+                  <td>RM <%=subtotal%></td>
                 </tr>
                 </tfoot>
               </table>
             </div>
-
           </div>
         </div>
 
+
+
         <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+
           <div class="your-order-payment">
+            <%
+              Statement st5 = con.createStatement();
+              ResultSet rs5 = st5.executeQuery("SELECT *FROM public.cart \"c\",  public.cafeworker \"cw\" WHERE \"c\".\"CWORKID\" = \"cw\".\"CWORKID\" AND \"c\".\"STUDENTID\" ='" + session.getAttribute("STUDENTID")+"'");
+              while (rs5.next()){
+            %>
             <div class="your-order">
+
               <h2 class="login-title mb-3">Bank Account Information</h2>
               <h3 class="font-15 xs-font-13">Account Number</h3>
-              <p class="no-margin font-15">8704345678</p>
+              <p class="no-margin font-15"><%=rs5.getString("CWORKACCNUM")%></p>
 
               <h3 class="font-15 xs-font-13">Account Name</h3>
-              <p class="no-margin font-15">Ibrahim bin Salamon</p>
+              <p class="no-margin font-15"><%=rs5.getString("CWORKACCNAME")%></p>
 
               <h3 class="font-15 xs-font-13">Account Bank</h3>
-              <p class="no-margin font-15">CIMB Bank Berhad</p>
+              <p class="no-margin font-15"><%=rs5.getString("CWORKBANKNAME")%></p>
+
 
             </div>
 
             <hr />
+            <%
+              }
+            %>
+
 
             <div class="your-payment">
               <h2 class="payment-title mb-3">UPLOAD RECEIPT</h2>

@@ -9,8 +9,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ee72d468-6c94-46a4-8c84-170d520e2088" name="Changes" comment="update dengan delete menu belum edit for session.">
+    <list default="true" id="ee72d468-6c94-46a4-8c84-170d520e2088" name="Changes" comment="a lil update here and there">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/GeraiAMenuList.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/GeraiAMenuList.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/GeraiBMenuList.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/GeraiBMenuList.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/GeraiCMenuList.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/GeraiCMenuList.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/GeraiDMenuList.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/GeraiDMenuList.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/aboutus.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/aboutus.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/studentProfile.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/studentProfile.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/index.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,13 +71,15 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/webapp/images" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/webapp/assets/images" />
     <property name="project.structure.last.edited" value="Facets" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.37241378" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Lenovo\IdeaProjects\E-Medan-Food-Ordering-System\src\main\webapp\assets\images" />
+      <recent name="C:\Users\Lenovo\IdeaProjects\E-Medan-Food-Ordering-System\src\main\webapp\assets\css" />
       <recent name="C:\Users\Lenovo\IdeaProjects\E-Medan-Food-Ordering-System\src\main\webapp\images" />
       <recent name="C:\Users\Lenovo\IdeaProjects\E-Medan-Food-Ordering-System\src\main\java\com\example\emedan_food_ordering_system" />
     </key>
@@ -213,7 +223,11 @@
       <workItem from="1643690446085" duration="27934000" />
       <workItem from="1643731583765" duration="10689000" />
       <workItem from="1643743929290" duration="3447000" />
-      <workItem from="1643772753799" duration="1029000" />
+      <workItem from="1643772753799" duration="4867000" />
+      <workItem from="1644094510930" duration="723000" />
+      <workItem from="1644137792244" duration="268000" />
+      <workItem from="1644218778564" duration="36204000" />
+      <workItem from="1644300276427" duration="7617000" />
     </task>
     <task id="LOCAL-00001" summary="Merge remote-tracking branch 'origin/dev' into dev">
       <created>1642837016272</created>
@@ -243,7 +257,35 @@
       <option name="project" value="LOCAL" />
       <updated>1643747715072</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="fix url servlet">
+      <created>1643774128366</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1643774128368</updated>
+    </task>
+    <task id="LOCAL-00006" summary="add to cart">
+      <created>1644259724558</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1644259724558</updated>
+    </task>
+    <task id="LOCAL-00007" summary="update quantity item in cart">
+      <created>1644262403257</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1644262403257</updated>
+    </task>
+    <task id="LOCAL-00008" summary="a lil update here and there">
+      <created>1644309340321</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1644309340321</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -266,6 +308,11 @@
     <MESSAGE value="insert and retrieve" />
     <MESSAGE value="update tak lepas" />
     <MESSAGE value="update dengan delete menu belum edit for session." />
-    <option name="LAST_COMMIT_MESSAGE" value="update dengan delete menu belum edit for session." />
+    <MESSAGE value="fix url servlet" />
+    <MESSAGE value="add to cart" />
+    <MESSAGE value="update quantity item in cart" />
+    <MESSAGE value="update here and there" />
+    <MESSAGE value="a lil update here and there" />
+    <option name="LAST_COMMIT_MESSAGE" value="a lil update here and there" />
   </component>
 </project>

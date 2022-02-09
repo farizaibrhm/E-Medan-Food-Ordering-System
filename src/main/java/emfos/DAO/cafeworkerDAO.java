@@ -1,12 +1,12 @@
-package emfos;
+package emfos.DAO;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
-import java.sql.Statement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
 import emfos.DBConnect.DBConnection;
+import emfos.Model.cafeworker;
 
 public class cafeworkerDAO {
 

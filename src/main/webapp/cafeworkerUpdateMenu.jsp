@@ -1,5 +1,5 @@
-<%@ page import="emfos.menu" %>
-<%@ page import="emfos.menuDAO" %><%--
+<%@ page import="emfos.Model.menu" %>
+<%@ page import="emfos.DAO.menuDAO" %><%--
   Created by IntelliJ IDEA.
   User: Lenovo
   Date: 2/2/2022

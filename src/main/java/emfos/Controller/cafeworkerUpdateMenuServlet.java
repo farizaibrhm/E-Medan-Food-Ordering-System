@@ -1,4 +1,7 @@
-package emfos;
+package emfos.Controller;
+
+import emfos.DAO.menuDAO;
+import emfos.Model.menu;
 
 import javax.servlet.*;
 import javax.servlet.http.*;
@@ -28,7 +31,7 @@ public class cafeworkerUpdateMenuServlet extends HttpServlet {
             System.out.println("in");
             PrintWriter out = response.getWriter();
 
-            menu mn = new menu();
+            emfos.Model.menu mn = new menu();
             menuDAO upMenu = new menuDAO();
 
             String id = request.getParameter("MENUID");

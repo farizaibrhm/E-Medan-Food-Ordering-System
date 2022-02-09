@@ -1,4 +1,4 @@
-package emfos;
+package emfos.Model;
 
 public class cafeworker {
 

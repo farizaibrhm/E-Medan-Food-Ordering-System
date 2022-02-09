@@ -1,4 +1,4 @@
-package emfos;
+package emfos.Controller;
 
 import javax.servlet.*;
 import javax.servlet.http.*;
@@ -6,8 +6,8 @@ import javax.servlet.annotation.*;
 import java.io.IOException;
 import java.io.PrintWriter;
 
-import emfos.cafeworker;
-import emfos.cafeworkerDAO;
+import emfos.DAO.cafeworkerDAO;
+import emfos.Model.cafeworker;
 
 
 @WebServlet(name = "cafeworkerRegisterServlet", value = "/cafeworkerRegisterServlet")

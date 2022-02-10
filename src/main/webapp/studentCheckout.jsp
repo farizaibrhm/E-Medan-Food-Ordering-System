@@ -1,8 +1,11 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+
 <%@page import="java.sql.ResultSet"%>
 <%@page import="java.sql.Statement"%>
 <%@page import="java.sql.Connection"%>
 <%@page import="emfos.DBConnect.DBConnection"%>
+<%@ page import = "java.io.*,java.util.*" %>
+<%@ page import = "javax.servlet.*,java.text.*" %>
 <!DOCTYPE html>
 <html class="no-js" lang="en">
 
@@ -159,24 +162,34 @@
                         <div class="table-responsive-sm order-table">
                             <table class="table table-borderless text-center">
 
+                                <%
+                                    Statement stt = con.createStatement();
+                                    ResultSet r = stt.executeQuery("SELECT \"CWORKSTALLNAME\" FROM public.cafeworker \"c\", public.cart \"m\" WHERE \"c\".\"CWORKID\" = \"m\".\"CWORKID\" AND \"m\".\"STUDENTID\" ='" + session.getAttribute("STUDENTID")+"'");
+                                    r.next();
+                                %>
                                 <tr>
                                     <td class="text-left">
                                         <h3 class="font-15 xs-font-13">Sold to:</h3>
-                                        <p class="no-margin font-15">Maria binti Ahmad</p>
+                                        <p class="no-margin font-15"><%= session.getAttribute("STUDENTNAME")%></p>
                                     </td>
                                     <td class="text-left">
                                         <h3 class="font-15 xs-font-13">Order:</h3>
                                         <p class="no-margin font-15">
                                             <b>Order number: </b>#450104<br>
-                                            <b>Order date: </b>23-Sept-2021<br>
-                                            <b>Order time: </b>14:27:18
+                                            <%
+                                                Date dNow = new Date( );
+                                                SimpleDateFormat ft = new SimpleDateFormat ("dd-MMM-yyyy");
+                                                SimpleDateFormat ft2 = new SimpleDateFormat("HH:mm:ss");
+                                                out.println(" <b>Order date: </b>"+ft.format(dNow)+"<br>");
+                                                out.println(" <b>Order time: </b>"+ft2.format(dNow)+"<br>");
+                                            %>
                                         </p>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td class="text-left">
                                         <h3 class="font-15 xs-font-13">Shop:</h3>
-                                        <p class="no-margin font-15">Gerai C (UiTM KJM)</p>
+                                        <p class="no-margin font-15"><%=r.getString("CWORKSTALLNAME")%></p>
                                     </td>
                                 </tr>
                             </table>
@@ -193,39 +206,52 @@
                                     <th>Subtotal</th>
                                 </tr>
                                 </thead>
+
                                 <tbody>
-                                <tr>
-                                    <td class="text-left">Burger Daging Supreme</td>
-                                    <td>RM 12.00</td>
-                                    <td>1</td>
-                                    <td>RM 12.00</td>
-                                </tr>
-                                <tr>
-                                    <td class="text-left">Oren Jus</td>
-                                    <td>RM 6.00</td>
-                                    <td>1</td>
-                                    <td>RM 6.00</td>
-                                </tr>
-                                <tr>
-                                    <td class="text-left">Chicken Cheeza</td>
-                                    <td>RM 6.00</td>
-                                    <td>1</td>
-                                    <td>RM 6.00</td>
-                                </tr>
-                                </tbody>
+                                <%
+
+                                    Statement st1 = con.createStatement();
+                                    ResultSet rs1;
+                                    rs1 = st1.executeQuery("SELECT * FROM public.cart \"c\", public.menu \"m\" WHERE \"c\".\"MENUID\" = \"m\".\"MENUID\" AND \"c\".\"STUDENTID\" ='" + session.getAttribute("STUDENTID")+"'");
+                                    while (rs1.next())
+                                    {
+                                %>
+
+                                    <tr>
+                                        <td class="text-left"><%=rs1.getString("MENUNAME")%></td>
+                                        <td>RM <%=rs1.getString("CARTPRICE")%></td>
+                                        <td><%=rs1.getString("CARTQUANTITY")%></td>
+                                        <td>RM <%=rs1.getString("CARTTOTALPRICE")%></td>
+                                        <input type="hidden" name="menuname" value="<%=rs1.getString("MENUNAME")%>">
+                                    </tr>
+                                <%
+                                    }
+                                %>
+
+                                    </tbody>
+
                                 <tfoot class="font-weight-600">
+                                <%
+                                    double subtotal = 00.00;
+                                    Statement st3 = con.createStatement();
+                                    ResultSet rs3 = st3.executeQuery("SELECT sum(\"CARTTOTALPRICE\") FROM public.cart WHERE \"STUDENTID\"='" + session.getAttribute("STUDENTID")+"'");
+                                    if (rs3.next()) {
+                                        subtotal = rs3.getDouble(1);
+                                    }
+                                %>
                                 <tr>
                                     <td colspan="3" class="text-right">Tax </td>
-                                    <td>RM 0.36</td>
-                                </tr>
-                                <tr>
-                                    <td colspan="3" class="text-right">Shipping </td>
                                     <td>RM 0.00</td>
                                 </tr>
                                 <tr>
-                                    <td colspan="3" class="text-right">Total</td>
-                                    <td>RM 24.36</td>
+                                    <td colspan="3" class="text-right">Shipping </td>
+                                    <td>FREE SHIPPING</td>
                                 </tr>
+                                <tr>
+                                    <td colspan="3" class="text-right">Total</td>
+                                    <td>RM <%=subtotal%></td>
+                                </tr>
+
                                 </tfoot>
                             </table>
                         </div>
@@ -235,17 +261,21 @@
 
                 <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
                     <div class="your-order-payment">
+                        <%
+                            Statement st4 = con.createStatement();
+                            ResultSet r1 = st4.executeQuery("SELECT \"CWORKACCNUM\",\"CWORKACCNAME\",\"CWORKBANKNAME\" FROM public.cafeworker \"c\", public.cart \"m\" WHERE \"c\".\"CWORKID\" = \"m\".\"CWORKID\" AND \"m\".\"STUDENTID\" ='" + session.getAttribute("STUDENTID")+"'");
+                            r1.next();
+                        %>
                         <div class="your-order">
                             <h2 class="login-title mb-3">Bank Account Information</h2>
                             <h3 class="font-15 xs-font-13">Account Number</h3>
-                            <p class="no-margin font-15">8704345678</p>
+                            <p class="no-margin font-15"><%=r1.getString("CWORKACCNUM")%></p>
 
                             <h3 class="font-15 xs-font-13">Account Name</h3>
-                            <p class="no-margin font-15">Ibrahim bin Salamon</p>
+                            <p class="no-margin font-15"><%=r1.getString("CWORKACCNAME")%></p>
 
                             <h3 class="font-15 xs-font-13">Account Bank</h3>
-                            <p class="no-margin font-15">CIMB Bank Berhad</p>
-
+                            <p class="no-margin font-15"><%=r1.getString("CWORKBANKNAME")%></p>
                         </div>
 
                         <hr />

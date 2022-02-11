@@ -236,7 +236,7 @@
           <div class="your-order-payment">
             <%
               Statement st5 = con.createStatement();
-              ResultSet rs5 = st5.executeQuery("SELECT *FROM public.cart \"c\",  public.cafeworker \"cw\" WHERE \"c\".\"CWORKID\" = \"cw\".\"CWORKID\" AND \"c\".\"STUDENTID\" ='" + session.getAttribute("STUDENTID")+"'");
+              ResultSet rs5 = st5.executeQuery("SELECT * FROM public.cart \"c\",  public.cafeworker \"cw\" WHERE \"c\".\"CWORKID\" = \"cw\".\"CWORKID\" AND \"c\".\"STUDENTID\" ='" + session.getAttribute("STUDENTID")+"'");
               while (rs5.next()){
             %>
             <div class="your-order">

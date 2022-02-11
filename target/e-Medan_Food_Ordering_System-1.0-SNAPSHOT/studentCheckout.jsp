@@ -171,10 +171,18 @@
                   </td>
                 </tr>
                 <tr>
+                  <%
+                    Statement st6 = con.createStatement();
+                    ResultSet rs6 = st6.executeQuery("SELECT * FROM public.cart \"c\",  public.cafeworker \"cw\" WHERE \"c\".\"CWORKID\" = \"cw\".\"CWORKID\" AND \"c\".\"STUDENTID\" ='" + session.getAttribute("STUDENTID")+"'");
+                    rs6.next();
+                  %>
                   <td class="text-left">
                     <h3 class="font-15 xs-font-13">Shop:</h3>
-                    <p class="no-margin font-15"><%=session.getAttribute("CWORKSTALLNAME")%></p>
+                    <p class="no-margin font-15"><%=rs6.getString("CWORKSTALLNAME")%></p>
                   </td>
+                  <%
+
+                  %>
                 </tr>
               </table>
             </div>
@@ -237,7 +245,7 @@
             <%
               Statement st5 = con.createStatement();
               ResultSet rs5 = st5.executeQuery("SELECT * FROM public.cart \"c\",  public.cafeworker \"cw\" WHERE \"c\".\"CWORKID\" = \"cw\".\"CWORKID\" AND \"c\".\"STUDENTID\" ='" + session.getAttribute("STUDENTID")+"'");
-              while (rs5.next()){
+              rs5.next();
             %>
             <div class="your-order">
 
@@ -253,11 +261,11 @@
 
 
             </div>
+            <%
+
+            %>
 
             <hr />
-            <%
-              }
-            %>
 
 
             <div class="your-payment">

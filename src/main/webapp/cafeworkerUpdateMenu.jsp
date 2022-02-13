@@ -1,17 +1,18 @@
 <%@ page import="emfos.Model.menu" %>
-<%@ page import="emfos.DAO.menuDAO" %><%--
-  Created by IntelliJ IDEA.
-  User: Lenovo
-  Date: 2/2/2022
-  Time: 4:15 AM
-  To change this template use File | Settings | File Templates.
---%>
+<%@ page import="emfos.DAO.menuDAO" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>Title</title>
+    <title>UPDATE MENU</title>
 </head>
 <body>
+
+<%
+    String CWORKID = (String) session.getAttribute("CWORKID");
+    if (CWORKID== null)
+    { response.sendRedirect("cafeworkerLogin.jsp");}
+%>
+
 <% menu mn = new menu();%>
 <% menuDAO upMenu = new menuDAO(); %>
 <style>
@@ -136,21 +137,24 @@
 </style>
 
 <div class="testbox">
-    <form method="post" enctype="multipart/form-data" action="${pageContext.request.contextPath}/cafeworkerUpdateMenuServlet">
+    <form method="post"  action="${pageContext.request.contextPath}/cafeworkerUpdateMenuServlet">
         <div class="banner">
             <h1>UPDATE MENU </h1>
         </div>
+
         <input type="hidden" name="Action" value="Update Menu" />
         <%
             String sid = request.getParameter("id");
-            if (!((sid) == null)) {
+            if (!((sid) == null))
+            {
                 int MENUID = Integer.parseInt(sid);
                 mn = upMenu.getMenuID(MENUID);
         %>
+
         <div class="item">
             <p>MENU ID</p>
             <div class="name-item">
-                <input type="number" name="MENUID" value="<%= mn.getMENUID()%>" readonly />
+                <input type="text" name="MENUID" value="<%=mn.getMENUID()%>" readonly />
             </div>
         </div>
         <div class="item">
@@ -163,16 +167,16 @@
         </div>
         <div class="item">
             <p>MENU PRICE (RM)</p>
-            <input type="number" min="0.00"  step="0.01" name="MENUPRICE" value="<%=mn.getMENUTPRICE()%>"/>
+            <input type="text"  name="MENUTPRICE" value="<%=mn.getMENUTPRICE()%>"/>
         </div>
         <div class="item">
             <p>MENU TYPE (F-FOOD/ D-DRINK)</p>
             <input type="text" name="MENUTYPE" value="<%= mn.getMENUTYPE()%>"/>
         </div>
-        <%--<div class="item">
-            <p>CAFE WORKER ID</p>
-            <input type="text" name="CWORKID"/>
-        </div>--%>
+        <div class="item">
+           <%-- <p>CAFE WORKER ID</p>--%>
+           <input type="hidden" name="CWORKID" value="<%=mn.getCWORKID()%>"/>
+        </div>
         <%--<div class="item">
             <p>PLEASE REUPLOAD IMAGE</p>
             <div class="name-item">

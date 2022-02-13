@@ -47,19 +47,19 @@ public class menuDAO {
             PreparedStatement preparedStatement = (PreparedStatement)
                     con.prepareStatement("UPDATE public.menu \n" +
                             "\tSET  \"MENUNAME\"=?, \"MENUDESC\"=?, \"MENUTPRICE\"=?, \"MENUTYPE\"=?" +
-                            "\tWHERE \"MENUID\" =? AND \"CWORKID\" = ?;");
+                            "\tWHERE \"MENUID\" =?  ;");
             // Parameters start with 1
 
             preparedStatement.setString(1, mn.getMENUNAME());
             preparedStatement.setString(2, mn.getMENUDESC());
             preparedStatement.setDouble(3, mn.getMENUTPRICE());
             preparedStatement.setString(4, mn.getMENUTYPE());
+            //preparedStatement.setString(5, mn.getCWORKID());
             preparedStatement.setInt(5, mn.getMENUID());
-            preparedStatement.setString(6, mn.getCWORKID());
+
             //preparedStatement.setString(5, mn.getFileName());
             //preparedStatement.setString(6, mn.getSavePath());
 
-            //preparedStatement.setString(8, upMenu.getCWORKID());
             i = preparedStatement.executeUpdate();
         }
 
@@ -81,7 +81,7 @@ public class menuDAO {
         menu mn = new menu();
         try {
             PreparedStatement preparedStatement = (PreparedStatement)
-                    con.prepareStatement("SELECT * FROM public.menu WHERE \"MENUID\" = ? AND \"CWORKID\" = ?;");
+                    con.prepareStatement("SELECT * FROM public.menu WHERE \"MENUID\" = ?;");
             preparedStatement.setInt(1, menuId);
             ResultSet rs = preparedStatement.executeQuery();
 
@@ -90,13 +90,11 @@ public class menuDAO {
                 mn.setMENUID(rs.getInt("MENUID"));
                 mn.setMENUNAME(rs.getString("MENUNAME"));
                 mn.setMENUDESC( rs.getString("MENUDESC"));
-                mn.setMENUTPRICE(rs.getDouble("MENUTPRICE")); ;
+                mn.setMENUTPRICE(rs.getDouble("MENUTPRICE"));
                 mn.setMENUTYPE( rs.getString("MENUTYPE"));
                 mn.setFileName(rs.getString("fileName"));
                 mn.setSavePath(rs.getString("savePath"));
-                mn.setSavePath(rs.getString("CWORKID"));
-                //int menuId= rs.getInt("MENUID");
-                //String cworkid = rs.getString("CWORKID");
+                mn.setCWORKID(rs.getString("CWORKID"));
 
             }
         }
@@ -109,4 +107,25 @@ public class menuDAO {
         return mn;
     }
 
+    public boolean deleteMenu (int id)
+    {
+        Connection con = DBConnection.getConn();
+
+        String sql = "DELETE FROM public.menu\n" + "\tWHERE \"MENUID\" =?;";
+
+        int i = 0;
+        try {
+            PreparedStatement ps = con.prepareStatement(sql);
+            ps.setInt(1, id);
+
+            i = ps.executeUpdate();
+        } catch (SQLException e){
+            e.printStackTrace();
+        }
+        if (i == 0){
+            return false;
+        } else {
+            return true;
+        }
+    }
 }

@@ -164,7 +164,7 @@
 
                     <tr>
                         <th class="text-center" scope="row"><%=i%></th>
-                        <td class="text-center"><image src="../images/<%=rs.getString("fileName")%>" width="100" height="100"/></td>
+                        <td class="text-center"><image src="images/<%=rs.getString("fileName")%>" width="100" height="100"/></td>
                         <td class="text-center"><%=rs.getString("MENUNAME")%></td>
                         <td class="text-center"><%=rs.getString("MENUDESC")%></td>
                         <td class="text-center">RM <%=rs.getString("MENUTPRICE")%></td>
@@ -173,7 +173,7 @@
                             <%--                            <a  href="updateMenu.jsp" class="button" style="color: black;">UPDATE </a>--%>
                             <%--                            <button type="button" id="<%=rs.getString("MENUID")%>" style="background-color: #5cb85c;" class="upd btn btn--sm">Update</button>--%>
                             <a  href="cafeworkerUpdateMenu.jsp?id=<%=rs.getString("MENUID")%>" style="background-color: #5cb85c;" class="btn btn--sm">Update</a>
-                            <button type="button" id="<%=rs.getString("MENUID")%>" style="background-color: #d9534f;" class="del btn btn--sm">Delete</button>
+                                <a href="cafeworkerDeleteMenu.jsp?id=<%=rs.getString("MENUID")%>" style="background-color: #d9534f;" class="del btn btn--sm">Delete</a>
                         </td>
                     </tr>
 

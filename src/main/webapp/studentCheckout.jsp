@@ -1,8 +1,11 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+
 <%@page import="java.sql.ResultSet"%>
 <%@page import="java.sql.Statement"%>
 <%@page import="java.sql.Connection"%>
 <%@page import="emfos.DBConnect.DBConnection"%>
+<%@ page import = "java.io.*,java.util.*" %>
+<%@ page import = "javax.servlet.*,java.text.*" %>
 <!DOCTYPE html>
 <html class="no-js" lang="en">
 
@@ -36,94 +39,94 @@
         </div>
     </div>
     <!--End Search Form Drawer-->
-            <%
+    <%
         String STUDENTNAME = (String) session.getAttribute("STUDENTNAME");
         if (STUDENTNAME== null)
         {
             response.sendRedirect("studentLogin.jsp");
-        %>
-            <% } else{
-                %>
+    %>
+    <% } else{
+    %>
 
-        <!--Top Header-->
-        <div class="top-header">
+    <!--Top Header-->
+    <div class="top-header">
         <div class="container-fluid">
-        <div class="row">
-        <div class="col-10 col-sm-8 col-md-5 col-lg-4">
+            <div class="row">
+                <div class="col-10 col-sm-8 col-md-5 col-lg-4">
+                </div>
+                <div class="col-sm-4 col-md-4 col-lg-4 d-none d-lg-none d-md-block d-lg-block">
+                    <div class="text-center"><p class="top-header_middle-text">Welcome, <%=session.getAttribute("STUDENTNAME")%>!</p></div>
+                </div>
+                <div class="col-2 col-sm-4 col-md-3 col-lg-4 text-right">
+                    <span class="user-menu d-block d-lg-none"><i class="anm anm-user-al" aria-hidden="true"></i></span>
+                    <ul class="customer-links list-inline">
+                        <li><a href="${pageContext.request.contextPath}/studentLogoutServlet">Logout</a></li>
+                    </ul>
+                </div>
+            </div>
         </div>
-        <div class="col-sm-4 col-md-4 col-lg-4 d-none d-lg-none d-md-block d-lg-block">
-        <div class="text-center"><p class="top-header_middle-text">Welcome, <%=session.getAttribute("STUDENTNAME")%>!</p></div>
-        </div>
-        <div class="col-2 col-sm-4 col-md-3 col-lg-4 text-right">
-        <span class="user-menu d-block d-lg-none"><i class="anm anm-user-al" aria-hidden="true"></i></span>
-        <ul class="customer-links list-inline">
-        <li><a href="${pageContext.request.contextPath}/studentLogoutServlet">Logout</a></li>
-        </ul>
-        </div>
-        </div>
-        </div>
-        </div>
-        <!--End Top Header-->
-        <!--Header-->
-        <div class="header-wrap animated d-flex border-bottom">
+    </div>
+    <!--End Top Header-->
+    <!--Header-->
+    <div class="header-wrap animated d-flex border-bottom">
         <div class="container-fluid">
-        <div class="row align-items-center">
-        <!--Desktop Logo-->
-        <div class="logo col-md-2 col-lg-2 d-none d-lg-block">
-        <a href="index.jsp">
-        <img src="assets/images/e-Medan.svg" alt="e-Medan Food Ordering Website" title="e-Medan Food Ordering Website" />
-        </a>
-        </div>
-        <!--End Desktop Logo-->
-        <div class="col-2 col-sm-3 col-md-3 col-lg-8">
-        <div class="d-block d-lg-none">
-        <button type="button" class="btn--link site-header__menu js-mobile-nav-toggle mobile-nav--open">
-        <i class="icon anm anm-times-l"></i>
-        <i class="anm anm-bars-r"></i>
-        </button>
-        </div>
-        <!--Desktop Menu-->
-        <nav class="grid__item" id="AccessibleNav"><!-- for mobile -->
-        <ul id="siteNav" class="site-nav medium center hidearrow">
-        <li class="lvl1 parent megamenu"><a href="index.jsp">Home <i class="anm anm-angle-down-l"></i></a></li>
-        <li class="lvl1 parent megamenu"><a href="aboutus.jsp">About Us <i class="anm anm-angle-down-l"></i></a></li>
-        <li class="lvl1 parent dropdown"><a href="studentMenuList.jsp">Menu <i class="anm anm-angle-down-l"></i></a>
-        <ul class="dropdown">
-        <li><a href="studentFoodMenuList.jsp" class="site-nav">Food</a></li>
-        <li><a href="studentDrinkMenuList.jsp" class="site-nav">Drink</a></li>
-        </ul>
-        </li>
-        <li class="lvl1 parent megamenu"><a href="studentProfile.jsp">Account <i class="anm anm-angle-down-l"></i></a></li>
-        </ul>
-        </nav>
-        <!--End Desktop Menu-->
-        </div>
+            <div class="row align-items-center">
+                <!--Desktop Logo-->
+                <div class="logo col-md-2 col-lg-2 d-none d-lg-block">
+                    <a href="index.jsp">
+                        <img src="assets/images/e-Medan.svg" alt="e-Medan Food Ordering Website" title="e-Medan Food Ordering Website" />
+                    </a>
+                </div>
+                <!--End Desktop Logo-->
+                <div class="col-2 col-sm-3 col-md-3 col-lg-8">
+                    <div class="d-block d-lg-none">
+                        <button type="button" class="btn--link site-header__menu js-mobile-nav-toggle mobile-nav--open">
+                            <i class="icon anm anm-times-l"></i>
+                            <i class="anm anm-bars-r"></i>
+                        </button>
+                    </div>
+                    <!--Desktop Menu-->
+                    <nav class="grid__item" id="AccessibleNav"><!-- for mobile -->
+                        <ul id="siteNav" class="site-nav medium center hidearrow">
+                            <li class="lvl1 parent megamenu"><a href="index.jsp">Home <i class="anm anm-angle-down-l"></i></a></li>
+                            <li class="lvl1 parent megamenu"><a href="aboutus.jsp">About Us <i class="anm anm-angle-down-l"></i></a></li>
+                            <li class="lvl1 parent dropdown"><a href="studentMenuList.jsp">Menu <i class="anm anm-angle-down-l"></i></a>
+                                <ul class="dropdown">
+                                    <li><a href="studentFoodMenuList.jsp" class="site-nav">Food</a></li>
+                                    <li><a href="studentDrinkMenuList.jsp" class="site-nav">Drink</a></li>
+                                </ul>
+                            </li>
+                            <li class="lvl1 parent megamenu"><a href="studentProfile.jsp">Account <i class="anm anm-angle-down-l"></i></a></li>
+                        </ul>
+                    </nav>
+                    <!--End Desktop Menu-->
+                </div>
 
-        <div class="col-4 col-sm-3 col-md-3 col-lg-2">
-        <div class="site-cart">
-        <a href="studentCart.jsp" class="site-header__cart" title="Cart">
-        <i class="icon anm anm-bag-l"></i>
-            <%
-                                            Connection con = emfos.DBConnect.DBConnection.getConn();
+                <div class="col-4 col-sm-3 col-md-3 col-lg-2">
+                    <div class="site-cart">
+                        <a href="studentCart.jsp" class="site-header__cart" title="Cart">
+                            <i class="icon anm anm-bag-l"></i>
+                            <%
+                                Connection con = emfos.DBConnect.DBConnection.getConn();
 
-                                            Statement st=con.createStatement();
-                                            ResultSet rs = st.executeQuery("SELECT COUNT (*) FROM public.cart WHERE \"STUDENTID\" ='" + session.getAttribute("STUDENTID")+"'");
+                                Statement st=con.createStatement();
+                                ResultSet rs = st.executeQuery("SELECT COUNT (*) FROM public.cart WHERE \"STUDENTID\" ='" + session.getAttribute("STUDENTID")+"'");
 
-                                            rs.next();
-                                            int count = rs.getInt(1);
-                                        %>
-        <span id="CartCount" class="site-header__cart-count" data-cart-render="item_count"><%=count%></span>
-        </a>
+                                rs.next();
+                                int count = rs.getInt(1);
+                            %>
+                            <span id="CartCount" class="site-header__cart-count" data-cart-render="item_count"><%=count%></span>
+                        </a>
 
+                    </div>
+                    <div class="site-header__search">
+                        <button type="button" class="search-trigger"><i class="icon anm anm-search-l"></i></button>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="site-header__search">
-        <button type="button" class="search-trigger"><i class="icon anm anm-search-l"></i></button>
-        </div>
-        </div>
-        </div>
-        </div>
-        </div>
-        <!--End Header-->
+    </div>
+    <!--End Header-->
     <!--Body Content-->
     <div id="page-content">
         <!--Page Title-->
@@ -159,24 +162,34 @@
                         <div class="table-responsive-sm order-table">
                             <table class="table table-borderless text-center">
 
+                                <%
+                                    Statement stt = con.createStatement();
+                                    ResultSet r = stt.executeQuery("SELECT \"CWORKSTALLNAME\" FROM public.cafeworker \"c\", public.cart \"m\" WHERE \"c\".\"CWORKID\" = \"m\".\"CWORKID\" AND \"m\".\"STUDENTID\" ='" + session.getAttribute("STUDENTID")+"'");
+                                    r.next();
+                                %>
                                 <tr>
                                     <td class="text-left">
                                         <h3 class="font-15 xs-font-13">Sold to:</h3>
-                                        <p class="no-margin font-15">Maria binti Ahmad</p>
+                                        <p class="no-margin font-15"><%= session.getAttribute("STUDENTNAME")%></p>
                                     </td>
                                     <td class="text-left">
                                         <h3 class="font-15 xs-font-13">Order:</h3>
                                         <p class="no-margin font-15">
                                             <b>Order number: </b>#450104<br>
-                                            <b>Order date: </b>23-Sept-2021<br>
-                                            <b>Order time: </b>14:27:18
+                                            <%
+                                                Date dNow = new Date( );
+                                                SimpleDateFormat ft = new SimpleDateFormat ("dd-MMM-yyyy");
+                                                SimpleDateFormat ft2 = new SimpleDateFormat("HH:mm:ss");
+                                                out.println(" <b>Order date: </b>"+ft.format(dNow)+"<br>");
+                                                out.println(" <b>Order time: </b>"+ft2.format(dNow)+"<br>");
+                                            %>
                                         </p>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td class="text-left">
                                         <h3 class="font-15 xs-font-13">Shop:</h3>
-                                        <p class="no-margin font-15">Gerai C (UiTM KJM)</p>
+                                        <p class="no-margin font-15"><%=r.getString("CWORKSTALLNAME")%></p>
                                     </td>
                                 </tr>
                             </table>
@@ -193,39 +206,52 @@
                                     <th>Subtotal</th>
                                 </tr>
                                 </thead>
+
                                 <tbody>
+                                <%
+
+                                    Statement st1 = con.createStatement();
+                                    ResultSet rs1;
+                                    rs1 = st1.executeQuery("SELECT * FROM public.cart \"c\", public.menu \"m\" WHERE \"c\".\"MENUID\" = \"m\".\"MENUID\" AND \"c\".\"STUDENTID\" ='" + session.getAttribute("STUDENTID")+"'");
+                                    while (rs1.next())
+                                    {
+                                %>
+
                                 <tr>
-                                    <td class="text-left">Burger Daging Supreme</td>
-                                    <td>RM 12.00</td>
-                                    <td>1</td>
-                                    <td>RM 12.00</td>
+                                    <td class="text-left"><%=rs1.getString("MENUNAME")%></td>
+                                    <td>RM <%=rs1.getString("CARTPRICE")%></td>
+                                    <td><%=rs1.getString("CARTQUANTITY")%></td>
+                                    <td>RM <%=rs1.getString("CARTTOTALPRICE")%></td>
+                                    <input type="hidden" name="menuname" value="<%=rs1.getString("MENUNAME")%>">
                                 </tr>
-                                <tr>
-                                    <td class="text-left">Oren Jus</td>
-                                    <td>RM 6.00</td>
-                                    <td>1</td>
-                                    <td>RM 6.00</td>
-                                </tr>
-                                <tr>
-                                    <td class="text-left">Chicken Cheeza</td>
-                                    <td>RM 6.00</td>
-                                    <td>1</td>
-                                    <td>RM 6.00</td>
-                                </tr>
+                                <%
+                                    }
+                                %>
+
                                 </tbody>
+
                                 <tfoot class="font-weight-600">
+                                <%
+                                    double subtotal = 00.00;
+                                    Statement st3 = con.createStatement();
+                                    ResultSet rs3 = st3.executeQuery("SELECT sum(\"CARTTOTALPRICE\") FROM public.cart WHERE \"STUDENTID\"='" + session.getAttribute("STUDENTID")+"'");
+                                    if (rs3.next()) {
+                                        subtotal = rs3.getDouble(1);
+                                    }
+                                %>
                                 <tr>
                                     <td colspan="3" class="text-right">Tax </td>
-                                    <td>RM 0.36</td>
-                                </tr>
-                                <tr>
-                                    <td colspan="3" class="text-right">Shipping </td>
                                     <td>RM 0.00</td>
                                 </tr>
                                 <tr>
-                                    <td colspan="3" class="text-right">Total</td>
-                                    <td>RM 24.36</td>
+                                    <td colspan="3" class="text-right">Shipping </td>
+                                    <td>FREE SHIPPING</td>
                                 </tr>
+                                <tr>
+                                    <td colspan="3" class="text-right">Total</td>
+                                    <td>RM <%=subtotal%></td>
+                                </tr>
+
                                 </tfoot>
                             </table>
                         </div>
@@ -235,17 +261,21 @@
 
                 <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
                     <div class="your-order-payment">
+                        <%
+                            Statement st4 = con.createStatement();
+                            ResultSet r1 = st4.executeQuery("SELECT \"CWORKACCNUM\",\"CWORKACCNAME\",\"CWORKBANKNAME\" FROM public.cafeworker \"c\", public.cart \"m\" WHERE \"c\".\"CWORKID\" = \"m\".\"CWORKID\" AND \"m\".\"STUDENTID\" ='" + session.getAttribute("STUDENTID")+"'");
+                            r1.next();
+                        %>
                         <div class="your-order">
                             <h2 class="login-title mb-3">Bank Account Information</h2>
                             <h3 class="font-15 xs-font-13">Account Number</h3>
-                            <p class="no-margin font-15">8704345678</p>
+                            <p class="no-margin font-15"><%=r1.getString("CWORKACCNUM")%></p>
 
                             <h3 class="font-15 xs-font-13">Account Name</h3>
-                            <p class="no-margin font-15">Ibrahim bin Salamon</p>
+                            <p class="no-margin font-15"><%=r1.getString("CWORKACCNAME")%></p>
 
                             <h3 class="font-15 xs-font-13">Account Bank</h3>
-                            <p class="no-margin font-15">CIMB Bank Berhad</p>
-
+                            <p class="no-margin font-15"><%=r1.getString("CWORKBANKNAME")%></p>
                         </div>
 
                         <hr />
@@ -277,12 +307,13 @@
                                     </div>
                                 </div>
 
+                                <form method="post" action="${pageContext.request.contextPath}/orderServlet">
+
                                 <div>
-                                    <a href="orderconfirmation.html">
-                                        <input type="submit" name="checkout" id="cartCheckout" class="btn btn--small-wide checkout" value="Place Order">
-                                    </a>
+                                        <input type="submit"  id="cartCheckout" class="btn btn--small-wide checkout" name="Action" value="Place Order">
 
                                 </div>
+                                </form>
 
 
                             </div>

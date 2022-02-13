@@ -42,9 +42,64 @@
         <%
         String STUDENTNAME = (String) session.getAttribute("STUDENTNAME");
         if (STUDENTNAME== null)
-        {
-            response.sendRedirect("studentLogin.jsp");
-        %>
+        { %>
+    <!--Top Header-->
+    <div class="top-header">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-10 col-sm-8 col-md-5 col-lg-4">
+                    <p class="phone-no"><i class="anm anm-phone-s"></i> (+606) 264 5000</p>
+                </div>
+                <div class="col-sm-4 col-md-4 col-lg-4 d-none d-lg-none d-md-block d-lg-block">
+                </div>
+                <div class="col-2 col-sm-4 col-md-3 col-lg-4 text-right">
+                    <span class="user-menu d-block d-lg-none"><i class="anm anm-user-al" aria-hidden="true"></i></span>
+                    <ul class="customer-links list-inline">
+                        <li><a href="studentLogin.jsp">Student Login</a></li>
+                        <li><a href="cafeworkerLogin.jsp">Cafeworker Login</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--End Top Header-->
+    <!--Header-->
+    <div class="header-wrap animated d-flex border-bottom">
+        <div class="container-fluid">
+            <div class="row align-items-center">
+                <!--Desktop Logo-->
+                <div class="logo col-md-2 col-lg-2 d-none d-lg-block">
+                    <a href="index.jsp">
+                        <img src="assets/images/e-Medan.svg" alt="e-Medan Food Ordering Website" title="e-Medan Food Ordering Website" />
+                    </a>
+                </div>
+                <!--End Desktop Logo-->
+                <div class="col-2 col-sm-3 col-md-3 col-lg-8">
+                    <div class="d-block d-lg-none">
+                        <button type="button" class="btn--link site-header__menu js-mobile-nav-toggle mobile-nav--open">
+                            <i class="icon anm anm-times-l"></i>
+                            <i class="anm anm-bars-r"></i>
+                        </button>
+                    </div>
+                    <!--Desktop Menu-->
+                    <nav class="grid__item" id="AccessibleNav"><!-- for mobile -->
+                        <ul id="siteNav" class="site-nav medium center hidearrow">
+                            <li class="lvl1 parent megamenu"><a href="index.jsp">Home <i class="anm anm-angle-down-l"></i></a></li>
+                            <li class="lvl1 parent megamenu"><a href="aboutus.jsp">About Us <i class="anm anm-angle-down-l"></i></a></li>
+                            <li class="lvl1 parent dropdown"><a href="#">Gerai <i class="anm anm-angle-down-l"></i></a>
+                                <ul class="dropdown">
+                                    <li><a href="GeraiAMenuList.jsp" class="site-nav">Gerai A</a></li>
+                                    <li><a href="GeraiBMenuList.jsp" class="site-nav">Gerai B</a></li>
+                                    <li><a href="GeraiCMenuList.jsp" class="site-nav">Gerai C</a></li>
+                                    <li><a href="GeraiDMenuList.jsp" class="site-nav">Gerai D</a></li>
+                                </ul>
+                            </li>
+                            </li>
+                        </ul>
+                    </nav>
+                    <!--End Desktop Menu-->
+                </div>
+
                 <% } else{
                 %>
 
@@ -90,10 +145,12 @@
                                     <ul id="siteNav" class="site-nav medium center hidearrow">
                                         <li class="lvl1 parent megamenu"><a href="index.jsp">Home <i class="anm anm-angle-down-l"></i></a></li>
                                         <li class="lvl1 parent megamenu"><a href="aboutus.jsp">About Us <i class="anm anm-angle-down-l"></i></a></li>
-                                        <li class="lvl1 parent dropdown"><a href="studentMenuList.jsp">Menu <i class="anm anm-angle-down-l"></i></a>
+                                        <li class="lvl1 parent dropdown"><a href="#">Gerai <i class="anm anm-angle-down-l"></i></a>
                                             <ul class="dropdown">
-                                                <li><a href="studentFoodMenuList.jsp" class="site-nav">Food</a></li>
-                                                <li><a href="studentDrinkMenuList.jsp" class="site-nav">Drink</a></li>
+                                                <li><a href="GeraiAMenuList.jsp" class="site-nav">Gerai A</a></li>
+                                                <li><a href="GeraiBMenuList.jsp" class="site-nav">Gerai B</a></li>
+                                                <li><a href="GeraiCMenuList.jsp" class="site-nav">Gerai C</a></li>
+                                                <li><a href="GeraiDMenuList.jsp" class="site-nav">Gerai D</a></li>
                                             </ul>
                                         </li>
                                         <li class="lvl1 parent megamenu"><a href="studentProfile.jsp">Account <i class="anm anm-angle-down-l"></i></a></li>
@@ -101,13 +158,15 @@
                                 </nav>
                                 <!--End Desktop Menu-->
                             </div>
-
+                            <% }%>
                             <div class="col-4 col-sm-3 col-md-3 col-lg-2">
                                 <div class="site-cart">
                                     <a href="studentCart.jsp" class="site-header__cart" title="Cart">
                                         <i class="icon anm anm-bag-l"></i>
                                         <%
                                             Connection con = emfos.DBConnect.DBConnection.getConn();
+
+                                            int index=0;
 
                                             Statement st=con.createStatement();
                                             ResultSet rs = st.executeQuery("SELECT COUNT (*) FROM public.cart WHERE \"STUDENTID\" ='" + session.getAttribute("STUDENTID")+"'");
@@ -142,7 +201,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-12 col-sm-12 col-md-8 col-lg-8 main-col">
-                    <form action="#" method="post" class="cart style2">
+                    <form class="cart style2">
                         <table>
                             <thead class="cart__row cart__header">
                             <tr>
@@ -158,6 +217,7 @@
                                 Statement st2 = con.createStatement();
                                 ResultSet rs2 = st2.executeQuery("SELECT * FROM public.cart \"c\", public.menu \"m\" WHERE \"c\".\"MENUID\" = \"m\".\"MENUID\" AND \"c\".\"STUDENTID\" ='" + session.getAttribute("STUDENTID")+"'");
                                 while (rs2.next()){
+                                    index++;
                             %>
                             <tr class="cart__row border-bottom line1 cart-flex border-top">
                                 <td class="cart__image-wrapper cart-flex-item">
@@ -202,13 +262,17 @@
                                 }
                             %>
                             </tbody>
-                            <tfoot>
-                            <tr>
-                                <td colspan="3" class="text-left"><a href="http://annimexweb.com/" class="btn--link cart-continue"><i class="icon icon-arrow-circle-left"></i> Continue shopping</a></td>
-                                <td colspan="3" class="text-right"><button type="submit" name="update" class="btn--link cart-update"><i class="fa fa-refresh"></i> Update</button></td>
-                            </tr>
-                            </tfoot>
+
                         </table>
+                        <%
+                            if (index == 0) {
+                        %>
+                        <center>
+                            <strong>There is no item(s) in your cart.</strong>
+                        </center>
+                        <%
+                            }
+                        %>
                     </form>
                 </div>
 
@@ -229,16 +293,16 @@
                         </div>
 
                         <div class="row border-bottom pb-2 pt-2">
-                            <span class="col-12 col-sm-6 cart__subtotal-title">Shipping</span>
-                            <span class="col-12 col-sm-6 text-right">Free shipping</span>
+                            <span class="col-12 col-sm-6 cart__subtotal-title">Delivery Method</span>
+                            <span class="col-12 col-sm-6 text-right">Cash on Pickup</span>
                         </div>
                         <div class="row border-bottom pb-2 pt-2">
                             <span class="col-12 col-sm-6 cart__subtotal-title"><strong>Grand Total</strong></span>
                             <span class="col-12 col-sm-6 cart__subtotal-title cart__subtotal text-right">RM <%=subtotal%></span></span>
                         </div>
-                        <a href="studentCheckout.jsp">
-                            <input type="button" name="checkout" id="cartCheckout" class="btn btn--small-wide checkout" value="Proceed to Checkout">
-                        </a>
+                        <form method="post" action="${pageContext.request.contextPath}/orderServlet">
+                            <input type="submit" name="Action" id="cartCheckout" class="btn btn--small-wide checkout" value="Place Order">
+                        </form>
                     </div>
 
                 </div>
@@ -246,6 +310,8 @@
         </div>
 
     </div>
+
+
 
     <!-- Delete Pop up -->
     <div class="modal fade" id="removeFromCart" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel2" aria-hidden="true">
@@ -328,7 +394,7 @@
     <script src="assets/js/main.js"></script>
 </div>
 </body>
-<% }%>
+
 
 <!-- belle/cart.html   11 Nov 2019 12:47:01 GMT -->
 </html>

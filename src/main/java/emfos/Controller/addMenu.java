@@ -60,19 +60,6 @@ public class addMenu extends HttpServlet {
                     out.println("</script>");
                 }
 
-//                if (result != null){
-//                    PrintWriter out = response.getWriter();
-//                    out.println("<script type=\"text/javascript\">");
-//                    out.println("alert('Menu successfully added!');");
-//                    out.println("location='cafeworkerMenuList.jsp';");
-//                    out.println("</script>");
-//                }else{
-//                    PrintWriter out = response.getWriter();
-//                    out.println("<script type=\"text/javascript\">");
-//                    out.println("alert('Data not inserted. Please try again.');");
-//                    out.println("location='cafeworkerAddMenu.jsp';");
-//                    out.println("</script>");
-//                }
             }
         }catch (Exception e) {
             e.printStackTrace();

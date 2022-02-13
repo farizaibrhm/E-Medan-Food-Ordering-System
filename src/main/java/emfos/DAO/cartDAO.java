@@ -138,6 +138,25 @@ public class cartDAO {
         }
     }
 
+    public boolean deleteCartOnceOrderHasBeenPlaced(String STUDENTID) {
+        Connection con = DBConnection.getConn();
 
+        String sql = "DELETE FROM public.cart WHERE \"STUDENTID\"=?;";
 
+        int i = 0;
+
+        try {
+            PreparedStatement ps = con.prepareStatement(sql);
+            ps.setString(1, STUDENTID);
+
+            i = ps.executeUpdate();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        if (i == 0) {
+            return false;
+        } else {
+            return true;
+        }
+    }
 }

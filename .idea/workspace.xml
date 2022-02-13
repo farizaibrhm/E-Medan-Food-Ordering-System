@@ -9,16 +9,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ee72d468-6c94-46a4-8c84-170d520e2088" name="Changes" comment="a lil update here and there">
+    <list default="true" id="ee72d468-6c94-46a4-8c84-170d520e2088" name="Changes" comment="#2 a lil update here and there">
+      <change afterPath="$PROJECT_DIR$/src/main/java/emfos/Controller/orderServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/emfos/DAO/orderDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/emfos/Model/order.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/webContexts.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/webContexts.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/GeraiAMenuList.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/GeraiAMenuList.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/GeraiBMenuList.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/GeraiBMenuList.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/GeraiCMenuList.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/GeraiCMenuList.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/GeraiDMenuList.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/GeraiDMenuList.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/aboutus.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/aboutus.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/studentProfile.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/studentProfile.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/emfos/Controller/addMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/emfos/Controller/addMenu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/emfos/DAO/cartDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/emfos/DAO/cartDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/cafeworkerMenuList.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/cafeworkerMenuList.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/studentCart.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/studentCart.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/studentCheckout.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/studentCheckout.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,8 +29,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Jsp File" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -227,7 +228,14 @@
       <workItem from="1644094510930" duration="723000" />
       <workItem from="1644137792244" duration="268000" />
       <workItem from="1644218778564" duration="36204000" />
-      <workItem from="1644300276427" duration="7617000" />
+      <workItem from="1644300276427" duration="7811000" />
+      <workItem from="1644415155715" duration="210000" />
+      <workItem from="1644427691812" duration="480000" />
+      <workItem from="1644429241704" duration="937000" />
+      <workItem from="1644563779573" duration="5457000" />
+      <workItem from="1644671418363" duration="2588000" />
+      <workItem from="1644677518628" duration="415000" />
+      <workItem from="1644768349500" duration="21920000" />
     </task>
     <task id="LOCAL-00001" summary="Merge remote-tracking branch 'origin/dev' into dev">
       <created>1642837016272</created>
@@ -285,7 +293,14 @@
       <option name="project" value="LOCAL" />
       <updated>1644309340321</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="#2 a lil update here and there">
+      <created>1644310311186</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1644310311186</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -313,6 +328,7 @@
     <MESSAGE value="update quantity item in cart" />
     <MESSAGE value="update here and there" />
     <MESSAGE value="a lil update here and there" />
-    <option name="LAST_COMMIT_MESSAGE" value="a lil update here and there" />
+    <MESSAGE value="#2 a lil update here and there" />
+    <option name="LAST_COMMIT_MESSAGE" value="#2 a lil update here and there" />
   </component>
 </project>

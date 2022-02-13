@@ -1,10 +1,6 @@
-<%@ page import="emfos.cafeworker" %>
-<%@ page import="emfos.cafeworkerDAO" %>
-<%@ page import="java.sql.DriverManager" %>
 <%@ page import="java.sql.ResultSet" %>
 <%@ page import="java.sql.Statement" %>
 <%@ page import="java.sql.Connection" %>
-<%@ page import="emfos.cafeworker" %>
 <%@page import="emfos.DBConnect.DBConnection"%>
 <%--
   Created by IntelliJ IDEA.
@@ -235,24 +231,24 @@
     </div>
 
 <center>
+    <%
 
+        Connection con = DBConnection.getConn();
+        Statement st = con.createStatement();
+        ResultSet rs = st.executeQuery("SELECT \"CWORKID\", \"CWORKSTALLNAME\", \"CWORKPHONENO\", \"CWORKEMAIL\", \"CWORKPASSWORD\", \"CWORKACCNUM\",\"CWORKACCNAME\" ,\"CWORKBANKNAME\"  FROM public.cafeworker WHERE \"CWORKID\" ='" + session.getAttribute("CWORKID")+ "'");
+        int i=1;
+        while (rs.next()){
+
+    %>
                 <div class="col-xl-5 col-lg-5 col-md-14 col-sm-14 col-14">
                     <div class="card h-100">
                         <div class="card-body">
                             <div class="account-settings">
                                 <div class="user-profile">
                                     <div class="user-avatar">
-                                        <img src="assets/images/stallicon.png" alt="Maxwell Admin">
+                                        <img src="assets/images/stallicon.png" alt="Maxwell Admin" size="4%">
                                     </div>
-                                    <%
 
-                                            Connection con = DBConnection.getConn();
-                                            Statement st = con.createStatement();
-                                            ResultSet rs = st.executeQuery("SELECT \"CWORKID\", \"CWORKSTALLNAME\", \"CWORKPHONENO\", \"CWORKEMAIL\", \"CWORKPASSWORD\", \"CWORKACCNUM\",\"CWORKACCNAME\" ,\"CWORKBANKNAME\"  FROM public.cafeworker WHERE \"CWORKID\" ='" + session.getAttribute("CWORKID")+ "'");
-                                            int i=1;
-                                            while (rs.next()){
-
-                                    %>
                                     <h5 class="user-name"><%=rs.getString("CWORKSTALLNAME")%></h5><br>
                                     <hr>
                                     <h4 class="user-name"><%=rs.getString("CWORKPHONENO")%></h4>
@@ -261,11 +257,7 @@
                                     <h4 class="user-name"><%=rs.getString("CWORKACCNAME")%></h4>
                                     <h4 class="user-name"><%=rs.getString("CWORKBANKNAME")%></h4>
                                     <hr>
-                                    <%
 
-                                            i++;
-                                            }
-                                    %>
                                     <a href="cafeworkerEditProfile.jsp" ><button type="submit" class="btn btn-primary">Edit Profile</button></a><br><br>
 
                                     <button onclick="document.getElementById('id01').style.display='block'">DELETE ACCOUNT</button>
@@ -279,12 +271,16 @@
 
                                                 <div class="clearfix">
                                                     <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
-                                                    <button id="<%session.getAttribute("CWORKID");%>" onclick="document.getElementById('id')" > Delete</button>
+                                                    <button id="<%rs.getString("CWORKID");%>" > Delete </button>
                                                 </div>
                                             </div>
                                         </form>
                                     </div>
+                                    <%
 
+                                            i++;
+                                        }
+                                    %>
                                     <script>
                                         // Get the modal
                                         var modal = document.getElementById('id01');

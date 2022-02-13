@@ -165,87 +165,31 @@
     </div>
     <!--End Header-->
 
-
+<center>
     <!--Body Content-->
-    <div class="col-2 col-sm-3 col-md-3 col-lg-8">
 
-    </div>
-    <form method="POST" action="studentUpdateProfileServlet">
-    <div class="container">
-        <div class="row gutters">
-            <div class="col-xl-3 col-lg-3 col-md-12 col-sm-12 col-12">
-                <div class="card h-100">
-                    <div class="card-body">
-                        <div class="account-settings">
-                            <!-- Start display about read from database after student register account -->
-                            <div class="user-profile">
-                                <div class="user-avatar">
-                                    <img src="assets/images/female-student.jpg" alt="Maxwell Admin">
-                                </div>
-                                <h5 class="user-name"><%=session.getAttribute("STUDENTNAME")%></h5>
-                                <h6 class="user-id"><%=session.getAttribute("STUDENTID")%></h6>
+        <div class="col-xl-3 col-lg-3 col-md-12 col-sm-12 col-12">
+            <div class="card h-100">
+                <div class="card-body">
+                    <div class="account-settings">
+                        <div class="user-profile">
+                            <div class="user-avatar">
+                                <img src="assets/images/female-student.jpg" alt="Maxwell Admin">
                             </div>
-
-                            <!-- End display about read from database after student register account -->
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xl-9 col-lg-9 col-md-12 col-sm-12 col-12">
-                <div class="card h-100">
-                    <div class="card-body">
-                        <div class="row gutters">
-                            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-                                <h6 class="mb-2 text-primary">Personal Details</h6>
-                            </div>
-                            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
-                                <div class="form-group">
-                                    <label >Student ID</label>
-                                    <input type="text" class="form-control" name="STUDENTID" placeholder="<%=session.getAttribute("STUDENTID")%>">
-                                </div>
-                            </div>
-                            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
-                                <div class="form-group">
-                                    <label>Name</label>
-                                    <input type="text" class="form-control"  name="STUDENTNAME" placeholder="<%=session.getAttribute("STUDENTNAME")%>" >
-                                </div>
-                            </div>
-                            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
-                                <div class="form-group">
-                                    <label>Phone Number</label>
-                                    <input type="text" class="form-control" name="STUDENTPHONENO" placeholder="<%=session.getAttribute("STUDENTPHONENO")%>" >
-                                </div>
-                            </div>
-                            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
-                                <div class="form-group">
-                                    <label>Email</label>
-                                    <input type="email" class="form-control"  name="STUDENTEMAIL" placeholder="<%=session.getAttribute("STUDENTEMAIL")%>">
-                                </div>
-                            </div>
-                            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
-                                <div class="form-group">
-                                    <label >Password</label>
-                                    <input type="password" class="form-control"  name="STUDENTPASSWORD" placeholder="<%=session.getAttribute("STUDENTPASSWORD")%>">
-                                </div>
-                            </div>
-
-                        </div>
-
-                        <div class="row gutters">
-                            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-                                <div class="text-right">
-                                    <button type="submit" name="submit" class="btn btn-primary">Update</button>
-<%--                                    <a href="#"  id="submit" name="submit" class="btn btn-primary">Delete Account</button></a>--%>
-                                </div>
-                            </div>
+                            <h5 class="user-name"><%=session.getAttribute("STUDENTID")%></h5><br>
+                            <hr>
+                            <h4 class="user-name"><%=session.getAttribute("STUDENTNAME")%></h4>
+                            <h4 class="user-name"><%=session.getAttribute("STUDENTPHONENO")%></h4>
+                            <h4 class="user-name"><%=session.getAttribute("STUDENTEMAIL")%></h4>
+                            <hr>
+                            <a href="studentEditProfile.jsp" ><button class="btn btn-primary">Edit Profile</button></a><br><br>
+                            <a href="" ><button type="submit" name="submit" class="btn btn-primary" style="background-color: red">Delete Account</button></a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-    </form>
-
+</center>
     <style type="text/css">
         body {
             margin: 0;

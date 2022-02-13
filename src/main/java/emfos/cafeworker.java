@@ -2,15 +2,15 @@ package emfos;
 
 public class cafeworker {
 
-    private String CWORKID;
-    private String CWORKSTALLNAME;
-    private String CWORKPHONENO;
-    private String CWORKEMAIL;
-    private String CWORKPASSWORD;
-    private String CWORKACCNUM;
-    private String CWORKACCNAME;
-    private String CWORKBANKNAME;
-//    public boolean valid;
+    private  String CWORKID;
+    private  String CWORKSTALLNAME;
+    private  String CWORKPHONENO;
+    private  String CWORKEMAIL;
+    private  String CWORKPASSWORD;
+    private  String CWORKACCNUM;
+    private  String CWORKACCNAME;
+    private  String CWORKBANKNAME;
+    private boolean valid;
 
     public cafeworker(){
         super();
@@ -44,7 +44,7 @@ public class cafeworker {
         this.CWORKSTALLNAME = CWORKSTALLNAME;
     }
 
-    public String getCWORKPHONENO() {
+    public  String getCWORKPHONENO() {
         return CWORKPHONENO;
     }
 
@@ -60,7 +60,7 @@ public class cafeworker {
         this.CWORKEMAIL = CWORKEMAIL;
     }
 
-    public String getCWORKPASSWORD() {
+    public  String getCWORKPASSWORD() {
         return CWORKPASSWORD;
     }
 
@@ -68,7 +68,7 @@ public class cafeworker {
         this.CWORKPASSWORD = CWORKPASSWORD;
     }
 
-    public String getCWORKACCNUM() {
+    public  String getCWORKACCNUM() {
         return CWORKACCNUM;
     }
 
@@ -76,7 +76,7 @@ public class cafeworker {
         this.CWORKACCNUM = CWORKACCNUM;
     }
 
-    public String getCWORKACCNAME() {
+    public  String getCWORKACCNAME() {
         return CWORKACCNAME;
     }
 
@@ -84,7 +84,7 @@ public class cafeworker {
         this.CWORKACCNAME = CWORKACCNAME;
     }
 
-    public String getCWORKBANKNAME() {
+    public  String getCWORKBANKNAME() {
         return CWORKBANKNAME;
     }
 
@@ -92,11 +92,11 @@ public class cafeworker {
         this.CWORKBANKNAME = CWORKBANKNAME;
     }
 
-//    public boolean isValid(){
-//        return valid;
-//    }
-//
-//    public void setValid(boolean newValid){
-//        valid = newValid;
-//    }
+    public boolean isValid(){
+        return valid;
+    }
+
+    public void setValid(boolean newValid){
+        valid = newValid;
+    }
 }

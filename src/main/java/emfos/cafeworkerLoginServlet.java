@@ -17,34 +17,6 @@ public class cafeworkerLoginServlet extends HttpServlet {
         super();
     }
 
-//    @Override
-//    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-////        try{
-////            cafeworker cw = new cafeworker();
-////
-////            cw.setCWORKID(request.getParameter("CWORKID"));
-////            cw.setCWORKPASSWORD(request.getParameter("CWORKPASSWORD"));
-////
-////            cw = cafeworkerDAO.login(cw);
-////
-////            if (cw.isValid()){
-////                HttpSession session = request.getSession(true);
-////                session.setAttribute("currentCafeworker",cw);
-////                response.sendRedirect("cafeworkerMenuList.jsp"); //logged-in page
-////            } else {
-////                PrintWriter out = response.getWriter();
-////                out.println("<script type=\"text/javascript\">");
-////                out.println("alert('You have entered wrong credential. Please try again.');");
-////                out.println("location='cafeworkerLogin.jsp';");
-////                out.println("</script>");
-////            }
-////
-////
-////        }catch (Throwable theException){
-////            System.out.println(theException);
-////        }
-//    }
-
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         cafeworkerDAO cwdao = new cafeworkerDAO();

@@ -38,60 +38,7 @@ public class cafeworkerDAO {
             result = "User not registered!";
         }
         return result;
-        }
-
-        //login
-//    public static cafeworker login(cafeworker cw){
-//        Statement st = null;
-//
-//        Connection con = DBConnection.getConn();
-//
-//        String CWORKID = cw.getCWORKID();
-//        String CWORKPASSWORD = cw.getCWORKPASSWORD();
-//
-//        String sql = "SELECT * FROM public.cafeworker WHERE \"CWORKID\"='" + CWORKID + "'AND \"CWORKPASSWORD\"='" + CWORKPASSWORD + "'";
-//
-//        System.out.println("Cafeworker ID is " + CWORKID);
-//        System.out.println("Password is " + CWORKPASSWORD);
-//        System.out.println("Query: "+sql);
-//
-//        try {
-//            st = con.createStatement();
-//            ResultSet rs = st.executeQuery(sql);
-//            boolean more = rs.next();
-//
-//            //if cafeworker does not exist, set the isValid variable to false
-//
-//            if(!more){
-//                System.out.println("Not a registered cafeworker");
-//                cw.setValid(false);
-//            }
-//
-//            //if cafeworker exist set the isValid variable to true
-//            else if(more){
-//
-//                String CWORKSTALLNAME =rs.getString("CWORKSTALLNAME") ;
-//                String CWORKPHONENO = rs.getString("CWORKPHONENO");
-//                String CWORKEMAIL = rs.getString("CWORKEMAIL");
-//                String CWORKACCNUM = rs.getString("CWORKACCNUM");
-//                String CWORKACCNAME =rs.getString("CWORKACCNAME") ;
-//                String CWORKBANKNAME = rs.getString("CWORKBANKNAME");
-//
-//                System.out.println("Welcome "+ CWORKSTALLNAME);
-//
-//                cw.setCWORKSTALLNAME(CWORKSTALLNAME);
-//                cw.setCWORKPHONENO(CWORKPHONENO);
-//                cw.setCWORKEMAIL(CWORKEMAIL);
-//                cw.setCWORKACCNUM(CWORKACCNUM);
-//                cw.setCWORKACCNAME(CWORKACCNAME);
-//                cw.setCWORKBANKNAME(CWORKBANKNAME);
-//                cw.setValid(true);
-//            }
-//        } catch (Exception ex){
-//            System.out.println("Log In failed: An Exception has occurred! " + ex);
-//        }
-//        return cw;
-//    }
+    }
 
     public  boolean loginCafeworker(cafeworker cwlogin){
 
@@ -126,7 +73,7 @@ public class cafeworkerDAO {
         return status;
     }
 
-    public void updateCafeWorker(cafeworker bean)
+    public boolean updateCafeWorker(cafeworker bean)
     {
         String CWORKID = bean.getCWORKID();
         String CWORKSTALLNAME = bean.getCWORKSTALLNAME();
@@ -168,6 +115,7 @@ public class cafeworkerDAO {
             e.printStackTrace();
             //System.out.print(e);}
         }
+        return false;
     }
 
     public static List <cafeworker> getAllCafeWorkers()
@@ -242,5 +190,28 @@ public class cafeworkerDAO {
         return cw;
     }
 
+    public void deleteCafeWorkerAccount(String CWORKID) {
+        try {
+
+            //call getConnection() method
+            Connection con = DBConnection.getConn();
+
+            //create statement
+            ps = con.prepareStatement("DELETE FROM public.cafeworker WHERE \"CWORKID\"=?"); //? refer to id we pass
+            ps.setString(1, CWORKID);
+
+            //execute query
+            ps.executeUpdate();
+            System.out.println("Successfully deleted");
+
+
+            //close connection
+            con.close();
+
+            //will handle line by line from step 1 - 5 if there is error
+        }catch(Exception e) {
+            e.printStackTrace();
+        }
+    }
 
 }

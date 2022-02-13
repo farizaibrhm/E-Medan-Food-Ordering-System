@@ -1,40 +1,40 @@
 package emfos;
 
-import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.io.PrintWriter;
+
 @WebServlet("/cafeworkerUpdateProfileServlet")
 public class cafeworkerUpdateProfileServlet extends HttpServlet {
 
     private static final long serialVersionUID = 1L;
-    private final cafeworkerDAO cwdao;
 
     public cafeworkerUpdateProfileServlet() {
         super();
-        cwdao = new cafeworkerDAO();
     }
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         // TODO Auto-generated method stub //same like view
-        String CWORKID = request.getParameter("CWORKID");
-        request.setAttribute("cw", cafeworkerDAO.getCafeWorkersById(CWORKID));
-        RequestDispatcher view = request.getRequestDispatcher("cafeworkerProfile.jsp");
-        view.forward(request,  response);
+
     }
 
-    /**
-     * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
-     */
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         // TODO Auto-generated method stub // same like add
 
+        System.out.println("in");
+        PrintWriter out = response.getWriter();
+
         cafeworker cw = new cafeworker();
-        cw.setCWORKID(request.getParameter("CWORKID"));
+        cafeworkerDAO cwdao = new cafeworkerDAO();
+
+        String CWORKID = request.getParameter("CWORKID");
+
+        cw.setCWORKID(CWORKID);
         cw.setCWORKSTALLNAME(request.getParameter("CWORKSTALLNAME"));
         cw.setCWORKPHONENO(request.getParameter("CWORKPHONENO"));
         cw.setCWORKEMAIL(request.getParameter("CWORKEMAIL"));
@@ -43,11 +43,14 @@ public class cafeworkerUpdateProfileServlet extends HttpServlet {
         cw.setCWORKACCNAME(request.getParameter("CWORKACCNAME"));
         cw.setCWORKBANKNAME(request.getParameter("CWORKBANKNAME"));
 
+        request.setAttribute("cw", cw);
         cwdao.updateCafeWorker(cw);
 
-        request.setAttribute("cws", cafeworkerDAO.getAllCafeWorkers());
-        RequestDispatcher view = request.getRequestDispatcher("cafeworkerProfile.jsp");
-        view.forward(request,  response);
+            out.println("<script type=\"text/javascript\">");
+            out.println("alert('Data updated successfully!');");
+            out.println("location='cafeworkerProfile.jsp';");
+            out.println("</script>");
+
     }
 
 }

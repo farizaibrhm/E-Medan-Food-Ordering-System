@@ -191,6 +191,7 @@ public class cafeworkerDAO {
     }
 
     public void deleteCafeWorkerAccount(String CWORKID) {
+
         try {
 
             //call getConnection() method
@@ -212,6 +213,29 @@ public class cafeworkerDAO {
         }catch(Exception e) {
             e.printStackTrace();
         }
+
     }
+//
+//    public boolean deleteCafeWorkerAccount(int id){
+//        Connection con = DBConnection.getConn();
+//
+//        int i = 0;
+//
+//        try {
+//            ps = con.prepareStatement("DELETE FROM public.cafeworker WHERE \"CWORKID\"=?");
+//            ps.setInt(1, id);
+//
+//            i = ps.executeUpdate();
+//        } catch (SQLException e){
+//            e.printStackTrace();
+//        }
+//        if (i == 0){
+//            return false;
+//        } else {
+//            return true;
+//        }
+//    }
+
+
 
 }

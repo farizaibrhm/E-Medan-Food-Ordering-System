@@ -33,10 +33,109 @@
     <!-- Main Style CSS -->
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/responsive.css">
+
+    <style>
+        body {font-family: Arial, Helvetica, sans-serif;}
+        * {box-sizing: border-box;}
+
+        /* Set a style for all buttons */
+        button {
+            background-color: #ff3300;
+            color: white;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            cursor: pointer;
+            width: 40%;
+            opacity: 0.9;
+        }
+
+        button:hover {
+            opacity:1;
+        }
+
+        /* Float cancel and delete buttons and add an equal width */
+        .cancelbtn, .deletebtn {
+            float: left;
+            width: 50%;
+        }
+
+        /* Add a color to the cancel button */
+        .cancelbtn {
+            background-color: #ccc;
+            color: black;
+        }
+
+        /* Add a color to the delete button */
+        .deletebtn {
+            background-color: #f44336;
+        }
+
+        /* Add padding and center-align text to the container */
+        .container {
+            padding: 16px;
+            text-align: center;
+        }
+
+        /* The Modal (background) */
+        .modal {
+            display: none; /* Hidden by default */
+            position: fixed; /* Stay in place */
+            z-index: 1; /* Sit on top */
+            left: 0;
+            top: 0;
+            width: 100%; /* Full width */
+            height: 100%; /* Full height */
+            overflow: auto; /* Enable scroll if needed */
+            background-color: #474e5d;
+            padding-top: 50px;
+        }
+
+        /* Modal Content/Box */
+        .modal-content {
+            background-color: #fefefe;
+            margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+            border: 1px solid #888;
+            width: 80%; /* Could be more or less, depending on screen size */
+        }
+
+        /* Style the horizontal ruler */
+        hr {
+            border: 1px solid #f1f1f1;
+            margin-bottom: 25px;
+        }
+
+        /* The Modal Close Button (x) */
+        .close {
+            position: absolute;
+            right: 35px;
+            top: 15px;
+            font-size: 40px;
+            font-weight: bold;
+            color: #f1f1f1;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: #f44336;
+            cursor: pointer;
+        }
+
+        /* Clear floats */
+        .clearfix::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+
+        /* Change styles for cancel button and delete button on extra small screens */
+        @media screen and (max-width: 300px) {
+            .cancelbtn, .deletebtn {
+                width: 100%;
+            }
+        }
+    </style>
 </head>
-
-
-
 
 <%--<%--%>
 
@@ -53,6 +152,13 @@
 
 <%--<% cafeworker cw = new cafeworker(); %>--%>
 <%--<% cafeworkerDAO cwdao = new cafeworkerDAO();%>--%>
+
+<%
+    String CWORKID = (String) session.getAttribute("CWORKID");
+    if (CWORKID == null)
+    { response.sendRedirect("cafeworkerLogin.jsp")
+    ;}
+%>
 
 
 
@@ -130,7 +236,7 @@
 
 <center>
 
-                <div class="col-xl-3 col-lg-3 col-md-12 col-sm-12 col-12">
+                <div class="col-xl-5 col-lg-5 col-md-14 col-sm-14 col-14">
                     <div class="card h-100">
                         <div class="card-body">
                             <div class="account-settings">
@@ -139,147 +245,41 @@
                                         <img src="assets/images/stallicon.png" alt="Maxwell Admin">
                                     </div>
                                     <%
-                                        try
-                                        {
-                                            Connection con = emfos.DBConnect.DBConnection.getConn();
+
+                                            Connection con = DBConnection.getConn();
                                             Statement st = con.createStatement();
-                                            String sql = "SELECT \"CWORKID\", \"CWORKSTALLNAME\", \"CWORKPHONENO\", \"CWORKEMAIL\", \"CWORKPASSWORD\", \"CWORKACCNUM\",\"CWORKACCNAME\" ,\"CWORKBANKNAME\"  FROM public.cafeworker WHERE \"CWORKID\" ='" + session.getAttribute("CWORKID")+ "'";
-                                            ResultSet rs = st.executeQuery(sql);
+                                            ResultSet rs = st.executeQuery("SELECT \"CWORKID\", \"CWORKSTALLNAME\", \"CWORKPHONENO\", \"CWORKEMAIL\", \"CWORKPASSWORD\", \"CWORKACCNUM\",\"CWORKACCNAME\" ,\"CWORKBANKNAME\"  FROM public.cafeworker WHERE \"CWORKID\" ='" + session.getAttribute("CWORKID")+ "'");
                                             int i=1;
-                                            while (rs.next());
+                                            while (rs.next()){
 
                                     %>
-                                    <h5 class="user-name"><%=session.getAttribute("CWORKID")%></h5><br>
-                                  <hr>
+                                    <h5 class="user-name"><%=rs.getString("CWORKSTALLNAME")%></h5><br>
+                                    <hr>
                                     <h4 class="user-name"><%=rs.getString("CWORKPHONENO")%></h4>
-                                    <h4 class="user-name"><%=rs.getString("CWORKEMAIL")%></h4>
+                                    <h4 class="user-name"><%=rs.getString("CWORKEMAIL")%></h4><br>
                                     <h4 class="user-name"><%=rs.getString("CWORKACCNUM")%></h4>
                                     <h4 class="user-name"><%=rs.getString("CWORKACCNAME")%></h4>
-                                    <h4 class="user-name"><%=rs.getString("CWORKACCBANKNAME")%></h4>
+                                    <h4 class="user-name"><%=rs.getString("CWORKBANKNAME")%></h4>
                                     <hr>
                                     <%
-                                            {
-                                                i++;
+
+                                            i++;
                                             }
-                                        }catch (Exception e){
-                                            ;
-                                        }
                                     %>
                                     <a href="cafeworkerEditProfile.jsp" ><button type="submit" class="btn btn-primary">Edit Profile</button></a><br><br>
 
-                                    <style>
-                                        body {font-family: Arial, Helvetica, sans-serif;}
-                                        * {box-sizing: border-box;}
-
-                                        /* Set a style for all buttons */
-                                        button {
-                                            background-color: #ff3300;
-                                            color: white;
-                                            padding: 14px 20px;
-                                            margin: 8px 0;
-                                            border: none;
-                                            cursor: pointer;
-                                            width: 40%;
-                                            opacity: 0.9;
-                                        }
-
-                                        button:hover {
-                                            opacity:1;
-                                        }
-
-                                        /* Float cancel and delete buttons and add an equal width */
-                                        .cancelbtn, .deletebtn {
-                                            float: left;
-                                            width: 50%;
-                                        }
-
-                                        /* Add a color to the cancel button */
-                                        .cancelbtn {
-                                            background-color: #ccc;
-                                            color: black;
-                                        }
-
-                                        /* Add a color to the delete button */
-                                        .deletebtn {
-                                            background-color: #f44336;
-                                        }
-
-                                        /* Add padding and center-align text to the container */
-                                        .container {
-                                            padding: 16px;
-                                            text-align: center;
-                                        }
-
-                                        /* The Modal (background) */
-                                        .modal {
-                                            display: none; /* Hidden by default */
-                                            position: fixed; /* Stay in place */
-                                            z-index: 1; /* Sit on top */
-                                            left: 0;
-                                            top: 0;
-                                            width: 100%; /* Full width */
-                                            height: 100%; /* Full height */
-                                            overflow: auto; /* Enable scroll if needed */
-                                            background-color: #474e5d;
-                                            padding-top: 50px;
-                                        }
-
-                                        /* Modal Content/Box */
-                                        .modal-content {
-                                            background-color: #fefefe;
-                                            margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
-                                            border: 1px solid #888;
-                                            width: 80%; /* Could be more or less, depending on screen size */
-                                        }
-
-                                        /* Style the horizontal ruler */
-                                        hr {
-                                            border: 1px solid #f1f1f1;
-                                            margin-bottom: 25px;
-                                        }
-
-                                        /* The Modal Close Button (x) */
-                                        .close {
-                                            position: absolute;
-                                            right: 35px;
-                                            top: 15px;
-                                            font-size: 40px;
-                                            font-weight: bold;
-                                            color: #f1f1f1;
-                                        }
-
-                                        .close:hover,
-                                        .close:focus {
-                                            color: #f44336;
-                                            cursor: pointer;
-                                        }
-
-                                        /* Clear floats */
-                                        .clearfix::after {
-                                            content: "";
-                                            clear: both;
-                                            display: table;
-                                        }
-
-                                        /* Change styles for cancel button and delete button on extra small screens */
-                                        @media screen and (max-width: 300px) {
-                                            .cancelbtn, .deletebtn {
-                                                width: 100%;
-                                            }
-                                        }
-                                    </style>
                                     <button onclick="document.getElementById('id01').style.display='block'">DELETE ACCOUNT</button>
 
                                     <div id="id01" class="modal">
                                         <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">×</span>
-                                        <form class="modal-content">
+                                        <form class="modal-content" method="post" action="${pageContext.request.contextPath}/cafeworkerDeleteAccountServlet">
                                             <div class="container">
                                                 <h1>Delete Account</h1>
                                                 <p>Are you sure you want to delete your account?</p>
 
                                                 <div class="clearfix">
                                                     <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
-                                                    <a href="cafeworkerDeleteAccountServlet"> <button type="submit" onclick="document.getElementById('id01').style.display=''" class="deletebtn">Delete</button></a>
+                                                    <button id="<%session.getAttribute("CWORKID");%>" onclick="document.getElementById('id')" > Delete</button>
                                                 </div>
                                             </div>
                                         </form>
@@ -297,11 +297,13 @@
                                         }
                                     </script>
 
+
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
+
 </center>
 
 <%--    <!-- Delete Pop up -->--%>

@@ -6,6 +6,10 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page import="java.sql.ResultSet" %>
+<%@ page import="java.sql.Statement" %>
+<%@ page import="java.sql.Connection" %>
+<%@page import="emfos.DBConnect.DBConnection"%>
 <html class="no-js" lang="en">
 
 <!-- belle/home2-default.html   11 Nov 2019 12:22:28 GMT -->
@@ -170,7 +174,17 @@
     <div class="col-2 col-sm-3 col-md-3 col-lg-8">
 
     </div>
+
     <form method="POST" action="studentUpdateProfileServlet">
+        <%
+
+            Connection con = DBConnection.getConn();
+            Statement st = con.createStatement();
+            ResultSet rs = st.executeQuery("SELECT \"STUDENTID\", \"STUDENTNAME\", \"STUDENTPHONENO\", \"STUDENTEMAIL\", \"STUDENTPASSWORD\"  FROM public.student WHERE \"STUDENTID\" ='" + session.getAttribute("STUDENTID")+ "'");
+            int i=1;
+            while (rs.next()){
+
+        %>
         <div class="container">
             <div class="row gutters">
                 <div class="col-xl-3 col-lg-3 col-md-12 col-sm-12 col-12">
@@ -182,8 +196,8 @@
                                     <div class="user-avatar">
                                         <img src="assets/images/female-student.jpg" alt="Maxwell Admin">
                                     </div>
-                                    <h5 class="user-name"><%=session.getAttribute("STUDENTNAME")%></h5>
-                                    <h6 class="user-id"><%=session.getAttribute("STUDENTID")%></h6>
+                                    <h5 class="user-name"><%=rs.getString("STUDENTNAME")%></h5>
+                                    <h6 class="user-id"><%=rs.getString("STUDENTID")%></h6>
                                 </div>
 
                                 <!-- End display about read from database after student register account -->
@@ -191,6 +205,7 @@
                         </div>
                     </div>
                 </div>
+
                 <div class="col-xl-9 col-lg-9 col-md-12 col-sm-12 col-12">
                     <div class="card h-100">
                         <div class="card-body">
@@ -201,31 +216,31 @@
                                 <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
                                     <div class="form-group">
                                         <label >Student ID</label>
-                                        <input type="text" class="form-control" name="STUDENTID" value="<%=session.getAttribute("STUDENTID")%>">
+                                        <input type="text" class="form-control" name="STUDENTID" value="<%=rs.getString("STUDENTID")%>">
                                     </div>
                                 </div>
                                 <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
                                     <div class="form-group">
                                         <label>Name</label>
-                                        <input type="text" class="form-control"  name="STUDENTNAME" value="<%=session.getAttribute("STUDENTNAME")%>" >
+                                        <input type="text" class="form-control"  name="STUDENTNAME" value="<%=rs.getString("STUDENTNAME")%>" >
                                     </div>
                                 </div>
                                 <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
                                     <div class="form-group">
                                         <label>Phone Number</label>
-                                        <input type="text" class="form-control" name="STUDENTPHONENO" value="<%=session.getAttribute("STUDENTPHONENO")%>" >
+                                        <input type="text" class="form-control" name="STUDENTPHONENO" value="<%=rs.getString("STUDENTPHONENO")%>" >
                                     </div>
                                 </div>
                                 <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
                                     <div class="form-group">
                                         <label>Email</label>
-                                        <input type="email" class="form-control"  name="STUDENTEMAIL" value="<%=session.getAttribute("STUDENTEMAIL")%>">
+                                        <input type="email" class="form-control"  name="STUDENTEMAIL" value="<%=rs.getString("STUDENTEMAIL")%>">
                                     </div>
                                 </div>
                                 <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
                                     <div class="form-group">
                                         <label >Password</label>
-                                        <input type="password" class="form-control"  name="STUDENTPASSWORD" value="<%=session.getAttribute("STUDENTPASSWORD")%>">
+                                        <input type="password" class="form-control"  name="STUDENTPASSWORD" value="<%=rs.getString("STUDENTPASSWORD")%>">
                                     </div>
                                 </div>
 
@@ -240,6 +255,11 @@
                                 </div>
                             </div>
                         </div>
+                        <%
+
+                                i++;
+                            }
+                        %>
                     </div>
                 </div>
             </div>

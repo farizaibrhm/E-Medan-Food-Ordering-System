@@ -1,11 +1,18 @@
 <%@ page import="emfos.cafeworker" %>
-<%@ page import="emfos.cafeworkerDAO" %><%--
-  Created by IntelliJ IDEA.
-  User: Lenovo
-  Date: 29/1/2022
-  Time: 9:29 PM
-  To change this template use File | Settings | File Templates.
---%>
+<%@ page import="emfos.cafeworkerDAO" %>
+<%@ page import="java.sql.DriverManager" %>
+<%@ page import="java.sql.ResultSet" %>
+<%@ page import="java.sql.Statement" %>
+<%@ page import="java.sql.Connection" %>
+<%@ page import="emfos.cafeworker" %>
+<%@page import="emfos.DBConnect.DBConnection"%>
+<%----%>
+<%--  Created by IntelliJ IDEA.--%>
+<%--  User: Lenovo--%>
+<%--  Date: 29/1/2022--%>
+<%--  Time: 9:29 PM--%>
+<%--  To change this template use File | Settings | File Templates.--%>
+<%----%>
 <%@ page contentType="text/html;charset=UTF-8" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html>
@@ -36,24 +43,6 @@
     { response.sendRedirect("cafeworkerLogin.jsp")
     ;}
 %>
-
-<%--<%--%>
-
-<%--    String CWORKID= (String) session.getAttribute("CWORKID");--%>
-<%--    String CWORKSTALLNAME = (String) session.getAttribute("CWORKSTALLNAME");--%>
-<%--    String CWORKPHONENO = (String) session.getAttribute("CWORKPHONENO");--%>
-<%--    String CWORKEMAIL = (String) session.getAttribute("CWORKEMAIL");--%>
-<%--    String CWORKPASSWORD = (String) session.getAttribute("CWORKPASSWORD");--%>
-<%--    String CWORKACCNUM = (String) session.getAttribute("CWORKACCNUM");--%>
-<%--    String CWORKACCNAME = (String) session.getAttribute("CWORKACCNAME");--%>
-<%--    String CWORKBANKNAME = (String) session.getAttribute("CWORKBANKNAME");--%>
-
-<%--%>--%>
-
-<% cafeworker cw = new cafeworker(); %>
-<% cafeworkerDAO cwdao = new cafeworkerDAO();%>
-
-<%--<jsp:include page="cafeworkerLoginServlet"/>--%>
 
 <body class="template-index home2-default">
 <div class="pageWrapper">
@@ -126,6 +115,16 @@
 
     </div>
     <form method="POST" action="${pageContext.request.contextPath}/cafeworkerUpdateProfileServlet">
+        <%
+
+            Connection con = DBConnection.getConn();
+            Statement st = con.createStatement();
+            ResultSet rs = st.executeQuery("SELECT \"CWORKID\", \"CWORKSTALLNAME\", \"CWORKPHONENO\", \"CWORKEMAIL\", \"CWORKPASSWORD\", \"CWORKACCNUM\",\"CWORKACCNAME\" ,\"CWORKBANKNAME\"  FROM public.cafeworker WHERE \"CWORKID\" ='" + session.getAttribute("CWORKID")+ "'");
+            int i=1;
+            while (rs.next()){
+
+        %>
+
         <div class="container">
             <div class="row gutters">
                 <div class="col-xl-3 col-lg-3 col-md-12 col-sm-12 col-12">
@@ -136,7 +135,7 @@
                                     <div class="user-avatar">
                                         <img src="assets/images/stallicon.png" alt="Maxwell Admin">
                                     </div>
-                                    <h5 class="user-name"><%=session.getAttribute("CWORKSTALLNAME")%></h5>
+                                    <h5 class="user-name"><%=rs.getString("CWORKSTALLNAME")%></h5>
                                 </div>
                             </div>
                         </div>
@@ -156,7 +155,7 @@
                                     <div class="form-group">
                                         <label>IC Number</label>
                                         <label>
-                                            <input type="text" class="form-control" name="CWORKID"  value="<%=session.getAttribute("CWORKID")%>"/>
+                                            <input type="text" class="form-control" name="CWORKID"  value="<%=rs.getString("CWORKID")%>"/>
                                         </label>
                                     </div>
                                 </div>
@@ -165,7 +164,7 @@
                                     <div class="form-group">
                                         <label>Stall Name</label>
                                         <label>
-                                            <input type="text" class="form-control" name="CWORKSTALLNAME" value="<%=session.getAttribute("CWORKSTALLNAME")%>"/>
+                                            <input type="text" class="form-control" name="CWORKSTALLNAME" value="<%=rs.getString("CWORKSTALLNAME")%>"/>
                                         </label>
                                     </div>
                                 </div>
@@ -174,7 +173,7 @@
                                     <div class="form-group">
                                         <label>Email</label>
                                         <label>
-                                            <input type="email" class="form-control" name="CWORKEMAIL" value="<%=session.getAttribute("CWORKEMAIL")%>"   />
+                                            <input type="email" class="form-control" name="CWORKEMAIL" value="<%=rs.getString("CWORKEMAIL")%>"   />
                                         </label>
                                     </div>
                                 </div>
@@ -183,7 +182,7 @@
                                     <div class="form-group">
                                         <label>Password</label>
                                         <label>
-                                            <input type="password" class="form-control" name="CWORKPASSWORD" value="<%=session.getAttribute("CWORKPASSWORD")%>"  />
+                                            <input type="password" class="form-control" name="CWORKPASSWORD" value="<%=rs.getString("CWORKPASSWORD")%>"  />
                                         </label>
                                     </div>
                                 </div>
@@ -192,7 +191,7 @@
                                     <div class="form-group">
                                         <label>Phone Number</label>
                                         <label>
-                                            <input type="text" class="form-control" name="CWORKPHONENO" value="<%=session.getAttribute("CWORKPHONENO")%>" >
+                                            <input type="text" class="form-control" name="CWORKPHONENO" value="<%=rs.getString("CWORKPHONENO")%>" >
                                         </label>
                                     </div>
                                 </div>
@@ -201,7 +200,7 @@
                                     <div class="form-group">
                                         <label>Bank Account Number</label>
                                         <label>
-                                            <input type="text" class="form-control"  name="CWORKACCNUM" value="<%=session.getAttribute("CWORKACCNUM")%>" />
+                                            <input type="text" class="form-control"  name="CWORKACCNUM" value="<%=rs.getString("CWORKACCNUM")%>" />
                                         </label>
                                     </div>
                                 </div>
@@ -210,7 +209,7 @@
                                     <div class="form-group">
                                         <label>Bank Name</label>
                                         <label>
-                                            <input type="text" class="form-control"  name="CWORKACCNAME" value="<%=session.getAttribute("CWORKACCNAME")%>"/>
+                                            <input type="text" class="form-control"  name="CWORKACCNAME" value="<%=rs.getString("CWORKACCNAME")%>"/>
                                         </label>
                                     </div>
                                 </div>
@@ -218,7 +217,7 @@
                                     <div class="form-group">
                                         <label>Bank Account Name</label>
                                         <label>
-                                            <input type="text" class="form-control"  name="CWORKBANKNAME" value="<%=session.getAttribute("CWORKBANKNAME")%>">
+                                            <input type="text" class="form-control"  name="CWORKBANKNAME" value="<%=rs.getString("CWORKBANKNAME")%>">
                                         </label>
                                     </div>
                                 </div>
@@ -233,7 +232,11 @@
                                 </div>
                             </div>
                         </div>
+                        <%
 
+                                i++;
+                            }
+                        %>
                     </div>
                 </div>
             </div>

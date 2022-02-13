@@ -6,6 +6,10 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@page import="emfos.DBConnect.DBConnection"%>
+<%@ page import="java.sql.ResultSet" %>
+<%@ page import="java.sql.Statement" %>
+<%@ page import="java.sql.Connection" %>
 <html class="no-js" lang="en">
 
 <!-- belle/home2-default.html   11 Nov 2019 12:22:28 GMT -->
@@ -168,7 +172,16 @@
 <center>
     <!--Body Content-->
 
-        <div class="col-xl-3 col-lg-3 col-md-12 col-sm-12 col-12">
+    <%
+
+        Connection con = DBConnection.getConn();
+        Statement st = con.createStatement();
+        ResultSet rs = st.executeQuery("SELECT \"STUDENTID\", \"STUDENTNAME\", \"STUDENTPHONENO\", \"STUDENTEMAIL\", \"STUDENTPASSWORD\"  FROM public.student WHERE \"STUDENTID\" ='" + session.getAttribute("STUDENTID")+ "'");
+        int i=1;
+        while (rs.next()){
+
+    %>
+        <div class="col-xl-5 col-lg-5 col-md-14 col-sm-14 col-14">
             <div class="card h-100">
                 <div class="card-body">
                     <div class="account-settings">
@@ -176,11 +189,11 @@
                             <div class="user-avatar">
                                 <img src="assets/images/female-student.jpg" alt="Maxwell Admin">
                             </div>
-                            <h5 class="user-name"><%=session.getAttribute("STUDENTID")%></h5><br>
+                            <h5 class="user-name"><%=rs.getString("STUDENTID")%></h5><br>
                             <hr>
-                            <h4 class="user-name"><%=session.getAttribute("STUDENTNAME")%></h4>
-                            <h4 class="user-name"><%=session.getAttribute("STUDENTPHONENO")%></h4>
-                            <h4 class="user-name"><%=session.getAttribute("STUDENTEMAIL")%></h4>
+                            <h4 class="user-name"><%=rs.getString("STUDENTNAME")%></h4>
+                            <h4 class="user-name"><%=rs.getString("STUDENTPHONENO")%></h4>
+                            <h4 class="user-name"><%=rs.getString("STUDENTEMAIL")%></h4>
                             <hr>
                             <a href="studentEditProfile.jsp" ><button class="btn btn-primary">Edit Profile</button></a><br><br>
                             <a href="" ><button type="submit" name="submit" class="btn btn-primary" style="background-color: red">Delete Account</button></a>
@@ -189,7 +202,13 @@
                 </div>
             </div>
         </div>
+    <%
+
+            i++;
+        }
+    %>
 </center>
+
     <style type="text/css">
         body {
             margin: 0;

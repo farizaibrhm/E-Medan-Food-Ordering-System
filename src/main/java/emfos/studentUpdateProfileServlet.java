@@ -34,19 +34,6 @@ public class studentUpdateProfileServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         // TODO Auto-generated method stub // same like add
 
-//        student st = new student();
-//        st.setSTUDENTID(request.getParameter("STUDENTID"));
-//        st.setSTUDENTNAME(request.getParameter("STUDENTNAME"));
-//        st.setSTUDENTPHONENO(request.getParameter("STUDENTPHONENO"));
-//        st.setSTUDENTEMAIL(request.getParameter("STUDENTEMAIL"));
-//        st.setSTUDENTPASSWORD(request.getParameter("STUDENTPASSWORD"));
-//
-//        stdao.updateStudent(st);
-//
-//        request.setAttribute("sts", studentDAO.getAllStudents());
-//        RequestDispatcher view = request.getRequestDispatcher("studentProfile.jsp");
-//        view.forward(request,  response);
-
         System.out.println("in");
         PrintWriter out = response.getWriter();
 

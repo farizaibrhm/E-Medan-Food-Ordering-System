@@ -39,27 +39,61 @@ public class studentCartServlet extends HttpServlet {
                 if ((String) session.getAttribute("STUDENTNAME") == null){
                     response.sendRedirect("studentLogin.jsp");
                 }else {
-                    crt.setMENUID(Integer.parseInt(request.getParameter("menuid")));
+                    int menuid= Integer.parseInt(request.getParameter("menuid"));
+                    crt.setMENUID(menuid);
                     crt.setCARTPRICE(Double.parseDouble(request.getParameter("price")));
                     crt.setCARTTOTALPRICE(Double.parseDouble(request.getParameter("price")));
                     crt.setCWORKID(request.getParameter("cafeid"));
-                    crt.setSTUDENTID((String) session.getAttribute("STUDENTID"));
+                    String stuid = (String) session.getAttribute("STUDENTID");
+                    crt.setSTUDENTID(stuid);
 
-                    boolean result = cdao.addItemToCart(crt);
-                    System.out.println(result);
+                    int menuid2 = cdao.getMenuByMenuID(menuid, stuid);
+                    System.out.println(menuid == menuid2);
 
-                    if (result == true) {
+                    if (menuid == menuid2){
 
-                        out.println("<script type=\"text/javascript\">");
-                        out.println("alert('Item successfully added to cart!');");
-                        out.println("location='index.jsp';");
-                        out.println("</script>");
-                    } else {
-                        out.println("<script type=\"text/javascript\">");
-                        out.println("alert('Item unsuccessfully added to cart. Please try again.');");
-                        out.println("location='index.jsp';");
-                        out.println("</script>");
+                        int quantity = cdao.getQuantityByMENUID(menuid, stuid);
+                        Double price = cdao.getPriceByMenuID(menuid, stuid);
+                        Double totalprice = price * quantity;
+
+                        crt.setMENUID(menuid);
+                        crt.setCARTQUANTITY(quantity);
+                        crt.setCARTTOTALPRICE(totalprice);
+                        crt.setSTUDENTID(stuid);
+
+                        boolean result2 = cdao.updateQuantity(crt);
+                        System.out.println("add the same item, only update quantity");
+                        if (result2 == true) {
+
+                            out.println("<script type=\"text/javascript\">");
+                            out.println("alert('Item successfully added to cart!');");
+                            out.println("location='index.jsp';");
+                            out.println("</script>");
+                        } else {
+                            out.println("<script type=\"text/javascript\">");
+                            out.println("alert('Item unsuccessfully added to cart. Please try again.');");
+                            out.println("location='index.jsp';");
+                            out.println("</script>");
+                        }
+                    }else{
+                        boolean result = cdao.addItemToCart(crt);
+                        System.out.println(result);
+
+                        if (result == true) {
+
+                            out.println("<script type=\"text/javascript\">");
+                            out.println("alert('Item successfully added to cart!');");
+                            out.println("location='index.jsp';");
+                            out.println("</script>");
+                        } else {
+                            out.println("<script type=\"text/javascript\">");
+                            out.println("alert('Item unsuccessfully added to cart. Please try again.');");
+                            out.println("location='index.jsp';");
+                            out.println("</script>");
+                        }
                     }
+
+
                 }
             }catch (Exception e) {
                 e.printStackTrace();

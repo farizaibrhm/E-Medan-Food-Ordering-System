@@ -64,6 +64,53 @@ public class cartDAO {
         return price;
     }
 
+    public int getMenuByMenuID(int id, String stuid){
+        Connection con = DBConnection.getConn();
+
+        int mid = 0;
+
+        String sql="SELECT \"MENUID\" FROM public.cart WHERE \"MENUID\"=? AND \"STUDENTID\"=? ;";
+
+        try{
+            PreparedStatement ps = con.prepareStatement(sql);
+            ps.setInt(1, id);
+            ps.setString(2, stuid);
+            ResultSet rs = ps.executeQuery();
+
+            while (rs.next()) {
+                 mid = rs.getInt("MENUID");
+            }
+
+        }catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return mid;
+    }
+
+    public int getQuantityByMENUID(int id, String stuid){
+        Connection con = DBConnection.getConn();
+
+        int qty = 0;
+
+        String sql="SELECT \"CARTQUANTITY\" FROM public.cart WHERE \"MENUID\"=? AND \"STUDENTID\"=? ;";
+
+        try{
+            PreparedStatement ps = con.prepareStatement(sql);
+            ps.setInt(1, id);
+            ps.setString(2, stuid);
+            ResultSet rs = ps.executeQuery();
+
+            while (rs.next()) {
+                qty = rs.getInt("CARTQUANTITY");
+                qty = qty + 1;
+            }
+
+        }catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return qty;
+    }
+
     public boolean updateQuantity (cart crt){
         Connection con = DBConnection.getConn();
         int i=0;

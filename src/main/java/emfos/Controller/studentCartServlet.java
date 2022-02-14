@@ -49,19 +49,17 @@ public class studentCartServlet extends HttpServlet {
                     System.out.println(result);
 
                     if (result == true) {
+
                         out.println("<script type=\"text/javascript\">");
                         out.println("alert('Item successfully added to cart!');");
-                        out.println("location='GeraiAMenuList.jsp';");
+                        out.println("location='index.jsp';");
                         out.println("</script>");
                     } else {
                         out.println("<script type=\"text/javascript\">");
                         out.println("alert('Item unsuccessfully added to cart. Please try again.');");
-                        out.println("location='GeraiAMenuList.jsp';");
+                        out.println("location='index.jsp';");
                         out.println("</script>");
                     }
-                    RequestDispatcher dispatcher = request.getRequestDispatcher("GeraiAMenuList.jsp");
-                    dispatcher.include(request, response);
-
                 }
             }catch (Exception e) {
                 e.printStackTrace();
@@ -105,7 +103,7 @@ public class studentCartServlet extends HttpServlet {
                     }
         }
 
-        if (request.getParameter("Action").equals("Remove from Cart")) {
+        if (request.getParameter("Action").equals("x")) {
             System.out.println("in");
             PrintWriter out = response.getWriter();
 
@@ -114,20 +112,28 @@ public class studentCartServlet extends HttpServlet {
 
             HttpSession session = request.getSession();
 
-            int id = Integer.parseInt(request.getParameter("id"));
-            String stuid = (String) session.getAttribute("STUDENTID");
+            String cid = request.getParameter("id");
+            if (!((cid) == null)) {
+                int id = Integer.parseInt(cid);
+                String stuid = (String) session.getAttribute("STUDENTID");
 
+                cdao.getItemByMENUID(id, stuid);
+                boolean result = cdao.removeItemFromCart(id, stuid);
 
-            boolean result = cdao.removeItemFromCart(id,stuid);
-
-            if (result == true){
-                out.println("<script type=\"text/javascript\">");
-                out.println("alert('Item successfully removed from cart!');");
-                out.println("location='studentCart.jsp';");
-                out.println("</script>");
+                if (result == true) {
+                    out.println("<script type=\"text/javascript\">");
+                    out.println("alert('Item successfully removed from cart!');");
+                    out.println("location='studentCart.jsp';");
+                    out.println("</script>");
+                } else {
+                    out.println("<script type=\"text/javascript\">");
+                    out.println("alert('Item unsuccessfully removed from cart. Please try again.');");
+                    out.println("location='studentCart.jsp';");
+                    out.println("</script>");
+                }
             }else {
                 out.println("<script type=\"text/javascript\">");
-                out.println("alert('Item unsuccessfully removed from cart. Please try again.');");
+                out.println("alert('ID not found.');");
                 out.println("location='studentCart.jsp';");
                 out.println("</script>");
             }

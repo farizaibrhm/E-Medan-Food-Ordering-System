@@ -255,7 +255,12 @@
                                 </td>
 <%--                                <td class="text-center small--hide"><a href="#" class="btn btn--secondary cart__remove" title="Remove"><i class="icon icon anm anm-times-l"></i></a></td>--%>
                                 <td>
-                                    <button type="button" data-toggle="modal" data-target="#removeFromCart" id="<%=rs2.getInt("MENUID")%>" class="btn btn--secondary cart__remove" title="Remove"><i class="icon icon anm anm-times-l"></i></button>
+                                    <form method="post" action="${pageContext.request.contextPath}/studentCartServlet">
+<%--                                        <a href="#" class="btn btn--secondary cart__remove" title="Remove"><i class="icon icon anm anm-times-l"></i></a>--%>
+                                        <input type="hidden" name="id" value="<%=rs2.getInt("MENUID")%>">
+                                        <input type="submit" name="Action" value="x" onclick="return confirm('Are you sure you want to remove this item from cart?');">
+                                    </form>
+<%--                                    <button type="button" data-toggle="modal" data-target="#removeFromCart" id="<%=rs2.getInt("MENUID")%>" class="btn btn--secondary cart__remove" title="Remove"><i class="icon icon anm anm-times-l"></i></button>--%>
                                 </td>
                             </tr>
                             <%

@@ -9,17 +9,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ee72d468-6c94-46a4-8c84-170d520e2088" name="Changes" comment="#2 a lil update here and there">
-      <change afterPath="$PROJECT_DIR$/src/main/java/emfos/Controller/orderServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/emfos/DAO/orderDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/emfos/Model/order.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/webContexts.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/webContexts.xml" afterDir="false" />
+    <list default="true" id="ee72d468-6c94-46a4-8c84-170d520e2088" name="Changes" comment="Placing order done (sesuaikan untuk ict punya requirement first, isp kemudian)">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/emfos/Controller/addMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/emfos/Controller/addMenu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/emfos/Controller/MyFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/emfos/Controller/MyFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/emfos/Controller/studentCartServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/emfos/Controller/studentCartServlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/emfos/DAO/cartDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/emfos/DAO/cartDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/cafeworkerMenuList.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/cafeworkerMenuList.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/studentCart.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/studentCart.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/studentCheckout.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/studentCheckout.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/studentRemoveFromCart.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/studentRemoveFromCart.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -235,7 +231,8 @@
       <workItem from="1644563779573" duration="5457000" />
       <workItem from="1644671418363" duration="2588000" />
       <workItem from="1644677518628" duration="415000" />
-      <workItem from="1644768349500" duration="21920000" />
+      <workItem from="1644768349500" duration="22085000" />
+      <workItem from="1644813747700" duration="5057000" />
     </task>
     <task id="LOCAL-00001" summary="Merge remote-tracking branch 'origin/dev' into dev">
       <created>1642837016272</created>
@@ -300,7 +297,14 @@
       <option name="project" value="LOCAL" />
       <updated>1644310311186</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Placing order done (sesuaikan untuk ict punya requirement first, isp kemudian)">
+      <created>1644796163747</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1644796163747</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -329,6 +333,7 @@
     <MESSAGE value="update here and there" />
     <MESSAGE value="a lil update here and there" />
     <MESSAGE value="#2 a lil update here and there" />
-    <option name="LAST_COMMIT_MESSAGE" value="#2 a lil update here and there" />
+    <MESSAGE value="Placing order done (sesuaikan untuk ict punya requirement first, isp kemudian)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Placing order done (sesuaikan untuk ict punya requirement first, isp kemudian)" />
   </component>
 </project>

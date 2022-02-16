@@ -13,8 +13,8 @@ public class cartDAO {
         Connection con = DBConnection.getConn();
 
         String sql = "INSERT INTO public.cart(\n" +
-                "\t\"CARTID\", \"MENUID\", \"CARTPRICE\", \"CARTQUANTITY\", \"CARTTOTALPRICE\", \"CWORKID\", \"STUDENTID\")\n" +
-                "\tVALUES (default, ?, ?, 1, ?, ?, ?);";
+                "\t\"CARTID\", \"MENUID\", \"CARTQUANTITY\",\"CWORKID\", \"STUDENTID\")\n" +
+                "\tVALUES (default,?, 1, ?, ?);";
 
         int i = 0;
 
@@ -22,10 +22,8 @@ public class cartDAO {
             PreparedStatement ps = con.prepareStatement(sql);
 
             ps.setInt(1, c.getMENUID());
-            ps.setDouble(2, c.getCARTPRICE());
-            ps.setDouble(3, c.getCARTTOTALPRICE());
-            ps.setString(4, c.getCWORKID());
-            ps.setString(5, c.getSTUDENTID());
+            ps.setString(2, c.getCWORKID());
+            ps.setString(3, c.getSTUDENTID());
 
             i = ps.executeUpdate();
 
@@ -37,31 +35,6 @@ public class cartDAO {
         } else {
             return true;
         }
-    }
-
-    public Double getPriceByMenuID(int id, String stuid){
-        Connection con = DBConnection.getConn();
-
-        Double price =0.0;
-
-        cart crt = new cart();
-
-        String sql="SELECT \"CARTPRICE\" FROM public.cart WHERE \"MENUID\"=? AND \"STUDENTID\"=? ;";
-
-        try{
-            PreparedStatement ps = con.prepareStatement(sql);
-            ps.setInt(1, id);
-            ps.setString(2, stuid);
-            ResultSet rs = ps.executeQuery();
-
-            while (rs.next()) {
-                price = rs.getDouble("CARTPRICE");
-            }
-
-        }catch (SQLException e) {
-            e.printStackTrace();
-        }
-        return price;
     }
 
     public int getMenuByMenuID(int id, String stuid){
@@ -85,6 +58,30 @@ public class cartDAO {
             e.printStackTrace();
         }
         return mid;
+    }
+
+    public int getMenuByCafeID(int menuid, String cafeid, String stuid){
+        Connection con = DBConnection.getConn();
+
+        int mcid = 0;
+
+        String sql="SELECT \"MENUID\" FROM public.cart WHERE \"MENUID\"=? AND \"CWORKID\"=? AND \"STUDENTID\"=? ;";
+
+        try{
+            PreparedStatement ps = con.prepareStatement(sql);
+            ps.setInt(1, menuid);
+            ps.setString(2, cafeid);
+            ps.setString(3, stuid);
+            ResultSet rs = ps.executeQuery();
+
+            while (rs.next()) {
+                mcid = rs.getInt("MENUID");
+            }
+
+        }catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return mcid;
     }
 
     public int getQuantityByMENUID(int id, String stuid){
@@ -114,14 +111,13 @@ public class cartDAO {
     public boolean updateQuantity (cart crt){
         Connection con = DBConnection.getConn();
         int i=0;
-        String sql ="UPDATE public.cart SET \"CARTQUANTITY\"=?, \"CARTTOTALPRICE\"=? WHERE \"MENUID\"=? AND \"STUDENTID\"=?;";
+        String sql ="UPDATE public.cart SET \"CARTQUANTITY\"=? WHERE \"MENUID\"=? AND \"STUDENTID\"=?;";
 
         try{
             PreparedStatement ps = con.prepareStatement(sql);
             ps.setInt(1, crt.getCARTQUANTITY());
-            ps.setDouble(2, crt.getCARTTOTALPRICE());
-            ps.setInt(3, crt.getMENUID());
-            ps.setString(4, crt.getSTUDENTID());
+            ps.setInt(2, crt.getMENUID());
+            ps.setString(3, crt.getSTUDENTID());
             i = ps.executeUpdate();
 
         }catch (SQLException e){
@@ -150,9 +146,7 @@ public class cartDAO {
             if (rs.next()) {
                 crt.setCARTID(rs.getInt("CARTID"));
                 crt.setMENUID(rs.getInt("MENUID"));
-                crt.setCARTPRICE(rs.getDouble("CARTPRICE"));
                 crt.setCARTQUANTITY(rs.getInt("CARTQUANTITY"));
-                crt.setCARTTOTALPRICE(rs.getDouble("CARTTOTALPRICE"));
                 crt.setCWORKID(rs.getString("CWORKID"));
                 crt.setSTUDENTID(rs.getString("STUDENTID"));
             }

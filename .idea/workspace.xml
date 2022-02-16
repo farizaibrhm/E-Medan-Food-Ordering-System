@@ -9,11 +9,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ee72d468-6c94-46a4-8c84-170d520e2088" name="Changes" comment="delete from cart done.">
-      <change beforePath="$PROJECT_DIR$/.idea/webContexts.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/webContexts.xml" afterDir="false" />
+    <list default="true" id="ee72d468-6c94-46a4-8c84-170d520e2088" name="Changes" comment="add same item to cart by increasing the quantity instead of adding the item to a new row">
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/studentOrderHistory.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/emfos/Controller/orderServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/emfos/Controller/orderServlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/emfos/Controller/studentCartServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/emfos/Controller/studentCartServlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/emfos/DAO/cartDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/emfos/DAO/cartDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/emfos/DAO/menuDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/emfos/DAO/menuDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/emfos/DAO/orderDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/emfos/DAO/orderDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/emfos/Model/cart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/emfos/Model/cart.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/emfos/Model/order.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/emfos/Model/order.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/GeraiBMenuList.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/GeraiBMenuList.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/studentCart.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/studentCart.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,8 +30,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Jsp File" />
         <option value="Class" />
+        <option value="Jsp File" />
       </list>
     </option>
   </component>
@@ -230,7 +237,9 @@
       <workItem from="1644671418363" duration="2588000" />
       <workItem from="1644677518628" duration="415000" />
       <workItem from="1644768349500" duration="22085000" />
-      <workItem from="1644813747700" duration="14654000" />
+      <workItem from="1644813747700" duration="25896000" />
+      <workItem from="1644892842558" duration="586000" />
+      <workItem from="1645002083623" duration="9871000" />
     </task>
     <task id="LOCAL-00001" summary="Merge remote-tracking branch 'origin/dev' into dev">
       <created>1642837016272</created>
@@ -309,7 +318,14 @@
       <option name="project" value="LOCAL" />
       <updated>1644819216357</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="add same item to cart by increasing the quantity instead of adding the item to a new row">
+      <created>1644836724674</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1644836724675</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -340,6 +356,7 @@
     <MESSAGE value="#2 a lil update here and there" />
     <MESSAGE value="Placing order done (sesuaikan untuk ict punya requirement first, isp kemudian)" />
     <MESSAGE value="delete from cart done." />
-    <option name="LAST_COMMIT_MESSAGE" value="delete from cart done." />
+    <MESSAGE value="add same item to cart by increasing the quantity instead of adding the item to a new row" />
+    <option name="LAST_COMMIT_MESSAGE" value="add same item to cart by increasing the quantity instead of adding the item to a new row" />
   </component>
 </project>

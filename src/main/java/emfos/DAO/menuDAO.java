@@ -3,6 +3,7 @@ package emfos.DAO;
 import java.sql.*;
 
 import emfos.DBConnect.DBConnection;
+import emfos.Model.cart;
 import emfos.Model.menu;
 
 public class menuDAO {
@@ -107,6 +108,30 @@ public class menuDAO {
         }
 
         return mn;
+    }
+
+    public Double getPriceByMenuID(int id){
+        Connection con = DBConnection.getConn();
+
+        Double price =0.0;
+
+        cart crt = new cart();
+
+        String sql="SELECT \"MENUTPRICE\" FROM public.menu WHERE \"MENUID\"=?;";
+
+        try{
+            PreparedStatement ps = con.prepareStatement(sql);
+            ps.setInt(1, id);
+            ResultSet rs = ps.executeQuery();
+
+            while (rs.next()) {
+                price = rs.getDouble("MENUTPRICE");
+            }
+
+        }catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return price;
     }
 
 }

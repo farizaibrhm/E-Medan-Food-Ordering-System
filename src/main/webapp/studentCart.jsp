@@ -3,6 +3,8 @@
 <%@page import="java.sql.Statement"%>
 <%@page import="java.sql.Connection"%>
 <%@page import="emfos.DBConnect.DBConnection"%>
+<%@ page import="java.text.DecimalFormat" %>
+<%@ page import="emfos.DAO.menuDAO" %>
 
 <!DOCTYPE html>
 <html class="no-js" lang="en">
@@ -167,6 +169,7 @@
                                             Connection con = emfos.DBConnect.DBConnection.getConn();
 
                                             int index=0;
+                                            Double grandtotal = 0.0;
 
                                             Statement st=con.createStatement();
                                             ResultSet rs = st.executeQuery("SELECT COUNT (*) FROM public.cart WHERE \"STUDENTID\" ='" + session.getAttribute("STUDENTID")+"'");
@@ -201,7 +204,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-12 col-sm-12 col-md-8 col-lg-8 main-col">
-                    <form class="cart style2">
+                    <div class="cart style2">
                         <table>
                             <thead class="cart__row cart__header">
                             <tr>
@@ -227,40 +230,40 @@
                                     <div class="list-view-item__title">
                                         <a href="#"><%=rs2.getString("MENUNAME")%></a>
                                     </div>
-
-                                    <div class="cart__meta-text">
-                                        <!-- Color: Navy<br>Size: Small<br> -->
-                                    </div>
                                 </td>
+                                <%
+                                    DecimalFormat df = new DecimalFormat("##. 00");
+                                    menuDAO mdao = new menuDAO();
+
+                                    Double price = mdao.getPriceByMenuID(rs2.getInt("MENUID"));
+                                    Double totalprice = price * (rs2.getInt("CARTQUANTITY"));
+                                    grandtotal = grandtotal + totalprice;
+                                %>
+
                                 <td class="cart__price-wrapper cart-flex-item">
-                                    <span class="money">RM <%=rs2.getString("CARTPRICE")%></span>
+                                    <span class="money">RM <%=df.format(rs2.getDouble("MENUTPRICE"))%></span>
                                 </td>
                                 <td class="cart__update-wrapper cart-flex-item text-right">
                                     <form method="post" action="${pageContext.request.contextPath}/studentCartServlet">
                                         <div class="cart__qty text-center">
                                             <div class="qtyField">
                                                 <input type="hidden" name="menuid" value="<%=rs2.getInt("MENUID") %>">
-<%--                                                <input type="number" name="quantity" value="<%=rs2.getInt("CARTQUANTITY") %>">--%>
                                                 <a class="qtyBtn minus" href="javascript:void(0);"><i class="icon icon-minus"></i></a>
                                                 <input class="cart__qty-input qty" type="text" name="quantity" id="qty" value="<%=rs2.getString("CARTQUANTITY")%>" pattern="[0-9]*">
                                                 <a class="qtyBtn plus" href="javascript:void(0);"><i class="icon icon-plus"></i></a><br>
-<%--                                                <button class="btn btn-danger btn-sm rounded-0"  name="Action" value="Update Quantity"><i class="material-icons" title="Update">&#xe5d5;</i></button>--%>
                                                 <button type="submit" name="Action" value="Update Quantity" class="btn--link cart-update"><i class="fa fa-refresh"></i></button>
                                             </div>
                                         </div>
                                     </form>
                                 </td>
                                 <td class="text-right small--hide cart-price">
-                                    <div><span class="money">RM <%=rs2.getString("CARTTOTALPRICE")%></span></div>
+                                    <div><span class="money">RM <%=df.format(totalprice)%></span></div>
                                 </td>
-<%--                                <td class="text-center small--hide"><a href="#" class="btn btn--secondary cart__remove" title="Remove"><i class="icon icon anm anm-times-l"></i></a></td>--%>
                                 <td>
                                     <form method="post" action="${pageContext.request.contextPath}/studentCartServlet">
-<%--                                        <a href="#" class="btn btn--secondary cart__remove" title="Remove"><i class="icon icon anm anm-times-l"></i></a>--%>
                                         <input type="hidden" name="id" value="<%=rs2.getInt("MENUID")%>">
                                         <input type="submit" name="Action" value="x" onclick="return confirm('Are you sure you want to remove this item from cart?');">
                                     </form>
-<%--                                    <button type="button" data-toggle="modal" data-target="#removeFromCart" id="<%=rs2.getInt("MENUID")%>" class="btn btn--secondary cart__remove" title="Remove"><i class="icon icon anm anm-times-l"></i></button>--%>
                                 </td>
                             </tr>
                             <%
@@ -278,23 +281,18 @@
                         <%
                             }
                         %>
-                    </form>
+                    </div>
                 </div>
 
                 <%
-                    double subtotal = 0.00;
-                    Statement st3 = con.createStatement();
-                    ResultSet rs3 = st3.executeQuery("SELECT sum(\"CARTTOTALPRICE\") FROM public.cart WHERE \"STUDENTID\"='" + session.getAttribute("STUDENTID")+"'");
-                    if (rs3.next()) {
-                        subtotal = rs3.getDouble(1);
-                    }
+                    DecimalFormat df = new DecimalFormat("##. 00");
                 %>
 
                 <div class="col-12 col-sm-12 col-md-4 col-lg-4 cart__footer">
                     <div class="solid-border">
                         <div class="row border-bottom pb-2">
                             <span class="col-12 col-sm-6 cart__subtotal-title">Subtotal</span>
-                            <span class="col-12 col-sm-6 text-right">RM <%=subtotal%></span></span>
+                            <span class="col-12 col-sm-6 text-right">RM <%=df.format(grandtotal)%></span></span>
                         </div>
 
                         <div class="row border-bottom pb-2 pt-2">
@@ -303,9 +301,10 @@
                         </div>
                         <div class="row border-bottom pb-2 pt-2">
                             <span class="col-12 col-sm-6 cart__subtotal-title"><strong>Grand Total</strong></span>
-                            <span class="col-12 col-sm-6 cart__subtotal-title cart__subtotal text-right">RM <%=subtotal%></span></span>
+                            <span class="col-12 col-sm-6 cart__subtotal-title cart__subtotal text-right">RM <%=df.format(grandtotal)%></span></span>
                         </div>
                         <form method="post" action="${pageContext.request.contextPath}/orderServlet">
+                            <input type="hidden" name="amount" value="<%=df.format(grandtotal)%>">
                             <input type="submit" name="Action" id="cartCheckout" class="btn btn--small-wide checkout" value="Place Order">
                         </form>
                     </div>
@@ -368,23 +367,6 @@
     <span id="site-scroll"><i class="icon anm anm-angle-up-r"></i></span>
     <!--End Scoll Top-->
 
-    <script type="text/javascript">
-        $(document).ready(function (){
-            $('.del').click(function(){
-                var id = +this.id;
-                $.ajax({
-                    url: "studentRemoveFromCart.jsp",
-                    type:"post",
-                    data:{
-                        id: id,
-                    },
-                    success:function (data){
-                        $("#show-data2").html(data);
-                    }
-                });
-            });
-        });
-    </script>
 
     <!-- Including Jquery -->
     <script src="assets/js/vendor/jquery-3.3.1.min.js"></script>

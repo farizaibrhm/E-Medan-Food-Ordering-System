@@ -40,8 +40,9 @@ public class orderServlet extends HttpServlet {
 
                     String masuk = (String) session.getAttribute("STUDENTID");
                     System.out.println(masuk);
+                    Double amount = Double.parseDouble(request.getParameter("amount"));
 
-                    boolean result = odao.placeOrder(masuk);
+                    boolean result = odao.placeOrder(masuk, amount);
 
                     if (result == true) {
                         out.println("<script type=\"text/javascript\">");

@@ -1,7 +1,7 @@
 package emfos.Controller;
 
 import emfos.DAO.cartDAO;
-import emfos.DBConnect.DBConnection;
+import emfos.DAO.menuDAO;
 import emfos.Model.cart;
 
 import javax.servlet.*;
@@ -32,6 +32,7 @@ public class studentCartServlet extends HttpServlet {
 
             cart crt = new cart();
             cartDAO cdao = new cartDAO();
+            menuDAO mdao = new menuDAO();
 
             HttpSession session = request.getSession();
 
@@ -40,42 +41,43 @@ public class studentCartServlet extends HttpServlet {
                     response.sendRedirect("studentLogin.jsp");
                 }else {
                     int menuid= Integer.parseInt(request.getParameter("menuid"));
-                    crt.setMENUID(menuid);
-                    crt.setCARTPRICE(Double.parseDouble(request.getParameter("price")));
-                    crt.setCARTTOTALPRICE(Double.parseDouble(request.getParameter("price")));
-                    crt.setCWORKID(request.getParameter("cafeid"));
+                    String cafeid = request.getParameter("cafeid");
                     String stuid = (String) session.getAttribute("STUDENTID");
+
+                    crt.setMENUID(menuid);
+                    crt.setCWORKID(cafeid);
                     crt.setSTUDENTID(stuid);
 
-                    int menuid2 = cdao.getMenuByMenuID(menuid, stuid);
-                    System.out.println(menuid == menuid2);
+                    int menuInCart = cdao.getMenuByMenuID(menuid, stuid);
+                    int menuGeraiInCart = cdao.getMenuByCafeID(menuid, cafeid, stuid);
 
-                    if (menuid == menuid2){
+                    //add same item, only update quantity
+                    if (menuid == menuInCart ){
 
                         int quantity = cdao.getQuantityByMENUID(menuid, stuid);
-                        Double price = cdao.getPriceByMenuID(menuid, stuid);
-                        Double totalprice = price * quantity;
 
                         crt.setMENUID(menuid);
                         crt.setCARTQUANTITY(quantity);
-                        crt.setCARTTOTALPRICE(totalprice);
                         crt.setSTUDENTID(stuid);
 
                         boolean result2 = cdao.updateQuantity(crt);
-                        System.out.println("add the same item, only update quantity");
                         if (result2 == true) {
 
                             out.println("<script type=\"text/javascript\">");
                             out.println("alert('Item successfully added to cart!');");
                             out.println("location='index.jsp';");
                             out.println("</script>");
+
                         } else {
+
                             out.println("<script type=\"text/javascript\">");
                             out.println("alert('Item unsuccessfully added to cart. Please try again.');");
                             out.println("location='index.jsp';");
                             out.println("</script>");
-                        }
-                    }else{
+
+                        }//if selected menu from different gerai, alert error msg
+                    }
+                    else{
                         boolean result = cdao.addItemToCart(crt);
                         System.out.println(result);
 
@@ -92,8 +94,6 @@ public class studentCartServlet extends HttpServlet {
                             out.println("</script>");
                         }
                     }
-
-
                 }
             }catch (Exception e) {
                 e.printStackTrace();
@@ -106,6 +106,7 @@ public class studentCartServlet extends HttpServlet {
 
             cart crt = new cart();
             cartDAO cdao = new cartDAO();
+            menuDAO mdao = new menuDAO();
 
             HttpSession session = request.getSession();
 
@@ -113,12 +114,9 @@ public class studentCartServlet extends HttpServlet {
             int quantity = Integer.parseInt(request.getParameter("quantity"));
             String stuid = (String) session.getAttribute("STUDENTID");
 
-            Double price = cdao.getPriceByMenuID(id, stuid);
-            Double totalprice = price * quantity;
 
                     crt.setMENUID(id);
                     crt.setCARTQUANTITY(quantity);
-                    crt.setCARTTOTALPRICE(totalprice);
                     crt.setSTUDENTID(stuid);
 
                     boolean result = cdao.updateQuantity(crt);
@@ -141,7 +139,6 @@ public class studentCartServlet extends HttpServlet {
             System.out.println("in");
             PrintWriter out = response.getWriter();
 
-            cart crt = new cart();
             cartDAO cdao = new cartDAO();
 
             HttpSession session = request.getSession();
@@ -174,4 +171,10 @@ public class studentCartServlet extends HttpServlet {
         }
 
     }
+//    else if(menuid != menuGeraiInCart){
+//
+//        out.println("<script type=\"text/javascript\">");
+//        out.println("alert('You have already selected different gerai. Remove your previous after first before continue.');");
+//        out.println("</script>");
+//    }
 }

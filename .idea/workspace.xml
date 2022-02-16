@@ -12,10 +12,14 @@
     <list default="true" id="ee72d468-6c94-46a4-8c84-170d520e2088" name="Changes" comment="update and retrieve cafe worker and student done || delete account under maintenance">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/emfos/cafeworkerDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/emfos/cafeworkerDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/emfos/cafeworkerDeleteAccountServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/emfos/cafeworkerDeleteAccountServlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/cafeworkerProfile.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/cafeworkerProfile.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/deleteCafeWorkerAccount.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/studentProfile.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/studentProfile.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/emfos/cafeworkerDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/emfos/cafeworkerDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/emfos/cafeworkerDeleteAccountServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/emfos/cafeworkerDeleteAccountServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/WEB-INF/classes/emfos/cafeworkerDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/WEB-INF/classes/emfos/cafeworkerDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/WEB-INF/classes/emfos/cafeworkerDeleteAccountServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/WEB-INF/classes/emfos/cafeworkerDeleteAccountServlet.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/cafeworkerProfile.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/cafeworkerProfile.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/deleteCafeWorkerAccount.jsp" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -204,9 +208,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JavaScript Debug.cafeworkerProfile.jsp" />
         <item itemvalue="JavaScript Debug.deleteCafeWorkerAccount.jsp" />
         <item itemvalue="JavaScript Debug.studentEditProfile.jsp" />
-        <item itemvalue="JavaScript Debug.cafeworkerProfile.jsp" />
       </list>
     </recent_temporary>
   </component>
@@ -246,7 +250,8 @@
       <workItem from="1644131166035" duration="3275000" />
       <workItem from="1644222572582" duration="22939000" />
       <workItem from="1644464789762" duration="9206000" />
-      <workItem from="1644557040326" duration="59963000" />
+      <workItem from="1644557040326" duration="62072000" />
+      <workItem from="1644988045138" duration="2877000" />
     </task>
     <task id="LOCAL-00001" summary="Merge remote-tracking branch 'origin/dev' into dev">
       <created>1642837016272</created>
@@ -304,7 +309,14 @@
       <option name="project" value="LOCAL" />
       <updated>1644776238218</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="update and retrieve cafe worker and student done || delete account under maintenance">
+      <created>1644777275094</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1644777275094</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

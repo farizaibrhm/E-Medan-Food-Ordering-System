@@ -190,30 +190,52 @@ public class cafeworkerDAO {
         return cw;
     }
 
-    public void deleteCafeWorkerAccount(String CWORKID) {
+//    public void deleteCafeWorkerAccount(String CWORKID) {
+//
+//        try {
+//
+//            //call getConnection() method
+//            Connection con = DBConnection.getConn();
+//
+//            //create statement
+//            ps = con.prepareStatement("DELETE FROM public.cafeworker WHERE \"CWORKID\"=?"); //? refer to id we pass
+//            ps.setString(1, CWORKID);
+//
+//            //execute query
+//            ps.executeUpdate();
+//            System.out.println("Successfully deleted");
+//
+//
+//            //close connection
+//            con.close();
+//
+//            //will handle line by line from step 1 - 5 if there is error
+//        }catch(Exception e) {
+//            e.printStackTrace();
+//        }
+//
+//    }
+
+    public boolean deleteCafeWorkerAccount(int CWORKID){
+        Connection con = DBConnection.getConn();
+
+        String sql = "DELETE FROM public.cafeworker WHERE \"CWORKID\"=?";
+
+        int i = 0;
 
         try {
+            PreparedStatement ps = con.prepareStatement(sql);
+            ps.setInt(1, CWORKID);
 
-            //call getConnection() method
-            Connection con = DBConnection.getConn();
-
-            //create statement
-            ps = con.prepareStatement("DELETE FROM public.cafeworker WHERE \"CWORKID\"=?"); //? refer to id we pass
-            ps.setString(1, CWORKID);
-
-            //execute query
-            ps.executeUpdate();
-            System.out.println("Successfully deleted");
-
-
-            //close connection
-            con.close();
-
-            //will handle line by line from step 1 - 5 if there is error
-        }catch(Exception e) {
+            i = ps.executeUpdate();
+        } catch (SQLException e){
             e.printStackTrace();
         }
-
+        if (i == 0){
+            return false;
+        } else {
+            return true;
+        }
     }
 
 

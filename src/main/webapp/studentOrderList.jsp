@@ -59,11 +59,8 @@
                         <%
                 Connection con = DBConnection.getConn();
                 Statement st = con.createStatement();
-                String sql = "SELECT * FROM public.forder \"o\", public.menu \"m\", public.orderitem \"oi\" WHERE\n" +
-                             "\"o\".\"ORDERID\" = \"oi\".\"ORDERID\" AND \"m\".\"MENUID\" = \"oi\".\"MENUID\" AND " +
-                              "\"o\".\"STUDENTID\" ='" + session.getAttribute("STUDENTID") + "' ";
+                String sql = "SELECT * FROM public.forder WHERE \"STUDENTID\" ='" + session.getAttribute("STUDENTID") + "' ";
                 ResultSet rs = st.executeQuery(sql);
-                int i=1;
                 while (rs.next())
                 {
         %>
@@ -78,6 +75,8 @@
                         <td class="text-center"><%=rs.getString("ORDERSTATUS")%></td>
                         <td class="text-center">
                             <a  href="studentViewOrderDetails.jsp?id=<%=rs.getString("ORDERID")%>" style="background-color: #343a40;" class="btn btn--sm">View</a>
+                            <a  href="studentViewOrderDetails.jsp?id=<%=rs.getString("ORDERID")%>" style="background-color: #343a40;" class="btn btn--sm">Leave Feedback</a>
+
                         </td>
                     </tr>
 

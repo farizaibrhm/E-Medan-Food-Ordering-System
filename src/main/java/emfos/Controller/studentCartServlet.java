@@ -65,7 +65,7 @@ public class studentCartServlet extends HttpServlet {
 
                             out.println("<script type=\"text/javascript\">");
                             out.println("alert('Item successfully added to cart!');");
-                            out.println("location='index.jsp';");
+                            out.println("location='studentCart.jsp';");
                             out.println("</script>");
 
                         } else {
@@ -75,7 +75,7 @@ public class studentCartServlet extends HttpServlet {
                             out.println("location='index.jsp';");
                             out.println("</script>");
 
-                        }//if selected menu from different gerai, alert error msg
+                        }//if selected menu from different gerai, alert error msg.
                     }
                     else{
                         boolean result = cdao.addItemToCart(crt);
@@ -85,7 +85,7 @@ public class studentCartServlet extends HttpServlet {
 
                             out.println("<script type=\"text/javascript\">");
                             out.println("alert('Item successfully added to cart!');");
-                            out.println("location='index.jsp';");
+                            out.println("location='studentCart.jsp';");
                             out.println("</script>");
                         } else {
                             out.println("<script type=\"text/javascript\">");

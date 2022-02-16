@@ -29,164 +29,9 @@
 <div id="pre-loader">
     <img src="assets/images/loader.gif" alt="Loading..." />
 </div>
-<div class="pageWrapper">
-    <!--Search Form Drawer-->
-    <div class="search">
-        <div class="search__form">
-            <form class="search-bar__form" action="#">
-                <button class="go-btn search__button" type="submit"><i class="icon anm anm-search-l"></i></button>
-                <input class="search__input" type="search" name="q" value="" placeholder="Search entire store..." aria-label="Search" autocomplete="off">
-            </form>
-            <button type="button" class="search-trigger close-btn"><i class="anm anm-times-l"></i></button>
-        </div>
-    </div>
-    <!--End Search Form Drawer-->
 
-        <%
-        String STUDENTNAME = (String) session.getAttribute("STUDENTNAME");
-        if (STUDENTNAME== null)
-        { %>
-    <!--Top Header-->
-    <div class="top-header">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-10 col-sm-8 col-md-5 col-lg-4">
-                    <p class="phone-no"><i class="anm anm-phone-s"></i> (+606) 264 5000</p>
-                </div>
-                <div class="col-sm-4 col-md-4 col-lg-4 d-none d-lg-none d-md-block d-lg-block">
-                </div>
-                <div class="col-2 col-sm-4 col-md-3 col-lg-4 text-right">
-                    <span class="user-menu d-block d-lg-none"><i class="anm anm-user-al" aria-hidden="true"></i></span>
-                    <ul class="customer-links list-inline">
-                        <li><a href="studentLogin.jsp">Student Login</a></li>
-                        <li><a href="cafeworkerLogin.jsp">Cafeworker Login</a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!--End Top Header-->
-    <!--Header-->
-    <div class="header-wrap animated d-flex border-bottom">
-        <div class="container-fluid">
-            <div class="row align-items-center">
-                <!--Desktop Logo-->
-                <div class="logo col-md-2 col-lg-2 d-none d-lg-block">
-                    <a href="index.jsp">
-                        <img src="assets/images/e-Medan.svg" alt="e-Medan Food Ordering Website" title="e-Medan Food Ordering Website" />
-                    </a>
-                </div>
-                <!--End Desktop Logo-->
-                <div class="col-2 col-sm-3 col-md-3 col-lg-8">
-                    <div class="d-block d-lg-none">
-                        <button type="button" class="btn--link site-header__menu js-mobile-nav-toggle mobile-nav--open">
-                            <i class="icon anm anm-times-l"></i>
-                            <i class="anm anm-bars-r"></i>
-                        </button>
-                    </div>
-                    <!--Desktop Menu-->
-                    <nav class="grid__item" id="AccessibleNav"><!-- for mobile -->
-                        <ul id="siteNav" class="site-nav medium center hidearrow">
-                            <li class="lvl1 parent megamenu"><a href="index.jsp">Home <i class="anm anm-angle-down-l"></i></a></li>
-                            <li class="lvl1 parent megamenu"><a href="aboutus.jsp">About Us <i class="anm anm-angle-down-l"></i></a></li>
-                            <li class="lvl1 parent dropdown"><a href="#">Gerai <i class="anm anm-angle-down-l"></i></a>
-                                <ul class="dropdown">
-                                    <li><a href="GeraiAMenuList.jsp" class="site-nav">Gerai A</a></li>
-                                    <li><a href="GeraiBMenuList.jsp" class="site-nav">Gerai B</a></li>
-                                    <li><a href="GeraiCMenuList.jsp" class="site-nav">Gerai C</a></li>
-                                    <li><a href="GeraiDMenuList.jsp" class="site-nav">Gerai D</a></li>
-                                </ul>
-                            </li>
-                            </li>
-                        </ul>
-                    </nav>
-                    <!--End Desktop Menu-->
-                </div>
 
-                <% } else{
-                %>
-
-                <!--Top Header-->
-                <div class="top-header">
-                    <div class="container-fluid">
-                        <div class="row">
-                            <div class="col-10 col-sm-8 col-md-5 col-lg-4">
-                            </div>
-                            <div class="col-sm-4 col-md-4 col-lg-4 d-none d-lg-none d-md-block d-lg-block">
-                                <div class="text-center"><p class="top-header_middle-text">Welcome, <%=session.getAttribute("STUDENTNAME")%>!</p></div>
-                            </div>
-                            <div class="col-2 col-sm-4 col-md-3 col-lg-4 text-right">
-                                <span class="user-menu d-block d-lg-none"><i class="anm anm-user-al" aria-hidden="true"></i></span>
-                                <ul class="customer-links list-inline">
-                                    <li><a href="${pageContext.request.contextPath}/studentLogoutServlet">Logout</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!--End Top Header-->
-                <!--Header-->
-                <div class="header-wrap animated d-flex border-bottom">
-                    <div class="container-fluid">
-                        <div class="row align-items-center">
-                            <!--Desktop Logo-->
-                            <div class="logo col-md-2 col-lg-2 d-none d-lg-block">
-                                <a href="index.jsp">
-                                    <img src="assets/images/e-Medan.svg" alt="e-Medan Food Ordering Website" title="e-Medan Food Ordering Website" />
-                                </a>
-                            </div>
-                            <!--End Desktop Logo-->
-                            <div class="col-2 col-sm-3 col-md-3 col-lg-8">
-                                <div class="d-block d-lg-none">
-                                    <button type="button" class="btn--link site-header__menu js-mobile-nav-toggle mobile-nav--open">
-                                        <i class="icon anm anm-times-l"></i>
-                                        <i class="anm anm-bars-r"></i>
-                                    </button>
-                                </div>
-                                <!--Desktop Menu-->
-                                <nav class="grid__item" id="AccessibleNav"><!-- for mobile -->
-                                    <ul id="siteNav" class="site-nav medium center hidearrow">
-                                        <li class="lvl1 parent megamenu"><a href="index.jsp">Home <i class="anm anm-angle-down-l"></i></a></li>
-                                        <li class="lvl1 parent megamenu"><a href="aboutus.jsp">About Us <i class="anm anm-angle-down-l"></i></a></li>
-                                        <li class="lvl1 parent dropdown"><a href="#">Gerai <i class="anm anm-angle-down-l"></i></a>
-                                            <ul class="dropdown">
-                                                <li><a href="GeraiAMenuList.jsp" class="site-nav">Gerai A</a></li>
-                                                <li><a href="GeraiBMenuList.jsp" class="site-nav">Gerai B</a></li>
-                                                <li><a href="GeraiCMenuList.jsp" class="site-nav">Gerai C</a></li>
-                                                <li><a href="GeraiDMenuList.jsp" class="site-nav">Gerai D</a></li>
-                                            </ul>
-                                        </li>
-                                        <li class="lvl1 parent megamenu"><a href="studentProfile.jsp">Account <i class="anm anm-angle-down-l"></i></a></li>
-                                    </ul>
-                                </nav>
-                                <!--End Desktop Menu-->
-                            </div>
-                            <% }%>
-                            <div class="col-4 col-sm-3 col-md-3 col-lg-2">
-                                <div class="site-cart">
-                                    <a href="studentCart.jsp" class="site-header__cart" title="Cart">
-                                        <i class="icon anm anm-bag-l"></i>
-                                        <%
-                                            Connection con = emfos.DBConnect.DBConnection.getConn();
-
-                                            Statement st=con.createStatement();
-                                            ResultSet rs = st.executeQuery("SELECT COUNT (*) FROM public.cart WHERE \"STUDENTID\" ='" + session.getAttribute("STUDENTID")+"'");
-
-                                            rs.next();
-                                            int count = rs.getInt(1);
-                                        %>
-                                        <span id="CartCount" class="site-header__cart-count" data-cart-render="item_count"><%=count%></span>
-                                    </a>
-
-                                </div>
-                                <div class="site-header__search">
-                                    <button type="button" class="search-trigger"><i class="icon anm anm-search-l"></i></button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!--End Header-->
+<jsp:include page="header.jsp"></jsp:include>
 
 
     <!--Body Content-->
@@ -242,101 +87,64 @@
                         </div>
                     </div>
                 </div>
-                <div class="grid-products">
-                    <div class="row">
-<%--                        //Gerai A--%>
-                        <div class="col-6 col-sm-2 col-md-3 col-lg-3 item">
-                            <!-- start product image -->
-                            <div class="product-image">
-                                <!-- start product image -->
-                                <a href="GeraiAMenuList.jsp" class="grid-view-item__link">
-                                    <!-- image -->
-                                    <img class="primary blur-up lazyload" data-src="assets/images/smallbanner.jpeg" src="assets/images/smallbanner.jpeg" alt="image">
-                                    <!-- End image -->
-                                    <!-- Hover image -->
-                                    <img class="hover blur-up lazyload" data-src="assets/images/smallbanner.jpeg" src="assets/images/smallbanner.jpeg" alt="image">
-                                    <!-- End hover image -->
-                                </a>
-                                <!-- end product image -->
 
-                                <!-- Start product button -->
-                                    <button class="btn btn-addto-cart" type="button" tabindex="0">Gerai A</button>
-                                <!-- end product button -->
+                <!--Collection Box slider-->
+                <div class="collection-box section">
+                    <div class="container-fluid">
+                        <div class="collection-grid">
+                            <div class="collection-grid-item">
+                                <a href="GeraiAMenuList.jsp" class="collection-grid-item__link">
+                                    <img data-src="assets/images/banner (1).jpg" src="assets/images/banner (1).jpg" class="blur-up lazyload"/>
+                                    <div class="collection-grid-item__title-wrapper">
+                                        <h3 class="collection-grid-item__title btn btn--secondary no-border">GERAI A</h3>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="collection-grid-item">
+                                <a href="GeraiBMenuList.jsp" class="collection-grid-item__link">
+                                    <img data-src="assets/images/banner (1).jpg" src="assets/images/banner (1).jpg" class="blur-up lazyload"/>
+                                    <div class="collection-grid-item__title-wrapper">
+                                        <h3 class="collection-grid-item__title btn btn--secondary no-border">GERAI B</h3>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="collection-grid-item blur-up lazyloaded">
+                                <a href="GeraiCMenuList.jsp" class="collection-grid-item__link">
+                                    <img data-src="assets/images/banner (1).jpg" src="assets/images/banner (1).jpg" class="blur-up lazyload"/>
+                                    <div class="collection-grid-item__title-wrapper">
+                                        <h3 class="collection-grid-item__title btn btn--secondary no-border">GERAI C</h3>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="collection-grid-item">
+                                <a href="GeraiDMenuList.jsp" class="collection-grid-item__link">
+                                    <img data-src="assets/images/banner (1).jpg" src="assets/images/banner (1).jpg" class="blur-up lazyload"/>
+                                    <div class="collection-grid-item__title-wrapper">
+                                        <h3 class="collection-grid-item__title btn btn--secondary no-border">GERAI D</h3>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="collection-grid-item">
+                                <a href="GeraiEMenuList.jsp" class="collection-grid-item__link">
+                                    <img data-src="assets/images/banner (1).jpg" src="assets/images/banner (1).jpg" class="blur-up lazyload"/>
+                                    <div class="collection-grid-item__title-wrapper">
+                                        <h3 class="collection-grid-item__title btn btn--secondary no-border">GERAI E</h3>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="collection-grid-item">
+                                <a href="GeraiFMenuList.jsp" class="collection-grid-item__link">
+                                    <img data-src="assets/images/banner (1).jpg" src="assets/images/banner (1).jpg" class="blur-up lazyload"/>
+                                    <div class="collection-grid-item__title-wrapper">
+                                        <h3 class="collection-grid-item__title btn btn--secondary no-border">GERAI F</h3>
+                                    </div>
+                                </a>
                             </div>
                         </div>
-<%--                        //habis Gerai A--%>
-
-    <%--                        //Gerai B--%>
-    <div class="col-6 col-sm-2 col-md-3 col-lg-3 item">
-        <!-- start product image -->
-        <div class="product-image">
-            <!-- start product image -->
-            <a href="GeraiBMenuList.jsp" class="grid-view-item__link">
-                <!-- image -->
-                <img class="primary blur-up lazyload" data-src="assets/images/smallbanner.jpeg" src="assets/images/smallbanner.jpeg" alt="image">
-                <!-- End image -->
-                <!-- Hover image -->
-                <img class="hover blur-up lazyload" data-src="assets/images/smallbanner.jpeg" src="assets/images/smallbanner.jpeg" alt="image">
-                <!-- End hover image -->
-            </a>
-            <!-- end product image -->
-
-            <!-- Start product button -->
-            <button class="btn btn-addto-cart" type="button" tabindex="0">Gerai B</button>
-            <!-- end product button -->
-        </div>
-    </div>
-    <%--                        //habis Gerai B--%>
-    <%--                        //Gerai C--%>
-    <div class="col-6 col-sm-2 col-md-3 col-lg-3 item">
-        <!-- start product image -->
-        <div class="product-image">
-            <!-- start product image -->
-            <a href="GeraiCMenuList.jsp" class="grid-view-item__link">
-                <!-- image -->
-                <img class="primary blur-up lazyload" data-src="assets/images/smallbanner.jpeg" src="assets/images/smallbanner.jpeg" alt="image">
-                <!-- End image -->
-                <!-- Hover image -->
-                <img class="hover blur-up lazyload" data-src="assets/images/smallbanner.jpeg" src="assets/images/smallbanner.jpeg" alt="image">
-                <!-- End hover image -->
-            </a>
-            <!-- end product image -->
-
-            <!-- Start product button -->
-            <button class="btn btn-addto-cart" type="button" tabindex="0">Gerai C</button>
-            <!-- end product button -->
-        </div>
-    </div>
-    <%--                        //habis Gerai C--%>
-
-    <%--                        //Gerai D--%>
-    <div class="col-6 col-sm-2 col-md-3 col-lg-3 item">
-        <!-- start product image -->
-        <div class="product-image">
-            <!-- start product image -->
-            <a href="GeraiDMenuList.jsp" class="grid-view-item__link">
-                <!-- image -->
-                <img class="primary blur-up lazyload" data-src="assets/images/smallbanner.jpeg" src="assets/images/smallbanner.jpeg" alt="image">
-                <!-- End image -->
-                <!-- Hover image -->
-                <img class="hover blur-up lazyload" data-src="assets/images/smallbanner.jpeg" src="assets/images/smallbanner.jpeg" alt="image">
-                <!-- End hover image -->
-            </a>
-            <!-- end product image -->
-
-            <!-- Start product button -->
-            <button class="btn btn-addto-cart" type="button" tabindex="0">Gerai D</button>
-            <!-- end product button -->
-        </div>
-    </div>
-    <%--                        //habis Gerai D--%>
                     </div>
-<%--                    <div class="row">--%>
-<%--                        <div class="col-12 col-sm-12 col-md-12 col-lg-12 text-center">--%>
-<%--                            <a href="studentMenuList.jsp" class="btn">View all</a>--%>
-<%--                        </div>--%>
-<%--                    </div>--%>
                 </div>
+                <!--End Collection Box slider-->
+
             </div>
         </div>
         <!--End Featured Product-->
@@ -348,108 +156,12 @@
     </div>
 
     <!--Google Maps-->
-    <!--Footer-->
-    <footer id="footer" class="footer-2">
-        <div class="site-footer">
-            <div class="container">
-                <!--Footer Links-->
-                <div class="footer-top">
-                    <div class="row">
-                        <div class="col-12 col-sm-12 col-md-3 col-lg-3 contact-box">
-                            <h4 class="h4">Contact Us</h4>
-                            <ul class="addressFooter">
-                                <li><i class="icon anm anm-map-marker-al"></i><p>Jalan Lembah Kesang 1/1-2, Kampung <br>Seri Mendapat, 77300 Merlimau, Melaka</p></li>
-                                <li class="phone"><i class="icon anm anm-phone-s"></i><p>(+606) 264 5000</p></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <!--End Footer Links-->
-                <hr>
-                <div class="footer-bottom">
-                    <div class="row">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
-    <!--End Footer-->
+<jsp:include page="footer.jsp"></jsp:include>
     <!--Scoll Top-->
     <span id="site-scroll"><i class="icon anm anm-angle-up-r"></i></span>
     <!--End Scoll Top-->
 
-    <!--Quick View popup-->
-    <div class="modal fade quick-view-popup" id="content_quickview">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-body">
-                    <div id="ProductSection-product-template" class="product-template__container prstyle1">
-                        <div class="product-single">
-                            <!-- Start model close -->
-                            <a href="javascript:void(0)" data-dismiss="modal" class="model-close-btn pull-right" title="close"><span class="icon icon anm anm-times-l"></span></a>
-                            <!-- End model close -->
-                            <div class="row">
-                                <div class="col-lg-6 col-md-6 col-sm-12 col-12">
-                                    <div class="product-details-img">
-                                        <div class="pl-20">
-                                            <img src="assets/images/signup-image.jpg" alt="" />
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6 col-md-6 col-sm-12 col-12">
-                                    <div class="product-single__meta">
-                                        <h2 class="product-single__title">&nbsp &nbsp &nbsp Don't have account?</h2>
 
-                                        <section class="signup">
-                                            <div class="container">
-                                                <div class="signup-content">
-                                                    <div class="signup-form">
-                                                        <h2 class="form-title">Sign up</h2>
-                                                        <form method="POST" class="register-form" id="register-form">
-                                                            <div class="form-group">
-                                                                <label for="name"><i class="zmdi zmdi-account material-icons-name"></i></label>
-                                                                <input type="text" name="name" id="name" placeholder="Your Name"/>
-                                                            </div>
-                                                            <div class="form-group">
-                                                                <label for="email"><i class="zmdi zmdi-email"></i></label>
-                                                                <input type="email" name="email" id="email" placeholder="Your Email"/>
-                                                            </div>
-                                                            <div class="form-group">
-                                                                <label for="pass"><i class="zmdi zmdi-lock"></i></label>
-                                                                <input type="password" name="pass" id="pass" placeholder="Password"/>
-                                                            </div>
-                                                            <div class="form-group">
-                                                                <label for="re-pass3"><i class="zmdi zmdi-lock-outline"></i></label>
-                                                                <input type="password" name="re_pass" id="re_pass3" placeholder="Repeat your password"/>
-                                                            </div>
-                                                            <div class="form-group">
-                                                                <input type="checkbox" name="agree-term" id="agree-term" class="agree-term" />
-                                                                <label for="agree-term" class="label-agree-term"><span><span></span></span>I agree all statements in  <a href="#" class="term-service">Terms of service</a></label>
-                                                            </div>
-                                                            <a href="login.html" class="signup-image-link">I am already member</a>
-                                                            <div class="form-group form-button">
-                                                                <input type="submit" name="signup" id="signup" class="form-submit" value="Register"/>
-                                                            </div>
-                                                        </form>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </section>
-
-                                    </div>
-                                </div>
-                            </div>
-                            <!--End-product-single-->
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!--End Quick View popup-->
-
-    <!-- Newsletter Popup -->
-    <!-- End Newsletter Popup -->
 
     <!-- Including Jquery -->
     <script src="assets/js/vendor/jquery-3.3.1.min.js"></script>

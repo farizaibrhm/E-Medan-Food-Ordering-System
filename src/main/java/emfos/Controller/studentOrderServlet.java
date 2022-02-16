@@ -9,11 +9,11 @@ import javax.servlet.annotation.*;
 import java.io.IOException;
 import java.io.PrintWriter;
 
-@WebServlet(name = "orderServlet", value = "/orderServlet")
-public class orderServlet extends HttpServlet {
+@WebServlet(name = "studentOrderServlet", value = "/studentOrderServlet")
+public class studentOrderServlet extends HttpServlet {
     private static final long serialVersionUID = 1L;
 
-    public orderServlet() {
+    public studentOrderServlet() {
         super();
     }
 
@@ -47,7 +47,7 @@ public class orderServlet extends HttpServlet {
                     if (result == true) {
                         out.println("<script type=\"text/javascript\">");
                         out.println("alert('Item has been placed. Thank you for your order.');");
-                        out.println("location='index.jsp';");
+                        out.println("location='studentOrderList.jsp';");
                         out.println("</script>");
                     } else {
                         out.println("<script type=\"text/javascript\">");

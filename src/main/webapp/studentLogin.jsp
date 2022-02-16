@@ -55,12 +55,13 @@
                     <ul id="siteNav" class="site-nav medium center hidearrow">
                         <li class="lvl1 parent megamenu"><a href="index.jsp">Home <i class="anm anm-angle-down-l"></i></a></li>
                         <li class="lvl1 parent megamenu"><a href="aboutus.jsp">About Us <i class="anm anm-angle-down-l"></i></a></li>
-                        <li class="lvl1 parent dropdown"><a href="studentMenuList.jsp">Menu <i class="anm anm-angle-down-l"></i></a>
+                        <li class="lvl1 parent dropdown"><a href="#">Gerai <i class="anm anm-angle-down-l"></i></a>
                             <ul class="dropdown">
-                                <li><a href="studentFoodMenuList.jsp" class="site-nav">Food</a></li>
-                                <li><a href="studentDrinkMenuList.jsp" class="site-nav">Drink</a></li>
+                                <li><a href="GeraiAMenuList.jsp" class="site-nav">Gerai A</a></li>
+                                <li><a href="GeraiBMenuList.jsp" class="site-nav">Gerai B</a></li>
+                                <li><a href="GeraiCMenuList.jsp" class="site-nav">Gerai C</a></li>
+                                <li><a href="GeraiDMenuList.jsp" class="site-nav">Gerai D</a></li>
                             </ul>
-                        </li>
                         </li>
                     </ul>
                 </nav>

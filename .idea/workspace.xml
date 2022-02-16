@@ -9,18 +9,28 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ee72d468-6c94-46a4-8c84-170d520e2088" name="Changes" comment="add same item to cart by increasing the quantity instead of adding the item to a new row">
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/studentOrderHistory.jsp" afterDir="false" />
+    <list default="true" id="ee72d468-6c94-46a4-8c84-170d520e2088" name="Changes" comment="tengok balik studentOrderList.jsp">
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/GeraiEMenuList.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/images/banner (1).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/footer.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/header.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/studentOrderList.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/emfos/Controller/orderServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/emfos/Controller/orderServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/emfos/Controller/orderServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/emfos/Controller/studentOrderServlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/emfos/Controller/studentCartServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/emfos/Controller/studentCartServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/emfos/DAO/cartDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/emfos/DAO/cartDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/emfos/DAO/menuDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/emfos/DAO/menuDAO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/emfos/DAO/orderDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/emfos/DAO/orderDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/emfos/Model/cart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/emfos/Model/cart.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/emfos/Model/order.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/emfos/Model/order.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/GeraiAMenuList.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/GeraiAMenuList.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/GeraiBMenuList.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/GeraiBMenuList.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/GeraiCMenuList.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/GeraiCMenuList.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/GeraiDMenuList.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/GeraiDMenuList.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/aboutus.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/aboutus.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/studentCart.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/studentCart.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/studentLogin.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/studentLogin.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/studentOrderHistory.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/studentViewOrderDetails.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/studentProfile.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/studentProfile.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/studentRegister.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/studentRegister.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/index.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -240,6 +250,8 @@
       <workItem from="1644813747700" duration="25896000" />
       <workItem from="1644892842558" duration="586000" />
       <workItem from="1645002083623" duration="9871000" />
+      <workItem from="1645021446190" duration="5716000" />
+      <workItem from="1645037343277" duration="7361000" />
     </task>
     <task id="LOCAL-00001" summary="Merge remote-tracking branch 'origin/dev' into dev">
       <created>1642837016272</created>
@@ -325,7 +337,14 @@
       <option name="project" value="LOCAL" />
       <updated>1644836724675</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="single order now can have many menu">
+      <created>1645021540781</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1645021540781</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -357,6 +376,8 @@
     <MESSAGE value="Placing order done (sesuaikan untuk ict punya requirement first, isp kemudian)" />
     <MESSAGE value="delete from cart done." />
     <MESSAGE value="add same item to cart by increasing the quantity instead of adding the item to a new row" />
-    <option name="LAST_COMMIT_MESSAGE" value="add same item to cart by increasing the quantity instead of adding the item to a new row" />
+    <MESSAGE value="single order now can have many menu" />
+    <MESSAGE value="tengok balik studentOrderList.jsp" />
+    <option name="LAST_COMMIT_MESSAGE" value="tengok balik studentOrderList.jsp" />
   </component>
 </project>

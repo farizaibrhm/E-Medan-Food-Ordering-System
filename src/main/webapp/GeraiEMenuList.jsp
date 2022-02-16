@@ -12,7 +12,7 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Menu Page &ndash; Gerai D</title>
+    <title>Menu Page &ndash; Gerai E</title>
     <meta name="description" content="description">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -36,7 +36,7 @@
         <div class="collection-header">
             <div class="collection-hero">
                 <div class="collection-hero__image"><img class="blur-up lazyload" src="assets/images/headerfoods.png" /></div>
-                <div class="collection-hero__title-wrapper"><h1 class="collection-hero__title page-width">Gerai D</h1></div>
+                <div class="collection-hero__title-wrapper"><h1 class="collection-hero__title page-width">Gerai E</h1></div>
             </div>
         </div>
         <!--End Collection Banner-->
@@ -52,7 +52,7 @@
                                         <%
                                             Connection con = DBConnection.getConn();
                                             Statement statement2= con.createStatement();
-                                            ResultSet resultSet2 = statement2.executeQuery("SELECT * FROM public.menu \"m\", public.cafeworker \"c\" WHERE \"m\".\"CWORKID\" = \"c\".\"CWORKID\" AND \"c\".\"CWORKSTALLNAME\" = 'Gerai D';\n");
+                                            ResultSet resultSet2 = statement2.executeQuery("SELECT * FROM public.menu \"m\", public.cafeworker \"c\" WHERE \"m\".\"CWORKID\" = \"c\".\"CWORKID\" AND \"c\".\"CWORKSTALLNAME\" = 'Gerai E';\n");
                                             while(resultSet2.next()){
                                         %>
                                         <div class="col-6 col-sm-6 col-md-3 col-lg-3 item">
@@ -65,7 +65,6 @@
                                                     <!-- End image -->
                                                 </a>
                                                 <!-- end product image -->
-
                                                 <!-- Start product button -->
                                                 <form class="variants add" method="post" action="${pageContext.request.contextPath}/studentCartServlet">
                                                     <input type="hidden"  name="menuid" value="<%=resultSet2.getInt("MENUID")%>">
@@ -96,17 +95,12 @@
                                             }
                                         %>
                                     </div>
-
                                 </div>
-
                             </div>
-
                         </div>
                     </div>
                 </div>
                 <!--End Hand-picked Items-->
-
-
             </div>
         </div>
         <!--End Body Content-->

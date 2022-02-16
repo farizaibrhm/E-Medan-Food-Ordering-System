@@ -20,7 +20,7 @@ public class orderDAO {
 
             while (rs.next()){
                 ORDERNO = rs.getInt(1);
-                ORDERNO = ORDERNO + 1;
+                ORDERNO = ORDERNO + 1000;
 
                 String oStatus = "Pending";
 
@@ -47,6 +47,7 @@ public class orderDAO {
                                 "VALUES (default,'" + quantity + "','" + oID + "','" + mid + "', '" + cafeid + "')");
                     }
                 }
+                ORDERNO++;
             }
         }catch (SQLException e) {
             e.printStackTrace();

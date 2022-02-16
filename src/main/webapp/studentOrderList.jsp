@@ -68,13 +68,13 @@
                 {
         %>
                     <tr>
-                        <td class="text-center"><%=rs.getInt("ORDERNO")%></td>
+                        <td class="text-center">#<%=rs.getInt("ORDERNO")%></td>
                         <td class="text-center">
                             <%=rs.getDate("ORDERDATE")%><br>
                             <%=rs.getTime("ORDERTIME")%>
                         </td>
                         <td class="text-center"><%=session.getAttribute("STUDENTNAME")%></td>
-                        <td class="text-center">RM <%=rs.getDouble("ORDERTPRICE")%></td>
+                        <td class="text-center">RM <%=rs.getString("ORDERTPRICE")%></td>
                         <td class="text-center"><%=rs.getString("ORDERSTATUS")%></td>
                         <td class="text-center">
                             <a  href="studentViewOrderDetails.jsp?id=<%=rs.getString("ORDERID")%>" style="background-color: #343a40;" class="btn btn--sm">View</a>

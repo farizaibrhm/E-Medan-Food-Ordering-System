@@ -74,9 +74,25 @@
                         <td class="text-center">RM <%=rs.getString("ORDERTPRICE")%></td>
                         <td class="text-center"><%=rs.getString("ORDERSTATUS")%></td>
                         <td class="text-center">
-                            <a  href="studentViewOrderDetails.jsp?id=<%=rs.getString("ORDERNO")%>" style="background-color: #343a40;" class="btn btn--sm">View</a>
-                            <a  href="studentViewOrderDetails.jsp?id=<%=rs.getString("ORDERID")%>" style="background-color: #343a40;" class="btn btn--sm">Leave Feedback</a>
+                            <%
+                                if (rs.getString("ORDERSTATUS").equalsIgnoreCase("Pending")){ %>
 
+                                    <a  href="studentViewOrderDetails.jsp?id=<%=rs.getString("ORDERNO")%>" style="background-color: #5D9DED;" class="btn btn--sm">View</a>
+
+                                    <form method="post" action="${pageContext.request.contextPath}/studentOrderServlet">
+                                        <input type="hidden" name="id" value="<%=rs.getInt("ORDERID")%>">
+                                            <input type="submit" name="Action" style="background-color: #d9534f;" class="btn btn--sm" value="Cancel" onclick="return confirm('Are you sure you want to cancel this order?');">
+                                    </form>
+
+                                <% } else if (rs.getString("ORDERSTATUS").equalsIgnoreCase("Processing")){ %>
+
+                                    <a  href="studentViewOrderDetails.jsp?id=<%=rs.getString("ORDERNO")%>" style="background-color: #5D9DED;" class="btn btn--sm">View</a>
+
+                                <% } else if (rs.getString("ORDERSTATUS").equalsIgnoreCase("Completed")){ %>
+
+                                    <a  href="studentViewOrderDetails.jsp?id=<%=rs.getString("ORDERNO")%>" style="background-color: #5D9DED;" class="btn btn--sm">View</a>
+                                    <a  href="studentLeaveFeedback.jsp?id=<%=rs.getString("ORDERID")%>" style="background-color: #42CB6F;" class="btn btn--sm">Leave Feedback</a>
+                                <% }%>
                         </td>
                     </tr>
 
@@ -128,6 +144,8 @@
     <script src="assets/js/popper.min.js"></script>
     <script src="assets/js/lazysizes.js"></script>
     <script src="assets/js/main.js"></script>
+
+
 </div>
 </body>
 

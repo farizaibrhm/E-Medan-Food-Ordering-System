@@ -1,14 +1,18 @@
+
+<%@ page import="java.sql.DriverManager" %>
 <%@ page import="java.sql.ResultSet" %>
 <%@ page import="java.sql.Statement" %>
 <%@ page import="java.sql.Connection" %>
+<%@ page import="emfos.Model.cafeworker" %>
 <%@ page import="emfos.DBConnect.DBConnection" %>
+<%@ page import="java.text.DecimalFormat" %>
 
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Order List</title>
+    <title>Total Sales</title>
     <meta name="description" content="description">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Favicon -->
@@ -20,8 +24,6 @@
     <!-- Main Style CSS -->
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/responsive.css">
-
-
 </head>
 <%
     String CWORKID = (String) session.getAttribute("CWORKID");
@@ -39,61 +41,64 @@
         <!--Page Title-->
         <div class="page section-header text-center">
             <div class="page-title">
-                <div class="wrapper"><h1 class="page-width">Order List of <%=session.getAttribute("CWORKSTALLNAME")%></h1></div>
+                <div class="wrapper"><h1 class="page-width">Total Sales of <%=session.getAttribute("CWORKSTALLNAME")%></h1></div>
             </div>
         </div>
         <!--End Page Title-->
 
         <div class="container">
             <div class="text-center">
-
-                <!--Order List-->
-
+                <!--Sales List-->
                 <table  class="table table-bordered">
                     <thead class="thead-dark">
                     <tr>
                         <th class="text-center">ORDER NO</th>
-                        <th class="text-center">ORDER DATE</th>
+                        <th class="text-center">PAYMENT DATE</th>
                         <th class="text-center">NAME</th>
                         <th class="text-center">AMOUNT</th>
-                        <th class="text-center">ORDER STATUS</th>
-                        <th class="text-center">ACTION</th>
+                        <th class="text-center">RECEIPT</th>
                     </tr>
                     </thead>
-                    <tbody>
+                    <tbody
         <%
                 Connection con = DBConnection.getConn();
                 Statement st = con.createStatement();
-                String sql = "SELECT *  FROM public.forder \"o\", public.orderitem \"oi\", public.student \"s\" WHERE \"o\".\"ORDERID\" = \"oi\".\"ORDERID\" AND \"o\".\"STUDENTID\" = \"s\".\"STUDENTID\" AND \"oi\".\"CWORKID\" = '" + session.getAttribute("CWORKID") + "' ";
+                String sql = "SELECT \"ORDERNO\", \"ORDERTPRICE\", \"PAYMENTDATE\", \"PAYMENTTIME\", \"FILENAME\", \"STUDENTNAME\" FROM public.forder \"o\", public.orderitem \"oi\", public.payment \"p\", public.student \"s\" WHERE \"o\".\"ORDERID\" = \"oi\".\"ORDERID\" AND \"o\".\"ORDERID\" = \"p\".\"ORDERID\" AND \"o\".\"STUDENTID\" = \"s\".\"STUDENTID\" AND \"oi\".\"CWORKID\" = '" + session.getAttribute("CWORKID") + "' ";
                 ResultSet rs = st.executeQuery(sql);
                 while (rs.next())
                 {
         %>
                     <tr>
-                        <td class="text-center" >#<%=rs.getString("ORDERNO")%></td>
+                        <td class="text-center">#<%=rs.getString("ORDERNO")%></td>
                         <td class="text-center">
-                            <%=rs.getDate("ORDERDATE")%> <br>
-                            <%=rs.getTime("ORDERTIME")%>
+                            <%=rs.getDate("PAYMENTDATE")%> <br>
+                            <%=rs.getTime("PAYMENTTIME")%>
                         </td>
                         <td class="text-center"><%=rs.getString("STUDENTNAME")%></td>
                         <td class="text-center">RM <%=rs.getString("ORDERTPRICE")%></td>
-                        <td class="text-center">
-                            <form method="post" action="${pageContext.request.contextPath}/cafeworkerOrderServlet">
-                                <input type="hidden" name="ORDERID" value="<%=rs.getInt("ORDERID")%>"/>
-                                <select id="ORDERSTATUS" name="ORDERSTATUS" onchange='this.form.submit();'>
-                                    <option value="<%=rs.getString("ORDERSTATUS")%>"><%=rs.getString("ORDERSTATUS")%></option>
-                                    <option value="Processing">Processing</option>
-                                    <option value="Completed">Completed</option>
-                                </select>
-                            </form>
-                        </td>
-                        <td class="text-center">
-                            <a  href="cafeworkerViewOrderDetails.jsp?id=<%=rs.getString("ORDERNO")%>" style="background-color: #343a40;" class="btn btn--sm">View</a>
-                        </td>
+                        <td class="text-center"><a href="receipt/<%=rs.getString("FILENAME")%>">VIEW</a></td>
                     </tr>
-                        <%
-                }
+
+                <%
+            }
                 %>
+
+             <%
+                    DecimalFormat df = new DecimalFormat("##. 00");
+                    double subtotal = 00.00;
+                    Statement st3 = con.createStatement();
+                    ResultSet rs3 = st3.executeQuery("SELECT sum (\"ORDERTPRICE\") FROM public.forder \"o\", public.orderitem \"oi\", public.payment p WHERE \"o\".\"ORDERID\" = \"oi\".\"ORDERID\" AND \"oi\".\"ORDERID\" = \"p\".\"ORDERID\" AND \"oi\".\"CWORKID\" ='" + session.getAttribute("CWORKID")+"'");
+                    if (rs3.next())
+                    {
+                        subtotal = rs3.getDouble(1);
+                    }
+
+             %>
+                <tr>
+                    <td colspan="4" class="text-right"><strong>Total Sales</strong></td>
+                    <td class ="text-center"><strong>RM <%=df.format(subtotal)%></strong></td>
+                </tr>
+
                 </table>
             </div>
 
@@ -120,7 +125,5 @@
         <script src="assets/js/vendor/photoswipe-ui-default.min.js"></script>
     </div>
 </div>
-
 </body>
-
 </html>

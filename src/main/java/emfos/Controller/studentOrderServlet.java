@@ -67,6 +67,42 @@ public class studentOrderServlet extends HttpServlet {
                 e.printStackTrace();
             }
         }
+
+        if (request.getParameter("Action").equals("Cancel")){
+            System.out.println("in");
+            PrintWriter out = response.getWriter();
+
+            orderDAO odao = new orderDAO();
+
+            HttpSession session = request.getSession();
+
+            String oid = request.getParameter("id");
+            if (!((oid) == null)) {
+                int id = Integer.parseInt(oid);
+                String stuid = (String) session.getAttribute("STUDENTID");
+
+                odao.getOrderByORDERID(id, stuid);
+                boolean result = odao.cancelOrder(id, stuid);
+
+                if (result == true) {
+                    out.println("<script type=\"text/javascript\">");
+                    out.println("alert('Your order has been cancelled.');");
+                    out.println("location='studentOrderList.jsp';");
+                    out.println("</script>");
+                } else {
+                    out.println("<script type=\"text/javascript\">");
+                    out.println("alert('An error occurred while trying to cancel your order. Please try again.');");
+                    out.println("location='studentOrderList.jsp';");
+                    out.println("</script>");
+                }
+            }else {
+                out.println("<script type=\"text/javascript\">");
+                out.println("alert('ID not found.');");
+                out.println("location='studentOrderList.jsp';");
+                out.println("</script>");
+            }
+
+        }
     }
 
     private String extractFileName (Part filePart)

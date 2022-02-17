@@ -1,6 +1,7 @@
 package emfos.DAO;
 
 import emfos.DBConnect.DBConnection;
+import emfos.Model.cart;
 import emfos.Model.order;
 
 import java.sql.Connection;
@@ -63,76 +64,86 @@ public class orderDAO {
         }
     }
 
-    public order getOrderByOrderNoStudent(int id, String stuid){
+    public boolean updateOrder(order upOrder)
+    {
+        Connection con = DBConnection.getConn();
+
+        int i = 0;
+        try
+        {
+            PreparedStatement preparedStatement = (PreparedStatement)
+                    con.prepareStatement("UPDATE public.forder \n" +
+                            "\tSET  \"ORDERSTATUS\"=?" +
+                            "\tWHERE \"ORDERID\" =?  ;");
+
+            preparedStatement.setString(1, upOrder.getORDERSTATUS());
+            preparedStatement.setInt(2, upOrder.getORDERID());
+
+            i = preparedStatement.executeUpdate();
+        }
+
+        catch (SQLException e)
+        {
+            e.printStackTrace();
+        }
+        if (i == 0)
+        {
+            return false;
+        } else {
+            return true;
+        }
+    }
+
+    public order getOrderByORDERID(int id, String stuid){
         Connection con = DBConnection.getConn();
 
         order o = new order();
 
-        //kalau retrieve kat student
-        String sql= "SELECT \"m\".\"MENUID\", \"m\".\"MENUNAME\", \"c\".\"CWORKSTALLNAME\", \"s\".\"STUDENTNAME\", \"o\".* FROM public.menu \"m\", public.student \"s\", public.cafeworker \"c\", public.forder \"o\" WHERE \"m\".\"MENUID\" = \"o\".\"MENUID\" AND \"s\".\"STUDENTID\" = \"o\".\"STUDENTID\" AND \"c\".\"CWORKID\"=\"o\".\"CWORKID\" AND \"o\".\"ORDERNO\" =? AND \"o\".\"STUDENTID\"=?";
+        String sql = "SELECT * FROM public.forder WHERE \"ORDERID\"=? AND \"STUDENTID\"=?;";
 
-        try{
+        try {
             PreparedStatement ps = con.prepareStatement(sql);
             ps.setInt(1, id);
             ps.setString(2, stuid);
             ResultSet rs = ps.executeQuery();
 
-            if (rs.next()){
+            if (rs.next()) {
                 o.setORDERID(rs.getInt("ORDERID"));
                 o.setORDERNO(rs.getInt("ORDERNO"));
                 o.setORDERDATE(rs.getString("ORDERDATE"));
                 o.setORDERTIME(rs.getString("ORDERTIME"));
                 o.setORDERSTATUS(rs.getString("ORDERSTATUS"));
-                o.setMENUID(rs.getInt("MENUID"));
-                o.setMENUNAME(rs.getString("MENUNAME"));
-                o.setORDERPRICE(rs.getDouble("ORDERPRICE"));
-                o.setORDERQUANTITY(rs.getInt("ORDERQUANTITY"));
                 o.setORDERTPRICE(rs.getDouble("ORDERTPRICE"));
                 o.setSTUDENTID(rs.getString("STUDENTID"));
-                o.setSTUDENTNAME(rs.getString("STUDENTNAME"));
-                o.setCWORKID(rs.getString("CWORKID"));
-                o.setCWORKSTALLNAME(rs.getString("CWORKSTALLNAME"));
             }
-
         }catch (SQLException e) {
             e.printStackTrace();
         }
         return o;
     }
 
-    public order getOrderByOrderNoCwork(int id, String cworkid){
+    public boolean cancelOrder(int id, String stuid){
         Connection con = DBConnection.getConn();
 
-        order o = new order();
-        // kalau retrieve kat cafeworker
-        String sql= "SELECT \"m\".\"MENUID\", \"m\".\"MENUNAME\", \"c\".\"CWORKSTALLNAME\", \"s\".\"STUDENTNAME\", \"o\".* FROM public.menu \"m\", public.student \"s\", public.cafeworker \"c\", public.forder \"o\" WHERE \"m\".\"MENUID\" = \"o\".\"MENUID\" AND \"s\".\"STUDENTID\" = \"o\".\"STUDENTID\" AND \"c\".\"CWORKID\"=\"o\".\"CWORKID\" AND \"o\".\"ORDERNO\" =? AND \"o\".\"CWORKID\"=?";
+        String sql = "DELETE FROM public.forder WHERE \"ORDERID\"=? AND \"STUDENTID\"=?;";
 
-        try{
+        int i = 0;
+
+        try {
             PreparedStatement ps = con.prepareStatement(sql);
             ps.setInt(1, id);
-            ps.setString(2,  cworkid);
-            ResultSet rs = ps.executeQuery();
+            ps.setString(2, stuid);
 
-            if (rs.next()){
-                o.setORDERID(rs.getInt("ORDERID"));
-                o.setORDERNO(rs.getInt("ORDERNO"));
-                o.setORDERDATE(rs.getString("ORDERDATE"));
-                o.setORDERTIME(rs.getString("ORDERTIME"));
-                o.setORDERSTATUS(rs.getString("ORDERSTATUS"));
-                o.setMENUID(rs.getInt("MENUID"));
-                o.setMENUNAME(rs.getString("MENUNAME"));
-                o.setORDERPRICE(rs.getDouble("ORDERPRICE"));
-                o.setORDERQUANTITY(rs.getInt("ORDERQUANTITY"));
-                o.setORDERTPRICE(rs.getDouble("ORDERTPRICE"));
-                o.setSTUDENTID(rs.getString("STUDENTID"));
-                o.setSTUDENTNAME(rs.getString("STUDENTNAME"));
-                o.setCWORKID(rs.getString("CWORKID"));
-                o.setCWORKSTALLNAME(rs.getString("CWORKSTALLNAME"));
-            }
-
-        }catch (SQLException e) {
+            i = ps.executeUpdate();
+        } catch (SQLException e){
             e.printStackTrace();
         }
-        return o;
+        if (i == 0){
+            return false;
+        } else {
+            return true;
+        }
     }
+
+
 }

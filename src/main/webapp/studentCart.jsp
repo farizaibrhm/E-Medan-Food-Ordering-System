@@ -131,7 +131,23 @@
                     DecimalFormat df = new DecimalFormat("##. 00");
                 %>
 
-                <div class="col-12 col-sm-12 col-md-4 col-lg-4 cart__footer">
+
+                    <div class="col-12 col-sm-12 col-md-4 col-lg-4 cart__footer">
+                        <form method="post" enctype="multipart/form-data" action="${pageContext.request.contextPath}/studentOrderServlet">
+                    <div class="solid-border">
+                        <div id="accordion" class="payment-section">
+                            <h3 class="font-15 xs-font-13">Payment Instruction</h3>
+                            <p class="no-margin font-15">Please include order number for the recipient's reference when uploading payment receipt.</p>
+                            <fieldset>
+                                <div class="row">
+                                    <div class="form-group col-md-6 col-lg-6 col-xl-12 required">
+                                        <label>Receipt/Proof of Payment<span class="required-f">*</span></label>
+                                        <input type="file" name="PAYMENTRECEIPT" class="form-control-file">
+                                    </div>
+                                </div>
+                            </fieldset>
+                        </div>
+                    </div>
                     <div class="solid-border">
                         <div class="row border-bottom pb-2">
                             <span class="col-12 col-sm-6 cart__subtotal-title">Subtotal</span>
@@ -139,19 +155,19 @@
                         </div>
 
                         <div class="row border-bottom pb-2 pt-2">
-                            <span class="col-12 col-sm-6 cart__subtotal-title">Delivery Method</span>
-                            <span class="col-12 col-sm-6 text-right">Cash on Pickup</span>
+                            <span class="col-12 col-sm-6 cart__subtotal-title">Shipping Fee</span>
+                            <span class="col-12 col-sm-6 text-right">0.00</span>
                         </div>
                         <div class="row border-bottom pb-2 pt-2">
                             <span class="col-12 col-sm-6 cart__subtotal-title"><strong>Grand Total</strong></span>
                             <span class="col-12 col-sm-6 cart__subtotal-title cart__subtotal text-right">RM <%=df.format(grandtotal)%></span></span>
                         </div>
-                        <form method="post" action="${pageContext.request.contextPath}/studentOrderServlet">
-                            <input type="hidden" name="amount" value="<%=df.format(grandtotal)%>">
-                            <input type="submit" name="Action" id="cartCheckout" class="btn btn--small-wide checkout" value="Place Order">
-                        </form>
-                    </div>
 
+                            <input type="hidden" name="amount" value="<%=df.format(grandtotal)%>">
+                            <input type="hidden" name="PAYMENTRECEIPT">
+                            <input type="submit" name="Action" id="cartCheckout" class="btn btn--small-wide checkout" value="Place Order">
+                    </div>
+                        </form>
                 </div>
             </div>
         </div>

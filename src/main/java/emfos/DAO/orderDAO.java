@@ -10,7 +10,7 @@ import java.sql.SQLException;
 
 public class orderDAO {
 
-    public boolean placeOrder(String stuid, double amount){
+    public boolean placeOrder(String stuid, double amount, String fileName, String savepath){
         Connection con = DBConnection.getConn();
         int ORDERNO = 1000, oID = 0, i = 0;
 
@@ -45,6 +45,9 @@ public class orderDAO {
 
                         con.createStatement().executeUpdate("INSERT INTO public.orderitem(\"ORDERITEMID\", \"ORDERITEMQUANTITY\", \"ORDERID\", \"MENUID\", \"CWORKID\")" +
                                 "VALUES (default,'" + quantity + "','" + oID + "','" + mid + "', '" + cafeid + "')");
+
+                        con.createStatement().executeUpdate("INSERT INTO public.payment(\"PAYMENTID\", \"FILENAME\", \"SAVEPATH\", \"ORDERID\", \"STUDENTID\")" +
+                                "VALUES (default,'" + fileName + "','" + savepath + "','" + oID + "', '" + stuid + "')");
                     }
                 }
                 ORDERNO++;

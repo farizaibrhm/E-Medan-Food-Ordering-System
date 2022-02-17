@@ -9,11 +9,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ee72d468-6c94-46a4-8c84-170d520e2088" name="Changes" comment="tengok balik studentOrderList.jsp">
+    <list default="true" id="ee72d468-6c94-46a4-8c84-170d520e2088" name="Changes" comment="student view order details ✔">
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/MenuList.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/webContexts.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/webContexts.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/studentOrderList.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/studentOrderList.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/studentViewOrderDetails.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/studentViewOrderDetails.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/GeraiAMenuList.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/GeraiBMenuList.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/GeraiCMenuList.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/GeraiDMenuList.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/GeraiEMenuList.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/cafeworkerLogin.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/cafeworkerLogin.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/cafeworkerRegister.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/cafeworkerRegister.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/header.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/header.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/studentCart.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/studentCart.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/studentLogin.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/studentLogin.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/studentRegister.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/studentRegister.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -236,7 +247,8 @@
       <workItem from="1645021446190" duration="5716000" />
       <workItem from="1645037343277" duration="7799000" />
       <workItem from="1645048345585" duration="1604000" />
-      <workItem from="1645080654544" duration="4100000" />
+      <workItem from="1645080654544" duration="4905000" />
+      <workItem from="1645087925359" duration="3422000" />
     </task>
     <task id="LOCAL-00001" summary="Merge remote-tracking branch 'origin/dev' into dev">
       <created>1642837016272</created>
@@ -350,7 +362,14 @@
       <option name="project" value="LOCAL" />
       <updated>1645051393570</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="student view order details ✔">
+      <created>1645084850121</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1645084850121</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -384,6 +403,7 @@
     <MESSAGE value="add same item to cart by increasing the quantity instead of adding the item to a new row" />
     <MESSAGE value="single order now can have many menu" />
     <MESSAGE value="tengok balik studentOrderList.jsp" />
-    <option name="LAST_COMMIT_MESSAGE" value="tengok balik studentOrderList.jsp" />
+    <MESSAGE value="student view order details ✔" />
+    <option name="LAST_COMMIT_MESSAGE" value="student view order details ✔" />
   </component>
 </project>

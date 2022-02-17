@@ -1,4 +1,7 @@
-<%--
+<%@ page import="java.sql.ResultSet" %>
+<%@ page import="java.sql.Statement" %>
+<%@ page import="emfos.DBConnect.DBConnection" %>
+<%@ page import="java.sql.Connection" %><%--
   Created by IntelliJ IDEA.
   User: Lenovo
   Date: 29/1/2022
@@ -57,12 +60,20 @@
                     <ul id="siteNav" class="site-nav medium center hidearrow">
                         <li class="lvl1 parent megamenu"><a href="index.jsp">Home <i class="anm anm-angle-down-l"></i></a></li>
                         <li class="lvl1 parent megamenu"><a href="aboutus.jsp">About Us <i class="anm anm-angle-down-l"></i></a></li>
-                        <li class="lvl1 parent dropdown"><a href="studentMenuList.jsp">Menu <i class="anm anm-angle-down-l"></i></a>
+                        <li class="lvl1 parent dropdown"><a href="#">Gerai <i class="anm anm-angle-down-l"></i></a>
                             <ul class="dropdown">
-                                <li><a href="studentFoodMenuList.jsp" class="site-nav">Food</a></li>
-                                <li><a href="studentDrinkMenuList.jsp" class="site-nav">Drink</a></li>
+                                <%
+                                    Connection con = DBConnection.getConn();
+                                    Statement statement2= con.createStatement();
+                                    ResultSet resultSet2 = statement2.executeQuery("SELECT * FROM public.cafeworker ORDER BY \"CWORKSTALLNAME\";");
+                                    while(resultSet2.next()){
+                                %>
+                                <li><a href="MenuList.jsp?shop=<%=resultSet2.getString("CWORKSTALLNAME")%>" class="site-nav"><%=resultSet2.getString("CWORKSTALLNAME")%></a></li>
+                                <%
+
+                                    }
+                                %>
                             </ul>
-                        </li>
                         </li>
                     </ul>
                 </nav>

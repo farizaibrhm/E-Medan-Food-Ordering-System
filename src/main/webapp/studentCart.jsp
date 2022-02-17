@@ -157,27 +157,6 @@
         </div>
 
     </div>
-
-
-
-    <!-- Delete Pop up -->
-    <div class="modal fade" id="removeFromCart" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel2" aria-hidden="true">
-        <div class="modal-dialog modal-confirm">
-            <div class="modal-content">
-                <div class="modal-header flex-column">
-                    <div class="icon-box">
-                        <i class="material-icons">&#xE5CD;</i>
-                    </div>
-                    <h4 class="modal-title w-100">Are you sure?</h4>
-                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                </div>
-                <div class="modal-body">
-                    <div id="show-data2"></div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Delete Pop up -->
     <!--End Body Content-->
 
     <jsp:include page="footer.jsp"></jsp:include>

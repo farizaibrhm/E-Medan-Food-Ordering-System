@@ -4,6 +4,15 @@
 <%@page import="java.sql.Connection"%>
 <%@page import="emfos.DBConnect.DBConnection"%>
 
+<%
+    String shop = request.getParameter("shop");
+
+    Connection con = DBConnection.getConn();
+    Statement st = con.createStatement();
+    String sql = "SELECT * FROM public.menu \"m\", public.cafeworker \"c\" WHERE \"m\".\"CWORKID\" = \"c\".\"CWORKID\" AND \"c\".\"CWORKSTALLNAME\" = '"+shop+"'";
+    ResultSet resultSet2 = st.executeQuery(sql);
+%>
+
 
 <!DOCTYPE html>
 <html class="no-js" lang="en">
@@ -12,7 +21,7 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Menu Page &ndash; Gerai D</title>
+    <title>Menu Page &ndash; <%=shop%></title>
     <meta name="description" content="description">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -36,7 +45,7 @@
         <div class="collection-header">
             <div class="collection-hero">
                 <div class="collection-hero__image"><img class="blur-up lazyload" src="assets/images/headerfoods.png" /></div>
-                <div class="collection-hero__title-wrapper"><h1 class="collection-hero__title page-width">Gerai D</h1></div>
+                <div class="collection-hero__title-wrapper"><h1 class="collection-hero__title page-width"><%=shop%></h1></div>
             </div>
         </div>
         <!--End Collection Banner-->
@@ -50,10 +59,7 @@
                                 <div class="grid-products">
                                     <div class="row">
                                         <%
-                                            Connection con = DBConnection.getConn();
-                                            Statement statement2= con.createStatement();
-                                            ResultSet resultSet2 = statement2.executeQuery("SELECT * FROM public.menu \"m\", public.cafeworker \"c\" WHERE \"m\".\"CWORKID\" = \"c\".\"CWORKID\" AND \"c\".\"CWORKSTALLNAME\" = 'Gerai D';\n");
-                                            while(resultSet2.next()){
+                                           while(resultSet2.next()){
                                         %>
                                         <div class="col-6 col-sm-6 col-md-3 col-lg-3 item">
                                             <!-- start product image -->
@@ -116,6 +122,8 @@
         <!--Scoll Top-->
         <span id="site-scroll"><i class="icon anm anm-angle-up-r"></i></span>
         <!--End Scoll Top-->
+
+
 
         <!-- Including Jquery -->
         <script src="assets/js/vendor/jquery-3.3.1.min.js"></script>

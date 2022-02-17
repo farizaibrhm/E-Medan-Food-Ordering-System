@@ -5,6 +5,7 @@
       <map>
         <entry key="file://$PROJECT_DIR$/src/main/webapp/cafe/cafeMenuList.jsp" value="file://$PROJECT_DIR$/src/main/webapp/cafe" />
         <entry key="file://$PROJECT_DIR$/src/main/webapp/cafe/updateMenu.jsp" value="file://$PROJECT_DIR$/src/main/webapp/cafe" />
+        <entry key="file://$PROJECT_DIR$/src/main/webapp/header.jsp" value="file://$PROJECT_DIR$/src/main/webapp" />
         <entry key="file://$PROJECT_DIR$/src/main/webapp/index.jsp" value="file://$PROJECT_DIR$/src/main/webapp" />
         <entry key="file://$PROJECT_DIR$/src/main/webapp/studentCheckout.jsp" value="file://$PROJECT_DIR$/src/main/webapp" />
         <entry key="file://$PROJECT_DIR$/src/main/webapp/studentFoodMenuList.jsp" value="file://$PROJECT_DIR$/src/main/webapp" />

@@ -5,6 +5,7 @@
 <%@page import="java.sql.ResultSet"%>
 <%@page import="java.sql.Statement"%>
 <%@page import="java.sql.Connection"%>
+<%@ page import="emfos.DBConnect.DBConnection" %>
 
 
 <!DOCTYPE html>
@@ -92,54 +93,24 @@
                 <div class="collection-box section">
                     <div class="container-fluid">
                         <div class="collection-grid">
+                            <%
+                                Connection con = DBConnection.getConn();
+                                Statement statement3= con.createStatement();
+                                ResultSet resultSet3 = statement3.executeQuery("SELECT * FROM public.cafeworker ORDER BY \"CWORKSTALLNAME\";");
+                                while(resultSet3.next()){
+                            %>
                             <div class="collection-grid-item">
-                                <a href="GeraiAMenuList.jsp" class="collection-grid-item__link">
+                                <a href="MenuList.jsp?shop=<%=resultSet3.getString("CWORKSTALLNAME")%>" class="collection-grid-item__link">
                                     <img data-src="assets/images/banner (1).jpg" src="assets/images/banner (1).jpg" class="blur-up lazyload"/>
                                     <div class="collection-grid-item__title-wrapper">
-                                        <h3 class="collection-grid-item__title btn btn--secondary no-border">GERAI A</h3>
+                                        <h3 class="collection-grid-item__title btn btn--secondary no-border"><%=resultSet3.getString("CWORKSTALLNAME")%></h3>
                                     </div>
                                 </a>
                             </div>
-                            <div class="collection-grid-item">
-                                <a href="GeraiBMenuList.jsp" class="collection-grid-item__link">
-                                    <img data-src="assets/images/banner (1).jpg" src="assets/images/banner (1).jpg" class="blur-up lazyload"/>
-                                    <div class="collection-grid-item__title-wrapper">
-                                        <h3 class="collection-grid-item__title btn btn--secondary no-border">GERAI B</h3>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="collection-grid-item blur-up lazyloaded">
-                                <a href="GeraiCMenuList.jsp" class="collection-grid-item__link">
-                                    <img data-src="assets/images/banner (1).jpg" src="assets/images/banner (1).jpg" class="blur-up lazyload"/>
-                                    <div class="collection-grid-item__title-wrapper">
-                                        <h3 class="collection-grid-item__title btn btn--secondary no-border">GERAI C</h3>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="collection-grid-item">
-                                <a href="GeraiDMenuList.jsp" class="collection-grid-item__link">
-                                    <img data-src="assets/images/banner (1).jpg" src="assets/images/banner (1).jpg" class="blur-up lazyload"/>
-                                    <div class="collection-grid-item__title-wrapper">
-                                        <h3 class="collection-grid-item__title btn btn--secondary no-border">GERAI D</h3>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="collection-grid-item">
-                                <a href="GeraiEMenuList.jsp" class="collection-grid-item__link">
-                                    <img data-src="assets/images/banner (1).jpg" src="assets/images/banner (1).jpg" class="blur-up lazyload"/>
-                                    <div class="collection-grid-item__title-wrapper">
-                                        <h3 class="collection-grid-item__title btn btn--secondary no-border">GERAI E</h3>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="collection-grid-item">
-                                <a href="GeraiFMenuList.jsp" class="collection-grid-item__link">
-                                    <img data-src="assets/images/banner (1).jpg" src="assets/images/banner (1).jpg" class="blur-up lazyload"/>
-                                    <div class="collection-grid-item__title-wrapper">
-                                        <h3 class="collection-grid-item__title btn btn--secondary no-border">GERAI F</h3>
-                                    </div>
-                                </a>
-                            </div>
+                            <%
+
+                                }
+                            %>
                         </div>
                     </div>
                 </div>

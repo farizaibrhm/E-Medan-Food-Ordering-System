@@ -5,6 +5,7 @@
 <%@page import="java.sql.ResultSet"%>
 <%@page import="java.sql.Statement"%>
 <%@page import="java.sql.Connection"%>
+<%@ page import="emfos.DBConnect.DBConnection" %>
 
 <%
     String STUDENTNAME = (String) session.getAttribute("STUDENTNAME");
@@ -55,10 +56,17 @@
                         <li class="lvl1 parent megamenu"><a href="aboutus.jsp">About Us <i class="anm anm-angle-down-l"></i></a></li>
                         <li class="lvl1 parent dropdown"><a href="#">Gerai <i class="anm anm-angle-down-l"></i></a>
                             <ul class="dropdown">
-                                <li><a href="GeraiAMenuList.jsp" class="site-nav">Gerai A</a></li>
-                                <li><a href="GeraiBMenuList.jsp" class="site-nav">Gerai B</a></li>
-                                <li><a href="GeraiCMenuList.jsp" class="site-nav">Gerai C</a></li>
-                                <li><a href="GeraiDMenuList.jsp" class="site-nav">Gerai D</a></li>
+                                <%
+                                    Connection con = DBConnection.getConn();
+                                    Statement statement2= con.createStatement();
+                                    ResultSet resultSet2 = statement2.executeQuery("SELECT * FROM public.cafeworker ORDER BY \"CWORKSTALLNAME\";");
+                                    while(resultSet2.next()){
+                                %>
+                                <li><a href="MenuList.jsp?shop=<%=resultSet2.getString("CWORKSTALLNAME")%>" class="site-nav"><%=resultSet2.getString("CWORKSTALLNAME")%></a></li>
+                                <%
+
+                                    }
+                                %>
                             </ul>
                         </li>
                         </li>
@@ -114,10 +122,17 @@
                                     <li class="lvl1 parent megamenu"><a href="aboutus.jsp">About Us <i class="anm anm-angle-down-l"></i></a></li>
                                     <li class="lvl1 parent dropdown"><a href="#">Gerai <i class="anm anm-angle-down-l"></i></a>
                                         <ul class="dropdown">
-                                            <li><a href="GeraiAMenuList.jsp" class="site-nav">Gerai A</a></li>
-                                            <li><a href="GeraiBMenuList.jsp" class="site-nav">Gerai B</a></li>
-                                            <li><a href="GeraiCMenuList.jsp" class="site-nav">Gerai C</a></li>
-                                            <li><a href="GeraiDMenuList.jsp" class="site-nav">Gerai D</a></li>
+                                            <%
+                                                Connection con = DBConnection.getConn();
+                                                Statement statement3= con.createStatement();
+                                                ResultSet resultSet3 = statement3.executeQuery("SELECT * FROM public.cafeworker ORDER BY \"CWORKSTALLNAME\";");
+                                                while(resultSet3.next()){
+                                            %>
+                                            <li><a href="MenuList.jsp?shop=<%=resultSet3.getString("CWORKSTALLNAME")%>" class="site-nav"><%=resultSet3.getString("CWORKSTALLNAME")%></a></li>
+                                            <%
+
+                                                }
+                                            %>
                                         </ul>
                                     </li>
                                     <li class="lvl1 parent megamenu"><a href="studentOrderList.jsp">Your Orders <i class="anm anm-angle-down-l"></i></a></li>

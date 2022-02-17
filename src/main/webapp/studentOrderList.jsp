@@ -74,7 +74,7 @@
                         <td class="text-center">RM <%=rs.getString("ORDERTPRICE")%></td>
                         <td class="text-center"><%=rs.getString("ORDERSTATUS")%></td>
                         <td class="text-center">
-                            <a  href="studentViewOrderDetails.jsp?id=<%=rs.getString("ORDERID")%>" style="background-color: #343a40;" class="btn btn--sm">View</a>
+                            <a  href="studentViewOrderDetails.jsp?id=<%=rs.getString("ORDERNO")%>" style="background-color: #343a40;" class="btn btn--sm">View</a>
                             <a  href="studentViewOrderDetails.jsp?id=<%=rs.getString("ORDERID")%>" style="background-color: #343a40;" class="btn btn--sm">Leave Feedback</a>
 
                         </td>

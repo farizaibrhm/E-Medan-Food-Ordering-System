@@ -8,8 +8,6 @@
 
 <!DOCTYPE html>
 <html class="no-js" lang="en">
-
-<!-- belle/cart.html   11 Nov 2019 12:47:01 GMT -->
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -142,16 +140,47 @@
                         <form method="post" enctype="multipart/form-data" action="${pageContext.request.contextPath}/studentOrderServlet">
                     <div class="solid-border">
                         <div id="accordion" class="payment-section">
-                            <h3 class="font-15 xs-font-13">Payment Instruction</h3>
-                            <p class="no-margin font-15">Please include order number for the recipient's reference when uploading payment receipt.</p>
-                            <fieldset>
-                                <div class="row">
-                                    <div class="form-group col-md-6 col-lg-6 col-xl-12 required">
-                                        <label>Receipt/Proof of Payment<span class="required-f">*</span></label>
-                                        <input type="file" name="PAYMENTRECEIPT" class="form-control-file">
-                                    </div>
+
+                            <div class="your-order">
+                                <div class="row border-bottom pb-1 pt-1">
+                                   <h2 class="login-title mb-1 text-center">Payment Details</h2>
                                 </div>
-                            </fieldset>
+                                <%
+                                    Statement st4 = con.createStatement();
+                                    ResultSet r1 = st4.executeQuery("SELECT \"CWORKACCNUM\",\"CWORKACCNAME\",\"CWORKBANKNAME\" FROM public.cafeworker \"c\", public.cart \"m\" WHERE \"c\".\"CWORKID\" = \"m\".\"CWORKID\" AND \"m\".\"STUDENTID\" ='" + session.getAttribute("STUDENTID")+"'");
+                                    while (r1.next()){
+                                %>
+
+                                <h3 class="font-15 xs-font-13">Account Number</h3>
+                                <p class="no-margin font-15"><%=r1.getString("CWORKACCNUM")%></p>
+
+                                <h3 class="font-15 xs-font-13">Account Name</h3>
+                                <p class="no-margin font-15"><%=r1.getString("CWORKACCNAME")%></p>
+
+                                <h3 class="font-15 xs-font-13">Account Bank</h3>
+                                <p class="no-margin font-15"><%=r1.getString("CWORKBANKNAME")%></p>
+
+                                <h3 class="font-15 xs-font-13">Payment Instruction</h3>
+                                <p class="no-margin font-15">Please include order number for the recipient's reference when uploading payment receipt.</p>
+                                <fieldset>
+                                    <div class="row">
+                                        <div class="form-group col-md-6 col-lg-6 col-xl-12 required">
+                                            <label>Receipt/Proof of Payment<span class="required-f">*</span></label>
+                                            <input type="file" name="PAYMENTRECEIPT" class="form-control-file">
+                                        </div>
+                                    </div>
+                                </fieldset>
+                                <% }
+                                    if (index == 0) {
+                                %>
+                                <center>
+                                    <br>
+                                    <strong>Please add item first to view payment details.</strong>
+                                </center>
+                                <%
+                                    }
+                                %>
+                            </div>
                         </div>
                     </div>
                     <div class="solid-border">

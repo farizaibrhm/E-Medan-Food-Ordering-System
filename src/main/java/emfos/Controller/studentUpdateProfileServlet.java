@@ -3,18 +3,19 @@ package emfos.Controller;
 import emfos.DAO.studentDAO;
 import emfos.Model.student;
 
-import javax.servlet.*;
-import javax.servlet.http.*;
-import javax.servlet.annotation.*;
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
 
-
-@WebServlet(name = "studentUpdateProfileServlet", value = "/studentUpdateProfileServlet")
+@WebServlet("/studentUpdateProfileServlet")
 public class studentUpdateProfileServlet extends HttpServlet {
+
     private static final long serialVersionUID = 1L;
-    private static String EDIT = "studentProfile.jsp";
-    private studentDAO stdao;
+    private final studentDAO stdao;
 
     public studentUpdateProfileServlet() {
         super();
@@ -22,50 +23,41 @@ public class studentUpdateProfileServlet extends HttpServlet {
     }
 
     @Override
-    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        String forward = "";
-        String action = request.getParameter("action");
+//    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+//        // TODO Auto-generated method stub //same like view
+//        String STUDENTID = request.getParameter("STUDENTID");
+//        request.setAttribute("st", studentDAO.getStudentsById(STUDENTID));
+//        RequestDispatcher view = request.getRequestDispatcher("studentProfile.jsp");
+//        view.forward(request,  response);
+//    }
 
-        if (action.equalsIgnoreCase("edit"))
-        {
-            forward = EDIT;
-
-            String STUDENTID = request.getParameter("STUDENTID");
-
-            student st = stdao.getById(STUDENTID);
-            request.setAttribute("st", st);
-            stdao.updateStudent(st);
-        }
-
-        RequestDispatcher view = request.getRequestDispatcher(forward);
-        view.forward(request, response);
-    }
-
-    @Override
+//    /**
+//     * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
+//     */
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        student st = new student();
+        // TODO Auto-generated method stub // same like add
 
+        System.out.println("in");
+        PrintWriter out = response.getWriter();
+
+        student st = new student();
+        studentDAO stdao = new studentDAO();
+
+        String STUDENTID = request.getParameter("STUDENTID");
+
+        st.setSTUDENTID(STUDENTID);
         st.setSTUDENTNAME(request.getParameter("STUDENTNAME"));
         st.setSTUDENTPHONENO(request.getParameter("STUDENTPHONENO"));
         st.setSTUDENTEMAIL(request.getParameter("STUDENTEMAIL"));
         st.setSTUDENTPASSWORD(request.getParameter("STUDENTPASSWORD"));
 
-        HttpSession session = request.getSession(true);
-
-        session.setAttribute("STUDENTID", st.getSTUDENTID());
-        session.setAttribute("STUDENTNAME", st.getSTUDENTNAME());
-        session.setAttribute("STUDENTPHONENO", st.getSTUDENTPHONENO());
-        session.setAttribute("STUDENTEMAIL", st.getSTUDENTEMAIL());
-        session.setAttribute("STUDENTPASSWORD", st.getSTUDENTPASSWORD());
-
-        st.setSTUDENTID(request.getParameter("STUDENTID"));
+        request.setAttribute("st", st);
         stdao.updateStudent(st);
 
-        PrintWriter out = response.getWriter();
         out.println("<script type=\"text/javascript\">");
         out.println("alert('Data updated successfully!');");
         out.println("location='studentProfile.jsp';");
         out.println("</script>");
-
     }
+
 }

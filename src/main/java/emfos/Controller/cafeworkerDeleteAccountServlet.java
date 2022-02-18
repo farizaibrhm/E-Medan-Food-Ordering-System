@@ -37,7 +37,7 @@ public class cafeworkerDeleteAccountServlet extends HttpServlet {
             cafeworker cw = new cafeworker();
             cafeworkerDAO cwdao = new cafeworkerDAO();
 
-            String CWORKID = request.getParameter("CWORKID");
+            String CWORKID = request.getParameter("id");
 
             boolean result = cwdao.deleteCafeWorkerAccount(CWORKID);
             System.out.println(result);

@@ -1,5 +1,7 @@
 <%@ page import="emfos.DBConnect.DBConnection" %>
 <%@ page import="java.sql.*" %>
+<%@ page import="java.text.DecimalFormat" %>
+<%@ page import="emfos.DAO.menuDAO" %>
 
 <%
     String oid = request.getParameter("id");
@@ -68,7 +70,7 @@
                             <tbody>
                             <%
                                 Statement st1 = con.createStatement();
-                                String sql1 = "SELECT \"CWORKSTALLNAME\", \"MENUNAME\", \"MENUTPRICE\", \"fileName\", \"ORDERITEMQUANTITY\" FROM public.forder \"o\", public.orderitem \"oi\", public.menu \"m\", public.cafeworker \"c\", public.student \"s\" WHERE \"o\".\"ORDERID\" = \"oi\".\"ORDERID\" AND \"o\".\"STUDENTID\" = \"s\".\"STUDENTID\" AND \"oi\".\"MENUID\" = \"m\".\"MENUID\" AND \"oi\".\"CWORKID\" = \"c\".\"CWORKID\" AND \"o\".\"ORDERNO\"='" + oid + "' AND \"o\".\"STUDENTID\" ='" + sid + "'";
+                                String sql1 = "SELECT * FROM public.forder \"o\", public.orderitem \"oi\", public.menu \"m\", public.cafeworker \"c\", public.student \"s\" WHERE \"o\".\"ORDERID\" = \"oi\".\"ORDERID\" AND \"o\".\"STUDENTID\" = \"s\".\"STUDENTID\" AND \"oi\".\"MENUID\" = \"m\".\"MENUID\" AND \"oi\".\"CWORKID\" = \"c\".\"CWORKID\" AND \"o\".\"ORDERNO\"='" + oid + "' AND \"o\".\"STUDENTID\" ='" + sid + "'";
                                 ResultSet rs1 = st1.executeQuery(sql1);
                                 while (rs1.next())
                                 {
@@ -77,11 +79,24 @@
                             <tr>
                                 <td width="20%"> <img src="images/<%=rs1.getString("fileName")%>" width="90"> </td>
                                 <td width="60%"> <span class="font-weight-bold"><%=rs1.getString("MENUNAME")%></span>
-                                    <div class="product-qty"> <span class="d-block"><%=rs1.getString("CWORKSTALLNAME")%></span><span>Quantity: <%=rs1.getInt("ORDERITEMQUANTITY")%></span></div>
+                                    <div class="product-qty"> <span class="d-block"><%=rs1.getString("CWORKSTALLNAME")%></span></div>
                                 </td>
-                                <td width="20%">
-                                    <div class="text-right"> <span class="font-weight-bold">RM <%=rs1.getString("MENUTPRICE")%></span> </div>
-                                </td>
+
+                                <%
+                                    DecimalFormat df = new DecimalFormat("##. 00");
+                                    menuDAO mdao = new menuDAO();
+
+                                    Double price = mdao.getPriceByMenuID(rs1.getInt("MENUID"));
+                                    Double totalprice = price * (rs1.getInt("ORDERITEMQUANTITY"));
+                                %>
+
+<%--                                <td width="20%">--%>
+<%--                                    <div class="text-right"> <span class="font-weight-bold">RM <%=df.format(totalprice)%></span> </div>--%>
+<%--                                </td>--%>
+                                    <td width="20%">
+                                        <div class="text-right"><span class="font-weight-bold">RM <%=rs1.getString("MENUTPRICE")%></span></div>
+                                        <div class="product-qty text-right"> <span class="d-block">x<%=rs1.getInt("ORDERITEMQUANTITY")%></span></div>
+                                    </td>
                             </tr>
                             <%
                                 }

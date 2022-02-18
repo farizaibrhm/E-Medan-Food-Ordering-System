@@ -135,7 +135,8 @@
                                             %>
                                         </ul>
                                     </li>
-                                    <li class="lvl1 parent megamenu"><a href="studentOrderList.jsp">Your Orders <i class="anm anm-angle-down-l"></i></a></li>
+                                    <li class="lvl1 parent megamenu"><a href="studentOrderList.jsp">Orders<i class="anm anm-angle-down-l"></i></a></li>
+                                    <li class="lvl1 parent megamenu"><a href="studentFeedbackList.jsp">Feedback<i class="anm anm-angle-down-l"></i></a></li>
                                     <li class="lvl1 parent megamenu"><a href="studentProfile.jsp">Account <i class="anm anm-angle-down-l"></i></a></li>
 
                                 </ul>

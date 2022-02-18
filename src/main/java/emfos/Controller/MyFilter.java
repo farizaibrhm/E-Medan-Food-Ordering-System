@@ -41,6 +41,15 @@ public class MyFilter implements Filter {
         if (request.getParameter("Action").equals("x"))
             // pass the request along the filter chain
             chain.doFilter(request, response);
+        if (request.getParameter("Action").equals("Place Order"))
+            // pass the request along the filter chain
+            chain.doFilter(request, response);
+        if (request.getParameter("Action").equals("Cancel"))
+            // pass the request along the filter chain
+            chain.doFilter(request, response);
+        if (request.getParameter("Action").equals("Send Feedback"))
+            // pass the request along the filter chain
+            chain.doFilter(request, response);
     }
     /**
      * @see Filter#init(FilterConfig)

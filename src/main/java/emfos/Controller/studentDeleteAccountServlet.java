@@ -20,6 +20,7 @@ public class studentDeleteAccountServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
+
     }
 
     @Override
@@ -37,10 +38,9 @@ public class studentDeleteAccountServlet extends HttpServlet {
             System.out.println(result);
 
             if (result == true){
-                out.println("<script type=\"text/javascript\">");
-                out.println("alert('Account deleted successfully!');");
-                out.println("location='deletion.jsp';");
-                out.println("</script>");
+                HttpSession session = request.getSession();
+                session.invalidate();
+                response.sendRedirect("deletion.jsp");
             }else {
                 out.println("<script type=\"text/javascript\">");
                 out.println("alert('Account unsuccessfully deleted. Please try again.');");

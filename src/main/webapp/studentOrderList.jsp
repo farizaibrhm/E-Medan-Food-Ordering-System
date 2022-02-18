@@ -5,6 +5,7 @@
 <%@page import="emfos.DBConnect.DBConnection"%>
 <%@ page import="java.text.DecimalFormat" %>
 <%@ page import="emfos.DAO.menuDAO" %>
+<%@ page import="java.text.SimpleDateFormat" %>
 
 <!DOCTYPE html>
 <html class="no-js" lang="en">
@@ -63,6 +64,8 @@
                     <tbody>
 
                         <%
+                        SimpleDateFormat ft = new SimpleDateFormat ("dd-MMM-yyyy");
+                            SimpleDateFormat ft2 = new SimpleDateFormat("HH:mm:ss");
                 Connection con = DBConnection.getConn();
                 Statement st = con.createStatement();
                 String sql = "SELECT * FROM public.forder WHERE \"STUDENTID\" ='" + session.getAttribute("STUDENTID") + "' ";
@@ -73,8 +76,8 @@
                     <tr>
                         <td class="text-center">#<%=rs.getInt("ORDERNO")%></td>
                         <td class="text-center">
-                            <%=rs.getDate("ORDERDATE")%><br>
-                            <%=rs.getTime("ORDERTIME")%>
+                            <%=ft.format(rs.getDate("ORDERDATE"))%><br>
+                            <%=ft2.format(rs.getTime("ORDERTIME"))%>
                         </td>
                         <td class="text-center"><%=session.getAttribute("STUDENTNAME")%></td>
                         <td class="text-center">RM <%=rs.getString("ORDERTPRICE")%></td>

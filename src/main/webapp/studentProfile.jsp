@@ -159,9 +159,6 @@
                             <h4 class="user-name"><%=rs.getString("STUDENTPHONENO")%></h4>
                             <h4 class="user-name"><%=rs.getString("STUDENTEMAIL")%></h4>
                             <hr>
-                            <a href="studentEditProfile.jsp" ><button class="btn btn-primary">Edit Profile</button></a><br><br>
-                            <button onclick="document.getElementById('id01').style.display='block'" size="20">DELETE ACCOUNT</button>
-
                             <button style="background-color: #000000; width: 180px;" class="btn btn--sm" onclick="window.location.href='studentEditProfile.jsp'">Edit Profile</button>
 
                             <form method="post" action="${pageContext.request.contextPath}/studentDeleteAccountServlet">

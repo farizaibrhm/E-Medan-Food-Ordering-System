@@ -78,7 +78,7 @@
                                     <div class="form-group">
                                         <label>IC Number</label>
                                         <label>
-                                            <input type="text" class="form-control" name="CWORKID"  value="<%=rs.getString("CWORKID")%>"/>
+                                            <input type="text" readonly class="form-control" name="CWORKID"  value="<%=rs.getString("CWORKID")%>"/>
                                         </label>
                                     </div>
                                 </div>
@@ -87,7 +87,7 @@
                                     <div class="form-group">
                                         <label>Stall Name</label>
                                         <label>
-                                            <input type="text" class="form-control" name="CWORKSTALLNAME" value="<%=rs.getString("CWORKSTALLNAME")%>"/>
+                                            <input type="text" readonly class="form-control" name="CWORKSTALLNAME" value="<%=rs.getString("CWORKSTALLNAME")%>"/>
                                         </label>
                                     </div>
                                 </div>
@@ -156,8 +156,6 @@
                             </div>
                         </div>
                         <%
-
-                                i++;
                             }
                         %>
                     </div>

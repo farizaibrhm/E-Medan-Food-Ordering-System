@@ -2,6 +2,7 @@
 <%@ page import="java.sql.Statement" %>
 <%@ page import="java.sql.Connection" %>
 <%@ page import="emfos.DBConnect.DBConnection" %>
+<%@ page import="java.text.SimpleDateFormat" %>
 
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
@@ -62,6 +63,8 @@
                     </thead>
                     <tbody>
         <%
+                SimpleDateFormat ft = new SimpleDateFormat ("dd-MMM-yyyy");
+                            SimpleDateFormat ft2 = new SimpleDateFormat("HH:mm:ss");
                 Connection con = DBConnection.getConn();
                 Statement st = con.createStatement();
                 String sql = "SELECT *  FROM public.forder \"o\", public.orderitem \"oi\", public.student \"s\" WHERE \"o\".\"ORDERID\" = \"oi\".\"ORDERID\" AND \"o\".\"STUDENTID\" = \"s\".\"STUDENTID\" AND \"oi\".\"CWORKID\" = '" + session.getAttribute("CWORKID") + "' ";
@@ -72,8 +75,8 @@
                     <tr>
                         <td class="text-center" >#<%=rs.getString("ORDERNO")%></td>
                         <td class="text-center">
-                            <%=rs.getDate("ORDERDATE")%> <br>
-                            <%=rs.getTime("ORDERTIME")%>
+                            <%=ft.format(rs.getDate("ORDERDATE"))%> <br>
+                            <%=ft2.format(rs.getTime("ORDERTIME"))%>
                         </td>
                         <td class="text-center"><%=rs.getString("STUDENTNAME")%></td>
                         <td class="text-center">RM <%=rs.getString("ORDERTPRICE")%></td>
@@ -88,7 +91,7 @@
                             </form>
                         </td>
                         <td class="text-center">
-                            <a  href="cafeworkerViewOrderDetails.jsp?id=<%=rs.getString("ORDERNO")%>" style="background-color: #343a40;" class="btn btn--sm">View</a>
+                            <a  href="cafeworkerViewOrderDetails.jsp?id=<%=rs.getString("ORDERNO")%>" style="background-color: #5D9DED;" class="btn btn--sm">View</a>
                         </td>
                     </tr>
                         <%

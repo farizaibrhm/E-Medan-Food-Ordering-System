@@ -8,6 +8,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import java.io.IOException;
 import java.io.PrintWriter;
 
@@ -43,10 +44,9 @@ public class cafeworkerDeleteAccountServlet extends HttpServlet {
             System.out.println(result);
 
             if (result == true){
-                out.println("<script type=\"text/javascript\">");
-                out.println("alert('Account deleted successfully!');");
-                out.println("location='deletion.jsp';");
-                out.println("</script>");
+                HttpSession session = request.getSession();
+                session.invalidate();
+                response.sendRedirect("deletion.jsp");
             }else {
                 out.println("<script type=\"text/javascript\">");
                 out.println("alert('Account unsuccessfully deleted. Please try again.');");

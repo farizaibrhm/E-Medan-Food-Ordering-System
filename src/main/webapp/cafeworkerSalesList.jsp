@@ -6,6 +6,7 @@
 <%@ page import="emfos.Model.cafeworker" %>
 <%@ page import="emfos.DBConnect.DBConnection" %>
 <%@ page import="java.text.DecimalFormat" %>
+<%@ page import="java.text.SimpleDateFormat" %>
 
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
@@ -61,6 +62,8 @@
                     </thead>
                     <tbody
         <%
+            SimpleDateFormat ft = new SimpleDateFormat ("dd-MMM-yyyy");
+            SimpleDateFormat ft2 = new SimpleDateFormat("HH:mm:ss");
                 Connection con = DBConnection.getConn();
                 Statement st = con.createStatement();
                 String sql = "SELECT \"ORDERNO\", \"ORDERTPRICE\", \"PAYMENTDATE\", \"PAYMENTTIME\", \"FILENAME\", \"STUDENTNAME\" FROM public.forder \"o\", public.orderitem \"oi\", public.payment \"p\", public.student \"s\" WHERE \"o\".\"ORDERID\" = \"oi\".\"ORDERID\" AND \"o\".\"ORDERID\" = \"p\".\"ORDERID\" AND \"o\".\"STUDENTID\" = \"s\".\"STUDENTID\" AND \"oi\".\"CWORKID\" = '" + session.getAttribute("CWORKID") + "' ";
@@ -71,12 +74,14 @@
                     <tr>
                         <td class="text-center">#<%=rs.getString("ORDERNO")%></td>
                         <td class="text-center">
-                            <%=rs.getDate("PAYMENTDATE")%> <br>
-                            <%=rs.getTime("PAYMENTTIME")%>
+                            <%=ft.format(rs.getDate("PAYMENTDATE"))%> <br>
+                            <%=ft2.format(rs.getTime("PAYMENTTIME"))%>
                         </td>
                         <td class="text-center"><%=rs.getString("STUDENTNAME")%></td>
                         <td class="text-center">RM <%=rs.getString("ORDERTPRICE")%></td>
-                        <td class="text-center"><a href="receipt/<%=rs.getString("FILENAME")%>" style="background-color: #F67D50;">VIEW</a></td>
+                        <td class="text-center">
+                            <a href="receipt/<%=rs.getString("FILENAME")%>" class="btn btn-sm" style="background-color: #5D9DED;">VIEW</a>
+                        </td>
                     </tr>
 
                 <%

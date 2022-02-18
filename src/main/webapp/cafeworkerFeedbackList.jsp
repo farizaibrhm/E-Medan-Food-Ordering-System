@@ -63,7 +63,7 @@
                         <tbody>
                         <tr class="cart__row border-bottom line1 cart-flex border-top">
                             <td class="cart__image-wrapper cart-flex-item">
-                                <a><img class="cart__image" src="assets/images/female-student.jpg" alt="3/4 Sleeve Kimono Dress"></a>
+                                <a><img class="cart__image" src="assets/images/female-student.jpg"></a>
                             </td>
                             <td class="cart__meta small--text-left cart-flex-item">
                                 <div class="list-view-item__title">
@@ -75,10 +75,10 @@
                             </td>
                             <td class="cart__update-wrapper  text-center cart-flex-item">
                                 <div class="list-view-item__title">
-                                    <h5>Order NO</h5>
+                                    <h5>Order No</h5>
                                 </div>
                                 <div class="cart__meta-text">
-                                    <h6><%=rs.getString("ORDERNO")%></h6>
+                                    <h6>#<%=rs.getString("ORDERNO")%></h6>
                                 </div>
                             </td>
                             <td class="cart__update-wrapper  text-center cart-flex-item">

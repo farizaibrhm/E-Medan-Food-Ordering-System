@@ -1,5 +1,6 @@
 <%@ page import="emfos.DBConnect.DBConnection" %>
 <%@ page import="java.sql.*" %>
+<%@ page import="java.text.SimpleDateFormat" %>
 
 <%
     String oid = request.getParameter("id");
@@ -13,6 +14,8 @@
     Date ODATE = null;
 
     Connection con = DBConnection.getConn();
+    SimpleDateFormat ft = new SimpleDateFormat ("dd-MMM-yyyy");
+    SimpleDateFormat ft2 = new SimpleDateFormat("HH:mm:ss");
     Statement st = con.createStatement();
     String sql = "SELECT * FROM public.forder \"o\", public.orderitem \"oi\", public.student \"s\", public.cafeworker \"c\" WHERE \"o\".\"STUDENTID\" = \"s\".\"STUDENTID\" AND \"o\".\"ORDERID\" = \"oi\".\"ORDERID\" AND \"oi\".\"CWORKID\" = \"c\".\"CWORKID\" AND \"o\".\"ORDERNO\"='" + oid + "' AND \"oi\".\"CWORKID\" ='" + cid + "'";
     ResultSet rs = st.executeQuery(sql);
@@ -53,13 +56,13 @@
                             <tbody>
                             <tr>
                                 <td>
-                                    <div class="py-1"> <span class="d-block text-muted">Order Date</span> <span><%=ODATE%></span> </div>
+                                    <div class="py-1"> <span class="d-block text-muted">Order Date</span> <span><%=ft.format(ODATE)%></span> </div>
                                 </td>
                                 <td>
-                                    <div class="py-1"> <span class="d-block text-muted">Order Time</span> <span><%=OTIME%></span> </div>
+                                    <div class="py-1"> <span class="d-block text-muted">Order Time</span> <span><%=ft2.format(OTIME)%></span> </div>
                                 </td>
                                 <td>
-                                    <div class="py-1"> <span class="d-block text-muted">Payment</span> <span>Cash on Pickup</span> </div>
+                                    <div class="py-1"> <span class="d-block text-muted">Payment</span> <span>Receipt Upload</span> </div>
                                 </td>
                             </tr>
 
@@ -80,10 +83,11 @@
                             <tr>
                                 <td width="20%"> <img src="images/<%=rs1.getString("fileName")%>" width="90"> </td>
                                 <td width="60%"> <span class="font-weight-bold"><%=rs1.getString("MENUNAME")%></span>
-                                    <div class="product-qty"> <span class="d-block"><%=rs1.getString("CWORKSTALLNAME")%></span><span>Quantity: <%=rs1.getInt("ORDERITEMQUANTITY")%></span></div>
+                                    <div class="product-qty"> <span class="d-block"><%=rs1.getString("CWORKSTALLNAME")%></span></div>
                                 </td>
                                 <td width="20%">
-                                    <div class="text-right"> <span class="font-weight-bold">RM <%=rs1.getString("MENUTPRICE")%></span> </div>
+                                    <div class="text-right"><span class="font-weight-bold">RM <%=rs1.getString("MENUTPRICE")%></span></div>
+                                    <div class="product-qty text-right"> <span class="d-block">x<%=rs1.getInt("ORDERITEMQUANTITY")%></span></div>
                                 </td>
                             </tr>
                             <%

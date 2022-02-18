@@ -2,6 +2,7 @@
 <%@ page import="java.sql.*" %>
 <%@ page import="java.text.DecimalFormat" %>
 <%@ page import="emfos.DAO.menuDAO" %>
+<%@ page import="java.text.SimpleDateFormat" %>
 
 <%
     String oid = request.getParameter("id");
@@ -13,6 +14,8 @@
     String SNAME = null, SPHONE = null, SEMAIL = null, ONO = null, OAMOUNT = null;
     Time OTIME = null;
     Date ODATE = null;
+    SimpleDateFormat ft = new SimpleDateFormat ("dd-MMM-yyyy");
+    SimpleDateFormat ft2 = new SimpleDateFormat("HH:mm:ss");
 
     Connection con = DBConnection.getConn();
     Statement st = con.createStatement();
@@ -55,13 +58,13 @@
                             <tbody>
                             <tr>
                                 <td>
-                                    <div class="py-1"> <span class="d-block text-muted">Order Date</span> <span><%=ODATE%></span> </div>
+                                    <div class="py-1"> <span class="d-block text-muted">Order Date</span> <span><%=ft.format(ODATE)%></span> </div>
                                 </td>
                                 <td>
-                                    <div class="py-1"> <span class="d-block text-muted">Order Time</span> <span><%=OTIME%></span> </div>
+                                    <div class="py-1"> <span class="d-block text-muted">Order Time</span> <span><%=ft2.format(OTIME)%></span> </div>
                                 </td>
                                 <td>
-                                    <div class="py-1"> <span class="d-block text-muted">Payment</span> <span>Cash on Pickup</span> </div>
+                                    <div class="py-1"> <span class="d-block text-muted">Payment</span> <span>Receipt Upload</span> </div>
                                 </td>
                             </tr>
 
@@ -85,17 +88,6 @@
                                     <div class="product-qty"> <span class="d-block"><%=rs1.getString("CWORKSTALLNAME")%></span></div>
                                 </td>
 
-                                <%
-                                    DecimalFormat df = new DecimalFormat("##. 00");
-                                    menuDAO mdao = new menuDAO();
-
-                                    Double price = mdao.getPriceByMenuID(rs1.getInt("MENUID"));
-                                    Double totalprice = price * (rs1.getInt("ORDERITEMQUANTITY"));
-                                %>
-
-<%--                                <td width="20%">--%>
-<%--                                    <div class="text-right"> <span class="font-weight-bold">RM <%=df.format(totalprice)%></span> </div>--%>
-<%--                                </td>--%>
                                     <td width="20%">
                                         <div class="text-right"><span class="font-weight-bold">RM <%=rs1.getString("MENUTPRICE")%></span></div>
                                         <div class="product-qty text-right"> <span class="d-block">x<%=rs1.getInt("ORDERITEMQUANTITY")%></span></div>

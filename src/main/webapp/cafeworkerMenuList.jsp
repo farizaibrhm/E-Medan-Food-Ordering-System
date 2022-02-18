@@ -2,7 +2,8 @@
 <%@ page import="java.sql.ResultSet" %>
 <%@ page import="java.sql.Statement" %>
 <%@ page import="java.sql.Connection" %>
-<%@ page import="emfos.Model.cafeworker" %><%--
+<%@ page import="emfos.Model.cafeworker" %>
+<%@ page import="emfos.DBConnect.DBConnection" %><%--
   Created by IntelliJ IDEA.
   User: Lenovo
   Date: 29/1/2022
@@ -76,20 +77,14 @@
                     <tbody>
 
                         <%
-                String MENUID = request.getParameter("MENUID");
-            try
-            {
-                Class.forName("org.postgresql.Driver");
-                Connection con = DriverManager.getConnection("jdbc:postgresql://ec2-44-199-52-133.compute-1.amazonaws.com:5432/danpunma7i9eh0", "kgkcfexavaezbv", "452a173c45857bc5d4a0e09e553e6748e19271602a8311160d7dca2ee3cf40a6");
+                Connection con = DBConnection.getConn();
                 Statement st = con.createStatement();
                 String sql = "SELECT \"MENUID\", \"MENUNAME\", \"MENUDESC\", \"MENUTPRICE\", \"MENUTYPE\", \"fileName\", \"savePath\", \"CWORKID\" FROM public.menu WHERE \"CWORKID\"='" + session.getAttribute("CWORKID") + "' ";
-//                String ql = "select * from tblorders where customer_name='" + session.getAttribute("name") + "' ";
                 ResultSet rs = st.executeQuery(sql);
                 int i=1;
                 while (rs.next())
                 {
         %>
-
                     <tr>
                         <th class="text-center" scope="row"><%=i%></th>
                         <td class="text-center"><image src="images/<%=rs.getString("fileName")%>" width="100" height="100"/></td>
@@ -98,18 +93,16 @@
                         <td class="text-center">RM <%=rs.getString("MENUTPRICE")%></td>
 
                         <td class="text-center">
-                            <%--                            <a  href="updateMenu.jsp" class="button" style="color: black;">UPDATE </a>--%>
-                            <%--                            <button type="button" id="<%=rs.getString("MENUID")%>" style="background-color: #5cb85c;" class="upd btn btn--sm">Update</button>--%>
-                            <a  href="cafeworkerUpdateMenu.jsp?id=<%=rs.getString("MENUID")%>" style="background-color: #5cb85c;" class="btn btn--sm">Update</a>
-                            <a href="cafeworkerDeleteMenu.jsp?id=<%=rs.getString("MENUID")%>" style="background-color: #d9534f;" class="del btn btn--sm">Delete</a>
+                                <button style="background-color: #5cb85c; display: inline-block; margin: 2px; width: 100px;" class="btn btn--sm" onclick="window.location.href='cafeworkerUpdateMenu.jsp?id=<%=rs.getString("MENUID")%>'">Update</button>
+
+                                <form method="post" action="${pageContext.request.contextPath}/cafeworkerDeleteMenuServlet">
+                                    <input type="hidden"  name="id" value="<%=rs.getInt("MENUID")%>">
+                                    <button type="submit" name="Action" style="background-color: #d9534f; display: inline-block; margin: 2px; width: 100px;" class="et_pb_button btn btn--sm" value="Delete Menu" onclick="return confirm('Are you sure you want to delete this menu?');" >Delete</button>
+                                </form>
                         </td>
                     </tr>
-
                         <%
                     i++;
-            }
-                }catch (Exception e){
-                    out.println();
                 }
     %>
                 </table>
@@ -119,9 +112,6 @@
 
         </div>
         <!--End Body Content-->
-
-        <!--Footer-->
-        <!--End Footer-->
 
         <!--Scoll Top-->
         <span id="site-scroll"><i class="icon anm anm-angle-up-r"></i></span>

@@ -19,6 +19,11 @@
     <link rel="stylesheet" href="assets/css/deletemodal.css" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 </head>
+<%
+    String STUDENTID = (String) session.getAttribute("STUDENTID");
+    if (STUDENTID == null)
+    {
+%>
 
 <body class="page-template belle">
 <div class="pageWrapper">
@@ -58,6 +63,7 @@
 
 </div>
 </body>
+<% } %>
 
 
 <!-- belle/cart.html   11 Nov 2019 12:47:01 GMT -->

@@ -148,7 +148,7 @@
                                 <%
                                     Statement st4 = con.createStatement();
                                     ResultSet r1 = st4.executeQuery("SELECT \"CWORKACCNUM\",\"CWORKACCNAME\",\"CWORKBANKNAME\" FROM public.cafeworker \"c\", public.cart \"m\" WHERE \"c\".\"CWORKID\" = \"m\".\"CWORKID\" AND \"m\".\"STUDENTID\" ='" + session.getAttribute("STUDENTID")+"'");
-                                    while (r1.next()){
+                                    r1.next();
                                 %>
 
                                 <h3 class="font-15 xs-font-13">Account Number</h3>
@@ -166,11 +166,11 @@
                                     <div class="row">
                                         <div class="form-group col-md-6 col-lg-6 col-xl-12 required">
                                             <label>Receipt/Proof of Payment<span class="required-f">*</span></label>
-                                            <input type="file" name="PAYMENTRECEIPT" class="form-control-file">
+                                            <input type="file" required="required" name="PAYMENTRECEIPT" class="form-control-file">
                                         </div>
                                     </div>
                                 </fieldset>
-                                <% }
+                                <%
                                     if (index == 0) {
                                 %>
                                 <center>

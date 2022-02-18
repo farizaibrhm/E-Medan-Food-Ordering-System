@@ -87,10 +87,11 @@
                                 int feedbackinDB = fdao.getFeedbackbyORDERID(rs.getInt("ORDERID"));
 
                                 if (rs.getInt("ORDERID") == feedbackinDB){ %>
-                                    <button style="background-color: #5D9DED; width: 150px;" class="btn btn--sm" onclick="window.location.href='#'">View Feedback</button>
+                                <button disabled style="background-color: #F67D50; width: 150px;" class="btn btn--sm" onclick="window.location.href='studentLeaveFeedback.jsp?id=<%=rs.getString("ORDERID")%>'">Leave Feedback</button>
+
                             <% } else{ %>
 
-                            <button style="background-color: #F67D50; width: 150px;" class="btn btn--sm" onclick="window.location.href='studentLeaveFeedback.jsp?id=<%=rs.getString("ORDERID")%>'">Leave Feedback</button>
+                                <button style="background-color: #F67D50; width: 150px;" class="btn btn--sm" onclick="window.location.href='studentLeaveFeedback.jsp?id=<%=rs.getString("ORDERID")%>'">Leave Feedback</button>
 
                             <% }
                             }%>

@@ -4,6 +4,9 @@
 <%
     String oid = request.getParameter("id");
     String cid = (String) session.getAttribute("CWORKID");
+    if (cid== null)
+    { response.sendRedirect("cafeworkerLogin.jsp")
+    ;}
 
     String SNAME = null, SPHONE = null, SEMAIL = null, ONO = null, OAMOUNT = null;
     Time OTIME = null;

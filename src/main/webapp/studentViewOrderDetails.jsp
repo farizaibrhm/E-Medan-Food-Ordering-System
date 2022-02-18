@@ -6,6 +6,9 @@
 <%
     String oid = request.getParameter("id");
     String sid = (String) session.getAttribute("STUDENTID");
+    if (sid == null)
+    { response.sendRedirect("studentLogin.jsp")
+    ;}
 
     String SNAME = null, SPHONE = null, SEMAIL = null, ONO = null, OAMOUNT = null;
     Time OTIME = null;

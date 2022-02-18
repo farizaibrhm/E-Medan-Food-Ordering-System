@@ -28,6 +28,12 @@
     <link rel="stylesheet" href="assets/css/deletemodal.css" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 </head>
+<%
+    String STUDENTID = (String) session.getAttribute("STUDENTID");
+    if (STUDENTID== null)
+    { response.sendRedirect("studentLogin.jsp")
+    ;}
+%>
 <body class="page-template belle">
 <div class="pageWrapper">
     <jsp:include page="header.jsp"></jsp:include>

@@ -13,6 +13,14 @@
       <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/images/goodbye.svg" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/webapp/deletion.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/emfos/Controller/cafeworkerDeleteAccountServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/emfos/Controller/cafeworkerDeleteAccountServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/emfos/Controller/cafeworkerDeleteMenuServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/emfos/Controller/cafeworkerDeleteMenuServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/emfos/Controller/cafeworkerUpdateMenuServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/emfos/Controller/cafeworkerUpdateMenuServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/cafeworkerDeleteMenu.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/cafeworkerDeleteMenu.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/cafeworkerEditProfile.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/cafeworkerEditProfile.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/cafeworkerMenuList.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/cafeworkerMenuList.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/cafeworkerUpdateMenu.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/cafeworkerUpdateMenu.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/studentEditProfile.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/studentEditProfile.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/MenuList.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/MenuList.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/cafeworkerSalesList.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/cafeworkerSalesList.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/studentCheckout.jsp" beforeDir="false" />
@@ -243,7 +251,7 @@
       <workItem from="1645048345585" duration="1604000" />
       <workItem from="1645080654544" duration="4905000" />
       <workItem from="1645087925359" duration="28057000" />
-      <workItem from="1645165624736" duration="22328000" />
+      <workItem from="1645165624736" duration="18668000" />
     </task>
     <task id="LOCAL-00001" summary="Merge remote-tracking branch 'origin/dev' into dev">
       <created>1642837016272</created>
@@ -447,5 +455,7 @@
     <MESSAGE value="cancel order, send feedback" />
     <MESSAGE value="add bank details. payment details is not displayed if there is no item in the cart." />
     <option name="LAST_COMMIT_MESSAGE" value="add bank details. payment details is not displayed if there is no item in the cart." />
+    <MESSAGE value="new upd" />
+    <option name="LAST_COMMIT_MESSAGE" value="new upd" />
   </component>
 </project>

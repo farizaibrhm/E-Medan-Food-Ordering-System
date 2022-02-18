@@ -9,21 +9,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ee72d468-6c94-46a4-8c84-170d520e2088" name="Changes" comment="add bank details. payment details is not displayed if there is no item in the cart.">
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/images/goodbye.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/deletion.jsp" afterDir="false" />
+    <list default="true" id="ee72d468-6c94-46a4-8c84-170d520e2088" name="Changes" comment="standardize width and height product image">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/emfos/Controller/cafeworkerDeleteAccountServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/emfos/Controller/cafeworkerDeleteAccountServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/emfos/Controller/cafeworkerDeleteMenuServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/emfos/Controller/cafeworkerDeleteMenuServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/emfos/Controller/cafeworkerUpdateMenuServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/emfos/Controller/cafeworkerUpdateMenuServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/cafeworkerDeleteMenu.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/cafeworkerDeleteMenu.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/emfos/DAO/cafeworkerDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/emfos/DAO/cafeworkerDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/cafeworkerAddMenu.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/cafeworkerAddMenu.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/cafeworkerEditProfile.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/cafeworkerEditProfile.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/cafeworkerFeedbackList.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/cafeworkerFeedbackList.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/cafeworkerMenuList.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/cafeworkerMenuList.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/cafeworkerProfile.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/cafeworkerProfile.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/cafeworkerUpdateMenu.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/cafeworkerUpdateMenu.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/studentEditProfile.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/studentEditProfile.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/MenuList.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/MenuList.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/cafeworkerSalesList.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/cafeworkerSalesList.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/studentCheckout.jsp" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -82,6 +77,7 @@
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.37241378" />
+    <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -454,7 +450,6 @@
     <MESSAGE value="." />
     <MESSAGE value="cancel order, send feedback" />
     <MESSAGE value="add bank details. payment details is not displayed if there is no item in the cart." />
-    <option name="LAST_COMMIT_MESSAGE" value="add bank details. payment details is not displayed if there is no item in the cart." />
     <MESSAGE value="new upd" />
     <option name="LAST_COMMIT_MESSAGE" value="new upd" />
   </component>

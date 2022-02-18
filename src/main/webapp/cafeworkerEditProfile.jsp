@@ -1,22 +1,12 @@
-<%@ page import="emfos.Model.cafeworker" %>
-<%@ page import="emfos.DAO.cafeworkerDAO" %>
-<%@ page import="java.sql.DriverManager" %>
+
 <%@ page import="java.sql.ResultSet" %>
 <%@ page import="java.sql.Statement" %>
 <%@ page import="java.sql.Connection" %>
 <%@page import="emfos.DBConnect.DBConnection"%>
-<%----%>
-<%--  Created by IntelliJ IDEA.--%>
-<%--  User: Lenovo--%>
-<%--  Date: 29/1/2022--%>
-<%--  Time: 9:29 PM--%>
-<%--  To change this template use File | Settings | File Templates.--%>
-<%----%>
 <%@ page contentType="text/html;charset=UTF-8" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html>
 <html class="no-js" lang="en">
-<!-- belle/home2-default.html   11 Nov 2019 12:22:28 GMT -->
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -34,8 +24,6 @@
     <link rel="stylesheet" href="assets/css/responsive.css">
 </head>
 
-
-
 <%
     String CWORKSTALLNAME = (String) session.getAttribute("CWORKSTALLNAME");
     if (CWORKSTALLNAME== null)
@@ -45,69 +33,7 @@
 
 <body class="template-index home2-default">
 <div class="pageWrapper">
-    <!--Top Header-->
-    <div class="top-header">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-10 col-sm-8 col-md-5 col-lg-4">
-                </div>
-                <div class="col-sm-4 col-md-4 col-lg-4 d-none d-lg-none d-md-block d-lg-block">
-                    <div class="text-center"><p class="top-header_middle-text">CAFE WORKER DASHBOARD</p></div>
-                </div>
-                <div class="col-2 col-sm-4 col-md-3 col-lg-4 text-right">
-                    <span class="user-menu d-block d-lg-none"><i class="anm anm-user-al" aria-hidden="true"></i></span>
-                    <ul class="customer-links list-inline">
-                        <li><a href="cafeworkerLogoutServlet">Logout</a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!--End Top Header-->
-
-    <!--Header-->
-    <div class="header-wrap animated d-flex">
-        <div class="container-fluid">
-            <div class="row align-items-center">
-                <!--Desktop Logo-->
-                <div class="logo col-md-2 col-lg-2 d-none d-lg-block">
-                    <a href="#">
-                        <img src="assets/images/e-Medan.svg" alt="e-Medan Food Ordering System" title="e-Medan Food Ordering System" />
-                    </a>
-                </div>
-                <!--End Desktop Logo-->
-                <div class="col-2 col-sm-3 col-md-3 col-lg-8">
-                    <div class="d-block d-lg-none">
-                        <button type="button" class="btn--link site-header__menu js-mobile-nav-toggle mobile-nav--open">
-                            <i class="icon anm anm-times-l"></i>
-                            <i class="anm anm-bars-r"></i>
-                        </button>
-                    </div>
-                    <!--Desktop Menu-->
-                    <nav class="grid__item" id="AccessibleNav"><!-- for mobile -->
-                        <ul id="siteNav" class="site-nav medium center hidearrow">
-                            <%--                            <li class="lvl1 parent dropdown"><a href="#">Menu <i class="anm anm-angle-down-l"></i></a>--%>
-                            <%--                                <ul class="dropdown">--%>
-                            <%--                                    <li><a href="menucw.html" class="site-nav">View Menu</a></li>--%>
-                            <%--                                    <li><a href="AddMenu.html" class="site-nav">Add Menu  </a></li>--%>
-                            <%--                                    <li><a href="updateMenu.html" class="site-nav">Update Menu  </a></li>--%>
-                            <%--                                    <li><a href="deleteMenu.html" class="site-nav">Delete Menu </a></li>--%>
-                            <%--                                </ul>--%>
-                            <li class="lvl1 parent megamenu"><a href="cafeworkerMenuList.jsp"> Menu <i class="anm anm-angle-down-l"></i></a></li>
-                            <li class="lvl1 parent megamenu"><a href="#"> Order <i class="anm anm-angle-down-l"></i></a></li>
-                            <li class="lvl1 parent megamenu"><a href="#"> Feedback <i class="anm anm-angle-down-l"></i></a></li>
-                            <li class="lvl1 parent megamenu"><a href="#"> Report <i class="anm anm-angle-down-l"></i></a></li>
-                            <li class="lvl1 parent megamenu"><a href="cafeworkerProfile.jsp"> Account <i class="anm anm-angle-down-l"></i></a></li>
-                        </ul>
-                    </nav>
-                    <!--End Desktop Menu-->
-                </div>
-            </div>
-        </div>
-    </div>
-    <!--End Header-->
-
-
+    <jsp:include page="header2.jsp"></jsp:include>
 
     <!--Body Content-->
     <div class="col-2 col-sm-3 col-md-3 col-lg-8">

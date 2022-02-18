@@ -33,7 +33,6 @@
 %>
 <body>
 
-
 <div id="page-content">
 
     <jsp:include page="header2.jsp"></jsp:include>

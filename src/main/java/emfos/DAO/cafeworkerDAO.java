@@ -185,39 +185,13 @@ public class cafeworkerDAO {
             //can use exception only, if using sqlexception add surround
         }catch(SQLException e) {
             e.printStackTrace();
-            //System.out.print(e);}
         }
 
         return cw;
     }
 
-//    public void deleteCafeWorkerAccount(String CWORKID) {
-//
-//        try {
-//
-//            //call getConnection() method
-//            Connection con = DBConnection.getConn();
-//
-//            //create statement
-//            ps = con.prepareStatement("DELETE FROM public.cafeworker WHERE \"CWORKID\"=?"); //? refer to id we pass
-//            ps.setString(1, CWORKID);
-//
-//            //execute query
-//            ps.executeUpdate();
-//            System.out.println("Successfully deleted");
-//
-//
-//            //close connection
-//            con.close();
-//
-//            //will handle line by line from step 1 - 5 if there is error
-//        }catch(Exception e) {
-//            e.printStackTrace();
-//        }
-//
-//    }
 
-    public boolean deleteCafeWorkerAccount(int CWORKID){
+    public boolean deleteCafeWorkerAccount(String CWORKID){
         Connection con = DBConnection.getConn();
 
         String sql = "DELETE FROM public.cafeworker WHERE \"CWORKID\"=?";
@@ -226,7 +200,7 @@ public class cafeworkerDAO {
 
         try {
             PreparedStatement ps = con.prepareStatement(sql);
-            ps.setInt(1, CWORKID);
+            ps.setString(1, CWORKID);
 
             i = ps.executeUpdate();
         } catch (SQLException e){

@@ -1,28 +1,10 @@
-<%@ page import="emfos.Model.cafeworker" %><%--
-  Created by IntelliJ IDEA.
-  User: Lenovo
-  Date: 29/1/2022
-  Time: 8:21 PM
-  To change this template use File | Settings | File Templates.
---%>
+
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
     <title>Add Menu</title>
-    <meta name="description" content="description">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Favicon -->
     <link rel="shortcut icon" href="assets/images/e-favicon.svg" />
-    <!-- Plugins CSS -->
-    <link rel="stylesheet" href="assets/css/plugins.css">
-    <!-- Bootstap CSS -->
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-    <!-- Main Style CSS -->
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="assets/css/responsive.css">
-
     <style>
         div, form, input, select, textarea, p {
             padding: 0;
@@ -135,120 +117,29 @@
         }
         @media (min-width: 568px) {
             .name-item
-            /*.city-item {
-                display: flex;
-                flex-wrap: wrap;
-                justify-content: space-between;
-            }*/
         }
     </style>
 
 </head>
-<%--<%--%>
-<%--    String CWORKSTALLNAME = (String) session.getAttribute("CWORKSTALLNAME");--%>
-<%--    if (CWORKSTALLNAME== null)--%>
-<%--    { response.sendRedirect("cafeworkerLogin.jsp")--%>
-<%--    ;}--%>
-<%--%>--%>
 
-<%--<%--%>
-<%--    String CWORKID = (String) session.getAttribute("CWORKID");--%>
-<%--    if (CWORKID== null)--%>
-<%--    { response.sendRedirect("cafeworkerLogin.jsp")--%>
-<%--    ;}--%>
-<%--%>--%>
+<%
+    String CWORKID = (String) session.getAttribute("CWORKID");
+    if (CWORKID== null)
+    { response.sendRedirect("cafeworkerLogin.jsp")
+    ;}
+%>
 
 <body class="template-product belle">
 <div class="pageWrapper">
-    <!--Search Form Drawer-->
-    <div class="search">
-        <div class="search__form">
-            <form class="search-bar__form" action="#">
-                <button class="go-btn search__button" type="submit"><i class="icon anm anm-search-l"></i></button>
-                <input class="search__input" type="search" name="q" value="" placeholder="Search entire store..." aria-label="Search" autocomplete="off">
-            </form>
-            <button type="button" class="search-trigger close-btn"><i class="icon anm anm-times-l"></i></button>
-        </div>
-    </div>
-    <!--End Search Form Drawer-->
-    <!--Top Header-->
-    <div class="top-header">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-10 col-sm-8 col-md-5 col-lg-4">
-                </div>
-                <div class="col-sm-4 col-md-4 col-lg-4 d-none d-lg-none d-md-block d-lg-block">
-                    <div class="text-center"><p class="top-header_middle-text">CAFE WORKER DASHBOARD</p></div>
-                </div>
-                <div class="col-2 col-sm-4 col-md-3 col-lg-4 text-right">
-                    <span class="user-menu d-block d-lg-none"><i class="anm anm-user-al" aria-hidden="true"></i></span>
-                    <ul class="customer-links list-inline">
-                        <li><a href="${pageContext.request.contextPath}/cafeworkerLogoutServlet">Logout</a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!--End Top Header-->
-
-    <!--Header-->
-    <div class="header-wrap animated d-flex">
-        <div class="container-fluid">
-            <div class="row align-items-center">
-                <!--Desktop Logo-->
-                <div class="logo col-md-2 col-lg-2 d-none d-lg-block">
-                    <a href="#">
-                        <img src="assets/images/e-Medan.svg" alt="e-Medan Food Ordering System" title="e-Medan Food Ordering System" />
-                    </a>
-                </div>
-                <!--End Desktop Logo-->
-                <div class="col-2 col-sm-3 col-md-3 col-lg-8">
-                    <div class="d-block d-lg-none">
-                        <button type="button" class="btn--link site-header__menu js-mobile-nav-toggle mobile-nav--open">
-                            <i class="icon anm anm-times-l"></i>
-                            <i class="anm anm-bars-r"></i>
-                        </button>
-                    </div>
-                    <!--Desktop Menu-->
-                    <nav class="grid__item" id="AccessibleNav"><!-- for mobile -->
-                        <ul id="siteNav" class="site-nav medium center hidearrow">
-                            <%--                            <li class="lvl1 parent dropdown"><a href="#">Menu <i class="anm anm-angle-down-l"></i></a>--%>
-                            <%--                                <ul class="dropdown">--%>
-                            <%--                                    <li><a href="menucw.html" class="site-nav">View Menu</a></li>--%>
-                            <%--                                    <li><a href="AddMenu.html" class="site-nav">Add Menu  </a></li>--%>
-                            <%--                                    <li><a href="updateMenu.html" class="site-nav">Update Menu  </a></li>--%>
-                            <%--                                    <li><a href="deleteMenu.html" class="site-nav">Delete Menu </a></li>--%>
-                            <%--                                </ul>--%>
-                            <li class="lvl1 parent megamenu"><a href="cafeworkerMenuList.jsp"> Menu <i class="anm anm-angle-down-l"></i></a></li>
-                            <li class="lvl1 parent megamenu"><a href="#"> Order <i class="anm anm-angle-down-l"></i></a></li>
-                            <li class="lvl1 parent megamenu"><a href="#"> Feedback <i class="anm anm-angle-down-l"></i></a></li>
-                            <li class="lvl1 parent megamenu"><a href="#"> Report <i class="anm anm-angle-down-l"></i></a></li>
-                            <li class="lvl1 parent megamenu"><a href="cafeworkerProfile.jsp"> Account <i class="anm anm-angle-down-l"></i></a></li>
-                        </ul>
-                    </nav>
-                    <!--End Desktop Menu-->
-                </div>
-            </div>
-        </div>
-    </div>
-    <!--End Header-->
-
 
     <!--Body Content-->
     <div id="page-content">
         <!--MainContent-->
         <div id="MainContent" class="main-content" role="main">
-            <!--Breadcrumb-->
-            <div class="bredcrumbWrap">
-                <div class="container-fluid breadcrumbs">
-                    <a href="cafeworkerMenuList.jsp" title="Back to the home page">Menu List</a><span aria-hidden="true">›</span><span>Add Menu</span>
-                </div>
-            </div>
-            <!--End Breadcrumb-->
             <div class="testbox">
             <form method="post" enctype="multipart/form-data" action="${pageContext.request.contextPath}/addMenu">
                     <div class="banner">
-                        <h1>ADD MENU FORM</h1>
+                        <h1>ADD MENU</h1>
                     </div>
                     <div class="item">
                         <p>MENU NAME</p>
@@ -256,7 +147,7 @@
                     </div>
                     <div class="item">
                         <p>MENU DESCRIPTION</p>
-                        <textarea rows="3" name="MENUDESC"></textarea>
+                        <input type="text" name="MENUDESC"/>
                     </div>
                     <div class="item">
                         <p>MENU PRICE (RM)</p>

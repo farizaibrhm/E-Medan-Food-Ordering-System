@@ -3,7 +3,9 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>UPDATE MENU</title>
+    <title>Update Menu</title>
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="assets/images/e-favicon.svg" />
 </head>
 <body>
 
@@ -150,13 +152,7 @@
                 int MENUID = Integer.parseInt(sid);
                 mn = upMenu.getMenuID(MENUID);
         %>
-
-        <div class="item">
-            <p>MENU ID</p>
-            <div class="name-item">
-                <input type="text" name="MENUID" value="<%=mn.getMENUID()%>" readonly />
-            </div>
-        </div>
+                <input type="hidden" name="MENUID" value="<%=mn.getMENUID()%>" readonly />
         <div class="item">
             <p>MENU NAME</p>
             <input type="text" name="MENUNAME" value="<%= mn.getMENUNAME()%>"/>
@@ -170,19 +166,15 @@
             <input type="text"  name="MENUTPRICE" value="<%=mn.getMENUTPRICE()%>"/>
         </div>
         <div class="item">
-            <p>MENU TYPE (F-FOOD/ D-DRINK)</p>
-            <input type="text" name="MENUTYPE" value="<%= mn.getMENUTYPE()%>"/>
+            <p>MENU TYPE</p>
+            <select id="menuType" name="MENUTYPE">
+                <option value="F">FOOD</option>
+                <option value="D">DRINK</option>
+            </select>
         </div>
         <div class="item">
-            <%-- <p>CAFE WORKER ID</p>--%>
             <input type="hidden" name="CWORKID" value="<%=mn.getCWORKID()%>"/>
         </div>
-        <%--<div class="item">
-            <p>PLEASE REUPLOAD IMAGE</p>
-            <div class="name-item">
-                <input type="file" id="MENUIMAGE" name="MENUIMAGE" value="<%= mn.getFileName()%>"/>
-            </div>
-        </div>--%>
         <div class="btn-block">
             <button type="submit" value="submit">UPDATE</button>
         </div>

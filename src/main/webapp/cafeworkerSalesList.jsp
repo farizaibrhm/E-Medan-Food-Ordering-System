@@ -76,7 +76,7 @@
                         </td>
                         <td class="text-center"><%=rs.getString("STUDENTNAME")%></td>
                         <td class="text-center">RM <%=rs.getString("ORDERTPRICE")%></td>
-                        <td class="text-center"><a href="receipt/<%=rs.getString("FILENAME")%>">VIEW</a></td>
+                        <td class="text-center"><a href="receipt/<%=rs.getString("FILENAME")%>" style="background-color: #F67D50;">VIEW</a></td>
                     </tr>
 
                 <%

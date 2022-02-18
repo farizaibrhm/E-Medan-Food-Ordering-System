@@ -9,9 +9,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ee72d468-6c94-46a4-8c84-170d520e2088" name="Changes" comment="cancel order, send feedback">
+    <list default="true" id="ee72d468-6c94-46a4-8c84-170d520e2088" name="Changes" comment="add bank details. payment details is not displayed if there is no item in the cart.">
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/images/goodbye.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/deletion.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/studentCart.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/studentCart.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/MenuList.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/MenuList.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/cafeworkerSalesList.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/cafeworkerSalesList.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/studentCheckout.jsp" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,20 +69,21 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/webapp/assets/css" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/webapp/images" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
-    <property name="project.structure.last.edited" value="Facets" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.37241378" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Lenovo\IdeaProjects\E-Medan-Food-Ordering-System\src\main\webapp\images" />
       <recent name="C:\Users\Lenovo\IdeaProjects\E-Medan-Food-Ordering-System\src\main\webapp\assets\css" />
       <recent name="C:\Users\Lenovo\IdeaProjects\E-Medan-Food-Ordering-System\src\main\webapp\assets\images" />
-      <recent name="C:\Users\Lenovo\IdeaProjects\E-Medan-Food-Ordering-System\src\main\webapp\images" />
       <recent name="C:\Users\Lenovo\IdeaProjects\E-Medan-Food-Ordering-System\src\main\java\com\example\emedan_food_ordering_system" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Lenovo\IdeaProjects\E-Medan-Food-Ordering-System\src\main\webapp\assets\images" />
       <recent name="C:\Users\Lenovo\IdeaProjects\E-Medan-Food-Ordering-System\src\main\webapp" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
@@ -238,7 +243,7 @@
       <workItem from="1645048345585" duration="1604000" />
       <workItem from="1645080654544" duration="4905000" />
       <workItem from="1645087925359" duration="28057000" />
-      <workItem from="1645165624736" duration="18668000" />
+      <workItem from="1645165624736" duration="22328000" />
     </task>
     <task id="LOCAL-00001" summary="Merge remote-tracking branch 'origin/dev' into dev">
       <created>1642837016272</created>
@@ -394,7 +399,14 @@
       <option name="project" value="LOCAL" />
       <updated>1645186834007</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="add bank details. payment details is not displayed if there is no item in the cart.">
+      <created>1645196880152</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1645196880152</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -433,6 +445,7 @@
     <MESSAGE value="upload file receipt" />
     <MESSAGE value="." />
     <MESSAGE value="cancel order, send feedback" />
-    <option name="LAST_COMMIT_MESSAGE" value="cancel order, send feedback" />
+    <MESSAGE value="add bank details. payment details is not displayed if there is no item in the cart." />
+    <option name="LAST_COMMIT_MESSAGE" value="add bank details. payment details is not displayed if there is no item in the cart." />
   </component>
 </project>

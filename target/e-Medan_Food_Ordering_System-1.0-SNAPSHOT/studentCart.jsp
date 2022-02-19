@@ -178,7 +178,7 @@
                                     <strong>Please add item first to view payment details.</strong>
                                 </center>
                                 <%
-                                    }
+                                    }//test sini
                                 %>
                             </div>
                         </div>

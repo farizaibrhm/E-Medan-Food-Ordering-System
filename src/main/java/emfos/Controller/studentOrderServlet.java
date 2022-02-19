@@ -27,12 +27,14 @@ public class studentOrderServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
         if (request.getParameter("Action").equals("Place Order")){
+
             System.out.println("in");
             PrintWriter out = response.getWriter();
 
             orderDAO odao = new orderDAO();
             cartDAO cdao = new cartDAO();
 
+            String applicationPath = getServletContext().getRealPath("");
             HttpSession session = request.getSession();
 
             try{
@@ -44,11 +46,20 @@ public class studentOrderServlet extends HttpServlet {
                     System.out.println(masuk);
                     Double amount = Double.parseDouble(request.getParameter("amount"));
                     Part filePart = request.getPart("PAYMENTRECEIPT");
-                    String fileName = extractFileName(filePart);
-                    String savePath = "C:\\Users\\Lenovo\\IdeaProjects\\E-Medan-Food-Ordering-System\\src\\main\\webapp\\receipt" + File.separator + fileName;
-                    File fileSaveDir = new File(savePath);
-                    filePart.write(savePath + File.separator);
-                    boolean result = odao.placeOrder(masuk, amount, fileName, savePath);
+
+
+                    String host = request.getScheme() + "://" + request.getHeader("e-medanfoodorderingsystem.herokuapp.com") + "/";
+                    System.out.println(host);
+
+                    String fileName = filePart.getSubmittedFileName();
+
+                    String urlPathForDB = host + "receipt/" + fileName;
+                    String savePath = applicationPath + "receipt" + File.separator + fileName;
+
+                    new File(applicationPath + "receipt").mkdir();
+                    filePart.write(savePath);
+
+                    boolean result = odao.placeOrder(masuk, amount, fileName, urlPathForDB);
 
                     if (result == true) {
                         out.println("<script type=\"text/javascript\">");

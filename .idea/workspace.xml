@@ -9,8 +9,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ee72d468-6c94-46a4-8c84-170d520e2088" name="Changes" comment="85%">
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+    <list default="true" id="ee72d468-6c94-46a4-8c84-170d520e2088" name="Changes" comment="90% (test gambar)">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/emfos/Controller/addMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/emfos/Controller/addMenu.java" afterDir="false" />
     </list>
@@ -242,7 +241,7 @@
       <workItem from="1645080654544" duration="4905000" />
       <workItem from="1645087925359" duration="28057000" />
       <workItem from="1645165624736" duration="18668000" />
-      <workItem from="1645250823012" duration="719000" />
+      <workItem from="1645250823012" duration="2304000" />
     </task>
     <task id="LOCAL-00001" summary="Merge remote-tracking branch 'origin/dev' into dev">
       <created>1642837016272</created>
@@ -433,7 +432,14 @@
       <option name="project" value="LOCAL" />
       <updated>1645218302083</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="90% (test gambar)">
+      <created>1645251932843</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1645251932843</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -452,7 +458,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="insert and retrieve" />
     <MESSAGE value="update tak lepas" />
     <MESSAGE value="update dengan delete menu belum edit for session." />
     <MESSAGE value="fix url servlet" />
@@ -477,6 +482,7 @@
     <MESSAGE value="delete account cw test 2" />
     <MESSAGE value="delete account st" />
     <MESSAGE value="85%" />
-    <option name="LAST_COMMIT_MESSAGE" value="85%" />
+    <MESSAGE value="90% (test gambar)" />
+    <option name="LAST_COMMIT_MESSAGE" value="90% (test gambar)" />
   </component>
 </project>

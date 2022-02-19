@@ -70,50 +70,7 @@ public class imageServlet extends HttpServlet {
 
 
 
-//        String applicationPath = getServletContext().getRealPath("");
-//
-//        //Getting all the parameters from the user
-//        String MENUNAME = request.getParameter("MENUNAME");
-//        String MENUDESC = request.getParameter("MENUDESC");
-//        double MENUPRICE = Double.parseDouble(request.getParameter("MENUPRICE"));
-//        String MENUTYPE = request.getParameter("MENUTYPE");
-//        Part filePart = request.getPart("MENUIMAGE");
-//
-//        String host = request.getScheme() + "://" + request.getHeader("host") + "/";
-//
-//        http://localhost:8088/images/burger.jpg
-//
-//        String fileName = filePart.getSubmittedFileName();
-//        String urlPathForDB = host + "images/" + fileName;
-//        String savePath = applicationPath + "images" + File.separator + fileName;
-//
-//        new File(applicationPath + "images").mkdir();
-//        filePart.write(savePath);
-//
-//        HttpSession session = request.getSession();
-//
-//        try{
-//            if ((String) session.getAttribute("CWORKID") == null){
-//                response.sendRedirect("cafeworkerLogin.jsp");
-//            }else{
-//                String CWORKID = (String) session.getAttribute("CWORKID");
-//
-//                int addMenu = DBConnection.insertUpdateFromSqlQuery("INSERT INTO public.menu(\"MENUID\", \"MENUNAME\", \"MENUDESC\", \"MENUTPRICE\", \"MENUTYPE\", \"fileName\", \"savePath\", \"CWORKID\") VALUES(default,'" + MENUNAME + "','" + MENUDESC + "','" + MENUPRICE + "','" + MENUTYPE + "','" + fileName + "','" + urlPathForDB + "','" + CWORKID + "')");
-//
-//                if (addMenu > 0){
-//                    PrintWriter out = response.getWriter();
-//                    out.println("<script type=\"text/javascript\">");
-//                    out.println("alert('Menu successfully added!');");
-//                    out.println("location='cafeworkerMenuList.jsp';");
-//                    out.println("</script>");
-//                }
-//
-//            }
-//        }catch (Exception e) {
-//            e.printStackTrace();
-//        }
-//
-//    }
+
     }
 
 }

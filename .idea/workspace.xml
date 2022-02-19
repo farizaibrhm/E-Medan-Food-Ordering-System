@@ -9,7 +9,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ee72d468-6c94-46a4-8c84-170d520e2088" name="Changes" comment="try deployed" />
+    <list default="true" id="ee72d468-6c94-46a4-8c84-170d520e2088" name="Changes" comment="try deployed 2">
+      <change beforePath="$PROJECT_DIR$/src/main/java/emfos/Controller/imageServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/emfos/Controller/imageServlet.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -239,7 +241,7 @@
       <workItem from="1645080654544" duration="4905000" />
       <workItem from="1645087925359" duration="28057000" />
       <workItem from="1645165624736" duration="18668000" />
-      <workItem from="1645250823012" duration="12870000" />
+      <workItem from="1645250823012" duration="13483000" />
     </task>
     <task id="LOCAL-00001" summary="Merge remote-tracking branch 'origin/dev' into dev">
       <created>1642837016272</created>
@@ -472,7 +474,14 @@
       <option name="project" value="LOCAL" />
       <updated>1645283501512</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="try deployed 2">
+      <created>1645283789569</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1645283789569</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -491,7 +500,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="fix url servlet" />
     <MESSAGE value="add to cart" />
     <MESSAGE value="update quantity item in cart" />
     <MESSAGE value="update here and there" />
@@ -516,6 +524,7 @@
     <MESSAGE value="90% (test gambar)" />
     <MESSAGE value="restore emfos" />
     <MESSAGE value="try deployed" />
-    <option name="LAST_COMMIT_MESSAGE" value="try deployed" />
+    <MESSAGE value="try deployed 2" />
+    <option name="LAST_COMMIT_MESSAGE" value="try deployed 2" />
   </component>
 </project>

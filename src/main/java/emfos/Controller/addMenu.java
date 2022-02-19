@@ -22,37 +22,39 @@ public class addMenu extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
 
+        String applicationPath = getServletContext().getRealPath("");
+
         //Getting all the parameters from the user
         String MENUNAME = request.getParameter("MENUNAME");
-        System.out.println("Menu name is " + MENUNAME);//nak check betul ke data yang dia get
         String MENUDESC = request.getParameter("MENUDESC");
-        System.out.println("Menu desc is " + MENUDESC);//nak check betul ke data yang dia get
         double MENUPRICE = Double.parseDouble(request.getParameter("MENUPRICE"));
-        System.out.println("Menu price is " +MENUPRICE);//nak check betul ke data yang dia get
         String MENUTYPE = request.getParameter("MENUTYPE");
-        System.out.println("Menu type " + MENUTYPE);//nak check betul ke data yang dia get
         Part filePart = request.getPart("MENUIMAGE");
-        String fileName = extractFileName(filePart);
-        System.out.println("Image name is " + fileName);//nak check betul ke data yang dia get
-        String savePath = "C:\\Users\\Lenovo\\IdeaProjects\\E-Medan-Food-Ordering-System\\src\\main\\webapp\\images" + File.separator + fileName;
-        File fileSaveDir = new File(savePath);
-        filePart.write(savePath + File.separator);
-        System.out.println("Image path is " + savePath);//nak check betul ke data yang dia get
 
+        String host = request.getScheme() + "://" + request.getHeader("e-medanfoodorderingsystem.herokuapp.com") + "/";
+        System.out.println(host);
 
+//        http://localhost:8088/images/burger.jpg
+
+        String fileName = filePart.getSubmittedFileName();
+        String urlPathForDB = host + "images/" + fileName;
+        String savePath = applicationPath + "images" + File.separator + fileName;
+
+        new File(applicationPath + "images").mkdir();
+        filePart.write(savePath);
 
         HttpSession session = request.getSession();
 
-        try{
-            if ((String) session.getAttribute("CWORKID") == null){
+        try {
+            if ((String) session.getAttribute("CWORKID") == null) {
                 response.sendRedirect("cafeworkerLogin.jsp");
-            }else{
+            } else {
                 String CWORKID = (String) session.getAttribute("CWORKID");
-                System.out.println("Cafeworker ID is " + CWORKID);//nak check betul ke dia retrieve cworkid yang login
 
-                int addMenu = DBConnection.insertUpdateFromSqlQuery("INSERT INTO public.menu(\"MENUID\", \"MENUNAME\", \"MENUDESC\", \"MENUTPRICE\", \"MENUTYPE\", \"fileName\", \"savePath\", \"CWORKID\") VALUES(default,'" + MENUNAME + "','" + MENUDESC + "','" + MENUPRICE + "','" + MENUTYPE + "','" + fileName + "','" + savePath + "','" + CWORKID + "')");
+                int addMenu = DBConnection.insertUpdateFromSqlQuery("INSERT INTO public.menu(\"MENUID\", \"MENUNAME\", \"MENUDESC\", \"MENUTPRICE\", \"MENUTYPE\", \"fileName\", \"savePath\", \"CWORKID\") " +
+                        "VALUES(default,'" + MENUNAME + "','" + MENUDESC + "','" + MENUPRICE + "','" + MENUTYPE + "','" + fileName + "','" + urlPathForDB + "','" + CWORKID + "')");
 
-                if (addMenu > 0){
+                if (addMenu > 0) {
                     PrintWriter out = response.getWriter();
                     out.println("<script type=\"text/javascript\">");
                     out.println("alert('Menu successfully added!');");
@@ -61,11 +63,12 @@ public class addMenu extends HttpServlet {
                 }
 
             }
-        }catch (Exception e) {
+        } catch (Exception e) {
             e.printStackTrace();
         }
 
     }
+
 
     private String extractFileName (Part filePart)
     {

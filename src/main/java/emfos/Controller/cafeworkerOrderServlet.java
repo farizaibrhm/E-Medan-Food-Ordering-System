@@ -25,12 +25,12 @@ public class cafeworkerOrderServlet extends HttpServlet {
         orderDAO odao = new orderDAO();
         order uporder = new order();
 
-        String orderid = request.getParameter("ORDERID");
+        String orderid = request.getParameter("ORDERNO");
 
         if (!((orderid) == null))
         {
             int sid = Integer.parseInt(orderid);
-            uporder.setORDERID(sid);
+            uporder.setORDERNO(sid);
         }
 
         uporder.setORDERSTATUS(request.getParameter("ORDERSTATUS"));

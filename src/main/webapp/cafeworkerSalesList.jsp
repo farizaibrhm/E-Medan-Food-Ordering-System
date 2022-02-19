@@ -66,7 +66,7 @@
             SimpleDateFormat ft2 = new SimpleDateFormat("HH:mm:ss");
                 Connection con = DBConnection.getConn();
                 Statement st = con.createStatement();
-                String sql = "SELECT \"ORDERNO\", \"ORDERTPRICE\", \"PAYMENTDATE\", \"PAYMENTTIME\", \"FILENAME\", \"STUDENTNAME\" FROM public.forder \"o\", public.orderitem \"oi\", public.payment \"p\", public.student \"s\" WHERE \"o\".\"ORDERID\" = \"oi\".\"ORDERID\" AND \"o\".\"ORDERID\" = \"p\".\"ORDERID\" AND \"o\".\"STUDENTID\" = \"s\".\"STUDENTID\" AND \"oi\".\"CWORKID\" = '" + session.getAttribute("CWORKID") + "' ";
+                String sql = "SELECT DISTINCT \"ORDERNO\",\"PAYMENTDATE\",\"ORDERTIME\",\"STUDENTNAME\",\"ORDERTPRICE\",\"FILENAME\" FROM public.forder \"o\", public.orderitem \"oi\", public.student \"s\",public.payment \"p\" WHERE \"o\".\"ORDERID\" = \"oi\".\"ORDERID\" AND \"o\".\"STUDENTID\" = \"s\".\"STUDENTID\" AND \"o\".\"ORDERID\"= \"p\".\"ORDERID\" AND \"oi\".\"CWORKID\" ='" + session.getAttribute("CWORKID") + "' ";
                 ResultSet rs = st.executeQuery(sql);
                 while (rs.next())
                 {
@@ -75,7 +75,7 @@
                         <td class="text-center">#<%=rs.getString("ORDERNO")%></td>
                         <td class="text-center">
                             <%=ft.format(rs.getDate("PAYMENTDATE"))%> <br>
-                            <%=ft2.format(rs.getTime("PAYMENTTIME"))%>
+                            <%=ft2.format(rs.getTime("ORDERTIME"))%>
                         </td>
                         <td class="text-center"><%=rs.getString("STUDENTNAME")%></td>
                         <td class="text-center">RM <%=rs.getString("ORDERTPRICE")%></td>
@@ -92,7 +92,7 @@
                     DecimalFormat df = new DecimalFormat("##. 00");
                     double subtotal = 00.00;
                     Statement st3 = con.createStatement();
-                    ResultSet rs3 = st3.executeQuery("SELECT sum (\"ORDERTPRICE\") FROM public.forder \"o\", public.orderitem \"oi\", public.payment p WHERE \"o\".\"ORDERID\" = \"oi\".\"ORDERID\" AND \"oi\".\"ORDERID\" = \"p\".\"ORDERID\" AND \"oi\".\"CWORKID\" ='" + session.getAttribute("CWORKID")+"'");
+                    ResultSet rs3 = st3.executeQuery("SELECT SUM(DISTINCT (\"ORDERTPRICE\")) FROM public.forder \"o\", public.orderitem \"oi\",public.payment \"p\" WHERE \"o\".\"ORDERID\" = \"oi\".\"ORDERID\" AND \"p\".\"ORDERID\"=\"o\".\"ORDERID\" AND \"oi\".\"CWORKID\" ='" + session.getAttribute("CWORKID")+"'");
                     if (rs3.next())
                     {
                         subtotal = rs3.getDouble(1);

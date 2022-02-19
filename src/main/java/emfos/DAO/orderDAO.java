@@ -74,10 +74,10 @@ public class orderDAO {
             PreparedStatement preparedStatement = (PreparedStatement)
                     con.prepareStatement("UPDATE public.forder \n" +
                             "\tSET  \"ORDERSTATUS\"=?" +
-                            "\tWHERE \"ORDERID\" =?  ;");
+                            "\tWHERE \"ORDERNO\" =?  ;");
 
             preparedStatement.setString(1, upOrder.getORDERSTATUS());
-            preparedStatement.setInt(2, upOrder.getORDERID());
+            preparedStatement.setInt(2, upOrder.getORDERNO());
 
             i = preparedStatement.executeUpdate();
         }

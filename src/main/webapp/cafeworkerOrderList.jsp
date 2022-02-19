@@ -67,7 +67,7 @@
                             SimpleDateFormat ft2 = new SimpleDateFormat("HH:mm:ss");
                 Connection con = DBConnection.getConn();
                 Statement st = con.createStatement();
-                String sql = "SELECT *  FROM public.forder \"o\", public.orderitem \"oi\", public.student \"s\" WHERE \"o\".\"ORDERID\" = \"oi\".\"ORDERID\" AND \"o\".\"STUDENTID\" = \"s\".\"STUDENTID\" AND \"oi\".\"CWORKID\" = '" + session.getAttribute("CWORKID") + "' ";
+                String sql = "SELECT DISTINCT \"ORDERNO\",\"ORDERDATE\",\"ORDERTIME\",\"ORDERTPRICE\",\"STUDENTNAME\",\"ORDERSTATUS\" FROM public.forder \"o\", public.orderitem \"oi\", public.student \"s\" WHERE \"o\".\"ORDERID\" = \"oi\".\"ORDERID\" AND \"o\".\"STUDENTID\" = \"s\".\"STUDENTID\" AND \"oi\".\"CWORKID\" = '" + session.getAttribute("CWORKID") + "' ";
                 ResultSet rs = st.executeQuery(sql);
                 while (rs.next())
                 {
@@ -82,7 +82,8 @@
                         <td class="text-center">RM <%=rs.getString("ORDERTPRICE")%></td>
                         <td class="text-center">
                             <form method="post" action="${pageContext.request.contextPath}/cafeworkerOrderServlet">
-                                <input type="hidden" name="ORDERID" value="<%=rs.getInt("ORDERID")%>"/>
+                                <%--<input type="hidden" name="ORDERID" value="<%=rs.getInt("ORDERID")%>"/>--%>
+                                <input type="hidden" name="ORDERNO" value="<%=rs.getInt("ORDERNO")%>"/>
                                 <select id="ORDERSTATUS" name="ORDERSTATUS" onchange='this.form.submit();'>
                                     <option value="<%=rs.getString("ORDERSTATUS")%>"><%=rs.getString("ORDERSTATUS")%></option>
                                     <option value="Processing">Processing</option>
@@ -94,8 +95,8 @@
                             <a  href="cafeworkerViewOrderDetails.jsp?id=<%=rs.getString("ORDERNO")%>" style="background-color: #5D9DED;" class="btn btn--sm">View</a>
                         </td>
                     </tr>
-                        <%
-                }
+                <%
+                    }
                 %>
                 </table>
             </div>

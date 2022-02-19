@@ -94,7 +94,7 @@
                 </div>
 
                 <div class="signin-form">
-                    <h2 class="form-title">Sign In</h2>
+                    <h2 class="form-title">Login</h2>
                     <h3 class="form-title">Student</h3>
                     <form method="POST" class="register-form" id="login-form" action="${pageContext.request.contextPath}/studentLoginServlet">
                         <div class="form-group">
@@ -106,7 +106,7 @@
                             <input type="password" name="STUDENTPASSWORD" id="studentPassword" placeholder="Password"/>
                         </div>
                         <div class="form-group form-button">
-                            <input type="submit" name="signin" id="signin" class="form-submit" value="Log in"/>
+                            <input type="submit" name="signin" id="signin" class="form-submit" value="Login"/>
                         </div>
                     </form>
 

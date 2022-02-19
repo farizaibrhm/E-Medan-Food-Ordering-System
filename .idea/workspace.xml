@@ -9,9 +9,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ee72d468-6c94-46a4-8c84-170d520e2088" name="Changes" comment="try deployed 3">
+    <list default="true" id="ee72d468-6c94-46a4-8c84-170d520e2088" name="Changes" comment="try deployed 5">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/emfos/Controller/studentOrderServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/emfos/Controller/studentOrderServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/cafeworkerLogin.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/cafeworkerLogin.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/cafeworkerProfile.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/cafeworkerProfile.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/cafeworkerRegister.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/cafeworkerRegister.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/studentLogin.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/studentLogin.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/studentOrderList.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/studentOrderList.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/studentProfile.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/studentProfile.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/studentRegister.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/studentRegister.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -242,7 +248,7 @@
       <workItem from="1645080654544" duration="4905000" />
       <workItem from="1645087925359" duration="28057000" />
       <workItem from="1645165624736" duration="18668000" />
-      <workItem from="1645250823012" duration="14830000" />
+      <workItem from="1645250823012" duration="17224000" />
     </task>
     <task id="LOCAL-00001" summary="Merge remote-tracking branch 'origin/dev' into dev">
       <created>1642837016272</created>
@@ -489,7 +495,14 @@
       <option name="project" value="LOCAL" />
       <updated>1645284444094</updated>
     </task>
-    <option name="localTasksCounter" value="36" />
+    <task id="LOCAL-00036" summary="try deployed 4">
+      <created>1645285908225</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1645285908226</updated>
+    </task>
+    <option name="localTasksCounter" value="37" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -508,8 +521,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="update quantity item in cart" />
-    <MESSAGE value="update here and there" />
     <MESSAGE value="a lil update here and there" />
     <MESSAGE value="#2 a lil update here and there" />
     <MESSAGE value="Placing order done (sesuaikan untuk ict punya requirement first, isp kemudian)" />
@@ -533,6 +544,8 @@
     <MESSAGE value="try deployed" />
     <MESSAGE value="try deployed 2" />
     <MESSAGE value="try deployed 3" />
-    <option name="LAST_COMMIT_MESSAGE" value="try deployed 3" />
+    <MESSAGE value="try deployed 4" />
+    <MESSAGE value="try deployed 5" />
+    <option name="LAST_COMMIT_MESSAGE" value="try deployed 5" />
   </component>
 </project>

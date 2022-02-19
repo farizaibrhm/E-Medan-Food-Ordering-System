@@ -95,7 +95,7 @@
                 </div>
 
                 <div class="signin-form">
-                    <h2 class="form-title">Sign In</h2>
+                    <h2 class="form-title">Login</h2>
                     <h3 class="form-title">Cafe Worker</h3>
                     <form class="register-form" id="login-form" method="post" action="${pageContext.request.contextPath}/cafeworkerLoginServlet">
                         <div class="form-group">
@@ -111,7 +111,7 @@
                             <label for="remember-me" class="label-agree-term"><span><span></span></span>Remember me</label>
                         </div>
                         <div class="form-group form-button">
-                            <input type="submit" name="signin" id="signin" class="form-submit" value="Log in"/>
+                            <input type="submit" name="signin" id="signin" class="form-submit" value="Login"/>
                         </div>
                     </form>
 

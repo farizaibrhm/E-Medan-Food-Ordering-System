@@ -180,7 +180,7 @@
                             <h4 class="user-name"><%=rs.getString("CWORKBANKNAME")%></h4>
                             <hr>
 
-                            <button style="background-color: #000000; width: 180px;" class="btn btn--sm" onclick="window.location.href='cafeworkerEditProfile.jsp'">Edit Profile</button>
+                            <button style="background-color: #000000; width: 180px;" class="btn btn--sm" onclick="window.location.href='cafeworkerEditProfile.jsp'">Update Account</button>
 
                             <form method="post" action="${pageContext.request.contextPath}/cafeworkerDeleteAccountServlet">
                                 <input type="hidden" name="id" value="<%=rs.getString("CWORKID")%>">

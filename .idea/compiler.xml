@@ -10,9 +10,4 @@
       </profile>
     </annotationProcessing>
   </component>
-<!--  <component name="JavacSettings">-->
-<!--    <option name="ADDITIONAL_OPTIONS_OVERRIDE">-->
-<!--      <module name="e-Medan_Food_Ordering_System" options="&#45;&#45;add-modules java.base,java.sql" />-->
-<!--    </option>-->
-<!--  </component>-->
 </project>

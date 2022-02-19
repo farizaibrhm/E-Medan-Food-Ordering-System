@@ -34,7 +34,7 @@ public class addMenu extends HttpServlet {
         Part filePart = request.getPart("MENUIMAGE");
         String fileName = extractFileName(filePart);
         System.out.println("Image name is " + fileName);//nak check betul ke data yang dia get
-        String savePath = "C:\\Users\\Lenovo\\IdeaProjects\\E-Medan-Food-Ordering-System\\src\\main\\webapp\\images" + File.separator + fileName;
+        String savePath = "images" + File.separator + fileName;
         File fileSaveDir = new File(savePath);
         filePart.write(savePath + File.separator);
         System.out.println("Image path is " + savePath);//nak check betul ke data yang dia get

@@ -9,26 +9,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ee72d468-6c94-46a4-8c84-170d520e2088" name="Changes" comment="delete account st">
+    <list default="true" id="ee72d468-6c94-46a4-8c84-170d520e2088" name="Changes" comment="85%">
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/webContexts.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/webContexts.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/emfos/Controller/cafeworkerDeleteAccountServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/emfos/Controller/cafeworkerDeleteAccountServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/emfos/Controller/studentDeleteAccountServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/emfos/Controller/studentDeleteAccountServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/emfos/Controller/studentOrderServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/emfos/Controller/studentOrderServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/emfos/DAO/menuDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/emfos/DAO/menuDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/cafeworkerEditProfile.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/cafeworkerEditProfile.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/cafeworkerFeedbackList.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/cafeworkerFeedbackList.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/cafeworkerMenuList.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/cafeworkerMenuList.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/cafeworkerOrderList.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/cafeworkerOrderList.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/cafeworkerSalesList.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/cafeworkerSalesList.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/cafeworkerViewOrderDetails.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/cafeworkerViewOrderDetails.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/deletion.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/deletion.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/studentCart.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/studentCart.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/studentFeedbackList.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/studentFeedbackList.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/studentOrderList.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/studentOrderList.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/studentProfile.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/studentProfile.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/studentViewOrderDetails.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/studentViewOrderDetails.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/emfos/Controller/addMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/emfos/Controller/addMenu.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -258,6 +242,7 @@
       <workItem from="1645080654544" duration="4905000" />
       <workItem from="1645087925359" duration="28057000" />
       <workItem from="1645165624736" duration="18668000" />
+      <workItem from="1645250823012" duration="719000" />
     </task>
     <task id="LOCAL-00001" summary="Merge remote-tracking branch 'origin/dev' into dev">
       <created>1642837016272</created>
@@ -441,7 +426,14 @@
       <option name="project" value="LOCAL" />
       <updated>1645208079163</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="85%">
+      <created>1645218302083</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1645218302083</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -460,7 +452,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="init" />
     <MESSAGE value="insert and retrieve" />
     <MESSAGE value="update tak lepas" />
     <MESSAGE value="update dengan delete menu belum edit for session." />
@@ -485,6 +476,7 @@
     <MESSAGE value="delete account cw" />
     <MESSAGE value="delete account cw test 2" />
     <MESSAGE value="delete account st" />
-    <option name="LAST_COMMIT_MESSAGE" value="delete account st" />
+    <MESSAGE value="85%" />
+    <option name="LAST_COMMIT_MESSAGE" value="85%" />
   </component>
 </project>

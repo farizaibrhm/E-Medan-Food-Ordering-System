@@ -92,7 +92,7 @@
                     DecimalFormat df = new DecimalFormat("##. 00");
                     double subtotal = 00.00;
                     Statement st3 = con.createStatement();
-                    ResultSet rs3 = st3.executeQuery("SELECT SUM(DISTINCT (\"ORDERTPRICE\")) FROM public.forder \"o\", public.orderitem \"oi\",public.payment \"p\" WHERE \"o\".\"ORDERID\" = \"oi\".\"ORDERID\" AND \"p\".\"ORDERID\"=\"o\".\"ORDERID\" AND \"oi\".\"CWORKID\" ='" + session.getAttribute("CWORKID")+"'");
+                    ResultSet rs3 = st3.executeQuery("SELECT SUM(DISTINCT (\"ORDERTPRICE\")) FROM public.payment \"p\", public.forder \"o\", public.orderitem \"oi\", public.menu \"m\", public.cafeworker \"c\", public.student \"s\" WHERE \"o\".\"ORDERID\" = \"p\".\"ORDERID\" AND \"o\".\"ORDERID\" = \"oi\".\"ORDERID\" AND \"o\".\"STUDENTID\" = \"s\".\"STUDENTID\" AND \"oi\".\"MENUID\" = \"m\".\"MENUID\" AND \"m\".\"CWORKID\" = \"c\".\"CWORKID\"  AND \"m\".\"CWORKID\" ='" + session.getAttribute("CWORKID")+"'");
                     if (rs3.next())
                     {
                         subtotal = rs3.getDouble(1);

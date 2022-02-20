@@ -76,7 +76,7 @@
                             <tbody>
                             <%
                                 Statement st1 = con.createStatement();
-                                String sql1 = "SELECT * FROM public.forder \"o\", public.orderitem \"oi\", public.menu \"m\", public.cafeworker \"c\", public.student \"s\" WHERE \"o\".\"ORDERID\" = \"oi\".\"ORDERID\" AND \"o\".\"STUDENTID\" = \"s\".\"STUDENTID\" AND \"oi\".\"MENUID\" = \"m\".\"MENUID\" AND \"oi\".\"CWORKID\" = \"c\".\"CWORKID\" AND \"o\".\"ORDERNO\"='" + oid + "' AND \"o\".\"STUDENTID\" ='" + sid + "'";
+                                String sql1 = "SELECT * FROM public.forder \"o\", public.orderitem \"oi\", public.menu \"m\", public.cafeworker \"c\", public.student \"s\" WHERE \"o\".\"ORDERID\" = \"oi\".\"ORDERID\" AND \"o\".\"STUDENTID\" = \"s\".\"STUDENTID\" AND \"oi\".\"MENUID\" = \"m\".\"MENUID\" AND \"m\".\"CWORKID\" = \"c\".\"CWORKID\" AND \"o\".\"ORDERNO\"='" + oid + "' AND \"o\".\"STUDENTID\" ='" + sid + "'";
                                 ResultSet rs1 = st1.executeQuery(sql1);
                                 while (rs1.next())
                                 {

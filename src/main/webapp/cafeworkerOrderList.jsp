@@ -67,7 +67,7 @@
                             SimpleDateFormat ft2 = new SimpleDateFormat("HH:mm:ss");
                 Connection con = DBConnection.getConn();
                 Statement st = con.createStatement();
-                String sql = "SELECT DISTINCT \"ORDERNO\",\"ORDERDATE\",\"ORDERTIME\",\"ORDERTPRICE\",\"STUDENTNAME\",\"ORDERSTATUS\" FROM public.forder \"o\", public.orderitem \"oi\", public.student \"s\" WHERE \"o\".\"ORDERID\" = \"oi\".\"ORDERID\" AND \"o\".\"STUDENTID\" = \"s\".\"STUDENTID\" AND \"oi\".\"CWORKID\" = '" + session.getAttribute("CWORKID") + "' ";
+                String sql = "SELECT DISTINCT \"ORDERNO\",\"ORDERDATE\",\"ORDERTIME\",\"ORDERTPRICE\",\"STUDENTNAME\",\"ORDERSTATUS\" FROM public.forder \"o\", public.orderitem \"oi\", public.menu \"m\", public.cafeworker \"c\", public.student \"s\" WHERE \"o\".\"ORDERID\" = \"oi\".\"ORDERID\" AND \"o\".\"STUDENTID\" = \"s\".\"STUDENTID\" AND \"oi\".\"MENUID\" = \"m\".\"MENUID\" AND \"m\".\"CWORKID\" = \"c\".\"CWORKID\" AND \"m\".\"CWORKID\" = '" + session.getAttribute("CWORKID") + "' ORDER BY \"o\".\"ORDERNO\"";
                 ResultSet rs = st.executeQuery(sql);
                 while (rs.next())
                 {

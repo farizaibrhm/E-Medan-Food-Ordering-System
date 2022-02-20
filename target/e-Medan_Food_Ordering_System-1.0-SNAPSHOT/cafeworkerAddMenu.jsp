@@ -137,7 +137,7 @@
         <!--MainContent-->
         <div id="MainContent" class="main-content" role="main">
             <div class="testbox">
-            <form method="post" enctype="multipart/form-data" action="${pageContext.request.contextPath}/addMenu">
+            <form method="post" enctype="multipart/form-data" action="${pageContext.request.contextPath}/cafeworkerAddMenuServlet">
                     <div class="banner">
                         <h1>ADD MENU</h1>
                     </div>

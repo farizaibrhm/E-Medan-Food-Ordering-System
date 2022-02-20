@@ -53,7 +53,7 @@
                             SimpleDateFormat ft = new SimpleDateFormat ("dd-MMM-yyyy");
                             SimpleDateFormat ft2 = new SimpleDateFormat("HH:mm:ss");
                             Statement st = con.createStatement();
-                            String sql = "SELECT *  FROM public.forder \"o\", public.orderitem \"oi\", public.student \"s\" ,public.feedback \"f\" WHERE \"o\".\"ORDERID\" = \"oi\".\"ORDERID\" AND \"f\".\"ORDERID\"= \"o\".\"ORDERID\" AND \"o\".\"STUDENTID\" = \"s\".\"STUDENTID\" AND \"oi\".\"CWORKID\" = '" + session.getAttribute("CWORKID") + "' ";
+                            String sql = "SELECT DISTINCT \"ORDERNO\", \"STUDENTNAME\", \"FEEDBACKMESSAGE\", \"FEEDBACKDATE\", \"FEEDBACKTIME\" FROM public.feedback \"f\", public.forder \"o\", public.orderitem \"oi\", public.menu \"m\", public.cafeworker \"c\", public.student \"s\" WHERE \"f\".\"ORDERID\" = \"o\".\"ORDERID\" AND \"o\".\"ORDERID\" = \"oi\".\"ORDERID\" AND \"o\".\"STUDENTID\" = \"s\".\"STUDENTID\" AND \"oi\".\"MENUID\" = \"m\".\"MENUID\" AND \"m\".\"CWORKID\" = \"c\".\"CWORKID\"  AND \"m\".\"CWORKID\" ='" + session.getAttribute("CWORKID") + "' ORDER BY \"o\".\"ORDERNO\"";
                             ResultSet rs = st.executeQuery(sql);
                             while (rs.next())
                             {

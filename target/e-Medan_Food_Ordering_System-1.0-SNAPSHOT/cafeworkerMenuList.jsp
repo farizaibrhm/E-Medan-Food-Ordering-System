@@ -113,10 +113,7 @@
         </div>
         <!--End Body Content-->
 
-        <br><br>
-        <!--Scoll Top-->
-        <span id="site-scroll"><i class="icon anm anm-angle-up-r"></i></span>
-        <!--End Scoll Top-->
+
 
         <!-- Including Jquery -->
         <script src="assets/js/vendor/jquery-3.3.1.min.js"></script>
@@ -133,24 +130,6 @@
         <script src="assets/js/vendor/photoswipe.min.js"></script>
         <script src="assets/js/vendor/photoswipe-ui-default.min.js"></script>
 
-        <script>
-            $(document).ready(function() {
-                $(".del").click(function() {
-                    var id = +this.id;
-                    $.ajax({
-                        url: "cafeworkerDeleteMenu.jsp",
-                        type: "post",
-                        data: {
-                            id : id,
-                        },
-                        success : function(data){
-                            alert(data); // alerts the response from jsp
-                            location.reload();
-                        }
-                    });
-                });
-            });
-        </script>
     </div>
 </div>
 

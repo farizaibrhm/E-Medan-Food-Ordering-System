@@ -157,7 +157,7 @@
                                     }else {
 
                                         Statement st4 = con.createStatement();
-                                        ResultSet r1 = st4.executeQuery("SELECT \"CWORKACCNUM\",\"CWORKACCNAME\",\"CWORKBANKNAME\" FROM public.cafeworker \"c\", public.cart \"m\" WHERE \"c\".\"CWORKID\" = \"m\".\"CWORKID\" AND \"m\".\"STUDENTID\" ='" + session.getAttribute("STUDENTID") + "'");
+                                        ResultSet r1 = st4.executeQuery("SELECT \"CWORKACCNUM\",\"CWORKACCNAME\",\"CWORKBANKNAME\" FROM public.cafeworker \"c\", public.cart \"cr\" , public.menu \"m\" WHERE  \"cr\".\"MENUID\" = \"m\".\"MENUID\" AND   \"m\".\"CWORKID\" = \"c\".\"MENUID\"  AND  \"cr\".\"STUDENTID\" ='" + session.getAttribute("STUDENTID") + "'");
                                         r1.next();
                                 %>
 

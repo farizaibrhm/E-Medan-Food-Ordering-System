@@ -13,8 +13,8 @@ public class cartDAO {
         Connection con = DBConnection.getConn();
 
         String sql = "INSERT INTO public.cart(\n" +
-                "\t\"CARTID\", \"MENUID\", \"CARTQUANTITY\",\"CWORKID\", \"STUDENTID\")\n" +
-                "\tVALUES (default,?, 1, ?, ?);";
+                "\t\"CARTID\", \"MENUID\", \"CARTQUANTITY\", \"STUDENTID\")\n" +
+                "\tVALUES (default,?, 1, ?);";
 
         int i = 0;
 
@@ -22,8 +22,7 @@ public class cartDAO {
             PreparedStatement ps = con.prepareStatement(sql);
 
             ps.setInt(1, c.getMENUID());
-            ps.setString(2, c.getCWORKID());
-            ps.setString(3, c.getSTUDENTID());
+            ps.setString(2, c.getSTUDENTID());
 
             i = ps.executeUpdate();
 
@@ -111,7 +110,7 @@ public class cartDAO {
 
         int mcid = 0;
 
-        String sql="SELECT \"MENUID\" FROM public.cart WHERE \"MENUID\"=? AND \"CWORKID\"=? AND \"STUDENTID\"=? ;";
+        String sql="SELECT \"cr\".\"MENUID\" FROM public.cart \"cr\", public.menu \"m\", public.cafeworker \"c\" WHERE \"cr\".\"MENUID\" = \"m\".\"MENUID\" AND \"m\".\"CWORKID\" = \"c\".\"CWORKID\" AND \"cr\".\"MENUID\"=? AND \"m\".\"CWORKID\"=? AND \"cr\".\"STUDENTID\"=?;";
 
         try{
             PreparedStatement ps = con.prepareStatement(sql);

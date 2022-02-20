@@ -17,7 +17,7 @@
     SimpleDateFormat ft = new SimpleDateFormat ("dd-MMM-yyyy");
     SimpleDateFormat ft2 = new SimpleDateFormat("HH:mm:ss");
     Statement st = con.createStatement();
-    String sql = "SELECT * FROM public.forder \"o\", public.orderitem \"oi\", public.student \"s\", public.cafeworker \"c\" WHERE \"o\".\"STUDENTID\" = \"s\".\"STUDENTID\" AND \"o\".\"ORDERID\" = \"oi\".\"ORDERID\" AND \"oi\".\"CWORKID\" = \"c\".\"CWORKID\" AND \"o\".\"ORDERNO\"='" + oid + "' AND \"oi\".\"CWORKID\" ='" + cid + "'";
+    String sql = "SELECT * FROM public.forder \"o\", public.orderitem \"oi\", public.menu \"m\", public.cafeworker \"c\", public.student \"s\" WHERE \"o\".\"ORDERID\" = \"oi\".\"ORDERID\" AND \"o\".\"STUDENTID\" = \"s\".\"STUDENTID\" AND \"oi\".\"MENUID\" = \"m\".\"MENUID\" AND \"m\".\"CWORKID\" = \"c\".\"CWORKID\" AND \"o\".\"ORDERNO\"='" + oid + "' AND \"m\".\"CWORKID\" ='" + cid + "'";
     ResultSet rs = st.executeQuery(sql);
     while (rs.next())
     {
@@ -74,7 +74,7 @@
                             <tbody>
                             <%
                                 Statement st1 = con.createStatement();
-                                String sql1 = "SELECT \"CWORKSTALLNAME\", \"MENUNAME\", \"MENUTPRICE\", \"fileName\", \"ORDERITEMQUANTITY\" FROM public.forder \"o\", public.orderitem \"oi\", public.menu \"m\", public.cafeworker \"c\", public.student \"s\" WHERE \"o\".\"ORDERID\" = \"oi\".\"ORDERID\" AND \"o\".\"STUDENTID\" = \"s\".\"STUDENTID\" AND \"oi\".\"MENUID\" = \"m\".\"MENUID\" AND \"oi\".\"CWORKID\" = \"c\".\"CWORKID\" AND \"o\".\"ORDERNO\"='" + oid + "' AND \"oi\".\"CWORKID\" ='" + cid + "'";
+                                String sql1 = "SELECT * FROM public.forder \"o\", public.orderitem \"oi\", public.menu \"m\", public.cafeworker \"c\", public.student \"s\" WHERE \"o\".\"ORDERID\" = \"oi\".\"ORDERID\" AND \"o\".\"STUDENTID\" = \"s\".\"STUDENTID\" AND \"oi\".\"MENUID\" = \"m\".\"MENUID\" AND \"m\".\"CWORKID\" = \"c\".\"CWORKID\" AND \"o\".\"ORDERNO\"='" + oid + "' AND \"m\".\"CWORKID\" ='" + cid + "'";
                                 ResultSet rs1 = st1.executeQuery(sql1);
                                 while (rs1.next())
                                 {

@@ -136,76 +136,76 @@
                 %>
 
 
-                    <div class="col-12 col-sm-12 col-md-4 col-lg-4 cart__footer">
-                        <form method="post" enctype="multipart/form-data" action="${pageContext.request.contextPath}/studentOrderServlet">
-                    <div class="solid-border">
-                        <div id="accordion" class="payment-section">
+                <div class="col-12 col-sm-12 col-md-4 col-lg-4 cart__footer">
+                    <form method="post" enctype="multipart/form-data" action="${pageContext.request.contextPath}/studentOrderServlet">
+                        <div class="solid-border">
+                            <div id="accordion" class="payment-section">
 
-                            <div class="your-order">
-                                <div class="row border-bottom pb-1 pt-1">
-                                   <h2 class="login-title mb-1 text-center">Payment Details</h2>
-                                </div>
-
-                                <%
-                                    if (index == 0) {
-                                %>
-                                <center>
-                                    <br>
-                                    <strong>Please add item first to view payment details.</strong>
-                                </center>
-                                <%
+                                <div class="your-order">
+                                    <div class="row border-bottom pb-1 pt-1">
+                                        <h2 class="login-title mb-1 text-center">Payment Details</h2>
+                                    </div>
+                                    <%
+                                        if (index == 0) {
+                                    %>
+                                    <center>
+                                        <br>
+                                        <strong>Please add item first to view payment details.</strong>
+                                    </center>
+                                    <%
                                     }else {
 
                                         Statement st4 = con.createStatement();
-                                        ResultSet r1 = st4.executeQuery("SELECT \"CWORKACCNUM\",\"CWORKACCNAME\",\"CWORKBANKNAME\" FROM public.cafeworker \"c\", public.cart \"cr\" , public.menu \"m\" WHERE  \"cr\".\"MENUID\" = \"m\".\"MENUID\" AND   \"m\".\"CWORKID\" = \"c\".\"MENUID\"  AND  \"cr\".\"STUDENTID\" ='" + session.getAttribute("STUDENTID") + "'");
+                                        ResultSet r1 = st4.executeQuery("SELECT \"CWORKACCNUM\", \"CWORKACCNAME\", \"CWORKBANKNAME\" FROM public.cafeworker \"c\", public.cart \"cr\", public.menu \"m\" WHERE \"cr\".\"MENUID\" = \"m\".\"MENUID\" AND \"m\".\"CWORKID\" = \"c\".\"CWORKID\"  AND \"cr\".\"STUDENTID\" ='" + session.getAttribute("STUDENTID")+"'");
                                         r1.next();
-                                %>
+                                    %>
 
-                                <h3 class="font-15 xs-font-13">Account Number</h3>
-                                <p class="no-margin font-15"><%=r1.getString("CWORKACCNUM")%></p>
+                                    <h3 class="font-15 xs-font-13">Account Number</h3>
+                                    <p class="no-margin font-15"><%=r1.getString("CWORKACCNUM")%></p>
 
-                                <h3 class="font-15 xs-font-13">Account Name</h3>
-                                <p class="no-margin font-15"><%=r1.getString("CWORKACCNAME")%></p>
+                                    <h3 class="font-15 xs-font-13">Account Name</h3>
+                                    <p class="no-margin font-15"><%=r1.getString("CWORKACCNAME")%></p>
 
-                                <h3 class="font-15 xs-font-13">Account Bank</h3>
-                                <p class="no-margin font-15"><%=r1.getString("CWORKBANKNAME")%></p>
+                                    <h3 class="font-15 xs-font-13">Account Bank</h3>
+                                    <p class="no-margin font-15"><%=r1.getString("CWORKBANKNAME")%></p>
 
-                                <h3 class="font-15 xs-font-13">Payment Instruction</h3>
-                                <p class="no-margin font-15">Please include order number for the recipient's reference when uploading payment receipt.</p>
-                                <fieldset>
-                                    <div class="row">
-                                        <div class="form-group col-md-6 col-lg-6 col-xl-12 required">
-                                            <label>Receipt/Proof of Payment<span class="required-f">*</span></label>
-                                            <input type="file" required="required" name="PAYMENTRECEIPT" class="form-control-file">
+                                    <h3 class="font-15 xs-font-13">Payment Instruction</h3>
+                                    <p class="no-margin font-15">Please include order number for the recipient's reference when uploading payment receipt.</p>
+                                    <fieldset>
+                                        <div class="row">
+                                            <div class="form-group col-md-6 col-lg-6 col-xl-12 required">
+                                                <label>Receipt/Proof of Payment<span class="required-f">*</span></label>
+                                                <input type="file" required="required" name="PAYMENTRECEIPT" class="form-control-file">
+                                            </div>
                                         </div>
-                                    </div>
-                                </fieldset>
-                                <%
-                                    }
-                                %>
+                                    </fieldset>
+
+                                    <%
+                                        }//test sini
+                                    %>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="solid-border">
-                        <div class="row border-bottom pb-2">
-                            <span class="col-12 col-sm-6 cart__subtotal-title">Subtotal</span>
-                            <span class="col-12 col-sm-6 text-right">RM <%=df.format(grandtotal)%></span></span>
-                        </div>
+                        <div class="solid-border">
+                            <div class="row border-bottom pb-2">
+                                <span class="col-12 col-sm-6 cart__subtotal-title">Subtotal</span>
+                                <span class="col-12 col-sm-6 text-right">RM <%=df.format(grandtotal)%></span></span>
+                            </div>
 
-                        <div class="row border-bottom pb-2 pt-2">
-                            <span class="col-12 col-sm-6 cart__subtotal-title">Shipping Fee</span>
-                            <span class="col-12 col-sm-6 text-right">0.00</span>
-                        </div>
-                        <div class="row border-bottom pb-2 pt-2">
-                            <span class="col-12 col-sm-6 cart__subtotal-title"><strong>Grand Total</strong></span>
-                            <span class="col-12 col-sm-6 cart__subtotal-title cart__subtotal text-right">RM <%=df.format(grandtotal)%></span></span>
-                        </div>
+                            <div class="row border-bottom pb-2 pt-2">
+                                <span class="col-12 col-sm-6 cart__subtotal-title">Shipping Fee</span>
+                                <span class="col-12 col-sm-6 text-right">0.00</span>
+                            </div>
+                            <div class="row border-bottom pb-2 pt-2">
+                                <span class="col-12 col-sm-6 cart__subtotal-title"><strong>Grand Total</strong></span>
+                                <span class="col-12 col-sm-6 cart__subtotal-title cart__subtotal text-right">RM <%=df.format(grandtotal)%></span></span>
+                            </div>
 
                             <input type="hidden" name="amount" value="<%=df.format(grandtotal)%>">
                             <input type="hidden" name="PAYMENTRECEIPT">
                             <input type="submit" name="Action" id="cartCheckout" class="btn btn--small-wide checkout" value="Place Order">
-                    </div>
-                        </form>
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>

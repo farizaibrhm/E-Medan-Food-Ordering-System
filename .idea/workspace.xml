@@ -9,29 +9,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ee72d468-6c94-46a4-8c84-170d520e2088" name="Changes" comment="try deployed 10">
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/images/mee_goreng.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/images/nasi ayam.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/images/nasi dagang kari ikan.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/images/nasi lemak ayam.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/images/nasi lemak biasa.jpg" afterDir="false" />
+    <list default="true" id="ee72d468-6c94-46a4-8c84-170d520e2088" name="Changes" comment="try deployed 11">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/images/bag.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/images/brandlogo1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/images/brandlogo2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/images/brandlogo3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/images/coming-soon.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/images/cosmetic3.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/images/jewellery-products1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/images/jewellery-products5-1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/images/jewellery-products6-1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/images/product-image10-1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/images/product-image5-1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/images/product-image7-1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/images/product-image8.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/images/product-image9-1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/images/single-product.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/images/studentViewOrderDetails.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/studentCart.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/studentCart.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/emfos/Controller/cafeworkerAddMenuServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/emfos/Controller/cafeworkerAddMenuServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/emfos/Controller/studentOrderServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/emfos/Controller/studentOrderServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/WEB-INF/classes/emfos/Controller/cafeworkerAddMenuServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/WEB-INF/classes/emfos/Controller/cafeworkerAddMenuServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/WEB-INF/classes/emfos/Controller/studentOrderServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/WEB-INF/classes/emfos/Controller/studentOrderServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/studentCart.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/studentCart.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -263,7 +248,7 @@
       <workItem from="1645087925359" duration="28057000" />
       <workItem from="1645165624736" duration="18668000" />
       <workItem from="1645250823012" duration="17869000" />
-      <workItem from="1645337810004" duration="19320000" />
+      <workItem from="1645337810004" duration="23516000" />
     </task>
     <task id="LOCAL-00001" summary="Merge remote-tracking branch 'origin/dev' into dev">
       <created>1642837016272</created>
@@ -566,7 +551,14 @@
       <option name="project" value="LOCAL" />
       <updated>1645365194203</updated>
     </task>
-    <option name="localTasksCounter" value="44" />
+    <task id="LOCAL-00044" summary="try deployed 10.5">
+      <created>1645366683009</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1645366683009</updated>
+    </task>
+    <option name="localTasksCounter" value="45" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -585,8 +577,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="tengok balik studentOrderList.jsp" />
-    <MESSAGE value="student view order details ✔" />
     <MESSAGE value="pakai satu page untuk semua gerai" />
     <MESSAGE value="upload file receipt" />
     <MESSAGE value="." />
@@ -610,6 +600,8 @@
     <MESSAGE value="try deployed 9" />
     <MESSAGE value="try deployed 9.5" />
     <MESSAGE value="try deployed 10" />
-    <option name="LAST_COMMIT_MESSAGE" value="try deployed 10" />
+    <MESSAGE value="try deployed 10.5" />
+    <MESSAGE value="try deployed 11" />
+    <option name="LAST_COMMIT_MESSAGE" value="try deployed 11" />
   </component>
 </project>

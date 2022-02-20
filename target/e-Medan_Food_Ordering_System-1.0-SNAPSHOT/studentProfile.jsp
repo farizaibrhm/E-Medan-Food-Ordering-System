@@ -159,7 +159,7 @@
                             <h4 class="user-name"><%=rs.getString("STUDENTPHONENO")%></h4>
                             <h4 class="user-name"><%=rs.getString("STUDENTEMAIL")%></h4>
                             <hr>
-                            <button style="background-color: #000000; width: 180px;" class="btn btn--sm" onclick="window.location.href='studentEditProfile.jsp'">Edit Profile</button>
+                            <button style="background-color: #000000; width: 180px;" class="btn btn--sm" onclick="window.location.href='studentEditProfile.jsp'">Update Account</button>
 
                             <form method="post" action="${pageContext.request.contextPath}/studentDeleteAccountServlet">
                                 <input type="hidden" name="id" value="<%=rs.getString("STUDENTID")%>">

@@ -145,10 +145,20 @@
                                 <div class="row border-bottom pb-1 pt-1">
                                    <h2 class="login-title mb-1 text-center">Payment Details</h2>
                                 </div>
+
                                 <%
-                                    Statement st4 = con.createStatement();
-                                    ResultSet r1 = st4.executeQuery("SELECT \"CWORKACCNUM\",\"CWORKACCNAME\",\"CWORKBANKNAME\" FROM public.cafeworker \"c\", public.cart \"m\" WHERE \"c\".\"CWORKID\" = \"m\".\"CWORKID\" AND \"m\".\"STUDENTID\" ='" + session.getAttribute("STUDENTID")+"'");
-                                    r1.next();
+                                    if (index == 0) {
+                                %>
+                                <center>
+                                    <br>
+                                    <strong>Please add item first to view payment details.</strong>
+                                </center>
+                                <%
+                                    }else {
+
+                                        Statement st4 = con.createStatement();
+                                        ResultSet r1 = st4.executeQuery("SELECT \"CWORKACCNUM\",\"CWORKACCNAME\",\"CWORKBANKNAME\" FROM public.cafeworker \"c\", public.cart \"m\" WHERE \"c\".\"CWORKID\" = \"m\".\"CWORKID\" AND \"m\".\"STUDENTID\" ='" + session.getAttribute("STUDENTID") + "'");
+                                        r1.next();
                                 %>
 
                                 <h3 class="font-15 xs-font-13">Account Number</h3>
@@ -171,14 +181,7 @@
                                     </div>
                                 </fieldset>
                                 <%
-                                    if (index == 0) {
-                                %>
-                                <center>
-                                    <br>
-                                    <strong>Please add item first to view payment details.</strong>
-                                </center>
-                                <%
-                                    }//test sini
+                                    }
                                 %>
                             </div>
                         </div>

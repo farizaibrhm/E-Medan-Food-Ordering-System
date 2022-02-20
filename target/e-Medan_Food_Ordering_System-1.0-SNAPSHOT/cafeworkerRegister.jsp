@@ -89,7 +89,7 @@
             <div class="signup-content">
                 <div class="signup-form">
 
-                    <h2 class="form-title">Sign up</h2>
+                    <h2 class="form-title">Register</h2>
                     <h3 class="form-title">Cafe Worker</h3>
                     <form method="POST" class="register-form" id="register-form" action="${pageContext.request.contextPath}/cafeworkerRegisterServlet">
                         <div class="form-group">

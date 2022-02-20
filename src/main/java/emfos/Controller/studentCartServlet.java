@@ -49,6 +49,7 @@ public class studentCartServlet extends HttpServlet {
                     crt.setSTUDENTID(stuid);
 
                     int menuInCart = cdao.getMenuByMenuID(menuid, stuid);
+                    int countCart = cdao.selectAll(stuid);
                     int menuGeraiInCart = cdao.getMenuByCafeID(menuid, cafeid, stuid);
 
                     //add same item, only update quantity
@@ -76,8 +77,7 @@ public class studentCartServlet extends HttpServlet {
                             out.println("</script>");
 
                         }//if selected menu from different gerai, alert error msg.
-                    }
-                    else{
+                    }  else{
                         boolean result = cdao.addItemToCart(crt);
                         System.out.println(result);
 
@@ -171,10 +171,12 @@ public class studentCartServlet extends HttpServlet {
         }
 
     }
+
 //    else if(menuid != menuGeraiInCart){
 //
 //        out.println("<script type=\"text/javascript\">");
-//        out.println("alert('You have already selected different gerai. Remove your previous after first before continue.');");
+//        out.println("alert('You have already selected different gerai. Remove your previous item first before continue.');");
 //        out.println("</script>");
 //    }
+
 }

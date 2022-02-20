@@ -37,53 +37,6 @@ public class cartDAO {
         }
     }
 
-    public int getMenuByMenuID(int id, String stuid){
-        Connection con = DBConnection.getConn();
-
-        int mid = 0;
-
-        String sql="SELECT \"MENUID\" FROM public.cart WHERE \"MENUID\"=? AND \"STUDENTID\"=? ;";
-
-        try{
-            PreparedStatement ps = con.prepareStatement(sql);
-            ps.setInt(1, id);
-            ps.setString(2, stuid);
-            ResultSet rs = ps.executeQuery();
-
-            while (rs.next()) {
-                 mid = rs.getInt("MENUID");
-            }
-
-        }catch (SQLException e) {
-            e.printStackTrace();
-        }
-        return mid;
-    }
-
-    public int getMenuByCafeID(int menuid, String cafeid, String stuid){
-        Connection con = DBConnection.getConn();
-
-        int mcid = 0;
-
-        String sql="SELECT \"MENUID\" FROM public.cart WHERE \"MENUID\"=? AND \"CWORKID\"=? AND \"STUDENTID\"=? ;";
-
-        try{
-            PreparedStatement ps = con.prepareStatement(sql);
-            ps.setInt(1, menuid);
-            ps.setString(2, cafeid);
-            ps.setString(3, stuid);
-            ResultSet rs = ps.executeQuery();
-
-            while (rs.next()) {
-                mcid = rs.getInt("MENUID");
-            }
-
-        }catch (SQLException e) {
-            e.printStackTrace();
-        }
-        return mcid;
-    }
-
     public int getQuantityByMENUID(int id, String stuid){
         Connection con = DBConnection.getConn();
 
@@ -130,6 +83,52 @@ public class cartDAO {
         }
     }
 
+    public int getMenuByMenuID(int id, String stuid){
+        Connection con = DBConnection.getConn();
+
+        int mid = 0;
+
+        String sql="SELECT \"MENUID\" FROM public.cart WHERE \"MENUID\"=? AND \"STUDENTID\"=? ;";
+
+        try{
+            PreparedStatement ps = con.prepareStatement(sql);
+            ps.setInt(1, id);
+            ps.setString(2, stuid);
+            ResultSet rs = ps.executeQuery();
+
+            while (rs.next()) {
+                mid = rs.getInt("MENUID");
+            }
+
+        }catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return mid;
+    }
+
+    public int getMenuByCafeID(int menuid, String cafeid, String stuid){
+        Connection con = DBConnection.getConn();
+
+        int mcid = 0;
+
+        String sql="SELECT \"MENUID\" FROM public.cart WHERE \"MENUID\"=? AND \"CWORKID\"=? AND \"STUDENTID\"=? ;";
+
+        try{
+            PreparedStatement ps = con.prepareStatement(sql);
+            ps.setInt(1, menuid);
+            ps.setString(2, cafeid);
+            ps.setString(3, stuid);
+            ResultSet rs = ps.executeQuery();
+
+            while (rs.next()) {
+                mcid = rs.getInt("MENUID");
+            }
+
+        }catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return mcid;
+    }
     public cart getItemByMENUID (int id, String stuid){
         Connection con = DBConnection.getConn();
 
@@ -154,6 +153,28 @@ public class cartDAO {
             e.printStackTrace();
         }
         return crt;
+    }
+
+    public int selectAll(String stuid){
+        Connection con = DBConnection.getConn();
+
+        int mcid = 0;
+
+        String sql="SELECT * FROM public.cart WHERE \"STUDENTID\"=? ;";
+
+        try{
+            PreparedStatement ps = con.prepareStatement(sql);
+            ps.setString(1, stuid);
+            ResultSet rs = ps.executeQuery();
+
+            while (rs.next()) {
+                mcid++;
+            }
+
+        }catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return mcid;
     }
 
     public boolean removeItemFromCart(int id, String stuid){

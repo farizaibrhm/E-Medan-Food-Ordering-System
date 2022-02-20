@@ -14,7 +14,7 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Orders</title>
+    <title>Order History</title>
     <meta name="description" content="description">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Favicon -->
@@ -43,7 +43,7 @@
         <!--Page Title-->
         <div class="page section-header text-center">
             <div class="page-title">
-                <div class="wrapper"><h1 class="page-width">Order List</h1></div>
+                <div class="wrapper"><h1 class="page-width">Order History</h1></div>
             </div>
         </div>
         <!--End Page Title-->

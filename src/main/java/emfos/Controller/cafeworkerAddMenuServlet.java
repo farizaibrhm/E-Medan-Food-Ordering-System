@@ -31,7 +31,7 @@ public class cafeworkerAddMenuServlet extends HttpServlet {
         String MENUTYPE = request.getParameter("MENUTYPE");
         Part filePart = request.getPart("MENUIMAGE");
 
-        String host = request.getScheme() + "://" + request.getHeader("X-Forwarded-Proto") + "/";
+        String host = request.getHeader("X-Forwarded-Proto") + "://" + "e-medanfoodorderingsystem.herokuapp.com" + "/";
         System.out.println(host);
 
         String fileName = filePart.getSubmittedFileName();

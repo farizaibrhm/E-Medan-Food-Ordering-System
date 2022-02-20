@@ -9,26 +9,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ee72d468-6c94-46a4-8c84-170d520e2088" name="Changes" comment="try deployed 6">
+    <list default="true" id="ee72d468-6c94-46a4-8c84-170d520e2088" name="Changes" comment="try deployed 7">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/emfos/Controller/cafeworkerAddMenuServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/emfos/Controller/cafeworkerAddMenuServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/emfos/DAO/cartDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/emfos/DAO/cartDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/emfos/DAO/orderDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/emfos/DAO/orderDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/cafeworkerFeedbackList.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/cafeworkerFeedbackList.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/cafeworkerMenuList.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/cafeworkerMenuList.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/cafeworkerOrderList.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/cafeworkerOrderList.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/cafeworkerSalesList.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/cafeworkerSalesList.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/cafeworkerViewOrderDetails.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/cafeworkerViewOrderDetails.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/studentCart.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/studentCart.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/studentViewOrderDetails.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/studentViewOrderDetails.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/emfos/Controller/cafeworkerAddMenuServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/emfos/Controller/cafeworkerAddMenuServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/emfos/Controller/studentCartServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/emfos/Controller/studentCartServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/emfos/DAO/cartDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/emfos/DAO/cartDAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/WEB-INF/classes/emfos/Controller/cafeworkerAddMenuServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/WEB-INF/classes/emfos/Controller/cafeworkerAddMenuServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/WEB-INF/classes/emfos/Controller/studentCartServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/WEB-INF/classes/emfos/Controller/studentCartServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/WEB-INF/classes/emfos/DAO/cartDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/WEB-INF/classes/emfos/DAO/cartDAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/cafeworkerAddMenu.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/cafeworkerAddMenu.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/studentCart.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/studentCart.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -260,7 +242,7 @@
       <workItem from="1645087925359" duration="28057000" />
       <workItem from="1645165624736" duration="18668000" />
       <workItem from="1645250823012" duration="17869000" />
-      <workItem from="1645337810004" duration="14114000" />
+      <workItem from="1645337810004" duration="15289000" />
     </task>
     <task id="LOCAL-00001" summary="Merge remote-tracking branch 'origin/dev' into dev">
       <created>1642837016272</created>
@@ -528,7 +510,14 @@
       <option name="project" value="LOCAL" />
       <updated>1645348578566</updated>
     </task>
-    <option name="localTasksCounter" value="39" />
+    <task id="LOCAL-00039" summary="try deployed 7">
+      <created>1645360204265</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1645360204265</updated>
+    </task>
+    <option name="localTasksCounter" value="40" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -547,7 +536,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="#2 a lil update here and there" />
     <MESSAGE value="Placing order done (sesuaikan untuk ict punya requirement first, isp kemudian)" />
     <MESSAGE value="delete from cart done." />
     <MESSAGE value="add same item to cart by increasing the quantity instead of adding the item to a new row" />
@@ -572,6 +560,7 @@
     <MESSAGE value="try deployed 4" />
     <MESSAGE value="try deployed 5" />
     <MESSAGE value="try deployed 6" />
-    <option name="LAST_COMMIT_MESSAGE" value="try deployed 6" />
+    <MESSAGE value="try deployed 7" />
+    <option name="LAST_COMMIT_MESSAGE" value="try deployed 7" />
   </component>
 </project>

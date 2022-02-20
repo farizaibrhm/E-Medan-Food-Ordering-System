@@ -67,7 +67,7 @@
                                                 <!-- start product image -->
                                                 <a href="#" class="grid-view-item__link">
                                                     <!-- image -->
-                                                    <img src="images/<%=resultSet2.getString("fileName")%>" style="width: 270px; height:270px;">
+                                                    <img src="<image src="<%=resultSet2.getString("savePath")%>" style="width: 270px; height:270px;">
                                                     <!-- End image -->
                                                 </a>
                                                 <!-- end product image -->

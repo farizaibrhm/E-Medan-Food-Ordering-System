@@ -83,7 +83,7 @@
                             %>
 
                             <tr>
-                                <td width="20%"> <img src="images/<%=rs1.getString("fileName")%>" width="90"> </td>
+                                <td width="20%"> <img src="<%=rs1.getString("savePath")%>" width="90"> </td>
                                 <td width="60%"> <span class="font-weight-bold"><%=rs1.getString("MENUNAME")%></span>
                                     <div class="product-qty"> <span class="d-block"><%=rs1.getString("CWORKSTALLNAME")%></span></div>
                                 </td>

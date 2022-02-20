@@ -87,7 +87,7 @@
         %>
                     <tr>
                         <th class="text-center" scope="row"><%=i%></th>
-                        <td class="text-center"><image src="images/<%=rs.getString("fileName")%>" width="100" height="100"/></td>
+                        <td class="text-center"><image src="<%=rs.getString("savePath")%>" width="100" height="100"/></td>
                         <td class="text-center"><%=rs.getString("MENUNAME")%></td>
                         <td class="text-center"><%=rs.getString("MENUDESC")%></td>
                         <td class="text-center">RM <%=rs.getString("MENUTPRICE")%></td>

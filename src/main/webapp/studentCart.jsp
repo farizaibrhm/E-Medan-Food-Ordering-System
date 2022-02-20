@@ -71,7 +71,7 @@
                             %>
                             <tr class="cart__row border-bottom line1 cart-flex border-top">
                                 <td class="cart__image-wrapper cart-flex-item">
-                                    <a href="#"><img class="cart__image" src="<%=rs2.getString("savePath")%>"></a>
+                                    <a href="#"><img class="cart__image" src="images/<%=rs2.getString("fileName")%>"></a>
                                 </td>
                                 <td class="cart__meta small--text-left cart-flex-item">
                                     <div class="list-view-item__title">

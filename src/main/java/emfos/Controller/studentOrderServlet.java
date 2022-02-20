@@ -48,7 +48,7 @@ public class studentOrderServlet extends HttpServlet {
                     Part filePart = request.getPart("PAYMENTRECEIPT");
 
 
-                    String host = request.getScheme() + "://" + request.getHeader("e-medanfoodorderingsystem.herokuapp.com") + "/";
+                    String host = request.getHeader("X-Forwarded-Proto") + "://" + "e-medanfoodorderingsystem.herokuapp.com" + "/";
                     System.out.println(host);
 
                     String fileName = filePart.getSubmittedFileName();

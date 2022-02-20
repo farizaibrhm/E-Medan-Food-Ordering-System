@@ -66,7 +66,7 @@
             SimpleDateFormat ft2 = new SimpleDateFormat("HH:mm:ss");
                 Connection con = DBConnection.getConn();
                 Statement st = con.createStatement();
-                String sql = "SELECT DISTINCT \"ORDERNO\",\"PAYMENTDATE\",\"ORDERTIME\",\"STUDENTNAME\",\"ORDERTPRICE\",\"SAVEPATH\" FROM public.payment \"p\", public.forder \"o\", public.orderitem \"oi\", public.menu \"m\", public.cafeworker \"c\", public.student \"s\" WHERE \"o\".\"ORDERID\" = \"p\".\"ORDERID\" AND \"o\".\"ORDERID\" = \"oi\".\"ORDERID\" AND \"o\".\"STUDENTID\" = \"s\".\"STUDENTID\" AND \"oi\".\"MENUID\" = \"m\".\"MENUID\" AND \"m\".\"CWORKID\" = \"c\".\"CWORKID\"  AND \"m\".\"CWORKID\" ='" + session.getAttribute("CWORKID") + "' ORDER BY \"o\".\"ORDERNO\"";
+                String sql = "SELECT DISTINCT \"ORDERNO\",\"PAYMENTDATE\",\"ORDERTIME\",\"STUDENTNAME\",\"ORDERTPRICE\",\"FILENAME\" FROM public.payment \"p\", public.forder \"o\", public.orderitem \"oi\", public.menu \"m\", public.cafeworker \"c\", public.student \"s\" WHERE \"o\".\"ORDERID\" = \"p\".\"ORDERID\" AND \"o\".\"ORDERID\" = \"oi\".\"ORDERID\" AND \"o\".\"STUDENTID\" = \"s\".\"STUDENTID\" AND \"oi\".\"MENUID\" = \"m\".\"MENUID\" AND \"m\".\"CWORKID\" = \"c\".\"CWORKID\"  AND \"m\".\"CWORKID\" ='" + session.getAttribute("CWORKID") + "' ORDER BY \"o\".\"ORDERNO\"";
                 ResultSet rs = st.executeQuery(sql);
                 while (rs.next())
                 {
@@ -80,7 +80,7 @@
                         <td class="text-center"><%=rs.getString("STUDENTNAME")%></td>
                         <td class="text-center">RM <%=rs.getString("ORDERTPRICE")%></td>
                         <td class="text-center">
-                            <a href="<%=rs.getString("SAVEPATH")%>" class="btn btn-sm" style="background-color: #5D9DED;">VIEW</a>
+                            <a href="receipt/<%=rs.getString("FILENAME")%>" class="btn btn-sm" style="background-color: #5D9DED;">VIEW</a>
                         </td>
                     </tr>
 

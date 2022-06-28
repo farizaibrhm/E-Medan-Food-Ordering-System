@@ -29,7 +29,7 @@ public class orderDAO {
                         "(default,'" + ORDERNO + "','" + amount + "','" + oStatus + "','" + stuid + "')");
 
                 if (i>0){
-//                    PreparedStatement ps1 = con.prepareStatement("SELECT \"CARTQUANTITY\", \"MENUID\", \"CWORKID\" FROM public.cart WHERE \"STUDENTID\"=?");
+
                     PreparedStatement ps1 = con.prepareStatement("SELECT \"CARTQUANTITY\", \"MENUID\" FROM public.cart WHERE \"STUDENTID\"=?");
 
                     ps1.setString(1, stuid);
@@ -45,14 +45,8 @@ public class orderDAO {
                             oID= rs2.getInt(1);
                         }
 
-//                        con.createStatement().executeUpdate("INSERT INTO public.orderitem(\"ORDERITEMID\", \"ORDERITEMQUANTITY\", \"ORDERID\", \"MENUID\", \"CWORKID\")" +
-//                                "VALUES (default,'" + quantity + "','" + oID + "','" + mid + "', '" + cafeid + "')");
-
                         con.createStatement().executeUpdate("INSERT INTO public.orderitem(\"ORDERITEMID\", \"ORDERITEMQUANTITY\", \"ORDERID\", \"MENUID\")" +
                                 "VALUES (default,'" + quantity + "','" + oID + "','" + mid + "')");
-
-//                        con.createStatement().executeUpdate("INSERT INTO public.payment(\"PAYMENTID\", \"FILENAME\", \"SAVEPATH\", \"ORDERID\", \"STUDENTID\")" +
-//                                "VALUES (default,'" + fileName + "','" + savepath + "','" + oID + "', '" + stuid + "')");
 
                         con.createStatement().executeUpdate("INSERT INTO public.payment(\"PAYMENTID\", \"FILENAME\", \"SAVEPATH\", \"ORDERID\")" +
                                 "VALUES (default,'" + fileName + "','" + savepath + "','" + oID + "')");

@@ -63,12 +63,12 @@ public class studentOrderServlet extends HttpServlet {
 
                     if (result == true) {
                         out.println("<script type=\"text/javascript\">");
-                        out.println("alert('Order has been placed.');");
+                        out.println("alert('Your order has been successfully placed.');");
                         out.println("location='studentOrderList.jsp';");
                         out.println("</script>");
                     } else {
                         out.println("<script type=\"text/javascript\">");
-                        out.println("alert('Order can't be placed. Please try again.');");
+                        out.println("alert('Your order can't be placed. Please try again.');");
                         out.println("location='studentCart.jsp';");
                         out.println("</script>");
                     }
@@ -97,7 +97,7 @@ public class studentOrderServlet extends HttpServlet {
 
                 if (result == true) {
                     out.println("<script type=\"text/javascript\">");
-                    out.println("alert('Your order has been cancelled.');");
+                    out.println("alert('Your order has been successfully cancelled.');");
                     out.println("location='studentOrderList.jsp';");
                     out.println("</script>");
                 } else {

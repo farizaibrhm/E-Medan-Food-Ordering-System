@@ -201,9 +201,24 @@
                                 <span class="col-12 col-sm-6 cart__subtotal-title cart__subtotal text-right">RM <%=df.format(grandtotal)%></span></span>
                             </div>
 
+                            <%
+                                if (index == 0) {
+                            %>
+
+                            <input type="hidden" name="amount" value="<%=df.format(grandtotal)%>">
+                            <input type="hidden" name="PAYMENTRECEIPT">
+                            <input type="submit" name="Action" id="cartCheckout" class="btn btn--small-wide checkout" value="Place Order" disabled>
+
+                            <%
+                                }else {
+                                    %>
                             <input type="hidden" name="amount" value="<%=df.format(grandtotal)%>">
                             <input type="hidden" name="PAYMENTRECEIPT">
                             <input type="submit" name="Action" id="cartCheckout" class="btn btn--small-wide checkout" value="Place Order">
+
+                            <%
+                                }//test sini
+                            %>
                         </div>
                     </form>
                 </div>

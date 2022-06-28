@@ -9,16 +9,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ee72d468-6c94-46a4-8c84-170d520e2088" name="Changes" comment="try deployed 11.5">
+    <list default="true" id="ee72d468-6c94-46a4-8c84-170d520e2088" name="Changes" comment="testing 1.0">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/emfos/Controller/studentOrderServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/emfos/Controller/studentOrderServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/emfos/DAO/orderDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/emfos/DAO/orderDAO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/MenuList.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/MenuList.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/studentCart.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/studentCart.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/emfos/DAO/orderDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/emfos/DAO/orderDAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/WEB-INF/classes/emfos/DAO/orderDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/WEB-INF/classes/emfos/DAO/orderDAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/cafeworkerSalesList.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/cafeworkerSalesList.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/studentCart.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/studentCart.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -259,7 +252,7 @@
       <workItem from="1654604262377" duration="3000" />
       <workItem from="1655274285363" duration="17000" />
       <workItem from="1656399715691" duration="1936000" />
-      <workItem from="1656402179162" duration="766000" />
+      <workItem from="1656402179162" duration="1435000" />
     </task>
     <task id="LOCAL-00001" summary="Merge remote-tracking branch 'origin/dev' into dev">
       <created>1642837016272</created>
@@ -583,7 +576,14 @@
       <option name="project" value="LOCAL" />
       <updated>1645372478362</updated>
     </task>
-    <option name="localTasksCounter" value="47" />
+    <task id="LOCAL-00047" summary="testing 1.0">
+      <created>1656403270710</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1656403270711</updated>
+    </task>
+    <option name="localTasksCounter" value="48" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -602,7 +602,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="upload file receipt" />
     <MESSAGE value="." />
     <MESSAGE value="cancel order, send feedback" />
     <MESSAGE value="add bank details. payment details is not displayed if there is no item in the cart." />
@@ -627,6 +626,7 @@
     <MESSAGE value="try deployed 10.5" />
     <MESSAGE value="try deployed 11" />
     <MESSAGE value="try deployed 11.5" />
-    <option name="LAST_COMMIT_MESSAGE" value="try deployed 11.5" />
+    <MESSAGE value="testing 1.0" />
+    <option name="LAST_COMMIT_MESSAGE" value="testing 1.0" />
   </component>
 </project>

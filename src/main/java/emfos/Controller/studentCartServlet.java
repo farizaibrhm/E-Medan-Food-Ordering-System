@@ -124,12 +124,12 @@ public class studentCartServlet extends HttpServlet {
 
                     if (result == true) {
                         out.println("<script type=\"text/javascript\">");
-                        out.println("alert('Item successfully added to cart!');");
+                        out.println("alert('Quantity of the item has been updated!');");
                         out.println("location='studentCart.jsp';");
                         out.println("</script>");
                     } else {
                         out.println("<script type=\"text/javascript\">");
-                        out.println("alert('Item unsuccessfully added to cart. Please try again.');");
+                        out.println("alert('Quantity of the item is unsuccessfully updated. Please try again.');");
                         out.println("location='studentCart.jsp';");
                         out.println("</script>");
                     }

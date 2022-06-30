@@ -48,7 +48,7 @@ public class cafeworkerLoginServlet extends HttpServlet {
             PrintWriter out = response.getWriter();
             out.println("<script type=\"text/javascript\">");
             out.println("alert('You have entered wrong credential. Please try again.');");
-            response.sendRedirect("cafeworkerLogin.jsp");
+            out.println("location='cafeworkerLogin.jsp';");
             out.println("</script>");
         }
 

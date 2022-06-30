@@ -175,7 +175,8 @@
                                         <div class="row">
                                             <div class="form-group col-md-6 col-lg-6 col-xl-12 required">
                                                 <label>Receipt/Proof of Payment<span class="required-f">*</span></label>
-                                                <input type="file" required="required" name="PAYMENTRECEIPT" class="form-control-file">
+                                                <label style="color: #cd0a0a"><small>Supported file types: .jpg, .jpeg, .png and .pdf only</small></label>
+                                                <input type="file" accept="application/pdf, image/*" required="required" name="PAYMENTRECEIPT" class="form-control-file">
                                             </div>
                                         </div>
                                     </fieldset>

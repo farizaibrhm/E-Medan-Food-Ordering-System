@@ -9,15 +9,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ee72d468-6c94-46a4-8c84-170d520e2088" name="Changes" comment="testing 1.1">
+    <list default="true" id="ee72d468-6c94-46a4-8c84-170d520e2088" name="Changes" comment="pop up for update quantity in cart">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/emfos/Controller/cafeworkerAddMenuServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/emfos/Controller/cafeworkerAddMenuServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/emfos/Controller/cafeworkerLoginServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/emfos/Controller/cafeworkerLoginServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/emfos/Controller/cafeworkerAddMenuServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/emfos/Controller/cafeworkerAddMenuServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/emfos/Controller/studentOrderServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/emfos/Controller/studentOrderServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/WEB-INF/classes/emfos/Controller/cafeworkerAddMenuServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/WEB-INF/classes/emfos/Controller/cafeworkerAddMenuServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/WEB-INF/classes/emfos/Controller/studentOrderServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/WEB-INF/classes/emfos/Controller/studentOrderServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/assets/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/studentCart.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/studentCart.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/emfos/Controller/cafeworkerLoginServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/emfos/Controller/cafeworkerLoginServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/WEB-INF/classes/emfos/Controller/cafeworkerLoginServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/WEB-INF/classes/emfos/Controller/cafeworkerLoginServlet.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -259,14 +255,7 @@
       <workItem from="1655274285363" duration="17000" />
       <workItem from="1656399715691" duration="1936000" />
       <workItem from="1656402179162" duration="4291000" />
-      <workItem from="1656606580076" duration="332000" />
-    </task>
-    <task id="LOCAL-00001" summary="Merge remote-tracking branch 'origin/dev' into dev">
-      <created>1642837016272</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1642837016272</updated>
+      <workItem from="1656606580076" duration="1551000" />
     </task>
     <task id="LOCAL-00002" summary="insert and retrieve">
       <created>1643004864303</created>
@@ -597,7 +586,21 @@
       <option name="project" value="LOCAL" />
       <updated>1656403665588</updated>
     </task>
-    <option name="localTasksCounter" value="49" />
+    <task id="LOCAL-00049" summary="pop up for invalid credential on cafeworker login">
+      <created>1656607275380</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1656607275380</updated>
+    </task>
+    <task id="LOCAL-00050" summary="pop up for update quantity in cart">
+      <created>1656607417970</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1656607417971</updated>
+    </task>
+    <option name="localTasksCounter" value="51" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -616,8 +619,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="cancel order, send feedback" />
-    <MESSAGE value="add bank details. payment details is not displayed if there is no item in the cart." />
     <MESSAGE value="new upd" />
     <MESSAGE value="delete account cw" />
     <MESSAGE value="delete account cw test 2" />
@@ -641,6 +642,8 @@
     <MESSAGE value="try deployed 11.5" />
     <MESSAGE value="testing 1.0" />
     <MESSAGE value="testing 1.1" />
-    <option name="LAST_COMMIT_MESSAGE" value="testing 1.1" />
+    <MESSAGE value="pop up for invalid credential on cafeworker login" />
+    <MESSAGE value="pop up for update quantity in cart" />
+    <option name="LAST_COMMIT_MESSAGE" value="pop up for update quantity in cart" />
   </component>
 </project>

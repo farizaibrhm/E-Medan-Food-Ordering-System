@@ -9,12 +9,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ee72d468-6c94-46a4-8c84-170d520e2088" name="Changes" comment="only specific file types are allowed to be uploaded for payment receipt">
+    <list default="true" id="ee72d468-6c94-46a4-8c84-170d520e2088" name="Changes" comment="test gambar v1">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/MenuList.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/MenuList.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/emfos/Controller/studentCartServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/emfos/Controller/studentCartServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/WEB-INF/classes/emfos/Controller/studentCartServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/WEB-INF/classes/emfos/Controller/studentCartServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/studentCart.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/studentCart.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/cafeworkerAddMenu.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/cafeworkerAddMenu.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/MenuList.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/MenuList.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -257,14 +255,7 @@
       <workItem from="1656399715691" duration="1936000" />
       <workItem from="1656402179162" duration="4291000" />
       <workItem from="1656606580076" duration="1783000" />
-      <workItem from="1657114685058" duration="1058000" />
-    </task>
-    <task id="LOCAL-00003" summary="update tak lepas">
-      <created>1643042801203</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1643042801203</updated>
+      <workItem from="1657114685058" duration="2540000" />
     </task>
     <task id="LOCAL-00004" summary="update dengan delete menu belum edit for session.">
       <created>1643747715072</created>
@@ -602,7 +593,14 @@
       <option name="project" value="LOCAL" />
       <updated>1656608394052</updated>
     </task>
-    <option name="localTasksCounter" value="52" />
+    <task id="LOCAL-00052" summary="test gambar v1">
+      <created>1657116176290</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1657116176291</updated>
+    </task>
+    <option name="localTasksCounter" value="53" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -621,7 +619,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="delete account cw" />
     <MESSAGE value="delete account cw test 2" />
     <MESSAGE value="delete account st" />
     <MESSAGE value="85%" />
@@ -646,6 +643,7 @@
     <MESSAGE value="pop up for invalid credential on cafeworker login" />
     <MESSAGE value="pop up for update quantity in cart" />
     <MESSAGE value="only specific file types are allowed to be uploaded for payment receipt" />
-    <option name="LAST_COMMIT_MESSAGE" value="only specific file types are allowed to be uploaded for payment receipt" />
+    <MESSAGE value="test gambar v1" />
+    <option name="LAST_COMMIT_MESSAGE" value="test gambar v1" />
   </component>
 </project>

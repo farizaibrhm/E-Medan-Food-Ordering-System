@@ -164,7 +164,7 @@
                     <div class="item">
                         <p>UPLOAD IMAGE</p>
                         <div class="name-item">
-                            <input type="file" id="MENUIMAGE" name="MENUIMAGE"/>
+                            <input type="file" accept="image/*" id="MENUIMAGE" name="MENUIMAGE"/>
                         </div>
                     </div>
                     <div class="btn-block">

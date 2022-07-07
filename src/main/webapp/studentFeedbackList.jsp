@@ -91,13 +91,16 @@
 
                                 if (rs.getInt("ORDERID") == feedbackinDB){ %>
                                 <button disabled style="background-color: #F67D50; width: 150px;" class="btn btn--sm" onclick="window.location.href='studentLeaveFeedback.jsp?id=<%=rs.getString("ORDERID")%>'">Leave Feedback</button>
+                            <br><small style="color: #cd0a0a">*Students can only leave feedback once.</small><br>
 
                             <% } else{ %>
 
                                 <button style="background-color: #F67D50; width: 150px;" class="btn btn--sm" onclick="window.location.href='studentLeaveFeedback.jsp?id=<%=rs.getString("ORDERID")%>'">Leave Feedback</button>
+                           <br> <small style="color: #cd0a0a">*Students can only leave feedback once.</small><br>
 
                             <% }
                             }%>
+
                         </td>
                     </tr>
 

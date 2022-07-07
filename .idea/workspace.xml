@@ -9,10 +9,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ee72d468-6c94-46a4-8c84-170d520e2088" name="Changes" comment="test gambar v1">
+    <list default="true" id="ee72d468-6c94-46a4-8c84-170d520e2088" name="Changes" comment="test gambar v1.1">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/cafeworkerAddMenu.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/cafeworkerAddMenu.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/MenuList.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/e-Medan_Food_Ordering_System-1.0-SNAPSHOT/MenuList.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/studentFeedbackList.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/studentFeedbackList.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -255,14 +254,8 @@
       <workItem from="1656399715691" duration="1936000" />
       <workItem from="1656402179162" duration="4291000" />
       <workItem from="1656606580076" duration="1783000" />
-      <workItem from="1657114685058" duration="2540000" />
-    </task>
-    <task id="LOCAL-00004" summary="update dengan delete menu belum edit for session.">
-      <created>1643747715072</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1643747715072</updated>
+      <workItem from="1657114685058" duration="3121000" />
+      <workItem from="1657166040377" duration="1385000" />
     </task>
     <task id="LOCAL-00005" summary="fix url servlet">
       <created>1643774128366</created>
@@ -600,7 +593,14 @@
       <option name="project" value="LOCAL" />
       <updated>1657116176291</updated>
     </task>
-    <option name="localTasksCounter" value="53" />
+    <task id="LOCAL-00053" summary="test gambar v1.1">
+      <created>1657118028725</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1657118028725</updated>
+    </task>
+    <option name="localTasksCounter" value="54" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -619,7 +619,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="delete account cw test 2" />
     <MESSAGE value="delete account st" />
     <MESSAGE value="85%" />
     <MESSAGE value="90% (test gambar)" />
@@ -644,6 +643,7 @@
     <MESSAGE value="pop up for update quantity in cart" />
     <MESSAGE value="only specific file types are allowed to be uploaded for payment receipt" />
     <MESSAGE value="test gambar v1" />
-    <option name="LAST_COMMIT_MESSAGE" value="test gambar v1" />
+    <MESSAGE value="test gambar v1.1" />
+    <option name="LAST_COMMIT_MESSAGE" value="test gambar v1.1" />
   </component>
 </project>
